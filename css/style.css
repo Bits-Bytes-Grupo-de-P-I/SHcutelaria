@@ -12,104 +12,17 @@ body {
 
 .container-home {
   display: grid;
-  height: 100vh;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-auto-rows: repeat(5, auto);
+  grid-template-columns: repeat(5, 1fr);
+  grid-auto-rows: repeat(auto, auto);
   gap: 5rem;
   grid-template-areas:
-  "nav nav nav nav"
-  "links links links links"
-  "cutelaria cutelaria cutelaria cutelaria"
-  "main main main main"
-  "footer footer footer footer"
-}
-
-.logo img {
-  height: 40px; /* para ajustar o tamanho da logo */
-}
-
-.nav-text p {
-  font-size: 1.2rem;
-  text-align: center;
-  flex: 1;
-}
-
-.social-icons a {
-  color: #fff;
-  margin-left: 1.5rem;
-  text-decoration: none;
-  font-size: 1.3rem;
-}
-
-.social-icons a :hover{
-    color: rgb(197, 113, 44);
-}
-
-.div-inicial {
-    margin-top: 4rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-}
-
-.texto-inicial {
-    padding: 1rem; 
-    display: inline-block; 
-    border-radius: 0.6rem; 
-    background-color: #f4f4f4;
-    font-size: 1.3rem;
-}
-
-.texto-inicial p {
-    padding: 0.2rem;
-}
-
-.card-cutelaria {
-  grid-area: cutelaria;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    height: 8rem;
-    margin: 5rem;
-    background-color: #fff;
-    border-radius: 0.6rem;
-}
-
-.card-blocos {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  order: 2;
-}
-
-.card-bloco {
-  display: grid;
-  grid-template-columns: repeat(2, auto);
-  justify-content: center;
-  align-items: center;
-  flex-direction: row-reverse;
-  gap: 20px;
-  border: 1px solid red;
-}
-
-/* Fim HOME */
-
-
-/* Início FORMULÁRIO */
-
-.container-form {
-  display: grid;
-  height: 100vh;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-auto-rows: repeat(4, auto);
-  gap: 5rem;
-  grid-template-areas: 
-  "nav nav nav nav"
-  "links links links links" 
-  "main main main main"
-  "footer footer footer footer"
+  "nav nav nav nav nav"
+  "links links links links links"
+  "div-inicial div-inicial div-inicial div-inicial div-inicial"
+  "cutelaria cutelaria cutelaria cutelaria ."
+  ". blocos blocos blocos blocos"
+  "main main main main main"
+  "footer footer footer footer footer";
 }
 
 nav {
@@ -120,7 +33,23 @@ nav {
   background-color: #333;
   padding: 0.6rem 2rem;
   color: white;
-  height: 5rem;
+  height: 7rem;
+}
+
+main {
+  grid-area: main;
+  margin: 0 5rem 0 5rem;
+}
+
+footer {
+  grid-area: footer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 3rem;
+  margin-top: 5rem;
+  height: 8rem;
+  background-color: #fff;
 }
 
 .links {
@@ -131,17 +60,138 @@ nav {
   font-size: 3rem;
 }
 
-main {
-  grid-area: main;
+.logo img {
+  height: 40px; /* para ajustar o tamanho da logo */
 }
 
-footer {
-  grid-area: footer;
-  text-align: center;
-  font-size: 3rem;
-  margin-top: 5rem;
-  height: 8rem;
+.nav-text {
+  grid-area: nav-text;
 }
+
+.nav-text p {
+  font-size: 1.2rem;
+  text-align: center;
+  padding: .5rem;
+}
+
+.barra-pesquisa {
+  background-color: #c0c0c0;
+  color: #333;
+  border-radius: .6rem;
+  padding: .5rem;
+}
+
+.social-icons a {
+  color: #fff;
+  margin-left: 1.5rem;
+  text-decoration: none;
+  font-size: 1.3rem;
+}
+
+.social-icons a:hover{
+    color: rgb(197, 113, 44);
+}
+
+.div-inicial {
+    grid-area: div-inicial;
+    margin-top: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.texto-inicial {
+    padding: 1rem; 
+    display: inline-block; 
+    border-radius: 0.6rem; 
+    background-color: #f4f4f4;
+    font-size: 1.3rem;
+    height: 8rem;
+}
+
+.texto-inicial p {
+    padding: 0.2rem;
+}
+
+.card-cutelaria {
+    grid-area: cutelaria;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    height: 15rem;
+    margin: 5rem;
+    background-color: #fff;
+    border-radius: 0.6rem;
+    padding: 1rem;
+    padding-left: 2rem;
+    font-size: 2rem;
+}
+
+
+.card-blocos {
+    grid-area: blocos;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    flex-direction: column;
+    height: 15rem;
+    margin: 5rem;
+    background-color: #fff;
+    border-radius: 0.6rem;
+    padding: 1rem;
+    padding-right: 2rem;
+    font-size: 2rem;
+}
+
+
+/* Fim HOME */
+
+
+/* Início FORMULÁRIO */
+
+.container-form {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(5, auto);
+  gap: 5rem;
+  grid-template-areas: 
+  "nav nav nav nav"
+  "links links links links"
+  "div-inicial div-inicial div-inicial div-inicial"
+  "main main main main"
+  "footer footer footer footer";
+}
+
+
+#formulario {
+  align-items: center;
+  margin-top: 5rem;
+  flex-direction: column;
+  text-align: center;
+}
+
+#formulario select {
+  width: 70%;
+  font-size: 2rem;
+  overflow: visible;
+  margin-bottom: 5rem;
+  margin-top: 1rem;
+  padding: 0.5rem 0.5rem 0.5rem 2rem;
+}
+
+#formulario label {
+  font-size: 2rem;
+  display: block;
+}
+
+.campo-detalhes {
+  min-height: 300px;
+  min-width: 80%;
+  margin-top: 5rem;
+}
+
+
 
 /* Fim FORMULÁRIO*/
 
@@ -252,35 +302,6 @@ footer {
   }
 
 Card UIverse - Fim*/
-
-/* ************* FORMULÁRIO **************** */
-
-#formulario {
-  align-items: center;
-  margin-top: 5rem;
-  flex-direction: column;
-  text-align: center;
-}
-
-#formulario select {
-  width: 70%;
-  font-size: 2rem;
-  overflow: visible;
-  margin-bottom: 5rem;
-  margin-top: 1rem;
-  padding: 0.5rem 0.5rem 0.5rem 2rem;
-}
-
-#formulario label {
-  font-size: 2rem;
-  display: block;
-}
-
-.campo-detalhes {
-  min-height: 300px;
-  min-width: 80%;
-  margin-top: 5rem;
-}
 
 
 /*  TELAS MENORES */
