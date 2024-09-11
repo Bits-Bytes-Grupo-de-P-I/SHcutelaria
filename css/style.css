@@ -23,7 +23,7 @@ body {
   "div-inicial div-inicial div-inicial div-inicial div-inicial"
   "cutelaria cutelaria cutelaria cutelaria ."
   ". blocos blocos blocos blocos"
-  ". rifa rifa rifa ."
+  "rifa rifa rifa rifa rifa"
   "mural mural mural mural mural"
   "main main main main main"
   "footer footer footer footer footer";
@@ -111,7 +111,6 @@ footer {
 
 .div-inicial {
     grid-area: div-inicial;
-    margin-top: 4rem;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -123,7 +122,7 @@ footer {
     border-radius: 0.6rem; 
     background-color: #f4f4f4;
     font-size: 1.3rem;
-    height: 8rem;
+    height: 0 auto;
 }
 
 .texto-inicial p {
@@ -143,6 +142,7 @@ footer {
     padding: 1rem;
     padding-left: 2rem;
     font-size: 2rem;
+    max-width: 100%; /*para os card não sair fora da tela*/
 }
 
 
@@ -159,6 +159,7 @@ footer {
     padding: 1rem;
     padding-right: 2rem;
     font-size: 2rem;
+    max-width: 100%;
 }
 
 
@@ -323,6 +324,7 @@ Card UIverse - Fim*/
 .rifa {
   grid-area: rifa;
   background-color: blueviolet;
+  margin: 0 2rem;
   height: 20rem;
 }
 
@@ -355,5 +357,21 @@ Card UIverse - Fim*/
   .container {
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr 1fr 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .card-blocos, .card-cutelaria { /*corrigindo responsividade das letras saindo fora da caixa nos cards*/
+    font-size: 1.2rem;
+  }
+
+  .texto-inicial {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .card-blocos, .card-cutelaria {
+    font-size: 1rem;
   }
 }
