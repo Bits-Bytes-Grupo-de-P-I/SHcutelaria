@@ -17,10 +17,14 @@ body {
   gap: 5rem;
   grid-template-areas:
   "nav nav nav nav nav"
+  "banner banner banner banner banner"
+  ". history history history ."
   "links links links links links"
   "div-inicial div-inicial div-inicial div-inicial div-inicial"
   "cutelaria cutelaria cutelaria cutelaria ."
   ". blocos blocos blocos blocos"
+  ". rifa rifa rifa ."
+  "mural mural mural mural mural"
   "main main main main main"
   "footer footer footer footer footer";
 }
@@ -38,7 +42,7 @@ nav {
 
 main {
   grid-area: main;
-  margin: 0 5rem 0 5rem;
+  
 }
 
 footer {
@@ -92,6 +96,19 @@ footer {
     color: rgb(197, 113, 44);
 }
 
+.banner {
+  grid-area: banner;
+  margin-top: -3rem;
+  height: 20rem;
+  background-color: red;
+}
+
+.history {
+  grid-area: history;
+  background-color: aqua;
+  height: 10rem;
+}
+
 .div-inicial {
     grid-area: div-inicial;
     margin-top: 4rem;
@@ -120,7 +137,7 @@ footer {
     justify-content: center;
     flex-direction: column;
     height: 15rem;
-    margin: 5rem;
+    margin: 2rem;
     background-color: #fff;
     border-radius: 0.6rem;
     padding: 1rem;
@@ -136,7 +153,7 @@ footer {
     justify-content: center;
     flex-direction: column;
     height: 15rem;
-    margin: 5rem;
+    margin: 2rem;
     background-color: #fff;
     border-radius: 0.6rem;
     padding: 1rem;
@@ -302,6 +319,34 @@ footer {
   }
 
 Card UIverse - Fim*/
+
+.rifa {
+  grid-area: rifa;
+  background-color: blueviolet;
+  height: 20rem;
+}
+
+.mural {
+  grid-area: mural;
+  background-color: chartreuse;
+}
+
+.mural h1 {
+  text-align: center;
+}
+
+.clientes {
+  height: 10rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.clientes div {
+  width: 15rem;
+  background-color: rgb(38, 107, 18);
+  height: 90%;
+}
 
 
 /*  TELAS MENORES */
