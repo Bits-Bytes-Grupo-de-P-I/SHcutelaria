@@ -1,0 +1,83 @@
+* {
+    color: var(--aluminio);
+}
+
+body {
+    background-color: var(--carbono);
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+:root {
+    --fuligem: #161616;
+    --carbono: #232323;
+    --cinza: #383838;
+    --prata: #C0C0C0;
+    --aluminio: #D0D5DB;
+    --brasa: #F05E1B;
+}
+
+.topo-navbar { 
+    height: 6rem;
+    width: 100%;
+    position: relative;
+    top: 0;
+    background: url(imgs/textura-damasco.jpg) no-repeat center;
+    background-size: cover;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.logo {
+    color: var(--aluminio);
+}
+
+.frase {
+    display: inline;
+    color: var(--aluminio);
+}
+
+.icones {
+    display: inline-flex;
+    gap: 1rem;
+    color: var(--aluminio);
+}
+
+.menu {
+    display: flex;
+    background-color: #383838;
+}
+
+.menu {
+    display: flex;
+    justify-content: center;
+}
+
+.menu ol {
+    display: flex;
+    gap: 1rem;
+}
+
+.menu li {
+    display: flex;
+}
+
+.banner {
+    color: var(--brasa);
+    background-color: var(--fuligem);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 3rem;
+    height: 15rem;
+}
+
+.card-destaque {
+    width: 4rem;
+    height: 6rem;
+    background-color: var(--prata);
+}
