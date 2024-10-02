@@ -107,15 +107,49 @@ main {
     box-shadow: var(--fuligem) 6px 4.8px 6.4px;
 }
 
+/*Estiliação do meu footer*/
 
 footer {
-    position: relative;
-    bottom: 0;
-    height: 8rem;
-    width: 100%;
     background-color: var(--fuligem);
     margin-top: 5rem;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    /*flex-wrap: wrap;*/
+    justify-content: space-between;
+}
+
+footer div {
+    margin: 1rem 2rem;
+}
+
+footer h3 {
+    display: inline-block;
+    border-bottom: 2px solid white;
+    padding-bottom: 0.4rem;
+    margin-bottom: 0; /*remover espaço abaixo da linha ´-´*/
+}
+
+footer li {
+    margin-bottom: 0.6rem;
+    color: #fff;
+    transition: color 0.4s ease;
+}
+
+footer a {
+    text-decoration: none;
+    color: #fff;
+    transition: color 0.4s ease;
+}
+
+footer a:hover, li:hover {
+    color: var(--brasa);
+}
+
+footer i {
+    color: var(--brasa);
+    margin-right: 0.3rem;
+}
+
+footer ul {
+    list-style: none;
+    padding: 0;
 }
