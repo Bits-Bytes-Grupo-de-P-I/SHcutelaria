@@ -20,13 +20,21 @@ img {
     --brasa: #F05E1B;
 }
 
+nav {
+    background: url(imgs/textura-damasco.jpg) no-repeat center;
+    background-size: cover;
+}
+
+main {
+    margin-left: 5rem;
+    margin-right: 5rem;
+}
+
 .topo-navbar { 
     height: 6rem;
     width: 100%;
     position: relative;
     top: 0;
-    background: url(imgs/textura-damasco.jpg) no-repeat center;
-    background-size: cover;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -49,13 +57,12 @@ img {
 
 .menu {
     display: flex;
-    background-color: #383838;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--fuligem);
+    font-size: 1.5rem;
 }
 
-.menu {
-    display: flex;
-    justify-content: center;
-}
 
 .menu ol {
     display: flex;
@@ -69,15 +76,46 @@ img {
 .banner {
     color: var(--brasa);
     background-color: var(--fuligem);
+    background: url(imgs/faca-cabo-vermelho.jpg) no-repeat 50% 30%;
+    background-size: cover;
     display: flex;
     justify-content: center;
     align-items: center;
     margin-top: 3rem;
-    height: 15rem;
+    margin-bottom: 5rem;
+    margin-left: 0;
+    margin-right: 0;
+    height: 25rem;
+}
+
+.destaques {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 5rem;
+    overflow: visible;
+    margin-left: 0;
+    margin-right: 0;
 }
 
 .card-destaque {
-    width: 4rem;
-    height: 6rem;
+    width: 12rem;
+    height: 18rem;
     background-color: var(--prata);
+    border-radius: 10px;
+    box-shadow: var(--fuligem) 6px 4.8px 6.4px;
+}
+
+
+footer {
+    position: relative;
+    bottom: 0;
+    height: 8rem;
+    width: 100%;
+    background-color: var(--fuligem);
+    margin-top: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
