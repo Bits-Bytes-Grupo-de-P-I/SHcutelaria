@@ -14,6 +14,7 @@
 
 body {
     background-color: var(--carbono);
+    box-sizing: border-box;
 }
 
 img {
@@ -32,13 +33,14 @@ nav {
 }
 
 main {
-    margin-left: 15rem;
-    margin-right: 15rem;
+    margin-left: clamp(5rem, 5vw, 15rem);
+    margin-right: clamp(5rem, 5vw, 15rem);
 }
 
 .topo-navbar {
     width: 100%;
-    padding: 2%;
+    padding-top: 2%;
+    padding-bottom: 2%;
     position: relative;
     top: 0;
     display: flex;
@@ -65,48 +67,65 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
     background-color: var(--fuligem);
     font-size: 1.5rem;
 }
 
-
 .menu ol {
     display: flex;
-    gap: 1rem;
+    justify-content: space-around;
+    width: 60%;
+    /* background-color: aquamarine; */ /*Só pra fazer debug*/
 }
 
-.menu li {
+.menu li, a {
     display: flex;
+    text-decoration: none;
 }
 
 .banner {
     color: var(--brasa);
     background-color: var(--fuligem);
-    background: url(imgs/faca-cabo-vermelho.jpg) no-repeat 50% 30%;
+    background: url(imgs/faca-cabo-vermelho.jpg) no-repeat 50% 35%;
     background-size: cover;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 3rem;
     margin-bottom: 5rem;
-    margin-left: -15rem;
-    margin-right: -15rem;
-    height: 25rem;
+    height: 22rem;
+    max-width: 100vw;
 }
 
 .destaques {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
+    flex-direction: column;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.destaques h1 {
+    color: var(--brasa);
+    font-size: 3rem;
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+}
+
+.carrossel-destaques {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
     gap: 5rem;
     overflow: visible;
     margin-bottom: 5rem;
-    margin-left: -15rem;
-    margin-right: -15rem;
 }
 
 .card-destaque {
-    width: 12rem;
+    width: 20rem;
     height: 18rem;
     background-color: var(--prata);
     border-radius: 10px;
@@ -116,83 +135,101 @@ main {
 .area-serviços {
     position: relative;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    flex-direction: column;
-    gap: 1rem;
+    flex-wrap: wrap;
 }
 
 .card-cutelaria {
     position: relative;
     width: 100%;
-    height: 40rem;
+    height: 35rem;
     background-color: var(--fuligem);
     border-radius: 10px;
     border: 1px solid black;
     box-shadow: var(--fuligem) 6px 4.8px 6.4px;
     background: url(imgs/faca-bainha-de-couro.jpg) no-repeat 50% 70%;
     background-size: cover;
-    margin: 2rem;
+    margin-bottom: 2rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transform-style: preserve-3d; /* Habilita o efeito 3D */ /*O chat disse que era pra deixar tudo do mesmo tamanho quando aumenta, mas não sei se precisa realmente 😔*/
+    cursor: pointer;
 }
 
-.blocos-restauracao {
-    position: relative;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: row;
-    gap: 2%;
+.card-cutelaria:hover {
+    transform: scale(1.01) translateZ(20px); /* Aumenta o tamanho e dá sensação de profundidade */
+    box-shadow: var(--fuligem) 12px 9.6px 12.8px;
 }
 
 .card-blocos {
     position: relative;
     width: 49%;
-    height: 45rem;
+    height: 35rem;
     justify-content: left;
     border-radius: 10px;
     border: 1px solid black;
     box-shadow: var(--fuligem) 6px 4.8px 6.4px;
     background: url(imgs/blocos-de-cima.jpg) no-repeat 50% 90%;
     background-size: cover;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transform-style: preserve-3d; /* Habilita o efeito 3D */
+    cursor: pointer;
+}
+
+.card-blocos:hover {
+    transform: scale(1.01) translateZ(20px);
+    box-shadow: var(--fuligem) 12px 9.6px 12.8px;
 }
 
 .card-restauracao {
     position: relative;
     width: 49%;
-    height: 45rem;
+    height: 35rem;
     justify-content: right;
     border-radius: 10px;
     border: 1px solid black;
     box-shadow: var(--fuligem) 6px 4.8px 6.4px;
     background: url(imgs/facas-e-blocos.jpg) no-repeat 40% 90%;
     background-size: cover;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transform-style: preserve-3d; /* Habilita o efeito 3D */
+    cursor: pointer;
+}
+
+.card-restauracao:hover {
+    transform: scale(1.01) translateZ(20px);
+    box-shadow: var(--fuligem) 12px 9.6px 12.8px;
 }
 
 .titulo-card {
     position: absolute;
     width: 100%;
     top: 0;
-    font-size: 120%;
-    text-align: center;
     background-color: rgba(0, 0, 0, 0.5);
-    padding: 1px;
+}
+
+.titulo-card h1 {
+    font-size: clamp(1.5rem, 2vw, 3rem);
+    text-align: center;
 }
 
 .explorar-card {
     position: absolute;
     bottom: 0;
     width: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    text-align: left;
-    font-size: 110%;
+    background-color: rgba(0, 0, 0, 0.2);
     padding-left: 3rem;
     padding-bottom: 1.5rem;
 }
 
+.explorar-card h1 {
+    text-align: left;
+    font-size: clamp(1.3rem, 2vw, 2.5rem);
+}
+
 .explorar-card button {
     font-weight: bold;
-    font-size: 200%;
+    font-size: clamp(0.5rem, 2vw, 2rem);
     padding: 1rem;
     background-color: var(--brasa);
     border: 1px solid black;
@@ -206,12 +243,13 @@ footer {
     background-color: var(--fuligem);
     margin-top: 5rem;
     display: flex;
-    /*flex-wrap: wrap;*/
-    justify-content: space-between;
+    flex-wrap: wrap;
+    justify-content: space-around;
 }
 
 footer div {
     margin: 1rem 2rem;
+    font-size: clamp(0.3rem, 2vw, 1.3rem);
 }
 
 footer h3 {
@@ -245,4 +283,27 @@ footer i {
 footer ul {
     list-style: none;
     padding: 0;
+}
+
+@media (max-width: 1250px) {
+
+    .card-cutelaria {
+        height: 20rem;
+    }
+
+    .card-blocos {
+        width: 100%;
+        height: 20rem;
+        margin-bottom: 2rem;
+    }
+
+    .card-restauracao {
+        width: 100%;
+        margin-bottom: 2rem;
+        height: 20rem;
+    }
+
+    .explorar-card {
+        padding-left: 1rem;
+    }
 }
