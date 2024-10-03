@@ -33,8 +33,8 @@ nav {
 }
 
 main {
-    margin-left: clamp(5rem, 5vw, 15rem);
-    margin-right: clamp(5rem, 5vw, 15rem);
+    margin-left: clamp(8rem, 5vw, 15rem);
+    margin-right: clamp(8rem, 5vw, 15rem);
 }
 
 .topo-navbar {
@@ -82,6 +82,7 @@ main {
 .menu li, a {
     display: flex;
     text-decoration: none;
+    font-size: clamp(1rem, 2vw, 1.5rem);
 }
 
 .banner {
@@ -306,4 +307,13 @@ footer ul {
     .explorar-card {
         padding-left: 1rem;
     }
+}
+
+@media (max-width: 600px) {
+    
+    main {
+        margin-left: 2rem;
+        margin-right: 2rem;
+    }
+
 }
