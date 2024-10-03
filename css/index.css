@@ -256,43 +256,31 @@ main {
 
 footer {
     background-color: var(--fuligem);
-    margin-top: 5rem;
+    margin-top: 6rem;
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-}
-
-footer div {
-    margin: 1rem 2rem;
+    justify-content: space-between;
+    padding: 1.8rem;
     font-size: clamp(0.7rem, 2vw, 1.3rem);
 }
 
-footer h3 {
+.logo p {
+    margin: 0;
+    text-align: center;
+    color: var(--brasa);
+    font-style: italic;
+}
+
+.logo img { 
+    width: 150px; 
+    height: auto; 
+    max-width: 100%;
+}
+
+footer h2 {
     display: inline-block;
-    border-bottom: 2px solid white;
+    border-bottom: 2px solid var(--brasa);
     padding-bottom: 0.4rem;
-    margin-bottom: 0; /*remover espaço abaixo da linha ´-´*/
-}
-
-footer li {
-    margin-bottom: 0.6rem;
-    color: #fff;
-    transition: color 0.4s ease;
-}
-
-footer a {
-    text-decoration: none;
-    color: #fff;
-    transition: color 0.4s ease;
-}
-
-footer a:hover, li:hover {
-    color: var(--brasa);
-}
-
-footer i {
-    color: var(--brasa);
-    margin-right: 0.3rem;
+    margin: 0; /*remover espaço abaixo da linha ´-´*/
 }
 
 footer ul {
@@ -300,8 +288,37 @@ footer ul {
     padding: 0;
 }
 
-@media (max-width: 1250px) {
+footer li {
+    margin-bottom: 0.6rem;
+    color: #fff;
+    transition: color 0.5s ease;
+    font-size: clamp(0.9rem, 2vw, 1.1rem);
+}
 
+footer a {
+    text-decoration: none;
+    color: #fff;
+    transition: color 0.5s ease;
+    font-size: clamp(0.9rem, 2vw, 1.1rem);
+}
+
+footer i {
+    margin-right: 0.4rem;
+    width: 1.2rem;
+    height: 1.2rem;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    transition: color 0.5s ease;
+}
+
+footer li:hover, footer li:hover a, footer li:hover i{
+    color: var(--brasa);
+}
+
+/*Cabo footer pae*/
+
+@media (max-width: 1250px) {
     .card-cutelaria {
         height: 20rem;
     }
@@ -325,8 +342,24 @@ footer ul {
 
 /*-------------------Responsividade-------------------*/
 
+@media (max-width: 1050px) {
+    footer {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .logo {
+        order: -1; /*faz a logo aparecer primeiro*/
+        align-self: center;
+        margin-bottom: 2rem;
+    }
+
+    .logo img {
+        width: 120px;
+    }
+}
+
 @media (max-width: 767px) {
-    
     main {
         margin-left: 2rem;
         margin-right: 2rem;
@@ -372,4 +405,7 @@ footer ul {
         margin-left: 2rem;
     }
 
+    .logo img {
+        width: 100px;
+    }
 }
