@@ -10,7 +10,20 @@
     --prata: #C0C0C0;
     --aluminio: #D0D5DB;
     --brasa: #F05E1B;
+    --incandescente: #be4811;
 }
+
+/*EFEITOS DE HOVER DO TOPO*/
+.menu a:hover, .sac a:hover, .login a:hover, .sac a:hover {
+    color: var(--brasa);
+    text-shadow: 
+                0 0 20px rgba(255, 69, 0, 1),
+                0 0 40px rgba(255, 69, 0, 0.8),
+                0 0 60px rgba(255, 69, 0, 0.6),
+                0 0 80px rgba(255, 69, 0, 0.4);
+    transition: all 0.3s ease;
+}
+
 
 body {
     background-color: var(--carbono);
@@ -22,6 +35,9 @@ img {
     height: auto;
 }
 
+a {
+    text-decoration: none;
+}
 
 button {
     cursor: pointer;
@@ -30,36 +46,25 @@ button {
 nav {
     background: url(imgs/textura-damasco.jpg) no-repeat center;
     background-size: cover;
-}
-
-main {
-    margin-left: clamp(8rem, 5vw, 15rem);
-    margin-right: clamp(8rem, 5vw, 15rem);
-}
-
-.topo-navbar {
+    padding: 0 10rem;
     width: 100%;
-    padding-top: 2%;
-    padding-bottom: 2%;
     position: relative;
     top: 0;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
 }
 
-.logo {
-    color: var(--aluminio);
+main {
+    margin-left: clamp(10rem, 5vw, 15rem);
+    margin-right: clamp(10rem, 5vw, 15rem);
 }
 
-.frase {
-    display: inline;
-    color: var(--aluminio);
-}
 
-.icones {
-    display: inline-flex;
-    gap: 1rem;
+.logo img {
+    width: 200px;
+    height: auto;
+    max-width: 100%;
     color: var(--aluminio);
 }
 
@@ -75,28 +80,72 @@ main {
 
 .menu {
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
     flex-wrap: wrap;
-    background-color: rgba(0, 0, 0, 0.3);
-    border-top: 0.5px solid var(--cinza);
+    text-align: center;
     font-size: 1.5rem;
     width: 100%;
     height: 5rem;
+    text-transform: uppercase;
 }
 
 .menu ul {
     display: flex;
     justify-content: space-around;
-    width: 60%;
-    /* background-color: aquamarine; */ /*Só pra fazer debug*/
+    list-style: none;
 }
 
-.menu li, a {
+.menu li {
     display: flex;
-    text-decoration: none;
-    font-size: clamp(1rem, 2vw, 1.5rem);
+    padding: 0 1rem;
 }
+
+.menu li a {
+    display: flex;
+    font-size: clamp(1rem, 2vw, 1.5rem);
+    padding: 1rem;
+}
+
+.menu i {
+    padding-right: 0.9rem;
+}
+
+.menu i {
+    color: var(--incandescente);
+}
+
+
+.atendimento {
+    display: flex;
+    gap: 2rem;
+    color: var(--aluminio);
+}
+
+.login {
+    text-align: center;
+    font-size: 1.5rem;
+    cursor: pointer;
+    list-style: none;
+}
+
+.login i {
+    font-size: 2rem;
+    color: var(--incandescente);
+}
+
+.sac {
+    text-align: center;
+    font-size: 1.5rem;
+    cursor: pointer;
+    list-style: none;
+}
+
+.sac i {
+    font-size: 2rem;
+    color: var(--incandescente);
+}
+
 
 .banner {
     color: var(--brasa);
@@ -106,8 +155,8 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: 5rem;
-    height: 22rem;
+    margin-bottom: 3rem;
+    height: 35rem;
     max-width: 100vw;
 }
 
@@ -252,6 +301,14 @@ main {
     border-radius: 10px;
 }
 
+.explorar-card button:hover {
+    background-color: #f15217;
+    color: var(--aluminio);
+    transition: all 0.3s ease-out;
+    border: 1px solid var(--brasa);
+    box-shadow: 0 0 20px rgba(255, 69, 0, 1), 0 0 30px rgba(255, 69, 0, 0.8), 0 0 40px rgba(255, 69, 0, 0.6);
+}
+
 /*Estiliação do meu footer*/
 
 footer {
@@ -259,7 +316,7 @@ footer {
     margin-top: 6rem;
     display: flex;
     justify-content: space-between;
-    padding: 1.8rem;
+    padding: 1.8rem 10rem;
     font-size: clamp(0.7rem, 2vw, 1.3rem);
 }
 
@@ -296,7 +353,6 @@ footer li {
 }
 
 footer a {
-    text-decoration: none;
     color: #fff;
     transition: color 0.5s ease;
     font-size: clamp(0.9rem, 2vw, 1.1rem);
@@ -312,8 +368,16 @@ footer i {
     transition: color 0.5s ease;
 }
 
-footer li:hover, footer li:hover a, footer li:hover i{
+/*EFEITOS DE HOVER DO FOOTER*/
+
+footer li:hover, footer li:hover a, footer li:hover i {
     color: var(--brasa);
+    text-shadow: 
+                0 0 20px rgba(255, 69, 0, 1),
+                0 0 40px rgba(255, 69, 0, 0.8),
+                0 0 60px rgba(255, 69, 0, 0.6),
+                0 0 80px rgba(255, 69, 0, 0.4);
+    transition: all 0.3s ease;
 }
 
 /*Cabo footer pae*/
