@@ -1,0 +1,398 @@
+:root {
+    --fuligem: #161616;
+    --carbono: #232323;
+    --cinza: #383838;
+    --prata: #C0C0C0;
+    --aluminio: #D0D5DB;
+    --brasa: #F05E1B;
+    --incandescente: #be4811;
+}
+
+/*EFEITO DE HOVER INCANDESCENTE DO TOPO*/
+.menu a:hover, .sac a:hover, .login a:hover, .sac a:hover, .menu-reduzido a:hover, .atendimento-reduzido a:hover {
+    color: var(--brasa);
+    text-shadow: 
+                0 0 20px rgba(255, 69, 0, 1),
+                0 0 40px rgba(255, 69, 0, 0.8),
+                0 0 60px rgba(255, 69, 0, 0.6),
+                0 0 80px rgba(255, 69, 0, 0.4);
+    transition: all 0.3s ease;
+}
+
+
+body {
+    background-color: var(--carbono);
+    box-sizing: border-box;
+    min-height: 100vh;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+a {
+    text-decoration: none;
+}
+
+button {
+    cursor: pointer;
+}
+
+nav {
+    background: url(imgs/fundo-chatpgt.png) no-repeat 50% 20%;
+    background-size: cover;
+    background-color: var(--carbono);
+    background-blend-mode: overlay; /* Mistura as duas camadas de cor */
+    position: relative;
+    top: 0;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+main {
+    margin-left: clamp(10rem, 5vw, 15rem);
+    margin-right: clamp(10rem, 5vw, 15rem);
+}
+
+
+.logo-nav {
+    font-size: 2rem;
+    text-wrap: nowrap;
+    color: var(--aluminio);
+}
+
+.ativar-menu {
+    display: none;
+    font-size: 2.5rem;
+    position: absolute;
+}
+
+.fechar-menu {
+    display: none;
+    font-size: 2.5rem;
+    position: absolute;
+    padding: 1rem;
+}
+
+.menu, .atendimento {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    text-transform: uppercase;
+    padding: 2rem 0;
+}
+
+.menu ul, .atendimento ul {
+    display: flex;
+    list-style: none;
+}
+
+.menu li, .atendimento li {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    padding: 0 1rem;
+}
+
+.menu a, .atendimento a {
+    font-size: clamp(0.5rem, 2vw, 1.2rem);
+    
+}
+
+.menu i, .atendimento i {
+    padding-right: 0.2rem;
+    color: var(--incandescente);
+}
+
+
+.navbar-reduzida {
+    display: none;
+    justify-content: flex-start;
+    flex-direction: column;
+    text-transform: uppercase;
+    background-color: rgba(35, 35, 35, 0.5);
+    backdrop-filter: blur(10px);
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vw;
+    gap: 2rem;
+}
+
+.menu-reduzido ul, .atendimento-reduzido ul {
+    list-style: none;
+}
+
+.menu-reduzido li {
+    padding: 1rem 0;
+    width: 100%;
+}
+
+.menu-reduzido li:hover {
+    background-color: var(--fuligem);
+    transition: all 0.2s ease;
+}
+
+.menu-reduzido a, .atendimento-reduzido a{
+    padding: 1rem;
+    font-size: 1.5rem;
+}
+
+.menu-reduzido i, .atendimento-reduzido i{
+    padding-right: 0.5rem;
+    color: var(--incandescente);
+}
+
+.atendimento-reduzido ul {
+    display: flex;
+}
+
+.atendimento-reduzido li {
+    justify-content: space-between;
+}
+
+/*Estiliação do meu footer*/
+
+footer {
+    background: url(imgs/fundo-chatpgt.png) no-repeat 50% 20%;
+    background-size: cover;
+    background-color: var(--carbono);
+    background-blend-mode: overlay; /* Mistura as duas camadas */
+    background-color: var(--fuligem);
+    margin-top: 6rem;
+    display: flex;
+    justify-content: space-between;
+    padding: 1.8rem 10rem;
+    font-size: clamp(0.7rem, 2vw, 1.3rem);
+}
+
+.logo-footer p {
+    margin: 0;
+    text-align: center;
+    color: var(--brasa);
+    font-style: italic;
+}
+
+.logo-footer img { 
+    width: 150px; 
+    height: auto; 
+    max-width: 100%;
+}
+
+footer h2 {
+    display: inline-block;
+    border-bottom: 2px solid var(--brasa);
+    padding-bottom: 0.4rem;
+    margin: 0; /*remover espaço abaixo da linha ´-´*/
+    font-size: clamp(1.2rem, 2vw, 1.5rem);
+}
+
+footer ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 0.5rem;
+}
+
+footer li {
+    margin-bottom: 0.6rem;
+    color: #fff;
+    transition: color 0.5s ease;
+    font-size: clamp(0.9rem, 2vw, 1.1rem);
+}
+
+footer a {
+    color: #fff;
+    transition: color 0.5s ease;
+    font-size: clamp(0.9rem, 2vw, 1.1rem);
+}
+
+footer i {
+    margin-right: 0.4rem;
+    width: 1.2rem;
+    height: 1.2rem;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    transition: color 0.5s ease;
+}
+
+/*EFEITOS DE HOVER DO FOOTER*/
+
+footer li:hover, footer li:hover a, footer li:hover i {
+    color: var(--brasa);
+    text-shadow: 
+                0 0 20px rgba(255, 69, 0, 1),
+                0 0 40px rgba(255, 69, 0, 0.8),
+                0 0 60px rgba(255, 69, 0, 0.6),
+                0 0 80px rgba(255, 69, 0, 0.4);
+    transition: all 0.3s ease;
+}
+
+/*Cabo footer pae*/
+
+
+/*--------------------------MEDIA QUERIES--------------------------*/
+
+
+/* 1264px = 79rem */
+
+@media (max-width: 79rem) {
+    
+
+    .menu a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .menu i {
+        padding-bottom: 0.2rem;
+    }
+
+    .atendimento a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .atendimento i {
+        padding-bottom: 0.2rem;
+    }
+
+    .card-destaque {
+        width: 15rem;
+    }
+    
+    .card-cutelaria {
+        height: 20rem;
+    }
+
+    .card-blocos {
+        width: 100%;
+        height: 20rem;
+        margin-bottom: 2rem;
+    }
+
+    .card-restauracao {
+        width: 100%;
+        margin-bottom: 2rem;
+        height: 20rem;
+    }
+
+    .explorar-card {
+        padding-left: 1rem;
+    }
+
+    footer {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 1.8rem 5rem;
+    }
+
+    footer ul {
+        margin-top: 0.3rem;
+    }
+
+    footer h2 {
+        text-align: start;
+        margin: 0.8rem;
+        margin-bottom: 0.5rem;
+        margin-left: 0;
+    }
+
+    .logo-footer {
+        order: -1; /*faz a logo aparecer primeiro*/
+        align-self: center;
+        margin-bottom: 2rem;
+    }
+
+    .logo-footer img {
+        width: 120px;
+    }
+}
+
+
+/* 1120px = 66rem */
+
+@media (max-width: 70rem) { /* Menu reduzido */
+
+    main {
+        margin-left: 5rem;
+        margin-right: 5rem;
+    }
+
+
+    .ativar-menu {
+        display: flex;
+        position: relative;
+        padding: 1rem;
+    }
+
+    .ativar-menu:hover {
+        cursor: pointer;
+        color: var(--brasa);
+        text-shadow: 
+                    0 0 20px rgba(255, 69, 0, 1),
+                    0 0 40px rgba(255, 69, 0, 0.8),
+                    0 0 60px rgba(255, 69, 0, 0.6),
+                    0 0 80px rgba(255, 69, 0, 0.4);
+    }
+
+    .ativar-menu i {
+        color: var(--incandescente);
+    }
+
+    .fechar-menu {
+        display: flex;
+        position: relative;
+        justify-content: flex-end;
+    }
+
+    .fechar-menu:hover {
+        cursor: pointer;
+        color: var(--brasa);
+        text-shadow: 
+                    0 0 20px rgba(255, 69, 0, 1),
+                    0 0 40px rgba(255, 69, 0, 0.8),
+                    0 0 60px rgba(255, 69, 0, 0.6),
+                    0 0 80px rgba(255, 69, 0, 0.4);
+    }
+
+    .menu {
+        display: none;
+    }
+
+    .atendimento {
+        display: none;
+    }
+
+
+}
+
+/* 768px = 48rem */
+
+@media (max-width: 48rem) {
+    main {
+        margin-left: 2.5rem;
+        margin-right: 2.5rem;
+    }
+
+
+    footer {
+        padding: 1.5rem 2.5rem;
+    }
+}
+
+/* 512px = 32rem */
+
+@media (max-width: 32rem) {
+    .navbar-reduzida {
+        width: 100%;
+        height: 100%;
+    }
+}

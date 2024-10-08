@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/navbar_footer.css">
     <script src="js/index.js" defer></script>
 
 </head>
@@ -17,56 +18,133 @@
     <!-- início da NavBar -->
     <nav>
 
-            <div class="logo">
-                <img src="css/imgs/logo-faca.jpg" alt="">
-            </div>
-
-
-            <div class="menu">
-                <label for="" class="ativar-menu">
-                    <i class="fa-solid fa-bars"></i>
-                </label>
-                <ul>
-                    <li>
-                        <a href=""><i class="fa-solid fa-house"></i>Inicio</a>
-                    </li>
-                    <li>
-                        <a href=""><i class="fa-solid fa-list"></i>Personalizar</a>
-                    </li>
-                    <li>
-                        <a href=""><i class="fa-sharp fa-solid fa-cubes"></i>Blocos</a>
-                    </li>
-                    <li>
-                        <a href=""><i class="fa-solid fa-hammer"></i>Restauração</a>
-                    </li>
-                    <li>
-                        <a href=""><i class="fa-duotone fa-solid fa-circle-info"></i>Sobre</a>
-                    </li>
-                </ul>
-            </div>
-            <!-- </div> -->
-
-            <div class="atendimento">
-
-                <ul>
-                    <li class="sac"><a href=""><i class="fa-solid fa-headset"></i>SAC</a></li>
-                    <li class="login"><a href=""><i class="fa-solid fa-right-to-bracket"></i>Login</a></li>
-                </ul>
-                <div class="sac">
-                    
-                </div>
-
-                <div class="login">
-                    
-                </div>
-
+            <div class="logo-nav">
+                SH Cutelaria
             </div>
             
+
+            <div class="menu">
+                <ul>
+                    <li>
+                        <a href="">
+                            <i class="fa-solid fa-house"></i>
+                            Início
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <i class="fa-solid fa-list"></i>
+                            Personalizar
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <i class="fa-sharp fa-solid fa-cubes"></i>
+                            Blocos
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <i class="fa-solid fa-hammer"></i>
+                            Restauração
+                        </a>
+                    </li>
+                    <li> 
+                        <a href="">
+                            <i class="fa-duotone fa-solid fa-circle-info"></i>
+                            Sobre
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+
+            <div class="atendimento">
+                <ul>
+                    <li class="login">
+                        <a href=""><i class="fa-solid fa-right-to-bracket"></i>
+                            Login
+                        </a>
+                    </li>
+                    <li class="sac">
+                        <a href=""><i class="fa-solid fa-headset"></i>
+                            SAC
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            
+
+            <!-- início do Menu Reduzido -->
+            <div class="navbar-reduzida">
+                
+                    <div class="menu-reduzido">
+                        <div class="fechar-menu">
+                            <label for="" onclick="EsconderMenu()"><i class="fa-solid fa-xmark"></i>
+                            </label>
+                        </div>
+                        <ul>
+                            <li>
+                                <a href="">
+                                    <i class="fa-solid fa-house"></i>
+                                    Início
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <i class="fa-solid fa-list"></i>
+                                    Personalizar
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <i class="fa-sharp fa-solid fa-cubes"></i>
+                                    Blocos
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <i class="fa-solid fa-hammer"></i>
+                                    Restauração
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <i class="fa-duotone fa-solid fa-circle-info"></i>
+                                    Sobre
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="atendimento-reduzido">
+                        <ul>
+                            <li class="login-reduzido">
+                                <a href=""><i class="fa-solid fa-right-to-bracket"></i>
+                                    Login
+                                </a>
+                            </li>
+                            <li class="sac-reduzido">
+                                <a href=""><i class="fa-solid fa-headset"></i>
+                                    SAC
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+            </div>
+            <!-- Fim do Menu Reduzido -->
+
+            <div class="ativar-menu">
+                <label for="" onclick="AtivarMenu()">
+                    <i class="fa-solid fa-bars"></i>
+                </label>
+            </div>
 
     </nav>
 
     <div class="banner">
-
+        <img src="css/imgs/faca-cabo-vermelho-cortada.jpg" alt="">
     </div>
 
     <!-- Fim da NavBar -->
@@ -89,7 +167,7 @@
             </div>
         </div>
 
-        <div class="area-serviços"> <!-- Área onde ficam os cards de cutelaria, blocos e restauração -->
+        <div class="area-serviços">
 
             <!-- Início CARD CUTELARIA -->
             <a href="#">
@@ -106,36 +184,33 @@
             <!-- Fim CARD CUTELARIA -->
 
 
-             <!-- Div feita pra separa o card grande dos cards menores -->
-
-
-                <!-- Início CARD BLOCOS -->
-                <a href="#">
-                    <div class="card-blocos">
-                        <div class="titulo-card">
-                            <h1>BLOCOS</h1>
-                        </div>
-                        <div class="explorar-card">
-                            <h1>Compre seu bloco!</h1>
-                            <a href="#"><button>Explorar</button></a>
-                        </div>
+            <!-- Início CARD BLOCOS -->
+            <a href="#">
+                <div class="card-blocos">
+                    <div class="titulo-card">
+                        <h1>BLOCOS</h1>
                     </div>
-                </a>
-                <!-- Fim CARD BLOCOS -->
-
-                <!-- Início CARD RESTAURAÇÃO -->
-                <a href="#">
-                    <div class="card-restauracao">
-                        <div class="titulo-card">
-                            <h1>RESTAURAÇÃO</h1>
-                        </div>
-                        <div class="explorar-card">
-                            <h1>Restaure sua ferramenta!</h1>
-                            <a href="#"><button>Explorar</button></a>
-                        </div>
+                    <div class="explorar-card">
+                        <h1>Compre seu bloco!</h1>
+                        <a href="#"><button>Explorar</button></a>
                     </div>
-                </a>
-                <!-- Fim CARD RESTAURAÇÃO -->
+                </div>
+            </a>
+            <!-- Fim CARD BLOCOS -->
+
+            <!-- Início CARD RESTAURAÇÃO -->
+            <a href="#">
+                <div class="card-restauracao">
+                    <div class="titulo-card">
+                        <h1>RESTAURAÇÃO</h1>
+                    </div>
+                    <div class="explorar-card">
+                        <h1>Restaure sua ferramenta!</h1>
+                        <a href="#"><button>Explorar</button></a>
+                    </div>
+                </div>
+            </a>
+            <!-- Fim CARD RESTAURAÇÃO -->
                 
 
         </div>
@@ -168,7 +243,7 @@
             </ul>
         </div>
 
-        <div class="logo">
+        <div class="logo-footer">
             <img src="css/imgs/logo-faca.jpg" alt="Logo da empresa">
             <p>Desde 2018</p>
         </div>
