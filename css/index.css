@@ -15,18 +15,6 @@
     --incandescente: #be4811;
 }
 
-/*EFEITO DE HOVER INCANDESCENTE DO TOPO*/
-.menu a:hover, .sac a:hover, .login a:hover, .sac a:hover, .menu-reduzido a:hover, .atendimento-reduzido a:hover {
-    color: var(--brasa);
-    text-shadow: 
-                0 0 20px rgba(255, 69, 0, 1),
-                0 0 40px rgba(255, 69, 0, 0.8),
-                0 0 60px rgba(255, 69, 0, 0.6),
-                0 0 80px rgba(255, 69, 0, 0.4);
-    transition: all 0.3s ease;
-}
-
-
 body {
     background-color: var(--carbono);
     box-sizing: border-box;
@@ -257,8 +245,6 @@ main {
         margin-left: 5rem;
         margin-right: 5rem;
     }
-
-
 }
 
 /* 768px = 48rem */
@@ -268,6 +254,4 @@ main {
         margin-left: 2.5rem;
         margin-right: 2.5rem;
     }
-
-
 }
