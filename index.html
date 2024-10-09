@@ -9,7 +9,9 @@
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet" href="css/navbar_footer.css">
+    <link rel="stylesheet" href="css/flickity.css">
     <script src="js/index.js" defer></script>
+    <script src="js/flickity.js" defer></script>
 
 </head>
 <body>
@@ -143,30 +145,59 @@
 
     </nav>
 
+
+
     <div class="banner">
-        <img src="css/imgs/faca-cabo-vermelho-cortada.jpg" alt="">
+        <div class="carousel"
+            data-flickity='{ "imagesLoaded": true, "percentPosition": false }'>
+                <video autoplay muted loop>
+                    <source src="css/imgs/banner-faca.mp4" type="video/mp4">
+                </video>
+                <img src="css/imgs/banner2.png" alt="">
+            </div>
+        </div>
     </div>
 
     <!-- Fim da NavBar -->
 
+    <!-- Início destaques -->
+    <div class="destaques">
+    <h1>Destaques</h1>
+        <div class="carousel"
+        data-flickity='{"wrapAround": true, "freeScroll": true,  "pageDots": false}'>
+            <div class="carousel-cell">
+                <img src="css/imgs/destaques/faca-roxa-e-preta.jpg" alt="">
+            </div>
+            <div class="carousel-cell">
+                <img src="css/imgs/destaques/faca-dragao.jpg" alt="">
+            </div>
+            <div class="carousel-cell">
+                <img src="css/imgs/destaques/blocos.jpg" alt="">
+            </div>
+            <div class="carousel-cell">
+                <img src="css/imgs/destaques/facas-enfileiradas.jpg" alt="">
+            </div>
+            <div class="carousel-cell">
+                <img src="css/imgs/destaques/faca-dentro-bainha.jpg" alt="">
+            </div>
+            <div class="carousel-cell">
+                <img src="css/imgs/destaques/1726946579954.jpg" alt="">
+            </div>
+            <div class="carousel-cell">
+                <img class="vertical" src="css/imgs/destaques/faca-cabo-vermelho.jpg" alt="">
+            </div>
+            <div class="carousel-cell">
+                <img src="css/imgs/destaques/1726946581344.jpg" alt="">
+            </div>
+        </div>
+    </div>
+    <!-- Fim destaques -->
 
 
     <!-- Início da Main -->
     <main>
-
-    
-        <div class="destaques">
-            <h1>DESTAQUES</h1>
-            
-            <div class="carrossel-destaques">
-                <div class="card-destaque"></div>
-                <div class="card-destaque"></div>
-                <div class="card-destaque"></div>
-                <div class="card-destaque"></div>
-                <div class="card-destaque"></div>
-            </div>
-        </div>
-
+   
+        <!-- Início Área Serviços -->
         <div class="area-serviços">
 
             <!-- Início CARD CUTELARIA -->
@@ -211,9 +242,38 @@
                 </div>
             </a>
             <!-- Fim CARD RESTAURAÇÃO -->
-                
 
         </div>
+        <!-- Início Área Serviços -->    
+                
+
+            <div class="rifa">
+                <div class="rifa-titulo">
+                    <h1>Concorra a uma faca grátis!</h1>
+                </div>
+
+                <div class="rifa-conteudo">
+
+                    <div class="rifa-imagem">
+                        <img src="css/imgs/messi.jpg" alt="">
+                    </div>
+
+                    <div class="rifa-info">
+                        <p style="font-size: 2.5rem;">Tempo até o fim do sorteio<br>00:00:00
+                        </p>
+                        <p style="text-align: start;">Faca do estilo: ""</p>
+                        <p style="text-align: start;">Tamanho:  ""</p>
+                        <p style="text-align: start;">Material da lâmina:  ""</p>
+                        <p style="text-align: start;">Material do cabo:  ""</p>
+                        <p style="text-align: start;">Material da bainha:  ""</p>
+                        
+                        <a href="#"><button>Participar do sorteio</button></a>
+
+                    </div>
+
+                </div>
+            </div>
+
 
     </main>
     <!-- Fim da Main -->

@@ -47,7 +47,7 @@ button {
 }
 
 nav {
-    background: url(imgs/fundo-chatpgt.png) no-repeat 50% 20%;
+    background: url(imgs/textura-damasco.png) no-repeat 50% 20%;
     background-size: cover;
     background-color: var(--carbono);
     background-blend-mode: overlay; /* Mistura as duas camadas de cor */
@@ -138,6 +138,7 @@ main {
     right: 0;
     height: 100vw;
     gap: 2rem;
+    z-index: 10;
 }
 
 .menu-reduzido ul, .atendimento-reduzido ul {
@@ -175,7 +176,7 @@ main {
 /*Estiliação do meu footer*/
 
 footer {
-    background: url(imgs/fundo-chatpgt.png) no-repeat 50% 20%;
+    background: url(imgs/textura-damasco.png) no-repeat 50% 20%;
     background-size: cover;
     background-color: var(--carbono);
     background-blend-mode: overlay; /* Mistura as duas camadas */
