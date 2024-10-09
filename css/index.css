@@ -86,8 +86,8 @@ main {
 }
 
 .carousel-cell {
-    width: 20rem;
-    height: 25rem;
+    width: 18rem;
+    height: 22rem;
     margin-right: 2rem;
     background: var(--carbono);
     border-radius: 10px;
@@ -98,8 +98,8 @@ main {
   }
 
 .carousel-cell img {
-    width: 20rem;
-    height: 25rem;
+    width: 18rem;
+    height: 22rem;
     border-radius: 10px;
     object-fit: cover;
 }
@@ -175,16 +175,15 @@ main {
     box-shadow: var(--fuligem) 12px 9.6px 12.8px;
 }
 
-.titulo-card {
+.titulo-card .rifa-titulo {
     position: absolute;
-    width: 100%;
     top: 0;
-    background-color: rgba(0, 0, 0, 0.5);
 }
 
 .titulo-card h1 {
     font-size: clamp(1.5rem, 2vw, 3rem);
     text-align: center;
+    background-color: rgba(0, 0, 0, 0.5);
 }
 
 .explorar-card {
@@ -199,6 +198,7 @@ main {
 .explorar-card h1 {
     text-align: left;
     font-size: clamp(1.2rem, 2vw, 2.5rem);
+    padding-bottom: 0.5rem;
 }
 
 .explorar-card button {
@@ -220,6 +220,77 @@ main {
 }
 
 
+.rifa {
+    width: 80%;
+    height: 35rem;
+    background-color: var(--fuligem);
+    border-radius: 10px;
+    border: 1px solid black;
+    box-shadow: var(--fuligem) 6px 4.8px 6.4px;
+    background: url(imgs/textura-damasco.png) no-repeat 50% 20%;
+    background-size: cover;
+    background-color: var(--carbono);
+    background-blend-mode: overlay; /* Mistura as duas camadas de cor */
+    transition: all 0.3s ease;
+    transform-style: preserve-3d; /* Habilita o efeito 3D */ /*O chat disse que era pra deixar tudo do mesmo tamanho quando aumenta, mas não sei se precisa realmente 😔*/
+    cursor: pointer;
+    margin: 5rem auto 0 auto;
+    padding: 1rem;
+    overflow: hidden;
+}
+
+.rifa:hover {
+    transform: scale(1.01) translateZ(20px);
+    box-shadow: var(--fuligem) 12px 9.6px 12.8px;
+}
+
+.rifa-titulo h1 {
+    font-size: clamp(1.5rem, 2vw, 3rem);
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.rifa-conteudo {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    overflow: hidden;
+}
+
+.rifa-imagem {
+    max-width: 500px;
+    max-height: 700px;
+    border-radius: 10px;
+    border: 1px solid var(--fuligem);
+    overflow: hidden;
+}
+
+.rifa-imagem img {
+    border-radius: 10px;
+    border: 1px solid var(--fuligem);
+}
+
+
+.rifa-info {
+    width: 45%;
+    font-size: 2rem;
+    text-align: center;
+}
+
+.rifa-info p {
+    padding: 1rem;
+}
+
+.rifa-info button {
+    font-weight: bold;
+    font-size: clamp(0.8rem, 2vw, 2rem);
+    padding: 1rem;
+    margin-top: 1rem;
+    background-color: var(--brasa);
+    border: 1px solid black;
+    color: var(--fuligem);
+    border-radius: 10px;
+}
 
 /*--------------------------MEDIA QUERIES--------------------------*/
 
