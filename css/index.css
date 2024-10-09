@@ -38,53 +38,70 @@ button {
 main {
     margin-left: clamp(10rem, 5vw, 15rem);
     margin-right: clamp(10rem, 5vw, 15rem);
+    margin-top: 8rem;
 }
 
 .banner {
-    color: var(--brasa);
     background-color: var(--fuligem);
     border: 2px solid var(--fuligem);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 3rem;
-    max-width: 100vw;
-    object-fit: contain;
+    margin-bottom: 6rem;
+    width: 100%;
+    overflow: hidden;
 }
 
+
+/* external css: flickity.css */ /* Framework do carrossel do banner */
+
+.carousel {
+    background: var(--carbono);
+}
+
+.carousel img { 
+    display: block;  
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.carousel video { 
+    display: block;  
+    width: 100%;
+    height: auto;
+    z-index: 1;
+}
+
+/*--------------DESTAQUES--------------*/
+
 .destaques {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-direction: column;
-    margin-bottom: 2rem;
-    text-align: center;
+    border-radius: 10px;
+    overflow: hidden;
 }
 
 .destaques h1 {
-    color: var(--brasa);
-    font-size: clamp(1.8rem, 1vw, 3rem);
-    margin-bottom: 2rem;
+    text-align: center;
     text-transform: uppercase;
+    color: var(--brasa);
+    padding-bottom: 2rem;
+    font-size: 3rem;
 }
 
-.carrossel-destaques {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-direction: row;
-    flex-shrink: 0;
-    flex-wrap: wrap;
-    gap: clamp(2rem, 2vw, 5rem);
-    margin-bottom: 5rem;
-}
-
-.card-destaque {
+.carousel-cell {
     width: 20rem;
-    height: 18rem;
-    background-color: var(--prata);
+    height: 25rem;
+    margin-right: 2rem;
+    background: var(--carbono);
     border-radius: 10px;
-    box-shadow: var(--fuligem) 6px 4.8px 6.4px;
+    border: 1px solid var(--fuligem);
+    box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
+    counter-increment: carousel-cell;
+    overflow: hidden;
+  }
+
+.carousel-cell img {
+    width: 20rem;
+    height: 25rem;
+    border-radius: 10px;
+    object-fit: cover;
 }
 
 .area-serviços {
@@ -93,6 +110,7 @@ main {
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
+    margin-top: 5rem;
 }
 
 .card-cutelaria {

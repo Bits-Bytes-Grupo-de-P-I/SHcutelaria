@@ -9,7 +9,9 @@
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet" href="css/navbar_footer.css">
+    <link rel="stylesheet" href="css/flickity.css">
     <script src="js/index.js" defer></script>
+    <script src="js/flickity.js" defer></script>
 
 </head>
 <body>
@@ -143,29 +145,71 @@
 
     </nav>
 
+    <!-- <div class="banner">
+        <div class="banner-carrossel">
+            <div class="banner-imagens">
+                <img id="slide-1" src="css/imgs/banner1.png" alt="">
+                <img id="slide-2"  src="css/imgs/banner2.png" alt="">
+            </div>
+            <div class="banner-nav">
+                <a href="#slide-1"></a>
+                <a href="#slide-2"></a>
+            </div>
+        </div>
+    </div> -->
+
     <div class="banner">
-        <img src="css/imgs/faca-cabo-vermelho-cortada.jpg" alt="">
+        <div class="carousel"
+            data-flickity='{ "imagesLoaded": true, "percentPosition": false }'>
+                <video autoplay muted loop>
+                    <source src="css/imgs/banner-faca.mp4" type="video/mp4">
+                </video>
+                <img src="css/imgs/banner2.png" alt="">
+            </div>
+        </div>
     </div>
 
     <!-- Fim da NavBar -->
 
+    <!-- Início destaques -->
+    <div class="destaques">
+    <h1>Destaques</h1>
+        <div class="carousel"
+        data-flickity='{"wrapAround": true, "freeScroll": true,  "pageDots": false}'>
+            <div class="carousel-cell">
+                <img src="css/imgs/destaques/faca-roxa-e-preta.jpg" alt="">
+            </div>
+            <div class="carousel-cell">
+                <img src="css/imgs/destaques/faca-dragao.jpg" alt="">
+            </div>
+            <div class="carousel-cell">
+                <img src="css/imgs/destaques/blocos.jpg" alt="">
+            </div>
+            <div class="carousel-cell">
+                <img src="css/imgs/destaques/facas-enfileiradas.jpg" alt="">
+            </div>
+            <div class="carousel-cell">
+                <img src="css/imgs/destaques/faca-dentro-bainha.jpg" alt="">
+            </div>
+            <div class="carousel-cell">
+                <img src="css/imgs/destaques/1726946579954.jpg" alt="">
+            </div>
+            <div class="carousel-cell">
+                <img src="css/imgs/destaques/faca-cabo-vermelho.jpg" alt="">
+            </div>
+            <div class="carousel-cell">
+                <img src="css/imgs/destaques/1726946581344.jpg" alt="">
+            </div>
+        </div>
+    </div>
+    <!-- Fim destaques -->
 
 
     <!-- Início da Main -->
     <main>
-
-    
-        <div class="destaques">
-            <h1>DESTAQUES</h1>
+   
+        
             
-            <div class="carrossel-destaques">
-                <div class="card-destaque"></div>
-                <div class="card-destaque"></div>
-                <div class="card-destaque"></div>
-                <div class="card-destaque"></div>
-                <div class="card-destaque"></div>
-            </div>
-        </div>
 
         <div class="area-serviços">
 
