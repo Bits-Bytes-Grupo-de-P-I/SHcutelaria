@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 function AtivarMenu() {
     const navbar_reduzida = document.querySelector('.navbar-reduzida')
     navbar_reduzida.style.display = 'flex'
@@ -11,3 +12,8 @@ function EsconderMenu() {
     const tres_barras = document.querySelector('.ativar-menu')
     tres_barras.style.zIndex = '1'
 }
+=======
+document.querySelector('.ativar-menu').addEventListener('click', function() {
+    document.querySelector('.menu ul').classList.toggle('mostrar');
+});
+>>>>>>> Stashed changes

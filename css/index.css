@@ -1,8 +1,11 @@
 * {
     color: var(--aluminio);
     font-family: 'PLAYFAIR';
+<<<<<<< Updated upstream
     margin: 0;
     padding: 0;
+=======
+>>>>>>> Stashed changes
 }
 
 :root {
@@ -15,10 +18,28 @@
     --incandescente: #be4811;
 }
 
+<<<<<<< Updated upstream
 body {
     background-color: var(--carbono);
     box-sizing: border-box;
     min-height: 100vh;
+=======
+/*EFEITOS DE HOVER DO TOPO*/
+.menu a:hover, .sac a:hover, .login a:hover, .sac a:hover {
+    color: var(--brasa);
+    text-shadow: 
+                0 0 20px rgba(255, 69, 0, 1),
+                0 0 40px rgba(255, 69, 0, 0.8),
+                0 0 60px rgba(255, 69, 0, 0.6),
+                0 0 80px rgba(255, 69, 0, 0.4);
+    transition: all 0.3s ease;
+}
+
+
+body {
+    background-color: var(--carbono);
+    box-sizing: border-box;
+>>>>>>> Stashed changes
 }
 
 img {
@@ -34,10 +55,25 @@ button {
     cursor: pointer;
 }
 
+<<<<<<< Updated upstream
+=======
+nav {
+    background: url(imgs/textura-damasco.jpg) no-repeat center;
+    background-size: cover;
+    padding: 0 10rem;
+    width: 100%;
+    position: relative;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+>>>>>>> Stashed changes
 
 main {
     margin-left: clamp(10rem, 5vw, 15rem);
     margin-right: clamp(10rem, 5vw, 15rem);
+<<<<<<< Updated upstream
     margin-top: 8rem;
 }
 
@@ -98,6 +134,143 @@ main {
     height: 22rem;
     border-radius: 10px;
     object-fit: cover;
+=======
+}
+
+
+.logo img {
+    width: 200px;
+    height: auto;
+    max-width: 100%;
+    color: var(--aluminio);
+}
+
+.ativar-menu {
+    display: none;
+    font-size: 1.8rem;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    position: absolute;
+}
+
+.menu {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    text-align: center;
+    font-size: 1.5rem;
+    width: 100%;
+    height: 5rem;
+    text-transform: uppercase;
+}
+
+.menu ul {
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+}
+
+.menu li {
+    display: flex;
+    padding: 0 1rem;
+}
+
+.menu li a {
+    display: flex;
+    font-size: clamp(1rem, 2vw, 1.5rem);
+    padding: 1rem;
+}
+
+.menu i {
+    padding-right: 0.9rem;
+}
+
+.menu i {
+    color: var(--incandescente);
+}
+
+
+.atendimento {
+    display: flex;
+    gap: 2rem;
+    color: var(--aluminio);
+}
+
+.login {
+    text-align: center;
+    font-size: 1.5rem;
+    cursor: pointer;
+    list-style: none;
+}
+
+.login i {
+    font-size: 2rem;
+    color: var(--incandescente);
+}
+
+.sac {
+    text-align: center;
+    font-size: 1.5rem;
+    cursor: pointer;
+    list-style: none;
+}
+
+.sac i {
+    font-size: 2rem;
+    color: var(--incandescente);
+}
+
+
+.banner {
+    color: var(--brasa);
+    background-color: var(--fuligem);
+    background: url(imgs/faca-cabo-vermelho.jpg) no-repeat 50% 35%;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 3rem;
+    height: 35rem;
+    max-width: 100vw;
+}
+
+.destaques {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.destaques h1 {
+    color: var(--brasa);
+    font-size: 3rem;
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+}
+
+.carrossel-destaques {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 5rem;
+    overflow: visible;
+    margin-bottom: 5rem;
+}
+
+.card-destaque {
+    width: 20rem;
+    height: 18rem;
+    background-color: var(--prata);
+    border-radius: 10px;
+    box-shadow: var(--fuligem) 6px 4.8px 6.4px;
+>>>>>>> Stashed changes
 }
 
 .area-serviços {
@@ -106,7 +279,10 @@ main {
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
+<<<<<<< Updated upstream
     margin-top: 5rem;
+=======
+>>>>>>> Stashed changes
 }
 
 .card-cutelaria {
@@ -171,15 +347,26 @@ main {
     box-shadow: var(--fuligem) 12px 9.6px 12.8px;
 }
 
+<<<<<<< Updated upstream
 .titulo-card .rifa-titulo {
     position: absolute;
     top: 0;
+=======
+.titulo-card {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+>>>>>>> Stashed changes
 }
 
 .titulo-card h1 {
     font-size: clamp(1.5rem, 2vw, 3rem);
     text-align: center;
+<<<<<<< Updated upstream
     background-color: rgba(0, 0, 0, 0.5);
+=======
+>>>>>>> Stashed changes
 }
 
 .explorar-card {
@@ -194,10 +381,16 @@ main {
 .explorar-card h1 {
     text-align: left;
     font-size: clamp(1.2rem, 2vw, 2.5rem);
+<<<<<<< Updated upstream
     padding-bottom: 0.5rem;
 }
 
 .explorar-card button, .ri {
+=======
+}
+
+.explorar-card button {
+>>>>>>> Stashed changes
     font-weight: bold;
     font-size: clamp(0.8rem, 2vw, 2rem);
     padding: 1rem;
@@ -215,6 +408,7 @@ main {
     box-shadow: 0 0 20px rgba(255, 69, 0, 1), 0 0 30px rgba(255, 69, 0, 0.8), 0 0 40px rgba(255, 69, 0, 0.6);
 }
 
+<<<<<<< Updated upstream
 
 .rifa {
     display: flex;
@@ -332,6 +526,82 @@ main {
         object-fit: cover;
     }
     
+=======
+/*Estiliação do meu footer*/
+
+footer {
+    background-color: var(--fuligem);
+    margin-top: 6rem;
+    display: flex;
+    justify-content: space-between;
+    padding: 1.8rem 10rem;
+    font-size: clamp(0.7rem, 2vw, 1.3rem);
+}
+
+.logo p {
+    margin: 0;
+    text-align: center;
+    color: var(--brasa);
+    font-style: italic;
+}
+
+.logo img { 
+    width: 150px; 
+    height: auto; 
+    max-width: 100%;
+}
+
+footer h2 {
+    display: inline-block;
+    border-bottom: 2px solid var(--brasa);
+    padding-bottom: 0.4rem;
+    margin: 0; /*remover espaço abaixo da linha ´-´*/
+}
+
+footer ul {
+    list-style: none;
+    padding: 0;
+}
+
+footer li {
+    margin-bottom: 0.6rem;
+    color: #fff;
+    transition: color 0.5s ease;
+    font-size: clamp(0.9rem, 2vw, 1.1rem);
+}
+
+footer a {
+    color: #fff;
+    transition: color 0.5s ease;
+    font-size: clamp(0.9rem, 2vw, 1.1rem);
+}
+
+footer i {
+    margin-right: 0.4rem;
+    width: 1.2rem;
+    height: 1.2rem;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    transition: color 0.5s ease;
+}
+
+/*EFEITOS DE HOVER DO FOOTER*/
+
+footer li:hover, footer li:hover a, footer li:hover i {
+    color: var(--brasa);
+    text-shadow: 
+                0 0 20px rgba(255, 69, 0, 1),
+                0 0 40px rgba(255, 69, 0, 0.8),
+                0 0 60px rgba(255, 69, 0, 0.6),
+                0 0 80px rgba(255, 69, 0, 0.4);
+    transition: all 0.3s ease;
+}
+
+/*Cabo footer pae*/
+
+@media (max-width: 1250px) {
+>>>>>>> Stashed changes
     .card-cutelaria {
         height: 20rem;
     }
@@ -351,6 +621,7 @@ main {
     .explorar-card {
         padding-left: 1rem;
     }
+<<<<<<< Updated upstream
 
     .rifa {
         width: 100%;
@@ -390,3 +661,76 @@ main {
         margin-right: 2.5rem;
     }
 }
+=======
+}
+
+/*-------------------Responsividade-------------------*/
+
+@media (max-width: 1050px) {
+    footer {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .logo {
+        order: -1; /*faz a logo aparecer primeiro*/
+        align-self: center;
+        margin-bottom: 2rem;
+    }
+
+    .logo img {
+        width: 120px;
+    }
+}
+
+@media (max-width: 767px) {
+    main {
+        margin-left: 2rem;
+        margin-right: 2rem;
+    }
+
+    .menu {
+        display: flex;
+        justify-content: start;
+    }
+
+    .menu ul {
+        display: none;
+    }
+
+    .menu ul.mostrar {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding: 1rem 0.5rem;
+        background-color: var(--carbono);
+        border-radius: 10px;
+    }
+
+    .menu ul li{
+        display: block;
+        width: 100%;
+        text-align: center;
+        padding: 1rem 0.5rem;
+        border: 1px top bottom var(--fuligem);
+    }
+
+    .menu ul li a {
+        display: block;
+    }
+
+    .menu ul li:hover {
+        background-color: var(--fuligem);
+    }
+
+    .ativar-menu {
+        display: flex;
+        margin-left: 2rem;
+    }
+
+    .logo img {
+        width: 100px;
+    }
+}
+>>>>>>> Stashed changes
