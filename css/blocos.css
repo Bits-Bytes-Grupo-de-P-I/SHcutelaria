@@ -35,10 +35,10 @@ a {
 
 .gallery::after {
     content: '';
-    flex-basis: calc(23% - 1rem); /* Mesmo valor que os cards */
+    flex-basis: calc(23% - 1rem);
     margin: 0.8rem 0;
     box-sizing: border-box;
-    visibility: hidden; /* Invisível, mas ocupa espaço */
+    visibility: hidden; 
 }
 
 .content {
