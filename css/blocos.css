@@ -1,3 +1,10 @@
+body {
+    background: url(imgs/textura-damasco.png) no-repeat 50% 20%;
+    background-size: cover;
+    background-color: var(--carbono);
+    background-blend-mode: overlay;
+}
+
 :root {
     --fuligem: #161616;
     --carbono: #232323;
