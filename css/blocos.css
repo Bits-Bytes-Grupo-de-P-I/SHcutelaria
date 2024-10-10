@@ -33,6 +33,14 @@ a {
     gap: 1rem;
 }
 
+.gallery::after {
+    content: '';
+    flex-basis: calc(23% - 1rem); /* Mesmo valor que os cards */
+    margin: 0.8rem 0;
+    box-sizing: border-box;
+    visibility: hidden; /* Invisível, mas ocupa espaço */
+}
+
 .content {
     flex-basis: calc(23% - 1rem); /* Define largura com ajuste de gap */
     margin: 0.8rem 0;
