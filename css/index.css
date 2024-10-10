@@ -52,9 +52,6 @@ main {
 
 /* external css: flickity.css */ /* Framework do carrossel do banner */
 
-.carousel {
-    background: var(--carbono);
-}
 
 .carousel img { 
     display: block;  
@@ -89,7 +86,6 @@ main {
     width: 18rem;
     height: 22rem;
     margin-right: 2rem;
-    background: var(--carbono);
     border-radius: 10px;
     border: 1px solid var(--fuligem);
     box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
@@ -221,6 +217,10 @@ main {
 
 
 .rifa {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
     width: 80%;
     background-color: var(--fuligem);
     border-radius: 10px;
@@ -231,9 +231,9 @@ main {
     background-color: var(--carbono);
     background-blend-mode: overlay; /* Mistura as duas camadas de cor */
     transition: all 0.3s ease;
-    transform-style: preserve-3d; /* Habilita o efeito 3D */ /*O chat disse que era pra deixar tudo do mesmo tamanho quando aumenta, mas não sei se precisa realmente 😔*/
+    transform-style: preserve-3d;
     cursor: pointer;
-    margin: 5rem auto 0 auto;
+    margin: 0 auto 0 auto;
     padding: 1.5rem;
     overflow: hidden;
 }
@@ -247,27 +247,35 @@ main {
     font-size: clamp(1.5rem, 2vw, 3rem);
     text-align: center;
     text-transform: uppercase;
-    padding-bottom: 2rem;
+    margin: 5rem 0 2rem 0rem;
+    color: var(--brasa);
 }
 
 .rifa-conteudo {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     overflow: hidden;
+    padding-bottom: 3rem;
 }
 
 .rifa-imagem {
-    max-width: 500px;
-    max-height: 700px;
+    width: 20rem;
+    height: 22rem;
+    height: fit-content;
     border-radius: 10px;
     border: 1px solid var(--fuligem);
     overflow: hidden;
 }
 
 .rifa-imagem img {
+    width: 20rem;
+    height: 22rem;
     border-radius: 10px;
-    border: 1px solid var(--fuligem);
+    object-fit: contain;
+    text-align: center;
+    margin: 0 auto;
+    flex-grow: 1;
 }
 
 
@@ -281,18 +289,19 @@ main {
     padding: 1rem;
 }
 
-.rifa-info button {
+.rifa-botao button {
+    display: block;
     font-weight: bold;
-    font-size: clamp(0.8rem, 2vw, 2rem);
+    font-size: clamp(1.2rem, 2vw, 2rem);
     padding: 1rem;
-    
+    margin-bottom: 3rem;
     background-color: var(--brasa);
     border: 1px solid black;
     color: var(--fuligem);
     border-radius: 10px;
 }
 
-.rifa-info button:hover {
+.rifa-botao button:hover {
     background-color: #f15217;
     color: var(--aluminio);
     transition: all 0.3s ease-out;
@@ -309,8 +318,18 @@ main {
 @media (max-width: 79rem) {
     
 
-    .card-destaque {
-        width: 15rem;
+    .carousel-cell {
+        width: 12rem;
+        height: 16rem;
+        counter-increment: carousel-cell;
+        overflow: hidden;
+      }
+    
+    .carousel-cell img {
+        width: 12rem;
+        height: 16rem;
+        border-radius: 10px;
+        object-fit: cover;
     }
     
     .card-cutelaria {
@@ -346,6 +365,20 @@ main {
     main {
         margin-left: 5rem;
         margin-right: 5rem;
+    }
+
+    .carousel-cell {
+        width: 9rem;
+        height: 11rem;
+        counter-increment: carousel-cell;
+        overflow: hidden;
+      }
+    
+    .carousel-cell img {
+        width: 9rem;
+        height: 11rem;
+        border-radius: 10px;
+        object-fit: cover;
     }
 }
 

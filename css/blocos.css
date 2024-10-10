@@ -27,14 +27,14 @@ a {
     margin: 0.8rem 0;
     box-sizing: border-box;
     text-align: center;
-    border-radius: 1.2rem;
+    border-radius: 10px;
     cursor: pointer;
     /* padding-top: 0.6rem; */
     box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25),
     0 10px 10px rgba(0, 0, 0, 0.22);
     transition: .4s;
-    background: #000;
-    overflow: hidden;
+    background: var(--fuligem);
+    overflow: visible;
     display: flex;
     flex-direction: column;
 }
@@ -53,6 +53,7 @@ img {
     margin: 0 auto;
     display: block;
     flex-grow: 1;
+    border-radius: 10px 10px 0 0;
     /* margin-bottom: 0.4rem; */
 }
 
@@ -90,7 +91,7 @@ p {
 button {
     text-align: center;
     font-size: 1.2rem;
-    color: #000;
+    color: var(--fuligem);
     width: 100%;
     padding: 0.7rem;
     border: 0;
@@ -100,6 +101,14 @@ button {
     border-bottom-right-radius: 1.2rem; 
     border-bottom-left-radius: 1.2rem;
     background-color: var(--brasa);
+}
+
+button:hover {
+    background-color: #f15217;
+    color: var(--aluminio);
+    transition: all 0.3s ease-out;
+    border: 1px solid var(--brasa);
+    box-shadow: 0 0 20px rgba(255, 69, 0, 1), 0 0 30px rgba(255, 69, 0, 0.8), 0 0 40px rgba(255, 69, 0, 0.6);
 }
 
 /* @media(max-width: 1000px) {
