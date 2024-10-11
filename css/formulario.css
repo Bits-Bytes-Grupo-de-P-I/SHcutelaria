@@ -1,0 +1,78 @@
+* {
+    color: var(--aluminio);
+    font-family: 'PLAYFAIR';
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --fuligem: #161616;
+    --carbono: #232323;
+    --cinza: #383838;
+    --prata: #C0C0C0;
+    --aluminio: #D0D5DB;
+    --brasa: #F05E1B;
+    --incandescente: #be4811;
+}
+
+body {
+    background-color: var(--carbono);
+    box-sizing: border-box;
+    min-height: 100vh;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+a {
+    text-decoration: none;
+}
+
+button {
+    cursor: pointer;
+}
+
+
+main {
+    margin-left: clamp(10rem, 5vw, 15rem);
+    margin-right: clamp(10rem, 5vw, 15rem);
+    margin-top: 8rem;
+}
+
+form {
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  label {
+    position: relative;
+    cursor: pointer;
+  }
+  
+  input[type="radio"] {
+    display: none; /* Esconde os botões de rádio */
+  }
+  
+  .selectable-image {
+    width: 100px;
+    height: 100px;
+    border: 2px solid transparent;
+    transition: border 0.3s ease;
+  }
+  
+  input[type="radio"]:checked + .selectable-image {
+    border: 2px solid #00f; /* Borda azul na imagem selecionada */
+  }
+  
+  .selectable-image:hover {
+    border: 2px solid #aaa; /* Efeito de hover */
+  }
+  
+  #result {
+    margin-top: 20px;
+    font-size: 18px;
+    font-weight: bold;
+  }
+  

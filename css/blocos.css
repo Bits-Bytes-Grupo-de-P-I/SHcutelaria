@@ -33,14 +33,6 @@ a {
     gap: 1rem;
 }
 
-.gallery::after {
-    content: '';
-    flex-basis: calc(23% - 1rem);
-    margin: 0.8rem 0;
-    box-sizing: border-box;
-    visibility: hidden; 
-}
-
 .content {
     flex-basis: calc(23% - 1rem); /* Define largura com ajuste de gap */
     margin: 0.8rem 0;
@@ -56,6 +48,10 @@ a {
     overflow: visible;
     display: flex;
     flex-direction: column;
+}
+
+.invisible {
+    visibility: hidden;
 }
 
 .content:hover {
