@@ -251,7 +251,10 @@
                     <div class="modal-info">
                         <h3>Costela e Vértebra de Baleia</h3>
                         <p>Preço: R$ 250,00</p>
-                        <p>Dimensões: 10cm x 5cm x 2cm</p>
+                        <p>
+                            Dimensões: 10cm x 5cm x 2cm 
+                            <i id="info-icon" class="fas fa-info-circle info-icon" onclick="toggleInfo()"></i>
+                        </p>
                     </div>
                     <span class="close" onclick="toggleModal('modal-baleia')">&times;</span>
                 </div>
@@ -269,6 +272,12 @@
                     <a href="" class="whatsapp-button">Contato pelo WhatsApp</a>
                 </div>
             </div>
+
+            <div id="info-message" class="info-message" style="display: none;">
+                <p>Medidas padrão que podem ter variações.</p>
+                <button onclick="closeInfo()">Entendi</button>
+            </div>
+
         </div>
 
     </main>

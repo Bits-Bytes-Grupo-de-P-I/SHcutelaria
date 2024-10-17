@@ -17,7 +17,6 @@ a {
     text-align: start;
     text-transform: uppercase;
     font-size: 1.8rem;
-    /* color: var(--brasa); */
     display: inline-block;
     border-bottom: 2px solid var(--brasa);
     padding-bottom: 0.2rem;
@@ -26,7 +25,7 @@ a {
 .gallery {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between; /*muda espaçamento aqui lindo*/
+    justify-content: space-between;
     align-items: center;
     width: 100%;
     margin: 1.7rem 0;
@@ -34,13 +33,12 @@ a {
 }
 
 .content {
-    flex-basis: calc(23% - 1rem); /* Define largura com ajuste de gap */
+    flex-basis: calc(23% - 1rem);
     margin: 0.8rem 0;
     box-sizing: border-box;
     text-align: center;
     border-radius: 10px;
     cursor: pointer;
-    /* padding-top: 0.6rem; */
     box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25),
     0 10px 10px rgba(0, 0, 0, 0.22);
     transition: .4s;
@@ -69,7 +67,6 @@ a {
     display: block;
     flex-grow: 1;
     border-radius: 1.2rem 1.2rem 0 0;
-    /* margin-bottom: 0.4rem; */
 }
 
 .texts {
@@ -91,17 +88,10 @@ h3 {
 p {
     text-align: center;
     color: #d2dec3;
-    font-size: 1.2rem;
+    font-size: 1rem;
     height: 55px;
     overflow: hidden;
 }
-
-/* h6 { 
-    font-size: 1.1rem;
-    text-align: center;
-    color: #fff;
-    margin: 0;
-} */
 
 button {
     text-align: center;
@@ -154,7 +144,7 @@ h2 {
 }
 
 .instructions li::marker {
-    color: var(--brasa); /* Cor para os números */
+    color: var(--brasa); 
     font-weight: bold; 
     font-size: 1.4rem; 
 }
@@ -247,7 +237,7 @@ h2 {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 1rem;
+    gap: 1.4rem;
     margin-bottom: 1rem;
 }
 
@@ -263,45 +253,67 @@ h2 {
     transform: scale(1.03);
 }
 
+.info-message {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -40%);
+    background-color: #414040;
+    border: 1px solid #ccc;
+    border-radius: 0.5rem;
+    padding: 1rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1000; 
+    font-size: 0.8rem;
+    color: var(--aluminio);
+    max-width: 200px;
+    width: auto;
+    white-space: normal; 
+}
+
+#info-icon {
+    color: var(--aluminio);
+}
+
+.info-message button {
+    background-color: var(--brasa);
+    color: #000;
+    border: none;
+    border-radius: 0.25rem;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    margin-top: 0.5rem;
+    transition: all 0.3s ease-out;
+}
+
+.info-message button:hover {
+    box-shadow: 0 0 20px rgba(255, 69, 0, 1), 0 0 30px rgba(255, 69, 0, 0.8), 0 0 40px rgba(255, 69, 0, 0.6); 
+    color: var(--aluminio);
+}
+
 @media (max-width: 1200px) {
     .content {
-        flex-basis: calc(25% - 1rem); /* 4 cards por linha */
-    }
-
-    img {
-
-    }
-
-    p {
-
-    }
-
-    h6 {
-
-    }
-
-    button {
-
+        flex-basis: calc(25% - 1rem);
     }
 }
 
 @media (max-width: 992px) {
     .content {
-        flex-basis: calc(33.333% - 1rem); /* 3 cards por linha */
+        flex-basis: calc(33.333% - 1rem);
     }
 }
 
 @media (max-width: 768px) {
     .content {
-        flex-basis: calc(50% - 1rem); /* 2 cards por linha */
+        flex-basis: calc(50% - 1rem); 
     }
 
     .modal-body img {
-        width: 45%; /* Cada imagem ocupa 45% da largura da linha, permitindo 2 por linha */
+        width: 45%; 
     }
 
     .modal-content {
-        max-width: 95%; /* Aumenta o uso da tela em telas pequenas */
+        max-width: 95%; 
     }
 }
 
@@ -317,7 +329,7 @@ h2 {
     }
 
     .content {
-        flex-basis: calc(50% - 1rem); /* 2 cards por linha */
+        flex-basis: calc(50% - 1rem); 
     }
 
     img {
@@ -334,10 +346,6 @@ h2 {
         height: 40px;
     }
 
-    button {
-
-    }
-
     h2 {
         font-size: 1.5rem;
     }
@@ -347,24 +355,24 @@ h2 {
     }
 
     .modal-info h3 {
-        font-size: 1.2em; /* Tamanho reduzido do título em telas menores */
+        font-size: 1.2em; 
     }
 
     .modal-info p {
-        font-size: 0.9em; /* Tamanho reduzido das informações em telas menores */
+        font-size: 0.9em; 
     }
 
     .close {
-        font-size: 24px; /* Botão "Fechar" menor em telas pequenas */
+        font-size: 24px; 
     }
 }
 
 @media (max-width: 480px) {
     .modal-body img {
-        width: 45%; /* Mantém 2 imagens por linha em telas muito pequenas */
+        width: 45%; 
     }
 
     .close {
-        font-size: 1.5rem; /* Botão "Fechar" menor em telas pequenas */
+        font-size: 1.5rem; 
     }
 }
