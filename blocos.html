@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="css/blocos.css">
     
     <script src="js/index.js"></script>
+    <script src="js/blocos.js"></script>
 
 </head>
 <body>
@@ -155,7 +156,7 @@
                     <p>Feito a partir de ossos de baleia, tratado e estabilizado em resina.</p>
                     <!-- <h6>R$ 200,00 - R$ 350,00</h6> -->
                 </div>
-                <button>Ver Mais</button>
+                <button onclick="toggleModal('modal-baleia')">Ver Mais</button>
             </div>
 
             <div class="content">
@@ -165,7 +166,7 @@
                     <p>Madeira de mango estabilizada em resina para maior durabilidade.</p>
                     <!-- <h6>R$ 10,00 - R$ 50,00</h6> -->
                 </div>
-                <button>Ver Mais</button>
+                <button onclick="toggleModal('modal-baleia')">Ver Mais</button>
             </div>
 
             <div class="content">
@@ -175,7 +176,7 @@
                     <p>Palmeira negra estabilizada, ideal para acabamentos únicos.</p>
                     <!-- <h6>R$ 2,00 - R$ 30,00</h6> -->
                 </div>
-                <button>Ver Mais</button>
+                <button onclick="toggleModal('modal-baleia')">Ver Mais</button>
             </div>
 
             <div class="content">
@@ -185,7 +186,7 @@
                     <p>Combinação de madeira e resina, oferecendo beleza e resistência.</p>
                     <!-- <h6>R$ 20,00 - R$ 500,00</h6> -->
                 </div>
-                <button>Ver Mais</button>
+                <button onclick="toggleModal('modal-baleia')">Ver Mais</button>
             </div>
 
             <div class="content">
@@ -195,7 +196,7 @@
                     <p>Madeira de leopard com acabamento estabilizado e exclusivo.</p>
                     <!-- <h6>R$ 20,00 - R$ 500,00</h6> -->
                 </div>
-                <button>Ver Mais</button>
+                <button onclick="toggleModal('modal-baleia')">Ver Mais</button>
             </div>
 
             <div class="content">
@@ -205,7 +206,7 @@
                     <p>Bloco sólido feito inteiramente de resina estabilizada.</p>
                     <!-- <h6>R$ 20,00 - R$ 500,00</h6> -->
                 </div>
-                <button>Ver Mais</button>
+                <button onclick="toggleModal('modal-baleia')">Ver Mais</button>
             </div>
 
             <div class="content">
@@ -215,7 +216,7 @@
                     <p>Madeira spalted tratada, destacando seus padrões naturais.</p>
                     <!-- <h6>R$ 20,00 - R$ 500,00</h6> -->
                 </div>
-                <button>Ver Mais</button>
+                <button onclick="toggleModal('modal-baleia')">Ver Mais</button>
             </div>
 
             <div class="content invisible">
@@ -239,9 +240,36 @@
                 <li><strong>Escolha Seu Bloco:</strong> Escolha o bloco que deseja adquirir e finalize sua compra diretamente com o artesão.</li>
                 <li><strong>Atenção aos Detalhes:</strong> Caso deseje um bloco em tamanho personalizado, o valor pode variar conforme a solicitação.</li>
             </ol>
-            <a href="" class="whatsapp-button">Contato pelo WhatsApp</a> <!-- Link do WhatsApp -->
+            <a href="" class="whatsapp-button">Contato pelo WhatsApp</a>
         </div>
 
+        <!--Inicio das divs suspensas-->
+
+        <div id="modal-baleia" class="modal" style="display: none;">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div class="modal-info">
+                        <h3>Costela e Vértebra de Baleia</h3>
+                        <p>Preço: R$ 250,00</p>
+                        <p>Dimensões: 10cm x 5cm x 2cm</p>
+                    </div>
+                    <span class="close" onclick="toggleModal('modal-baleia')">&times;</span>
+                </div>
+                <div class="modal-body">
+                    <img src="css/imgs/catalogo/baleia-extra-1.jpg" alt="Foto extra 1">
+                    <img src="css/imgs/catalogo/baleia-extra-2.jpg" alt="Foto extra 2">
+                    <img src="css/imgs/catalogo/baleia-extra-3.jpg" alt="Foto extra 3">
+                    <img src="css/imgs/catalogo/baleia-extra-4.jpg" alt="Foto extra 4">
+                    <img src="css/imgs/catalogo/baleia-extra-5.jpg" alt="Foto extra 5">
+                    <img src="css/imgs/catalogo/baleia-extra-6.jpg" alt="Foto extra 6">
+                    <img src="css/imgs/catalogo/baleia-extra-7.jpg" alt="Foto extra 7">
+                    <img src="css/imgs/catalogo/baleia-extra-8.jpg" alt="Foto extra 8">
+                </div>
+                <div style="text-align: center;">
+                    <a href="" class="whatsapp-button">Contato pelo WhatsApp</a>
+                </div>
+            </div>
+        </div>
 
     </main>
     <!-- Fim da Main -->
