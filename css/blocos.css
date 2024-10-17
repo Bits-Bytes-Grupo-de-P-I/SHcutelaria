@@ -44,7 +44,7 @@ a {
     box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25),
     0 10px 10px rgba(0, 0, 0, 0.22);
     transition: .4s;
-    background: var(--fuligem);
+    background-color: var(--fuligem);
     overflow: visible;
     display: flex;
     flex-direction: column;
@@ -91,7 +91,7 @@ h3 {
 p {
     text-align: center;
     color: #d2dec3;
-    font-size: 1rem;
+    font-size: 1.2rem;
     height: 55px;
     overflow: hidden;
 }
