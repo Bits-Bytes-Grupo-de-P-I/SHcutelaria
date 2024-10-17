@@ -166,7 +166,7 @@ h2 {
 .whatsapp-button {
     display: inline-block;
     padding: 0.6rem 1.25rem;
-    background-color: #25D366; /* Cor do WhatsApp */
+    background-color: #25D366; 
     color: var(--carbono);
     text-align: center;
     border-radius: 0.5rem;
@@ -179,18 +179,93 @@ h2 {
     transform: scale(1.04);
 }
 
+/*Estilização das divs suspensas*/
 
-/* @media(max-width: 1000px) {
-    .content {
-        width: 45%;
-    }
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1.25rem;
+    box-sizing: border-box;
 }
 
-@media(max-width: 750px) {
-    .content {
-        width: 40%;
-    }
-} */
+.modal-content {
+    background: url(imgs/textura-damasco.png) no-repeat 50% 20%;
+    background-size: cover;
+    background-color: var(--fuligem);
+    background-blend-mode: overlay;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2), 
+    0 6px 20px rgba(0, 0, 0, 0.19);
+    padding: 1.25rem;
+    border-radius: 0.5rem;
+    max-width: 80%;
+    max-height: 80%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    scrollbar-width: none;
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 1.2rem;
+    border-bottom: 2px solid var(--brasa);
+    padding-bottom: 0.6rem;
+}
+
+.modal-info {
+    flex-grow: 1;
+    margin-right: 0.6rem;
+}
+
+.modal-info h3 {
+    margin: 0.2rem 0;
+    font-size: 1.5em;
+    color: var(--brasa);
+}
+
+.modal-info p {
+    margin: 0.3rem 0;
+    font-size: 1.1em;
+    color: #d3d3cf;
+}
+
+.close {
+    font-size: 1.75rem;
+    font-weight: bold;
+    cursor: pointer;
+    margin-left: 0.6rem;
+    color: var(--brasa);
+}
+
+.modal-body {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.modal-body img {
+    width: 22%;
+    height: auto;
+    transition: transform 0.3s;
+    object-fit: contain;
+    border-radius: 0.5rem;
+}
+
+.modal-body img:hover {
+    transform: scale(1.03);
+}
 
 @media (max-width: 1200px) {
     .content {
@@ -223,6 +298,14 @@ h2 {
 @media (max-width: 768px) {
     .content {
         flex-basis: calc(50% - 1rem); /* 2 cards por linha */
+    }
+
+    .modal-body img {
+        width: 45%; /* Cada imagem ocupa 45% da largura da linha, permitindo 2 por linha */
+    }
+
+    .modal-content {
+        max-width: 95%; /* Aumenta o uso da tela em telas pequenas */
     }
 }
 
@@ -266,4 +349,26 @@ h2 {
     .instructions li {
         font-size: 1.1rem;
     }
-}    
+
+    .modal-info h3 {
+        font-size: 1.2em; /* Tamanho reduzido do título em telas menores */
+    }
+
+    .modal-info p {
+        font-size: 0.9em; /* Tamanho reduzido das informações em telas menores */
+    }
+
+    .close {
+        font-size: 24px; /* Botão "Fechar" menor em telas pequenas */
+    }
+}
+
+@media (max-width: 480px) {
+    .modal-body img {
+        width: 45%; /* Mantém 2 imagens por linha em telas muito pequenas */
+    }
+
+    .close {
+        font-size: 1.5rem; /* Botão "Fechar" menor em telas pequenas */
+    }
+}
