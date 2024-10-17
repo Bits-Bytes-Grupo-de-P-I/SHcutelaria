@@ -7,23 +7,221 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/formulario.css">
+    <link rel="stylesheet" href="css/navbar_footer.css">
+    <link rel="stylesheet" href="css/flickity.css">
+    <script src="js/index.js" defer></script>
+    <script src="js/formulario.js" defer></script>
+    <script src="js/flickity.js" defer></script>
 
 </head>
 <body>
     
     <!-- início da NavBar -->
-    <nav></nav>
+    <nav>
+
+        <div class="logo-nav">
+            <img src="css/imgs/logo-cortada.png" alt="">
+        </div>
+        
+
+        <div class="menu">
+            <ul>
+                <li>
+                    <a href="index.html">
+                        <i class="fa-solid fa-house"></i>
+                        Início
+                    </a>
+                </li>
+                <li>
+                    <a href="formulario.html">
+                        <i class="fa-solid fa-list"></i>
+                        Personalizar
+                    </a>
+                </li>
+                <li>
+                    <a href="blocos.html">
+                        <i class="fa-sharp fa-solid fa-cubes"></i>
+                        Blocos
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <i class="fa-solid fa-hammer"></i>
+                        Restauração
+                    </a>
+                </li>
+                <li> 
+                    <a href="sobre.html">
+                        <i class="fa-duotone fa-solid fa-circle-info"></i>
+                        Sobre
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+
+        <div class="atendimento">
+            <ul>
+                <li class="login">
+                    <a href=""><i class="fa-solid fa-right-to-bracket"></i>
+                        Login
+                    </a>
+                </li>
+                <li class="sac">
+                    <a href=""><i class="fa-solid fa-headset"></i>
+                        SAC
+                    </a>
+                </li>
+            </ul>
+        </div>
+        
+
+        <!-- início do Menu Reduzido -->
+        <div class="navbar-reduzida">
+            
+                <div class="menu-reduzido">
+                    <div class="fechar-menu">
+                        <label for="" onclick="EsconderMenu()"><i class="fa-solid fa-xmark"></i>
+                        </label>
+                    </div>
+                    <ul>
+                        <li>
+                            <a href="">
+                                <i class="fa-solid fa-house"></i>
+                                Início
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <i class="fa-solid fa-list"></i>
+                                Personalizar
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <i class="fa-sharp fa-solid fa-cubes"></i>
+                                Blocos
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <i class="fa-solid fa-hammer"></i>
+                                Restauração
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <i class="fa-duotone fa-solid fa-circle-info"></i>
+                                Sobre
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="atendimento-reduzido">
+                    <ul>
+                        <li class="login-reduzido">
+                            <a href=""><i class="fa-solid fa-right-to-bracket"></i>
+                                Login
+                            </a>
+                        </li>
+                        <li class="sac-reduzido">
+                            <a href=""><i class="fa-solid fa-headset"></i>
+                                SAC
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+        </div>
+        <!-- Fim do Menu Reduzido -->
+
+        <div class="ativar-menu">
+            <label for="" onclick="AtivarMenu()">
+                <i class="fa-solid fa-bars"></i>
+            </label>
+        </div>
+
+    </nav>
     <!-- Fim da NavBar -->
 
 
 
     <!-- Início da Main -->
-    <main></main>
+    <main>
+
+        <form id="selectionForm">
+            <label>
+                <input type="radio" name="material" value="Carbono">
+                <img src="css/imgs/black-cat.jpg" alt="Carbono" class="selectable-image">
+            </label>
+
+            <label>
+                <input type="radio" name="material" value="Damasco">
+                <img src="css/imgs/leopard-cat.jpg" alt="Damasco" class="selectable-image">
+            </label>
+
+            <label>
+                <input type="radio" name="material" value="Aço">
+                <img src="css/imgs/leopard-cat.jpg" alt="Aço" class="selectable-image">
+            </label>
+
+            <button type="button" id="submitBtn">Selecionar</button>
+        </form>
+
+        <div id="result"></div>
+
+    </main>
     <!-- Fim da Main -->
 
     
     <!-- Início do Footer -->
-    <footer></footer>
+    <footer>
+        <div>
+            <h2>Institucional</h2>
+            <ul>
+                <li><a href="">Como comprar</a></li>
+                <li><a href="">Segurança</a></li>
+                <li><a href="">Envio</a></li>
+                <li><a href="">Pagamento</a></li>
+                <li><a href="">Política de privacidade</a></li>
+                <li><a href="">Sobre</a></li>
+                <li><a href="">Fale conosco</a></li>
+            </ul>
+        </div>
+
+        <div>
+            <h2>Serviços</h2>
+            <ul>
+                <li><a href="">Ferramentas personalizadas</a></li>
+                <li><a href="">Catálogo atualizado</a></li>
+                <li><a href="">Restauração de ferramentas</a></li>
+            </ul>
+        </div>
+
+        <div class="logo-footer">
+            <img src="css/imgs/logo.png" alt="Logo da empresa">
+            <p>Desde 2018</p>
+        </div>
+
+        <div>
+            <h2>Redes Socias</h2>
+            <ul>
+                <li><a href=""><i class="fa-brands fa-instagram"></i>SHcutelaria</a></li>
+                <li><a href=""><i class="fa-brands fa-whatsapp"></i>Sérgio SH cutelaria</a></li>
+                <li><a href=""><i class="fa-brands fa-youtube"></i>sergiohonorato353</a></li>
+                <li><a href=""><i class="fa-brands fa-tiktok"></i>SH cutelaria</a></li>
+            </ul>
+        </div>
+
+        <div>
+            <h2>Forma de Pagamento</h2>
+            <ul>
+                <li><i class="fa-brands fa-pix"></i>Pix</li>
+                <li><i class="fa-regular fa-credit-card"></i>Link Cartão</li>
+            </ul>
+        </div>
+    </footer>
     <!-- Fim do Footer -->
     
 

@@ -70,6 +70,12 @@ main {
     color: var(--aluminio);
 }
 
+.logo-nav img {
+    width: 150px; 
+    height: auto; 
+    max-width: 100%;
+}
+
 .ativar-menu {
     display: none;
     font-size: 2.5rem;
