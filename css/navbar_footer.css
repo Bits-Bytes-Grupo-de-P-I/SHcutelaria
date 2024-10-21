@@ -16,7 +16,7 @@
 }
 
 /*EFEITO DE HOVER INCANDESCENTE DO TOPO*/
-.menu a:hover, .sac a:hover, .login a:hover, .sac a:hover, .menu-reduzido a:hover, .atendimento-reduzido a:hover {
+.menu a:hover, .converse a:hover, .login a:hover, .converse a:hover, .menu-reduzido a:hover, .atendimento-reduzido a:hover {
     color: var(--brasa);
     text-shadow: 
                 0 0 20px rgba(255, 69, 0, 1),
@@ -47,9 +47,9 @@ button {
 }
 
 nav {
-    background: url(imgs/textura-damasco.png) no-repeat 50% 20%;
+    background: url(imgs/elementos/textura-damasco.png) no-repeat 50% 20%;
     background-size: cover;
-    background-color: var(--carbono);
+    background-color: var(--fuligem);
     background-blend-mode: overlay; /* Mistura as duas camadas de cor */
     position: relative;
     top: 0;
@@ -90,8 +90,9 @@ main {
 .fechar-menu {
     display: none;
     font-size: 2.5rem;
-    position: absolute;
     padding: 1rem;
+    position: relative;
+    justify-content: flex-end;
 }
 
 .fechar-menu i {
@@ -99,7 +100,7 @@ main {
 }
 
 /*EFEITO DE HOVER INCANDESCENTE DO TOPO*/
-.menu a:hover, .sac a:hover, .login a:hover, .sac a:hover, .menu-reduzido a:hover, .atendimento-reduzido a:hover {
+.menu a:hover, .converse a:hover, .login a:hover, .converse a:hover, .menu-reduzido a:hover, .atendimento-reduzido a:hover {
     color: var(--brasa);
     text-shadow: 
                 0 0 20px rgba(255, 69, 0, 1),
@@ -191,7 +192,7 @@ main {
 /*Estiliação do meu footer*/
 
 footer {
-    background: url(imgs/textura-damasco.png) no-repeat 50% 20%;
+    background: url(imgs/elementos/textura-damasco.png) no-repeat 50% 20%;
     background-size: cover;
     background-color: var(--carbono);
     background-blend-mode: overlay; /* Mistura as duas camadas */
@@ -287,6 +288,7 @@ footer li:hover, footer li:hover a, footer li:hover i {
         padding-bottom: 0.2rem;
     }
 
+
     .atendimento a {
         display: flex;
         justify-content: center;
@@ -381,11 +383,6 @@ footer li:hover, footer li:hover a, footer li:hover i {
         color: var(--incandescente);
     }
 
-    .fechar-menu {
-        display: flex;
-        position: relative;
-        justify-content: flex-end;
-    }
 
     .fechar-menu:hover {
         cursor: pointer;

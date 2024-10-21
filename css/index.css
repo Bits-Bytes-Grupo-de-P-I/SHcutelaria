@@ -117,7 +117,7 @@ main {
     border-radius: 10px;
     border: 1px solid black;
     box-shadow: var(--fuligem) 6px 4.8px 6.4px;
-    background: url(imgs/faca-bainha-de-couro.jpg) no-repeat 50% 70%;
+    background: url(imgs/elementos/faca-bainha-de-couro.jpg) no-repeat 50% 70%;
     background-size: cover;
     margin-bottom: 2rem;
     transition: all 0.3s ease;
@@ -139,7 +139,7 @@ main {
     border-radius: 10px;
     border: 1px solid black;
     box-shadow: var(--fuligem) 6px 4.8px 6.4px;
-    background: url(imgs/blocos-de-cima.jpg) no-repeat 50% 90%;
+    background: url(imgs/elementos/blocos-de-cima.jpg) no-repeat 50% 90%;
     background-size: cover;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     transform-style: preserve-3d; /* Habilita o efeito 3D */
@@ -159,7 +159,7 @@ main {
     border-radius: 10px;
     border: 1px solid black;
     box-shadow: var(--fuligem) 6px 4.8px 6.4px;
-    background: url(imgs/facas-e-blocos.jpg) no-repeat 40% 90%;
+    background: url(imgs/elementos/facas-e-blocos.jpg) no-repeat 40% 90%;
     background-size: cover;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     transform-style: preserve-3d; /* Habilita o efeito 3D */
@@ -226,9 +226,9 @@ main {
     border-radius: 10px;
     border: 1px solid black;
     box-shadow: var(--fuligem) 6px 4.8px 6.4px;
-    background: url(imgs/textura-damasco.png) no-repeat 50% 20%;
+    background: url(imgs/elementos/textura-damasco.png) no-repeat 50% 20%;
     background-size: cover;
-    background-color: var(--carbono);
+    background-color: var(--fuligem);
     background-blend-mode: overlay; /* Mistura as duas camadas de cor */
     transition: all 0.3s ease;
     transform-style: preserve-3d;

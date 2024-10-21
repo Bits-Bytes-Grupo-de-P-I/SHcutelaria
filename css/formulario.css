@@ -38,7 +38,20 @@ button {
 main {
     margin-left: clamp(10rem, 5vw, 15rem);
     margin-right: clamp(10rem, 5vw, 15rem);
-    margin-top: 8rem;
+    margin-top: 5rem;
+    transition: all 0.3s ease-in-out;
+}
+
+.instrucao {
+  font-size: clamp(1.5rem, 2vw, 3rem);
+  text-align: center;
+  margin-bottom: 5rem;
+  color: var(--incandescente);
+}
+
+.instrucao p {
+  color: var(--aluminio);
+  text-transform: uppercase;
 }
 
 form {
@@ -67,7 +80,7 @@ h1 {
 
 .form-opcao {
   border: 2px solid transparent;
-  transition: all 0.3s ease;
+  transition: transition 0.3s ease;
   border-radius: 10px;
   background-color: var(--fuligem);
 }
@@ -94,15 +107,23 @@ h1 {
 input[type="radio"]:checked + .form-opcao{
   color: var(--brasa);
   transition: all 0.3s ease-out;
-  border: 1px solid var(--brasa);
-  box-shadow: 0 0 20px rgba(255, 69, 0, 1), 0 0 30px rgba(255, 69, 0, 0.8), 0 0 40px rgba(255, 69, 0, 0.6);
+  box-shadow: 0 0 20px rgba(255, 103, 0, 0.7), 0 0 40px rgba(255, 103, 0, 0.5), 0 0 60px rgba(255, 103, 0, 0.3);
+  transform: scale(1.05);
+  border: 1px solid var(--incandescente);
 }
 
 input[type="radio"]:checked ~ .texts h3 {
   color: var(--brasa);
-  transition: all 0.3s ease-out;
+  transition: transform 0.3s ease-out;
 }
 
+.estilo-ferramenta {
+  display: none;
+}
+
+.material-bainha {
+  display: none;
+}
 
 #resultado {
   margin-top: 20px;

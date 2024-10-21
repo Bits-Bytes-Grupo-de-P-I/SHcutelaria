@@ -9,9 +9,10 @@
     <link rel="stylesheet" href="css/formulario.css">
     <link rel="stylesheet" href="css/navbar_footer.css">
     <link rel="stylesheet" href="css/flickity.css">
-    <script src="js/index.js" defer></script>
+    <script src="js/navbar.js" defer></script>
     <script src="js/formulario.js" defer></script>
     <script src="js/flickity.js" defer></script>
+
 
 </head>
 <body>
@@ -62,14 +63,9 @@
 
         <div class="atendimento">
             <ul>
-                <li class="login">
-                    <a href=""><i class="fa-solid fa-right-to-bracket"></i>
-                        Login
-                    </a>
-                </li>
-                <li class="sac">
+                <li class="converse">
                     <a href=""><i class="fa-solid fa-headset"></i>
-                        SAC
+                        Converse Conosco
                     </a>
                 </li>
             </ul>
@@ -120,14 +116,9 @@
 
                 <div class="atendimento-reduzido">
                     <ul>
-                        <li class="login-reduzido">
-                            <a href=""><i class="fa-solid fa-right-to-bracket"></i>
-                                Login
-                            </a>
-                        </li>
-                        <li class="sac-reduzido">
+                        <li class="converse">
                             <a href=""><i class="fa-solid fa-headset"></i>
-                                SAC
+                                Converse Conosco
                             </a>
                         </li>
                     </ul>
@@ -150,7 +141,11 @@
     <!-- Início da Main -->
     <main>
 
-
+        <div class="instrucao">
+            <p>
+                Selecione as opções para escolher como você gostaria da sua ferramenta
+            </p>
+        </div>
 
         <h1>Tipo de ferramenta</h1>
         <form id="formulario-1">
@@ -163,7 +158,6 @@
                     </div>
                 </div>
             </label>
-
             <label>
                 <input type="radio" name="material" value="Carbono">
                 <div class="form-opcao">
@@ -173,7 +167,6 @@
                     </div>
                 </div>
             </label>
-
             <label>
                 <input type="radio" name="material" value="Carbono">
                 <div class="form-opcao">
@@ -183,42 +176,40 @@
                     </div>
                 </div>
             </label>
-
         </form>
 
-        <h1>Estilo de ferramenta</h1>
-        <form id="formulario-2">
-            <label>
-                <input type="radio" name="material" value="Carbono">
-                <div class="form-opcao">
-                    <img src="css/imgs/messi.jpg" alt="Carbono">
-                    <div class="texts">
-                        <h3>Messi</h3>
+        <div class="estilo-ferramenta">
+            <h1>Estilo de ferramenta</h1>
+            <form id="formulario-2">
+                <label>
+                    <input type="radio" name="material" value="Carbono">
+                    <div class="form-opcao">
+                        <img src="css/imgs/elementos/messi.jpg" alt="Carbono">
+                        <div class="texts">
+                            <h3>Messi</h3>
+                        </div>
                     </div>
-                </div>
-            </label>
-
-            <label>
-                <input type="radio" name="material" value="Carbono">
-                <div class="form-opcao">
-                    <img src="css/imgs/messi.jpg" alt="Carbono">
-                    <div class="texts">
-                        <h3>Messi</h3>
+                </label>
+                <label>
+                    <input type="radio" name="material" value="Carbono">
+                    <div class="form-opcao">
+                        <img src="css/imgs/elementos/messi.jpg" alt="Carbono">
+                        <div class="texts">
+                            <h3>Messi</h3>
+                        </div>
                     </div>
-                </div>
-            </label>
-
-            <label>
-                <input type="radio" name="material" value="Carbono">
-                <div class="form-opcao">
-                    <img src="css/imgs/messi.jpg" alt="Carbono">
-                    <div class="texts">
-                        <h3>Messi</h3>
+                </label>
+                <label>
+                    <input type="radio" name="material" value="Carbono">
+                    <div class="form-opcao">
+                        <img src="css/imgs/elementos/messi.jpg" alt="Carbono">
+                        <div class="texts">
+                            <h3>Messi</h3>
+                        </div>
                     </div>
-                </div>
-            </label>
-
-        </form>
+                </label>
+            </form>
+        </div>
 
         <h1>Material da lâmina</h1>
         <form id="formulario-3">
@@ -259,7 +250,7 @@
             <label>
                 <input type="radio" name="material" value="Carbono">
                 <div class="form-opcao">
-                    <img src="css/imgs/curly-cat.jpg" alt="Carbono">
+                    <img src="css/imgs/catalogo/curly-cat.jpg" alt="Carbono">
                     <div class="texts">
                         <h3>Curly Mango</h3>
                     </div>
@@ -269,7 +260,7 @@
             <label>
                 <input type="radio" name="material" value="Carbono">
                 <div class="form-opcao">
-                    <img src="css/imgs/baleia-cat.jpg" alt="Carbono">
+                    <img src="css/imgs/catalogo/baleia-cat.jpg" alt="Carbono">
                     <div class="texts">
                         <h3>Vértebra de Baleia</h3>
                     </div>
@@ -279,7 +270,7 @@
             <label>
                 <input type="radio" name="material" value="Carbono">
                 <div class="form-opcao">
-                    <img src="css/imgs/spalted-cat.jpg" alt="Carbono">
+                    <img src="css/imgs/catalogo/spalted-cat.jpg" alt="Carbono">
                     <div class="texts">
                         <h3>Spalted</h3>
                     </div>
@@ -309,43 +300,41 @@
                     </div>
                 </div>
             </label>
-
-
         </form>
 
-            <h1>Tipo de couro ou madeira</h1>
+
+        <div class="material-bainha">
+            <h1>Material da bainha</h1>
             <form id="formulario-6">
-            <label>
-                <input type="radio" name="material" value="Carbono">
-                <div class="form-opcao">
-                    <img src="css/imgs/messi.jpg" alt="Carbono">
-                    <div class="texts">
-                        <h3>Messi</h3>
+                <label>
+                    <input type="radio" name="material" value="Carbono">
+                    <div class="form-opcao">
+                        <img src="css/imgs/elementos/messi.jpg" alt="Carbono">
+                        <div class="texts">
+                            <h3>Messi</h3>
+                        </div>
                     </div>
-                </div>
-            </label>
-
-            <label>
-                <input type="radio" name="material" value="Carbono">
-                <div class="form-opcao">
-                    <img src="css/imgs/messi.jpg" alt="Carbono">
-                    <div class="texts">
-                        <h3>Messi</h3>
+                </label>
+                <label>
+                    <input type="radio" name="material" value="Carbono">
+                    <div class="form-opcao">
+                        <img src="css/imgs/elementos/messi.jpg" alt="Carbono">
+                        <div class="texts">
+                            <h3>Messi</h3>
+                        </div>
                     </div>
-                </div>
-            </label>
-
-            <label>
-                <input type="radio" name="material" value="Carbono">
-                <div class="form-opcao">
-                    <img src="css/imgs/messi.jpg" alt="Carbono">
-                    <div class="texts">
-                        <h3>Messi</h3>
+                </label>
+                <label>
+                    <input type="radio" name="material" value="Carbono">
+                    <div class="form-opcao">
+                        <img src="css/imgs/elementos/messi.jpg" alt="Carbono">
+                        <div class="texts">
+                            <h3>Messi</h3>
+                        </div>
                     </div>
-                </div>
-            </label>
-
-        </form>
+                </label>
+            </form>
+        </div>
 
         <!-- <button type="button" id="resetBtn">Limpar Seleções</button>
 
@@ -382,7 +371,7 @@
         </div>
 
         <div class="logo-footer">
-            <img src="css/imgs/logo.png" alt="Logo da empresa">
+            <img src="css/imgs/elementos/logo.png" alt="Logo da empresa">
             <p>Desde 2018</p>
         </div>
 
