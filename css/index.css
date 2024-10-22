@@ -93,6 +93,10 @@ main {
     overflow: hidden;
   }
 
+.carousel:hover {
+    transform: scale(1.05);
+}
+
 .carousel-cell img {
     width: 18rem;
     height: 22rem;

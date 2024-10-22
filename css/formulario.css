@@ -63,6 +63,7 @@ form {
 label {
   position: relative;
   cursor: pointer;
+  margin-right: 2rem;
 }
 
 input[type="radio"] {
@@ -79,14 +80,14 @@ h1 {
 }
 
 .form-opcao {
-  border: 2px solid var(--fuligem);
+  border: 1px solid var(--fuligem);
   transition: transition 0.3s ease;
   border-radius: 10px;
   background-color: var(--carbono);
 }
 
 .form-opcao:hover {
-  border: 2px solid var(--brasa); /* Efeito de hover */
+  border: 1px solid var(--brasa); /* Efeito de hover */
 }
 
 .form-opcao img {
@@ -106,6 +107,10 @@ h1 {
   border-radius: 0 0 10px 10px;
 }
 
+.estilo-faca, .estilo-cutelo, .estilo-machado, .tipo-couro, .tipo-madeira {
+  display: none;
+}
+
 
 input[type="radio"]:checked + .form-opcao{
   color: var(--brasa);
@@ -115,9 +120,23 @@ input[type="radio"]:checked + .form-opcao{
   border: 1px solid var(--incandescente);
 }
 
-input[type="radio"]:checked ~ .texts h3 {
+input[type="radio"]:checked ~ h3 {
   color: var(--brasa);
   transition: transform 0.3s ease-out;
+}
+
+.carousel {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+  /* background-color: var(--brasa); */
+}
+
+.carousel-cell {
+  margin-right: 2rem;
+  border-radius: 10px;
+  overflow: visible;
+  margin-top: 4rem;
+  margin-bottom: 4rem;
 }
 
 
