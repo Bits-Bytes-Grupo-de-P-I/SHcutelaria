@@ -267,30 +267,21 @@ h2 {
     transform: scale(1.03);
 }
 
-.info-message {
+#info-message {
     position: absolute;
-    top: 40%;
-    left: 50%;
-    transform: translate(-50%, -40%);
+    display: none;
     background-color: #414040;
     border: 1px solid #ccc;
-    border-radius: 0.5rem;
-    padding: 1rem;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    z-index: 1000; 
-    font-size: 0.8rem;
     color: var(--aluminio);
+    padding: 10px;
+    z-index: 1000;
     max-width: 200px;
     height: auto;
-    width: auto;
-    white-space: normal; 
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
 }
 
-#info-icon {
-    color: var(--aluminio);
-}
-
-.info-message button {
+#info-message button {
     background-color: var(--brasa);
     color: #000;
     border: none;
@@ -301,7 +292,7 @@ h2 {
     transition: all 0.3s ease-out;
 }
 
-.info-message button:hover {
+#info-message button:hover {
     box-shadow: 0 0 20px rgba(255, 69, 0, 1), 0 0 30px rgba(255, 69, 0, 0.8), 0 0 40px rgba(255, 69, 0, 0.6); 
     color: var(--aluminio);
 }
