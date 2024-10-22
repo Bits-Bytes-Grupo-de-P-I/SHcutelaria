@@ -189,6 +189,15 @@ main {
     justify-content: space-between;
 }
 
+.btn-whats-fixo {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    max-width: 70px;
+    height: 70px;
+    margin: 20px;
+}
+
 /*Estiliação do meu footer*/
 
 footer {
