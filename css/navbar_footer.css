@@ -193,9 +193,14 @@ main {
     position: fixed;
     bottom: 0;
     right: 0;
-    max-width: 70px;
-    height: 70px;
+    max-width: 60px;
+    height: 60px;
     margin: 20px;
+    transition: transform 0.3s ease;
+}
+
+.btn-whats-fixo:hover {
+    transform: scale(1.1);
 }
 
 /*Estiliação do meu footer*/
@@ -359,6 +364,11 @@ footer li:hover, footer li:hover a, footer li:hover i {
     .logo-footer img {
         width: 120px;
     }
+
+    .btn-whats-fixo {
+        max-width: 50px;
+        height: 50px;
+    }
 }
 
 
@@ -411,6 +421,10 @@ footer li:hover, footer li:hover a, footer li:hover i {
         display: none;
     }
 
+    .btn-whats-fixo {
+        max-width: 40px;
+        height: 40px;
+    }
 
 }
 

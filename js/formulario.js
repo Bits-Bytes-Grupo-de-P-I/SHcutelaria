@@ -1,15 +1,22 @@
-// Função para esconder todos os sub-formulários
+// Função para esconder todos os sub-formulários e limpar as opções
 function hideAllSubForms() {
-  document.querySelector('.estilo-faca').style.display = 'none';
-  document.querySelector('.estilo-cutelo').style.display = 'none';
-  document.querySelector('.estilo-machado').style.display = 'none';
+  const subForms = document.querySelectorAll('.estilo-faca, .estilo-cutelo, .estilo-machado, .tipo-couro, .tipo-madeira');
+  
+  subForms.forEach(form => {
+    form.style.display = 'none';
+    // Limpa as seleções dos inputs dentro do sub-formulário
+    const inputs = form.querySelectorAll('input[type="radio"]');
+    inputs.forEach(input => {
+      input.checked = false;
+    });
+  });
 }
 
-// Adiciona um listener ao formulário principal
+// Adiciona um listener ao formulário principal (formulario-1)
 document.getElementById('formulario-1').addEventListener('change', (event) => {
   // Verifica se o input alterado é do tipo radio
   if (event.target.type === 'radio') {
-      // Esconde todos os sub-formulários
+      // Esconde todos os sub-formulários e limpa suas opções
       hideAllSubForms();
 
       // Pega o valor da opção selecionada e mostra o sub-formulário correspondente
@@ -21,6 +28,24 @@ document.getElementById('formulario-1').addEventListener('change', (event) => {
       }
   }
 });
+
+// Adiciona um listener ao novo formulário principal (formulario-5)
+document.getElementById('formulario-5').addEventListener('change', (event) => {
+  // Verifica se o input alterado é do tipo radio
+  if (event.target.type === 'radio') {
+      // Esconde todos os sub-formulários e limpa suas opções
+      hideAllSubForms();
+
+      // Pega o valor da opção selecionada e mostra o sub-formulário correspondente
+      const selectedValue = event.target.nextElementSibling.querySelector('h3').textContent.toLowerCase();
+      const subFormToShow = document.querySelector(`.tipo-${selectedValue}`);
+      
+      if (subFormToShow) {
+          subFormToShow.style.display = 'block';
+      }
+  }
+});
+
 
 
 

@@ -79,10 +79,10 @@ h1 {
 }
 
 .form-opcao {
-  border: 2px solid transparent;
+  border: 2px solid var(--fuligem);
   transition: transition 0.3s ease;
   border-radius: 10px;
-  background-color: var(--fuligem);
+  background-color: var(--carbono);
 }
 
 .form-opcao:hover {
@@ -101,6 +101,9 @@ h1 {
   font-size: 1.5rem;
   padding: 0.8rem;
   flex-grow: 0;
+  flex-wrap: wrap;
+  background-color: var(--fuligem);
+  border-radius: 0 0 10px 10px;
 }
 
 
@@ -117,21 +120,6 @@ input[type="radio"]:checked ~ .texts h3 {
   transition: transform 0.3s ease-out;
 }
 
-.estilo-faca {
-  display: none;
-}
-
-.estilo-cutelo {
-  display: none;
-}
-
-.estilo-machado {
-  display: none;
-}
-
-.material-bainha {
-  display: none;
-}
 
 #resultado {
   margin-top: 20px;
