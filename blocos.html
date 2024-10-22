@@ -138,13 +138,15 @@
     <!-- Início da Main -->
     <main>
         <h1 class="title">Amostras <i class="fa-sharp fa-solid fa-cubes" style="color: #f05e1b;"></i></h1>
+        <p class="aviso">
+            <strong>Atenção:</strong> As imagens a seguir são exemplos de blocos já produzidos. Os blocos disponíveis para compra podem variar nos materiais exibidos nas amostras e nas cores. Para consultar o catálogo atualizado, entre em contato via <a href="http://" target="_blank" rel="noopener noreferrer">WhatsApp.</a> 
+        </p>
         <div class="gallery">
             <div class="content">
                 <img class="imgCat" src="css/imgs/catalogo/baleia-cat.jpg" alt="">
                 <div class="texts">
                     <h3>Osso de Baleia</h3>
                     <p>Feito a partir de ossos de baleia, tratado e estabilizado em resina.</p>
-                    <!-- <h6>R$ 200,00 - R$ 350,00</h6> -->
                 </div>
                 <button onclick="toggleModal('modal-baleia')">Ver Mais</button>
             </div>
@@ -154,9 +156,8 @@
                 <div class="texts">
                     <h3>Curly Mango</h3>
                     <p>Madeira de mango estabilizada em resina para maior durabilidade.</p>
-                    <!-- <h6>R$ 10,00 - R$ 50,00</h6> -->
                 </div>
-                <button onclick="toggleModal('modal-baleia')">Ver Mais</button>
+                <button onclick="toggleModal('modal-curly')">Ver Mais</button>
             </div>
 
             <div class="content">
@@ -164,7 +165,6 @@
                 <div class="texts">
                     <h3>Black Palm</h3>
                     <p>Palmeira negra estabilizada, ideal para acabamentos únicos.</p>
-                    <!-- <h6>R$ 2,00 - R$ 30,00</h6> -->
                 </div>
                 <button onclick="toggleModal('modal-baleia')">Ver Mais</button>
             </div>
@@ -174,7 +174,6 @@
                 <div class="texts">
                     <h3>Híbrido</h3>
                     <p>Combinação de madeira e resina, oferecendo beleza e resistência.</p>
-                    <!-- <h6>R$ 20,00 - R$ 500,00</h6> -->
                 </div>
                 <button onclick="toggleModal('modal-baleia')">Ver Mais</button>
             </div>
@@ -184,7 +183,6 @@
                 <div class="texts">
                     <h3>Leopard Wood</h3>
                     <p>Madeira de leopard com acabamento estabilizado e exclusivo.</p>
-                    <!-- <h6>R$ 20,00 - R$ 500,00</h6> -->
                 </div>
                 <button onclick="toggleModal('modal-baleia')">Ver Mais</button>
             </div>
@@ -194,7 +192,6 @@
                 <div class="texts">
                     <h3>Resina</h3>
                     <p>Bloco sólido feito inteiramente de resina estabilizada.</p>
-                    <!-- <h6>R$ 20,00 - R$ 500,00</h6> -->
                 </div>
                 <button onclick="toggleModal('modal-baleia')">Ver Mais</button>
             </div>
@@ -204,7 +201,6 @@
                 <div class="texts">
                     <h3>Spalted</h3>
                     <p>Madeira spalted tratada, destacando seus padrões naturais.</p>
-                    <!-- <h6>R$ 20,00 - R$ 500,00</h6> -->
                 </div>
                 <button onclick="toggleModal('modal-baleia')">Ver Mais</button>
             </div>
@@ -214,7 +210,6 @@
                 <div class="texts">
                     <h3>Spalted</h3>
                     <p>Madeira spalted tratada, destacando seus padrões naturais.</p>
-                    <!-- <h6>R$ 20,00 - R$ 500,00</h6> -->
                 </div>
                 <button>Ver Mais</button>
             </div>
@@ -240,13 +235,48 @@
                 <div class="modal-header">
                     <div class="modal-info">
                         <h3>Costela e Vértebra de Baleia</h3>
+                        <p>Preço: R$ 225,00</p>
+                        <p>
+                            Dimensões: 30 x 52 x 140mm 
+                            <i id="info-icon" class="fas fa-info-circle info-icon" onclick="toggleInfo()"></i>
+                        </p>
+                    </div>
+                    <span class="close" onclick="toggleModal('modal-baleia')">&times;</span>
+                </div>
+                <div class="modal-body">
+                    <img src="css/imgs/catalogo/baleia-extra-1.jpg" alt="Foto bloco estabilizado baleia extra 1">
+                    <img src="css/imgs/catalogo/baleia-extra-2.jpg" alt="Foto bloco estabilizado baleia extra 2">
+                    <img src="css/imgs/catalogo/baleia-extra-3.jpg" alt="Foto bloco estabilizado baleia extra 3">
+                    <img src="css/imgs/catalogo/baleia-extra-4.jpg" alt="Foto bloco estabilizado baleia extra 4">
+                    <img src="css/imgs/catalogo/baleia-extra-5.jpg" alt="Foto bloco estabilizado baleia extra 5">
+                    <img src="css/imgs/catalogo/baleia-extra-6.jpg" alt="Foto bloco estabilizado baleia extra 6">
+                    <img src="css/imgs/catalogo/baleia-extra-7.jpg" alt="Foto bloco estabilizado baleia extra 7">
+                    <img src="css/imgs/catalogo/baleia-extra-8.jpg" alt="Foto bloco estabilizado baleia extra 8">
+                </div>
+                <div style="text-align: center;">
+                    <a href="" class="whatsapp-button">Contato pelo WhatsApp</a>
+                </div>
+            </div>
+
+            <div id="info-message" class="info-message" style="display: none;">
+                <p>Medidas padrão que podem ter variações.</p>
+                <button onclick="closeInfo()">Entendi</button>
+            </div>
+
+        </div>
+
+        <div id="modal-curly" class="modal" style="display: none;">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div class="modal-info">
+                        <h3>Curly Mango Estabilizado</h3>
                         <p>Preço: R$ 250,00</p>
                         <p>
                             Dimensões: 10cm x 5cm x 2cm 
                             <i id="info-icon" class="fas fa-info-circle info-icon" onclick="toggleInfo()"></i>
                         </p>
                     </div>
-                    <span class="close" onclick="toggleModal('modal-baleia')">&times;</span>
+                    <span class="close" onclick="toggleModal('modal-curly')">&times;</span>
                 </div>
                 <div class="modal-body">
                     <img src="css/imgs/catalogo/baleia-extra-1.jpg" alt="Foto extra 1">

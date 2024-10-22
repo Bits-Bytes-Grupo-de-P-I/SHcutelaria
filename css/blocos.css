@@ -8,10 +8,6 @@
     --incandescente: #be4811;
 }
 
-a {
-    text-decoration: none;
-}
-
 .title  {
     margin-top: 1.5rem;
     text-align: start;
@@ -20,6 +16,24 @@ a {
     display: inline-block;
     border-bottom: 2px solid var(--brasa);
     padding-bottom: 0.2rem;
+}
+
+.aviso {
+    margin-top: 0.8rem;
+    max-width: 800px;
+    height: auto;
+    text-align: start;
+    font-size: 1.2rem;
+}
+
+.aviso strong {
+    color: var(--brasa);
+}
+
+.aviso a {
+    text-transform: uppercase;
+    color: #25D366;
+    text-decoration: underline;
 }
 
 .gallery {
@@ -267,6 +281,7 @@ h2 {
     font-size: 0.8rem;
     color: var(--aluminio);
     max-width: 200px;
+    height: auto;
     width: auto;
     white-space: normal; 
 }
@@ -321,6 +336,10 @@ h2 {
 
     .title {
         margin-top: 0.7rem;
+    }
+
+    .aviso {
+        font-size: 1.1rem;
     }
 
     .gallery {
