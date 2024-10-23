@@ -57,34 +57,39 @@ function hideAllSubForms() {
 
 
   function enviarWhatsApp() {
-    const tipoFerramenta = document.querySelector('input[name="tipo-ferramenta"]:checked')?.value;
-    const facaEstilo = document.querySelector('input[name="faca-estilo"]:checked')?.value;
-    const cuteloEstilo = document.querySelector('input[name="cutelo-estilo"]:checked')?.value;
-    const machadoEstilo = document.querySelector('input[name="machado-estilo"]:checked')?.value;
-    const materialLamina = document.querySelector('input[name="material-lamina"]:checked')?.value;
-    const materialCabo = document.querySelector('input[name="material-cabo"]:checked')?.value;
-    const tipoBainha = document.querySelector('input[name="tipo-bainha"]:checked')?.value;
-    const couroTipo = document.querySelector('input[name="couro-tipo"]:checked')?.value;
-    const madeiraTipo = document.querySelector('input[name="madeira-tipo"]:checked')?.value;
+    // Obtém os valores selecionados nos formulários
+    const tipoFerramenta = document.querySelector('input[name="tipo-ferramenta"]:checked').value;
+    const facaEstilo = document.querySelector('input[name="faca-estilo"]:checked')?.value || 'N/A';
+    const cuteloEstilo = document.querySelector('input[name="cutelo-estilo"]:checked')?.value || 'N/A';
+    const machadoEstilo = document.querySelector('input[name="machado-estilo"]:checked')?.value || 'N/A';
+    const materialLamina = document.querySelector('input[name="material-lamina"]:checked').value;
+    const materialCabo = document.querySelector('input[name="material-cabo"]:checked').value;
+    const tipoBainha = document.querySelector('input[name="tipo-bainha"]:checked').value;
+    const couroTipo = document.querySelector('input[name="couro-tipo"]:checked')?.value || 'N/A';
+    const madeiraTipo = document.querySelector('input[name="madeira-tipo"]:checked')?.value || 'N/A';
 
     // Monta a mensagem
-    let mensagem = `Olá! Gostaria de fazer um pedido:\n\n`;
-    if (tipoFerramenta) mensagem += `Tipo de ferramenta: ${tipoFerramenta}\n`;
-    if (facaEstilo) mensagem += `Estilo de faca: ${facaEstilo}\n`;
-    if (cuteloEstilo) mensagem += `Estilo de cutelo: ${cuteloEstilo}\n`;
-    if (machadoEstilo) mensagem += `Estilo de machado: ${machadoEstilo}\n`;
-    if (materialLamina) mensagem += `Material da lâmina: ${materialLamina}\n`;
-    if (materialCabo) mensagem += `Material do cabo: ${materialCabo}\n`;
-    if (tipoBainha) mensagem += `Tipo de bainha: ${tipoBainha}\n`;
-    if (couroTipo) mensagem += `Tipo de couro: ${couroTipo}\n`;
-    if (madeiraTipo) mensagem += `Tipo de madeira: ${madeiraTipo}\n`;
+    const mensagem = `
+        Tipo de Ferramenta: ${tipoFerramenta}
+        Estilo de Faca: ${facaEstilo}
+        Estilo de Cutelo: ${cuteloEstilo}
+        Estilo de Machado: ${machadoEstilo}
+        Material da Lâmina: ${materialLamina}
+        Material do Cabo: ${materialCabo}
+        Tipo de Bainha: ${tipoBainha}
+        Tipo de Couro: ${couroTipo}
+        Tipo de Madeira: ${madeiraTipo}
+    `;
 
-    const telefone = "553499443790"; // seu número de telefone no formato correto
-    const urlWhatsApp = `whatsapp://send?phone=${telefone}&text=${encodeURIComponent(mensagem)}`;
+    // Formata a mensagem para URL
+    const mensagemFormatada = encodeURIComponent(mensagem);
+    const numeroTelefone = '553499443790';
+    const linkWhatsApp = `whatsapp://send?phone=${numeroTelefone}&text=${mensagemFormatada}`;
 
-    // Abre o link no WhatsApp Desktop
-    window.open(urlWhatsApp, '_blank');
+    // Abre o link do WhatsApp
+    window.location.href = linkWhatsApp;
 }
+
 
 
 
