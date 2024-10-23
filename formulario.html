@@ -148,18 +148,10 @@
             </p>
         </div>
 
-        <!-- TESTE -->
-
-        <!-- Carrossel Flickity -->
-
-        
-
-         <!-- TESTE -->
-        
         <h1>Tipo de ferramenta</h1>
         <form id="formulario-1">
             <label>
-                <input type="radio" name="material" value="Carbono">
+                <input type="radio" name="tipo-ferramenta" value="Faca" required>
                 <div class="form-opcao">
                     <img src="css/imgs/formulario/faca.jpg" alt="">
                     <div class="texts">
@@ -167,17 +159,19 @@
                     </div>
                 </div>
             </label>
+            
             <label>
-                <input type="radio" name="material" value="Carbono">
+                <input type="radio" name="tipo-ferramenta" value="Cutelo" required>
                 <div class="form-opcao">
                     <img src="css/imgs/formulario/cutelo.png" alt="cutelo">
                     <div class="texts">
                         <h3>Cutelo</h3>
                     </div>
                 </div>
-            </label>
+            </label>      
+            
             <label>
-                <input type="radio" name="material" value="Carbono">
+                <input type="radio" name="tipo-ferramenta" value="Machado" required>
                 <div class="form-opcao">
                     <img src="css/imgs/formulario/machado.jpg" alt="machado">
                     <div class="texts">
@@ -191,7 +185,7 @@
             <h1>Estilo de faca</h1>
             <form>
                 <label>
-                    <input type="radio" name="material" value="Carbono">
+                    <input type="radio" name="faca-estilo" value="Chef" required>
                     <div class="form-opcao">
                         <img src="css/imgs/elementos/messi.jpg" alt="Carbono">
                         <div class="texts">
@@ -200,7 +194,7 @@
                     </div>
                 </label>
                 <label>
-                    <input type="radio" name="material" value="Carbono">
+                    <input type="radio" name="faca-estilo" value="Combate" required>
                     <div class="form-opcao">
                         <img src="css/imgs/elementos/messi.jpg" alt="Carbono">
                         <div class="texts">
@@ -209,7 +203,7 @@
                     </div>
                 </label>
                 <label>
-                    <input type="radio" name="material" value="Carbono">
+                    <input type="radio" name="faca-estilo" value="Japonesa" required>
                     <div class="form-opcao">
                         <img src="css/imgs/elementos/messi.jpg" alt="Carbono">
                         <div class="texts">
@@ -224,7 +218,7 @@
             <h1>Estilo de cutelo</h1>
             <form>
                 <label>
-                    <input type="radio" name="material" value="Carbono">
+                    <input type="radio" name="cutelo-estilo" value="Chinês" required>
                     <div class="form-opcao">
                         <img src="css/imgs/elementos/messi.jpg" alt="Carbono">
                         <div class="texts">
@@ -233,7 +227,7 @@
                     </div>
                 </label>
                 <label>
-                    <input type="radio" name="material" value="Carbono">
+                    <input type="radio" name="cutelo-estilo" value="Ocidental" required>
                     <div class="form-opcao">
                         <img src="css/imgs/elementos/messi.jpg" alt="Carbono">
                         <div class="texts">
@@ -248,7 +242,7 @@
             <h1>Estilo de machado</h1>
             <form>
                 <label>
-                    <input type="radio" name="material" value="Carbono">
+                    <input type="radio" name="machado-estilo" value="Lenhador" required>
                     <div class="form-opcao">
                         <img src="css/imgs/elementos/messi.jpg" alt="Carbono">
                         <div class="texts">
@@ -257,7 +251,7 @@
                     </div>
                 </label>
                 <label>
-                    <input type="radio" name="material" value="Carbono">
+                    <input type="radio" name="machado-estilo" value="Corte" required>
                     <div class="form-opcao">
                         <img src="css/imgs/elementos/messi.jpg" alt="Carbono">
                         <div class="texts">
@@ -266,7 +260,7 @@
                     </div>
                 </label>
                 <label>
-                    <input type="radio" name="material" value="Carbono">
+                    <input type="radio" name="machado-estilo" value="Tático" required>
                     <div class="form-opcao">
                         <img src="css/imgs/elementos/messi.jpg" alt="Carbono">
                         <div class="texts">
@@ -280,7 +274,7 @@
         <h1>Material da lâmina</h1>
         <form id="formulario-3">
             <label>
-                <input type="radio" name="material" value="Carbono">
+                <input type="radio" name="material-lamina" value="Aço" required>
                 <div class="form-opcao">
                     <img src="css/imgs/formulario/aço.jpg" alt="Carbono">
                     <div class="texts">
@@ -290,7 +284,7 @@
             </label>
 
             <label>
-                <input type="radio" name="material" value="Carbono">
+                <input type="radio" name="material-lamina" value="Carbono" required>
                 <div class="form-opcao">
                     <img src="css/imgs/formulario/carbono.jpg" alt="Carbono">
                     <div class="texts">
@@ -300,7 +294,7 @@
             </label>
 
             <label>
-                <input type="radio" name="material" value="Carbono">
+                <input type="radio" name="material-lamina" value="Damasco" required>
                 <div class="form-opcao">
                     <img src="css/imgs/formulario/damasco.jpg" alt="Carbono">
                     <div class="texts">
@@ -311,15 +305,32 @@
 
         </form>
 
-        <h1 style="margin-bottom: -5rem;">Material do cabo</h1>
+        <h1>Material do cabo</h1>
 
-            <div class="carousel" data-flickity='{"wrapAround": true, "freeScroll": true, "pageDots": false, "adaptiveHeight": true}'>
+        <h4>
+            AVISO: A cor dos blocos pode ser totalmente customizada, por isso, consulte a página <a href="blocos.html">Blocos</a>  para mais informações
+        </h4>
+            
+
+            <div class="carousel" data-flickity='{"wrapAround": true, "freeScroll": true, "pageDots": false, "prevNextButtons": true }'>
 
                 <div class="carousel-cell">
                     <label>
-                        <input type="radio" name="material" value="Carbono">
+                        <input type="radio" name="material-cabo" value="Osso de Baleia" required>
                         <div class="form-opcao">
-                            <img src="css/imgs/catalogo/curly-cat.jpg" alt="Carbono">
+                            <img src="css/imgs/catalogo/baleia-extra-2.jpg" alt="osso de baleia">
+                            <div class="texts">
+                                <h3>Osso de Baleia</h3>
+                            </div>
+                        </div>
+                    </label>
+                </div>
+            
+                <div class="carousel-cell">
+                    <label>
+                        <input type="radio" name="material-cabo" value="Curly Mango" required>
+                        <div class="form-opcao">
+                            <img src="css/imgs/catalogo/curly-extra-1.jpg" alt="curly mango">
                             <div class="texts">
                                 <h3>Curly Mango</h3>
                             </div>
@@ -329,11 +340,11 @@
             
                 <div class="carousel-cell">
                     <label>
-                        <input type="radio" name="material" value="Carbono">
+                        <input type="radio" name="material-cabo" value="Black Palm" required>
                         <div class="form-opcao">
-                            <img src="css/imgs/catalogo/baleia-cat.jpg" alt="Carbono">
+                            <img src="css/imgs/catalogo/black-extra-1.jpg" alt="black palm">
                             <div class="texts">
-                                <h3>Vértebra de Baleia</h3>
+                                <h3>Black Palm</h3>
                             </div>
                         </div>
                     </label>
@@ -341,11 +352,11 @@
             
                 <div class="carousel-cell">
                     <label>
-                        <input type="radio" name="material" value="Carbono">
+                        <input type="radio" name="material-cabo" value="Híbrido" required>
                         <div class="form-opcao">
-                            <img src="css/imgs/catalogo/spalted-cat.jpg" alt="Carbono">
+                            <img src="css/imgs/catalogo/hibrido-extra-2.jpg" alt="híbrido">
                             <div class="texts">
-                                <h3>Spalted</h3>
+                                <h3>Híbrido</h3>
                             </div>
                         </div>
                     </label>
@@ -353,11 +364,11 @@
             
                 <div class="carousel-cell">
                     <label>
-                        <input type="radio" name="material" value="Carbono">
+                        <input type="radio" name="material-cabo" value="Leopard Wood" required>
                         <div class="form-opcao">
-                            <img src="css/imgs/catalogo/spalted-cat.jpg" alt="Carbono">
+                            <img src="css/imgs/catalogo/leopard-extra-1.jpg" alt="leopard wood">
                             <div class="texts">
-                                <h3>Spalted</h3>
+                                <h3>Leopard Wood</h3>
                             </div>
                         </div>
                     </label>
@@ -365,11 +376,11 @@
             
                 <div class="carousel-cell">
                     <label>
-                        <input type="radio" name="material" value="Carbono">
+                        <input type="radio" name="material-cabo" value="Resina" required>
                         <div class="form-opcao">
-                            <img src="css/imgs/catalogo/spalted-cat.jpg" alt="Carbono">
+                            <img src="css/imgs/catalogo/resina-extra-4.jpg" alt="resina">
                             <div class="texts">
-                                <h3>Spalted</h3>
+                                <h3>Resina</h3>
                             </div>
                         </div>
                     </label>
@@ -377,33 +388,9 @@
             
                 <div class="carousel-cell">
                     <label>
-                        <input type="radio" name="material" value="Carbono">
+                        <input type="radio" name="material-cabo" value="Spalted" required>
                         <div class="form-opcao">
-                            <img src="css/imgs/catalogo/spalted-cat.jpg" alt="Carbono">
-                            <div class="texts">
-                                <h3>Spalted</h3>
-                            </div>
-                        </div>
-                    </label>
-                </div>
-            
-                <div class="carousel-cell">
-                    <label>
-                        <input type="radio" name="material" value="Carbono">
-                        <div class="form-opcao">
-                            <img src="css/imgs/catalogo/spalted-cat.jpg" alt="Carbono">
-                            <div class="texts">
-                                <h3>Spalted</h3>
-                            </div>
-                        </div>
-                    </label>
-                </div>
-            
-                <div class="carousel-cell">
-                    <label>
-                        <input type="radio" name="material" value="Carbono">
-                        <div class="form-opcao">
-                            <img src="css/imgs/catalogo/spalted-cat.jpg" alt="Carbono">
+                            <img src="css/imgs/catalogo/spalted-extra-13.jpg" alt="spalted">
                             <div class="texts">
                                 <h3>Spalted</h3>
                             </div>
@@ -416,7 +403,7 @@
         <h1>Tipo de bainha</h1>
         <form id="formulario-5">
             <label>
-                <input type="radio" name="material" value="Carbono">
+                <input type="radio" name="tipo-bainha" value="Couro" required>
                 <div class="form-opcao">
                     <img src="css/imgs/formulario/couro.jpg" alt="Carbono">
                     <div class="texts">
@@ -426,7 +413,7 @@
             </label>
 
             <label>
-                <input type="radio" name="material" value="Carbono">
+                <input type="radio" name="tipo-bainha" value="Madeira" required>
                 <div class="form-opcao">
                     <img src="css/imgs/formulario/madeira.jpg" alt="Carbono">
                     <div class="texts">
@@ -441,7 +428,7 @@
             <h1>Tipo de couro</h1>
             <form>
                 <label>
-                    <input type="radio" name="material" value="Carbono">
+                    <input type="radio" name="couro-tipo" value="Boto" required>
                     <div class="form-opcao">
                         <img src="css/imgs/elementos/messi.jpg" alt="Carbono">
                         <div class="texts">
@@ -450,7 +437,7 @@
                     </div>
                 </label>
                 <label>
-                    <input type="radio" name="material" value="Carbono">
+                    <input type="radio" name="couro-tipo" value="Rosa" required>
                     <div class="form-opcao">
                         <img src="css/imgs/elementos/messi.jpg" alt="Carbono">
                         <div class="texts">
@@ -465,7 +452,7 @@
             <h1>Tipo de madeira</h1>
             <form>
                 <label>
-                    <input type="radio" name="material" value="Carbono">
+                    <input type="radio" name="madeira-tipo" value="Menino de pau" required>
                     <div class="form-opcao">
                         <img src="css/imgs/elementos/messi.jpg" alt="Carbono">
                         <div class="texts">
@@ -474,20 +461,20 @@
                     </div>
                 </label>
                 <label>
-                    <input type="radio" name="material" value="Carbono">
+                    <input type="radio" name="madeira-tipo" value="Menino" required>
                     <div class="form-opcao">
                         <img src="css/imgs/elementos/messi.jpg" alt="Carbono">
                         <div class="texts">
-                            <h3>Menino de pau</h3>
+                            <h3>Menino</h3>
                         </div>
                     </div>
                 </label>
             </form>
         </div>
 
-        <!-- <button type="button" id="resetBtn">Limpar Seleções</button>
+        <!-- <button type="button" id="resetBtn">Limpar Seleções</button>  -->
 
-        <button type="button" id="submitBtn">Selecionar</button> -->
+        <button type="button" id="enviarWhatsApp" onclick="enviarWhatsApp()">Selecionar</button>
 
         <div id="resultado"></div>
 
@@ -505,6 +492,7 @@
 
     </main>
     <!-- Fim da Main -->
+
 
     <a class="btn-whats-fixo" href=""><img src="css/imgs/elementos/whatsapp.png" alt=""></a>
     

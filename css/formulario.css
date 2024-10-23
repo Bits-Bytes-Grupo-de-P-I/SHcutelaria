@@ -56,19 +56,23 @@ main {
 
 form {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     margin-bottom: 6rem;
   }
   
 label {
   position: relative;
   cursor: pointer;
-  margin-right: 2rem;
+}
+
+label:not(:last-child) {
+  margin-right: 3rem;
 }
 
 input[type="radio"] {
   display: none; /* Esconde os botões de rádio */
 }
+
 
 h1 {
   font-size: clamp(2.3rem, 2vw, 3rem);
@@ -79,11 +83,31 @@ h1 {
   font-weight: bold;
 }
 
+h4 {
+  text-decoration: none;
+  font-style: italic;
+  text-align: center;
+  color: var(--aluminio);
+  font-size: clamp(0.8rem, 2vw, 1.5rem);
+  z-index: 2;
+  margin-top: -1rem;
+}
+
+h4 a {
+  text-decoration: underline;
+  color: var(--brasa);
+}
+
+h4 a:hover {
+  color: var(--incandescente);
+}
+
 .form-opcao {
   border: 1px solid var(--fuligem);
   transition: transition 0.3s ease;
   border-radius: 10px;
   background-color: var(--carbono);
+  position: relative;
 }
 
 .form-opcao:hover {
@@ -105,6 +129,16 @@ h1 {
   flex-wrap: wrap;
   background-color: var(--fuligem);
   border-radius: 0 0 10px 10px;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  width: 20rem;
+}
+
+.texts i {
+  margin-left: 1rem;
+  margin-top: auto;
+  margin-bottom: auto;
 }
 
 .estilo-faca, .estilo-cutelo, .estilo-machado, .tipo-couro, .tipo-madeira {
@@ -120,23 +154,21 @@ input[type="radio"]:checked + .form-opcao{
   border: 1px solid var(--incandescente);
 }
 
-input[type="radio"]:checked ~ h3 {
+input[type="radio"]:checked + .form-opcao .texts h3 {
   color: var(--brasa);
   transition: transform 0.3s ease-out;
 }
 
+
 .carousel {
-  padding-top: 5rem;
-  padding-bottom: 5rem;
   /* background-color: var(--brasa); */
 }
 
 .carousel-cell {
-  margin-right: 2rem;
+  margin-right: 3rem;
   border-radius: 10px;
   overflow: visible;
-  margin-top: 4rem;
-  margin-bottom: 4rem;
+  padding: 4rem 0;
 }
 
 
@@ -146,7 +178,7 @@ input[type="radio"]:checked ~ h3 {
   font-weight: bold;
 }
 
-/* Intrucções de como personalizar que eu roubei do Bernardo */
+/* Instruções de como personalizar que eu roubei do Bernardo */
 
 .container-instructions {
   max-width: 800px;
@@ -209,10 +241,13 @@ h2 {
   height: 16rem;
 }
 
+.texts {
+  width: 14rem;
 }
 
+}
 
-/* 1120px = 66rem */
+/* 1120px = 70rem */
 
 @media (max-width: 70rem) { /* Menu reduzido */
 
@@ -220,13 +255,22 @@ h2 {
 
 }
 
-/* 768px = 48rem */
+/* 896px = 56rem */
 
 @media (max-width: 50rem) {
+
+h1 {
+  font-size: 2rem;
+}
 
 .form-opcao img {
   width: 10rem;
   height: 12rem;
+}
+
+.texts {
+  font-size: 1rem;
+  width: 10rem;
 }
 
 }
