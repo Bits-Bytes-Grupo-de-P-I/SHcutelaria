@@ -79,13 +79,11 @@ function hideAllSubForms() {
     if (couroTipo) mensagem += `Tipo de couro: ${couroTipo}\n`;
     if (madeiraTipo) mensagem += `Tipo de madeira: ${madeiraTipo}\n`;
 
-    // Formata a mensagem para URL
-    const mensagemFormatada = encodeURIComponent(mensagem);
-    const numeroTelefone = '553499443790'; // Número de telefone no formato antigo
-    const linkWhatsApp = `https://api.whatsapp.com/send?phone=${numeroTelefone}&text=${mensagemFormatada}`;
+    const telefone = "553499443790"; // seu número de telefone no formato correto
+    const urlWhatsApp = `whatsapp://send?phone=${telefone}&text=${encodeURIComponent(mensagem)}`;
 
-    // Abre o link do WhatsApp
-    window.open(linkWhatsApp, '_blank');
+    // Abre o link no WhatsApp Desktop
+    window.open(urlWhatsApp, '_blank');
 }
 
 
