@@ -66,11 +66,16 @@ form {
   background-blend-mode: overlay;
   border-radius: 10px;
   padding: 3rem;
-  border: 1px solid var(--fuligem);
-  }
+  border: 2px solid var(--fuligem);
+  box-shadow: rgba(0, 0, 0, 0.7) 0px 5px 15px;
+}
   
+form:hover {
+  transition: all 0.3s ease-in-out;
+  border-radius: 0;
+}
+
 label {
-  position: relative;
   cursor: pointer;
   border-radius: 10px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.7);
@@ -124,7 +129,6 @@ h4 a:hover {
   transition: transition 0.3s ease;
   border-radius: 10px;
   background-color: var(--carbono);
-  position: relative;
 }
 
 .form-opcao:hover {
@@ -136,6 +140,7 @@ h4 a:hover {
   height: 26rem;
   border-radius: 10px 10px 0 0;
   transition: all 0.3s ease;
+  object-fit: cover;
 }
 
 .texts {
@@ -146,7 +151,6 @@ h4 a:hover {
   background-color: var(--fuligem);
   display: flex;
   justify-content: center;
-  position: relative;
   width: 24rem;
   border-radius: 0 0 8px 8px;
 }
@@ -184,7 +188,13 @@ input[type="radio"]:checked + .form-opcao .texts h3 {
   background-color: var(--fuligem);
   background-blend-mode: overlay;
   border-radius: 10px;
-  border: 1px solid var(--fuligem);
+  border: 2px solid var(--fuligem);
+  box-shadow: rgba(0, 0, 0, 0.7) 5px 10px 30px;
+}
+
+.carousel:hover {
+  transition: all 0.3s ease-in-out;
+  border-radius: 0;
 }
 
 .carousel-cell {
@@ -193,18 +203,6 @@ input[type="radio"]:checked + .form-opcao .texts h3 {
   padding: 2rem 0;
 }
 
-.carousel-cell label {
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.7);
-}
-
-.carousel-cell:hover label {
-  transition: all 0.3s ease-in-out;
-  transform: translate(0px, -8px);
-}
-
-.carousel-cell .texts {
-  border-radius: 0 0 10px 10px;
-}
 
 .btn-enviar {
   display: flex;
@@ -315,12 +313,6 @@ input[type="radio"]:checked + .form-opcao .texts h3 {
   color: var(--brasa);
 }
 
-#resultado {
-  margin-top: 20px;
-  font-size: 18px;
-  font-weight: bold;
-}
-
 /* Instruções de como personalizar que eu roubei do Bernardo */
 
 .container-instructions {
@@ -372,6 +364,8 @@ h2 {
 .whatsapp-button:hover {
   transform: scale(1.04);
 }
+
+/* Media Queries */
 
 /* 1760px = ? */
 

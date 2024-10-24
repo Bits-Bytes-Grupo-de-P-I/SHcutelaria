@@ -1,0 +1,83 @@
+* {
+    color: var(--aluminio);
+    font-family: 'PLAYFAIR';
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --fuligem: #161616;
+    --carbono: #232323;
+    --cinza: #383838;
+    --prata: #C0C0C0;
+    --aluminio: #D0D5DB;
+    --brasa: #F05E1B;
+    --incandescente: #be4811;
+}
+
+body {
+    background-color: var(--carbono);
+    box-sizing: border-box;
+    min-height: 100vh;
+}
+
+main {
+  margin-top: 5rem;
+}
+
+/* Instruções de como personalizar que eu roubei do Bernardo */
+
+.container-instructions {
+    margin: 0 auto 0 auto;
+    max-width: 70%;
+  }
+  
+  h2 {
+    font-size: 2rem;
+    color: var(--aluminio);
+    border-bottom: 2px solid var(--brasa);
+    padding-bottom: 0.5rem;
+    text-align: center;
+  }
+  
+  .instructions {
+    list-style-type: decimal;
+    padding-left: 1.25rem;
+    margin: 1.5rem 0;
+  }
+  
+  .instructions li {
+    margin: 0.7rem 0;
+    line-height: 1.5;
+    font-size: 1.3rem;
+  }
+  
+  .instructions strong {
+    color: var(--brasa);
+  }
+  
+  .instructions li::marker {
+    color: var(--brasa); 
+    font-weight: bold; 
+    font-size: 1.4rem;
+  }
+  
+  .whatsapp-button {
+    display: block;
+    min-width: 40%;
+    max-width: 45%;
+    padding: 0.6rem 1.25rem;
+    background-color: #25D366; 
+    color: var(--carbono);
+    text-align: center;
+    border-radius: 0.5rem;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: clamp(1.5rem, 2vw, 1.8rem);
+    transition: transform 0.4s ease;
+    margin: 3rem auto 0 auto;
+  }
+  
+  .whatsapp-button:hover {
+    transform: scale(1.04);
+  }
