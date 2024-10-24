@@ -3,6 +3,7 @@
     font-family: 'PLAYFAIR';
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 :root {
@@ -55,17 +56,17 @@ main {
 }
 
 form {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    margin-bottom: 12rem;
-    background: url(imgs/elementos/textura-damasco.png) no-repeat 50% 20%;
-    background-size: cover;
-    background-color: var(--fuligem);
-    background-blend-mode: overlay;
-    border-radius: 10px;
-    padding: 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 12rem;
+  background: url(imgs/elementos/textura-damasco.png) no-repeat 50% 20%;
+  background-size: cover;
+  background-color: var(--fuligem);
+  background-blend-mode: overlay;
+  border-radius: 10px;
+  padding: 3rem;
+  border: 1px solid var(--fuligem);
   }
   
 label {
@@ -75,25 +76,13 @@ label {
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.7);
 }
 
-/* Efeito de hover para a label */
 label:hover {
   transition: all 0.3s ease-in-out;
   transform: translate(0px, -8px);
 }
 
-/* Remove o efeito de hover quando o input estiver marcado */
-label input[type="radio"]:checked:hover {
-  transform: none;
-  transition: none;
-}
-
-/* Impede que a label tenha o efeito de hover quando o input estiver marcado */
-label input[type="radio"]:checked + label:hover {
-  transform: none;
-}
-
 label:not(:last-child) {
-  margin-right: 3rem;
+  margin-right: 5rem;
 }
 
 input[type="radio"] {
@@ -143,15 +132,14 @@ h4 a:hover {
 }
 
 .form-opcao img {
-  width: 20rem;
-  height: 22rem;
+  width: 24rem;
+  height: 26rem;
   border-radius: 10px 10px 0 0;
   transition: all 0.3s ease;
 }
 
 .texts {
   text-align: center;
-  font-size: 1.5rem;
   padding: 0.8rem;
   flex-grow: 0;
   flex-wrap: wrap;
@@ -159,14 +147,11 @@ h4 a:hover {
   display: flex;
   justify-content: center;
   position: relative;
-  width: 20rem;
+  width: 24rem;
   border-radius: 0 0 8px 8px;
 }
-
-.texts i {
-  margin-left: 1rem;
-  margin-top: auto;
-  margin-bottom: auto;
+.texts h3 {
+  font-size: clamp(1.5rem, 2vw, 2rem);
 }
 
 .estilo-faca, .estilo-cutelo, .estilo-machado, .tipo-couro, .tipo-madeira {
@@ -202,23 +187,22 @@ input[type="radio"]:checked + .form-opcao .texts h3 {
   border: 1px solid var(--fuligem);
 }
 
-.carousel .carousel-cell {
+.carousel-cell {
   margin-right: 3rem;
   overflow: visible;
-  padding: 3rem 0;
+  padding: 2rem 0;
 }
 
-.carousel .carousel-cell label {
+.carousel-cell label {
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.7);
 }
 
-.carousel .carousel-cell:hover label {
+.carousel-cell:hover label {
   transition: all 0.3s ease-in-out;
   transform: translate(0px, -8px);
 }
 
-
-.carousel .carousel-cell .texts {
+.carousel-cell .texts {
   border-radius: 0 0 10px 10px;
 }
 
@@ -264,7 +248,9 @@ input[type="radio"]:checked + .form-opcao .texts h3 {
 }
 
 .icones-btn-whats {
-  display: flex; /* Altera para flex para manter ícones em linha */
+  display: flex;
+  justify-content: center;
+  align-items: center; /* Altera para flex para manter ícones em linha */
   transform: translateX(30px); /* Mantém os ícones fora da área visível */
   opacity: 0;
   position: absolute;
@@ -311,9 +297,10 @@ input[type="radio"]:checked + .form-opcao .texts h3 {
   background-blend-mode: overlay;
   color: var(--brasa);
   border-radius: 10px;
-  margin: 15% auto;
+  margin: 20% auto;
   font-size: clamp(1.5rem, 2vw, 2.5rem);
   text-align: center;
+  font-weight: bold;
   padding: 2rem 1rem;
   max-width: 40%;
   border: 1px solid var(--fuligem);
@@ -386,10 +373,21 @@ h2 {
   transform: scale(1.04);
 }
 
+/* 1760px = ? */
+
+@media (max-width: 1760px) {
+  main {
+    margin-left: 2rem !important;
+    margin-right: 2rem !important;
+  }
+}
+
+
 /* 1488px = 93rem */
 
 @media (max-width: 93rem) {
   
+
 .form-opcao img {
   width: 18rem;
   height: 20rem;
@@ -401,24 +399,14 @@ h2 {
 
 }
 
-/* 134px = 84rem */
-
-@media (max-width: 93rem) {
-  
-.form-opcao img {
-  width: 16rem;
-  height: 18rem;
-}
-
-.texts {
-  width: 16rem;
-}
-
-}
-
 /* 1264px = 79rem */
 
 @media (max-width: 79rem) {
+
+main {
+  margin-left: 1rem !important;
+  margin-right: 1rem !important;
+}
 
 .form-opcao img {
   width: 14rem;
@@ -451,10 +439,32 @@ h1 {
 
 }
 
+/* 1008px = 63rem */
+
+@media (max-width: 63rem) {
+  
+form {
+  width: 100%;
+  flex-wrap: nowrap;
+  padding: 2rem;
+  padding-left: 4rem;
+  overflow-x: scroll;
+  gap: 3rem;
+}
+
+label {
+  margin: 0 !important;
+}
+
+form label {
+  scroll-snap-type: x mandatory;
+}
+
+}
+
 /* 896px = 56rem */
 
 @media (max-width: 50rem) {
-
 
 
 
