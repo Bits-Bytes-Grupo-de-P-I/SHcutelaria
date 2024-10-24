@@ -217,7 +217,7 @@
         <div class="estilo-cutelo">
             <h1>Estilo de cutelo</h1>
             <form>
-                <label>
+                <label style="margin-right: 10rem;">
                     <input type="radio" name="cutelo-estilo" value="Chinês" required>
                     <div class="form-opcao">
                         <img src="css/imgs/elementos/messi.jpg" alt="Carbono">
@@ -402,7 +402,7 @@
 
         <h1>Tipo de bainha</h1>
         <form id="formulario-5">
-            <label>
+            <label style="margin-right: 10rem;">
                 <input type="radio" name="tipo-bainha" value="Couro" required>
                 <div class="form-opcao">
                     <img src="css/imgs/formulario/couro.jpg" alt="Carbono">
@@ -427,7 +427,7 @@
         <div class="tipo-couro">
             <h1>Tipo de couro</h1>
             <form>
-                <label>
+                <label style="margin-right: 10rem;">
                     <input type="radio" name="couro-tipo" value="Boto" required>
                     <div class="form-opcao">
                         <img src="css/imgs/elementos/messi.jpg" alt="Carbono">
@@ -451,7 +451,7 @@
         <div class="tipo-madeira">
             <h1>Tipo de madeira</h1>
             <form>
-                <label>
+                <label style="margin-right: 10rem;">
                     <input type="radio" name="madeira-tipo" value="Menino de pau" required>
                     <div class="form-opcao">
                         <img src="css/imgs/elementos/messi.jpg" alt="Carbono">
@@ -474,7 +474,14 @@
 
         <!-- <button type="button" id="resetBtn">Limpar Seleções</button>  -->
 
-        <button type="button" id="enviarWhatsApp" onclick="enviarWhatsApp()">Selecionar</button>
+        <div class="btn-enviar">
+            <button type="button" onclick="enviarWhatsApp()">
+                Enviar 
+                <span class="icone-btn-whats">
+                    <i class="fa-brands fa-whatsapp"></i>
+                </span>
+            </button>
+        </div>
 
         <div id="resultado"></div>
 
@@ -494,7 +501,9 @@
     <!-- Fim da Main -->
 
 
-    <a class="btn-whats-fixo" href=""><img src="css/imgs/elementos/whatsapp.png" alt=""></a>
+    <a class="btn-whats-fixo" href="">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
     
     <!-- Início do Footer -->
     <footer>

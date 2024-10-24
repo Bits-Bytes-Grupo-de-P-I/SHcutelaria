@@ -196,7 +196,7 @@ main {
     padding-bottom: 0.5rem;
 }
 
-.explorar-card button, .ri {
+.explorar-card button {
     font-weight: bold;
     font-size: clamp(0.8rem, 2vw, 2rem);
     padding: 1rem;

@@ -1,6 +1,6 @@
 * {
     color: var(--aluminio);
-    font-family: 'PLAYFAIR';
+    font-family: 'PLAYFAIR', serif;
     margin: 0;
     padding: 0;
 }
@@ -193,10 +193,13 @@ main {
     position: fixed;
     bottom: 0;
     right: 0;
-    max-width: 60px;
-    height: 60px;
+    font-size: 3rem;
     margin: 20px;
     transition: transform 0.3s ease;
+}
+
+.btn-whats-fixo i {
+    color: var(--brasa);
 }
 
 .btn-whats-fixo:hover {
@@ -216,6 +219,7 @@ footer {
     justify-content: space-between;
     padding: 1.8rem 10rem;
     font-size: clamp(0.7rem, 2vw, 1.3rem);
+    border-top: 1px solid var(--fuligem);
 }
 
 .logo-footer p {

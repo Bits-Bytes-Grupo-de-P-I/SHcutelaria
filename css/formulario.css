@@ -45,7 +45,7 @@ main {
 .instrucao {
   font-size: clamp(1.5rem, 2vw, 3rem);
   text-align: center;
-  margin-bottom: 5rem;
+  margin-bottom: 10rem;
   color: var(--incandescente);
 }
 
@@ -57,12 +57,35 @@ main {
 form {
     display: flex;
     justify-content: center;
-    margin-bottom: 6rem;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 12rem;
+    background-color: var(--fuligem);
+    border-radius: 10px;
+    padding: 5rem;
   }
   
 label {
   position: relative;
   cursor: pointer;
+  border-radius: 10px;
+}
+
+/* Efeito de hover para a label */
+label:hover {
+  transition: all 0.3s ease-in-out;
+  transform: translate(0px, -8px);
+}
+
+/* Remove o efeito de hover quando o input estiver marcado */
+label input[type="radio"]:checked:hover {
+  transform: none;
+  transition: none;
+}
+
+/* Impede que a label tenha o efeito de hover quando o input estiver marcado */
+label input[type="radio"]:checked + label:hover {
+  transform: none;
 }
 
 label:not(:last-child) {
@@ -127,12 +150,15 @@ h4 a:hover {
   padding: 0.8rem;
   flex-grow: 0;
   flex-wrap: wrap;
+  background: url(imgs/elementos/textura-damasco.png) no-repeat;
+  background-size: cover;
   background-color: var(--fuligem);
-  border-radius: 0 0 10px 10px;
+  background-blend-mode: overlay; /* Mistura as duas camadas de cor */
   display: flex;
   justify-content: center;
   position: relative;
   width: 20rem;
+  border-radius: 0 0 8px 8px;
 }
 
 .texts i {
@@ -161,16 +187,64 @@ input[type="radio"]:checked + .form-opcao .texts h3 {
 
 
 .carousel {
-  /* background-color: var(--brasa); */
+  margin-bottom: 12rem;
+  background-color: var(--fuligem);
+  border-radius: 10px;
+  border: 1px solid var(--fuligem);
 }
 
 .carousel-cell {
   margin-right: 3rem;
-  border-radius: 10px;
   overflow: visible;
-  padding: 4rem 0;
+  padding: 3rem 0;
 }
 
+.carousel-cell:hover {
+  transition: all 0.3s ease-in-out;
+  transform: translate(0px, -8px);
+}
+
+.carousel-cell .texts {
+  border-radius: 0 0 10px 10px;
+}
+
+.btn-enviar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 5rem;
+}
+
+.btn-enviar button {
+  font-weight: bold;
+  font-size: clamp(1.5rem, 2vw, 2.5rem);
+  padding: 2rem;
+  background-color: var(--brasa);
+  border: 1px solid black;
+  color: var(--fuligem);
+  border-radius: 10px;
+}
+
+.btn-enviar span {
+  padding-left: 1rem;
+}
+
+.btn-enviar i {
+  color: var(--fuligem);
+  transition: all 0.3s ease-out;
+}
+
+.btn-enviar button:hover {
+  background-color: #f15217;
+  color: var(--aluminio);
+  transition: all 0.3s ease-out;
+  border: 1px solid var(--brasa);
+  box-shadow: 0 0 20px rgba(255, 69, 0, 1), 0 0 30px rgba(255, 69, 0, 0.8), 0 0 40px rgba(255, 69, 0, 0.6);
+}
+
+.btn-enviar button:hover .icone-btn-whats i {
+  color: var(--aluminio);
+}
 
 #resultado {
   margin-top: 20px;
@@ -230,12 +304,40 @@ h2 {
   transform: scale(1.04);
 }
 
+/* 1488px = 93rem */
 
+@media (max-width: 93rem) {
+  
+.form-opcao img {
+  width: 18rem;
+  height: 20rem;
+}
+
+.texts {
+  width: 18rem;
+}
+
+}
+
+/* 134px = 84rem */
+
+@media (max-width: 93rem) {
+  
+.form-opcao img {
+  width: 16rem;
+  height: 18rem;
+}
+
+.texts {
+  width: 16rem;
+}
+
+}
 
 /* 1264px = 79rem */
 
 @media (max-width: 79rem) {
-  
+
 .form-opcao img {
   width: 14rem;
   height: 16rem;
@@ -251,7 +353,19 @@ h2 {
 
 @media (max-width: 70rem) { /* Menu reduzido */
 
+h1 {
+  font-size: 2rem;
+}
 
+.form-opcao img {
+  width: 14rem;
+  height: 16rem;
+}
+
+.texts {
+  font-size: 1rem;
+  width: 14rem;
+}
 
 }
 
@@ -259,18 +373,7 @@ h2 {
 
 @media (max-width: 50rem) {
 
-h1 {
-  font-size: 2rem;
-}
 
-.form-opcao img {
-  width: 10rem;
-  height: 12rem;
-}
 
-.texts {
-  font-size: 1rem;
-  width: 10rem;
-}
 
 }
