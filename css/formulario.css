@@ -37,10 +37,10 @@ button {
 
 
 main {
-    margin-left: clamp(10rem, 5vw, 15rem);
-    margin-right: clamp(10rem, 5vw, 15rem);
-    margin-top: 5rem;
-    transition: all 0.3s ease-in-out;
+  margin-left: clamp(10rem, 5vw, 15rem);
+  margin-right: clamp(10rem, 5vw, 15rem);
+  margin-top: 5rem;
+  transition: all 0.3s ease-in-out;
 }
 
 .instrucao {
@@ -210,8 +210,8 @@ input[type="radio"]:checked + .form-opcao .texts h3 {
   align-items: center;
   margin: 0 auto 5rem auto;
   font-weight: bold;
-  font-size: clamp(3rem, 2vw, 4rem);
-  padding: 2rem;
+  font-size: clamp(2rem, 2vw, 4rem);
+  padding: 0.5rem;
   background-color: var(--brasa);
   border: 1px solid black;
   color: var(--fuligem);
@@ -220,7 +220,7 @@ input[type="radio"]:checked + .form-opcao .texts h3 {
   overflow: hidden;
   white-space: nowrap;
   transition: background-color 0.4s ease, transform 0.4s ease; /* Transições */
-  width: 30%;
+  width: 25%;
 }
 
 .btn-enviar span {
@@ -242,7 +242,6 @@ input[type="radio"]:checked + .form-opcao .texts h3 {
 
 .btn-enviar:hover span {
   display: inline-flex;
-  padding-right: 35px; /* Aumenta o padding do texto */
 }
 
 .icones-btn-whats {
@@ -317,6 +316,8 @@ input[type="radio"]:checked + .form-opcao .texts h3 {
 
 .container-instructions {
   max-width: 800px;
+  margin-left: clamp(5rem, 5vw, 15rem);
+  margin-right: clamp(5rem, 5vw, 15rem);
 }
 
 h2 {
@@ -358,6 +359,7 @@ h2 {
   border-radius: 0.5rem;
   text-decoration: none;
   font-weight: bold;
+  font-size: 1.2rem;
   transition: transform 0.4s ease;
 }
 
