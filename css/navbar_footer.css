@@ -202,8 +202,9 @@ main {
     color: var(--brasa);
 }
 
-.btn-whats-fixo:hover {
-    transform: scale(1.1);
+.btn-whats-fixo:hover, .btn-whats-fixo:hover i {
+    text-shadow: 0 0 20px rgba(255, 69, 0, 1), 0 0 30px rgba(255, 69, 0, 0.8), 0 0 40px rgba(255, 69, 0, 0.6);
+    transform: scale(1.05);
 }
 
 /*Estiliação do meu footer*/

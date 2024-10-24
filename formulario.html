@@ -66,7 +66,7 @@
             <ul>
                 <li class="converse">
                     <a href=""><i class="fa-solid fa-headset"></i>
-                        Converse Conosco
+                        Fale Conosco
                     </a>
                 </li>
             </ul>
@@ -137,7 +137,13 @@
     </nav>
     <!-- Fim da NavBar -->
 
-
+    <!-- Container para a mensagem de aviso -->
+    <div id="aviso" class="aviso" style="display: none;">
+        <div class="conteudo-aviso">
+            <span id="fechar" class="fechar" onclick="fecharAviso()">✖</span>
+            Por favor, selecione UMA opção em cada menu de seleção.
+        </div>
+    </div>
 
     <!-- Início da Main -->
     <main>
@@ -183,7 +189,7 @@
 
         <div class="estilo-faca">
             <h1>Estilo de faca</h1>
-            <form>
+            <form id="formulario-2">
                 <label>
                     <input type="radio" name="faca-estilo" value="Chef" required>
                     <div class="form-opcao">
@@ -216,7 +222,7 @@
 
         <div class="estilo-cutelo">
             <h1>Estilo de cutelo</h1>
-            <form>
+            <form id="formulario-3">
                 <label style="margin-right: 10rem;">
                     <input type="radio" name="cutelo-estilo" value="Chinês" required>
                     <div class="form-opcao">
@@ -240,7 +246,7 @@
 
         <div class="estilo-machado">
             <h1>Estilo de machado</h1>
-            <form>
+            <form id="formulario-4">
                 <label>
                     <input type="radio" name="machado-estilo" value="Lenhador" required>
                     <div class="form-opcao">
@@ -272,7 +278,7 @@
         </div>
 
         <h1>Material da lâmina</h1>
-        <form id="formulario-3">
+        <form id="formulario-5">
             <label>
                 <input type="radio" name="material-lamina" value="Aço" required>
                 <div class="form-opcao">
@@ -312,7 +318,7 @@
         </h4>
             
 
-            <div class="carousel" data-flickity='{"wrapAround": true, "freeScroll": true, "pageDots": false, "prevNextButtons": true }'>
+            <div class="carousel" id="formulario-6" data-flickity='{"wrapAround": true, "freeScroll": true, "pageDots": false, "prevNextButtons": true }'>
 
                 <div class="carousel-cell">
                     <label>
@@ -401,7 +407,7 @@
             </div>
 
         <h1>Tipo de bainha</h1>
-        <form id="formulario-5">
+        <form id="formulario-7">
             <label style="margin-right: 10rem;">
                 <input type="radio" name="tipo-bainha" value="Couro" required>
                 <div class="form-opcao">
@@ -426,7 +432,7 @@
 
         <div class="tipo-couro">
             <h1>Tipo de couro</h1>
-            <form>
+            <form id="formulario-8">
                 <label style="margin-right: 10rem;">
                     <input type="radio" name="couro-tipo" value="Boto" required>
                     <div class="form-opcao">
@@ -450,7 +456,7 @@
 
         <div class="tipo-madeira">
             <h1>Tipo de madeira</h1>
-            <form>
+            <form id="formulario-9">
                 <label style="margin-right: 10rem;">
                     <input type="radio" name="madeira-tipo" value="Menino de pau" required>
                     <div class="form-opcao">
@@ -474,16 +480,15 @@
 
         <!-- <button type="button" id="resetBtn">Limpar Seleções</button>  -->
 
-        <div class="btn-enviar">
-            <button type="button" onclick="enviarWhatsApp()">
-                Enviar 
-                <span class="icone-btn-whats">
-                    <i class="fa-brands fa-whatsapp"></i>
-                </span>
-            </button>
-        </div>
+        <!-- Botão de enviar pro whatsapp -->
+        <button type="button" class="btn-enviar" onclick="enviarWhatsApp()">
+            Enviar
+            <span class="icones-btn-whats">
+                <i class="fa-solid fa-arrow-right seta"></i>
+                <i class="fa-brands fa-whatsapp"></i>
+            </span>
+        </button>
 
-        <div id="resultado"></div>
 
         <div class="container-instructions">
             <h2>Como personalizar sua ferramenta</h2>

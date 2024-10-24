@@ -239,6 +239,10 @@ h2 {
     color: #d3d3cf;
 }
 
+.modal-info i:hover {
+    cursor: pointer;
+} 
+
 .close {
     font-size: 1.75rem;
     font-weight: bold;
@@ -271,7 +275,7 @@ h2 {
     position: absolute;
     display: none;
     background-color: #414040;
-    border: 1px solid #ccc;
+    border: 1px solid var(--fuligem);
     color: var(--aluminio);
     padding: 10px;
     z-index: 1000;

@@ -60,7 +60,10 @@ form {
     align-items: center;
     flex-wrap: wrap;
     margin-bottom: 12rem;
+    background: url(imgs/elementos/textura-damasco.png) no-repeat 50% 20%;
+    background-size: cover;
     background-color: var(--fuligem);
+    background-blend-mode: overlay;
     border-radius: 10px;
     padding: 5rem;
   }
@@ -69,6 +72,7 @@ label {
   position: relative;
   cursor: pointer;
   border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.7);
 }
 
 /* Efeito de hover para a label */
@@ -114,6 +118,7 @@ h4 {
   font-size: clamp(0.8rem, 2vw, 1.5rem);
   z-index: 2;
   margin-top: -1rem;
+  margin-bottom: 1rem;
 }
 
 h4 a {
@@ -150,10 +155,7 @@ h4 a:hover {
   padding: 0.8rem;
   flex-grow: 0;
   flex-wrap: wrap;
-  background: url(imgs/elementos/textura-damasco.png) no-repeat;
-  background-size: cover;
   background-color: var(--fuligem);
-  background-blend-mode: overlay; /* Mistura as duas camadas de cor */
   display: flex;
   justify-content: center;
   position: relative;
@@ -180,31 +182,43 @@ input[type="radio"]:checked + .form-opcao{
   border: 1px solid var(--incandescente);
 }
 
+input[type="radio"]:checked + .form-opcao .texts {
+  background-color: var(--brasa);
+}
+
 input[type="radio"]:checked + .form-opcao .texts h3 {
-  color: var(--brasa);
+  color: var(--fuligem);
   transition: transform 0.3s ease-out;
 }
 
 
 .carousel {
   margin-bottom: 12rem;
+  background: url(imgs/elementos/textura-damasco.png) no-repeat 50% 20%;
+  background-size: cover;
   background-color: var(--fuligem);
+  background-blend-mode: overlay;
   border-radius: 10px;
   border: 1px solid var(--fuligem);
 }
 
-.carousel-cell {
+.carousel .carousel-cell {
   margin-right: 3rem;
   overflow: visible;
   padding: 3rem 0;
 }
 
-.carousel-cell:hover {
+.carousel .carousel-cell label {
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.7);
+}
+
+.carousel .carousel-cell:hover label {
   transition: all 0.3s ease-in-out;
   transform: translate(0px, -8px);
 }
 
-.carousel-cell .texts {
+
+.carousel .carousel-cell .texts {
   border-radius: 0 0 10px 10px;
 }
 
@@ -212,38 +226,106 @@ input[type="radio"]:checked + .form-opcao .texts h3 {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: 5rem;
-}
-
-.btn-enviar button {
+  margin: 0 auto 5rem auto;
   font-weight: bold;
-  font-size: clamp(1.5rem, 2vw, 2.5rem);
+  font-size: clamp(3rem, 2vw, 4rem);
   padding: 2rem;
   background-color: var(--brasa);
   border: 1px solid black;
   color: var(--fuligem);
   border-radius: 10px;
+  position: relative;
+  overflow: hidden;
+  white-space: nowrap;
+  transition: background-color 0.4s ease, transform 0.4s ease; /* Transições */
+  width: 30%;
 }
 
 .btn-enviar span {
-  padding-left: 1rem;
+  cursor: pointer;
+  display: none; /* Usa inline-flex para manter o conteúdo em linha e centralizar */
+  align-items: center; /* Centraliza verticalmente os ícones e texto */
+  position: relative;
+  transition: padding-right 0.5s; /* Transição para o padding */
 }
 
-.btn-enviar i {
+.btn-enviar:hover {
+  background: url(imgs/elementos/textura-damasco.png) no-repeat 50% 20%;
+  background-size: cover;
+  background-color: var(--fuligem);
+  background-blend-mode: overlay;
+  transform: scale(1.02);
+  color: var(--brasa);
+}
+
+.btn-enviar:hover span {
+  display: inline-flex;
+  padding-right: 35px; /* Aumenta o padding do texto */
+}
+
+.icones-btn-whats {
+  display: flex; /* Altera para flex para manter ícones em linha */
+  transform: translateX(30px); /* Mantém os ícones fora da área visível */
+  opacity: 0;
+  position: absolute;
+  transition: transform 0.3s ease, opacity 0.3s ease; /* Transições para os ícones */
+}
+
+.icones-btn-whats i {
   color: var(--fuligem);
-  transition: all 0.3s ease-out;
+  padding-left: 1rem;
+  font-size: clamp(2rem, 2vw, 3rem);
 }
 
-.btn-enviar button:hover {
-  background-color: #f15217;
-  color: var(--aluminio);
-  transition: all 0.3s ease-out;
-  border: 1px solid var(--brasa);
-  box-shadow: 0 0 20px rgba(255, 69, 0, 1), 0 0 30px rgba(255, 69, 0, 0.8), 0 0 40px rgba(255, 69, 0, 0.6);
+.btn-enviar:hover .icones-btn-whats {
+  transform: translateX(0); /* Desliza os ícones para dentro */
+  opacity: 1; /* Torna os ícones visíveis */
 }
 
-.btn-enviar button:hover .icone-btn-whats i {
-  color: var(--aluminio);
+.btn-enviar:hover .icones-btn-whats i {
+  display: inline;
+  color: var(--brasa);
+}
+
+.seta {
+  margin: auto 0 auto 0;
+  font-size: clamp(0.8rem, 2vw, 1.8rem);
+}
+
+.aviso {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.4);
+}
+
+.conteudo-aviso {
+  position: relative;
+  background: url(imgs/elementos/textura-damasco.png) no-repeat 50% 20%;
+  background-size: cover;
+  background-color: var(--fuligem);
+  background-blend-mode: overlay;
+  color: var(--brasa);
+  border-radius: 10px;
+  margin: 15% auto;
+  font-size: clamp(1.5rem, 2vw, 2.5rem);
+  text-align: center;
+  padding: 2rem 1rem;
+  max-width: 40%;
+  border: 1px solid var(--fuligem);
+}
+
+.fechar {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 2rem;
+  cursor: pointer;
+  color: var(--brasa);
 }
 
 #resultado {
