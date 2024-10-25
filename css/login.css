@@ -1,0 +1,95 @@
+* {
+    color: var(--aluminio);
+    font-family: 'PLAYFAIR', serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --fuligem: #161616;
+    --carbono: #232323;
+    --cinza: #383838;
+    --prata: #C0C0C0;
+    --aluminio: #D0D5DB;
+    --brasa: #F05E1B;
+    --incandescente: #be4811;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--carbono);
+    box-sizing: border-box;
+    min-height: 100vh;
+}
+
+.container-login {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+    padding: 5rem;
+    background: url(imgs/elementos/textura-damasco.png) no-repeat 50% 20%;
+    background-size: cover;
+    background-color: var(--fuligem);
+    background-blend-mode: overlay;
+    border-radius: 10px;
+}
+
+form {
+
+}
+
+.container-login h1 {
+    text-align: center;
+    color: var(--aluminio);
+}
+
+.dados {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    color: var(--aluminio);
+    font-size: 1.5rem;
+}
+
+input[type="text"], input[type="password"] {
+    width: 100%;
+    padding: 1rem;
+    margin-top: 5px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    
+}
+
+input::placeholder {
+
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    color: #fff;
+    background-color: #4CAF50;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+.entrar {
+    display: block;
+    text-align: center;
+    margin-top: 10px;
+    color: #555;
+    font-size: 14px;
+}
