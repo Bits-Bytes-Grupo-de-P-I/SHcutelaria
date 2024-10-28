@@ -25,6 +25,9 @@
     <link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet" href="css/navbar_footer.css">
     <link rel="stylesheet" href="css/flickity.css">
+    <link rel="stylesheet" href="css/fonte/fonte.css">
+
+    <script src="js/index.js" defer></script>
     <script src="js/navbar.js" defer></script>
     <script src="js/flickity.js" defer></script>
 
@@ -79,7 +82,8 @@
             <div class="atendimento">
                 <ul>
                     <li class="converse">
-                        <a href="login.html"><i class="fa-solid fa-headset"></i>
+                        <a href="login.html">
+                            <i class="fa-solid fa-headset"></i>
                             Fale Conosco
                         </a>
                     </li>
@@ -252,33 +256,39 @@
         <!-- Início Área Serviços -->    
                 
 
-            <div class="rifa-titulo">
-                <h1>Concorra a uma faca grátis!</h1>
-            </div>
             <div class="rifa">
+
+                <div class="rifa-titulo">
+                    <h1>Concorra a uma faca grátis!</h1>
+                    <h2>Tempo até o fim do sorteio</h2>
+                </div>
+
+                <div class="timer" id="timer">00:00:00
+                </div>
 
                 <div class="rifa-conteudo">
 
                     <div class="rifa-imagem">
-                        <img src="css/imgs/elementos/messi.jpg" alt="">
+                        <img src="css/imgs/formulario/faca.jpg" alt="">
                     </div>
 
                     <div class="rifa-info">
-                        <p style="font-size: clamp(1.2rem, 2vw, 2.5rem)">Tempo até o fim do sorteio<br>00:00:00
-                        </p>
-                        <p style="text-align: start;">Faca do estilo: ""</p>
-                        <p style="text-align: start;">Tamanho:  ""</p>
-                        <p style="text-align: start;">Material da lâmina:  ""</p>
-                        <p style="text-align: start;">Material do cabo:  ""</p>
-                        <p style="text-align: start;">Material da bainha:  ""</p>
+                        <p>Faca do estilo: ""</p>
+                        <p>Tamanho:  ""</p>
+                        <p>Material da lâmina:  ""</p>
+                        <p>Material do cabo:  ""</p>
+                        <p>Material da bainha:  ""</p>
                     </div>
 
                 </div>
 
-                <div class="rifa-botao">
-                    <a href="#"><button>Participar do sorteio</button>
-                    </a>
-                </div>
+                <button type="button" class="btn-enviar">
+                    Participar
+                    <span class="icones-btn-whats">
+                        <i class="fa-solid fa-arrow-right seta"></i>
+                        <i class="fa-brands fa-whatsapp"></i>
+                    </span>
+                </button>
 
             </div>
 

@@ -46,7 +46,7 @@ main {
 .instrucao {
   font-size: clamp(1.5rem, 2vw, 3rem);
   text-align: center;
-  margin-bottom: 10rem;
+  margin-bottom: 5rem;
   color: var(--incandescente);
 }
 
@@ -59,7 +59,7 @@ form {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: 12rem;
+  margin-bottom: 6rem;
   background: url(imgs/elementos/textura-damasco.png) no-repeat 50% 20%;
   background-size: cover;
   background-color: var(--fuligem);
@@ -98,10 +98,10 @@ input[type="radio"] {
 h1 {
   font-size: clamp(2.3rem, 2vw, 3rem);
   text-align: center;
-  margin-bottom: 2rem;
   color: var(--brasa);
   text-transform: uppercase;
   font-weight: bold;
+  margin-bottom: 1rem;
 }
 
 h4 {
@@ -109,8 +109,7 @@ h4 {
   font-style: italic;
   text-align: center;
   color: var(--aluminio);
-  font-size: clamp(0.8rem, 2vw, 1.5rem);
-  z-index: 2;
+  font-size: clamp(0.8rem, 2vw, 1.3rem);
   margin-top: -1rem;
   margin-bottom: 1rem;
 }
@@ -136,8 +135,8 @@ h4 a:hover {
 }
 
 .form-opcao img {
-  width: 24rem;
-  height: 26rem;
+  width: 22rem;
+  height: 22rem;
   border-radius: 10px 10px 0 0;
   transition: all 0.3s ease;
   object-fit: cover;
@@ -151,7 +150,7 @@ h4 a:hover {
   background-color: var(--fuligem);
   display: flex;
   justify-content: center;
-  width: 24rem;
+  width: 22rem;
   border-radius: 0 0 8px 8px;
 }
 .texts h3 {
@@ -182,7 +181,7 @@ input[type="radio"]:checked + .form-opcao .texts h3 {
 
 
 .carousel {
-  margin-bottom: 12rem;
+  margin-bottom: 6rem;
   background: url(imgs/elementos/textura-damasco.png) no-repeat 50% 20%;
   background-size: cover;
   background-color: var(--fuligem);
@@ -202,7 +201,6 @@ input[type="radio"]:checked + .form-opcao .texts h3 {
   overflow: visible;
   padding: 2rem 0;
 }
-
 
 .btn-enviar {
   display: flex;
@@ -228,16 +226,19 @@ input[type="radio"]:checked + .form-opcao .texts h3 {
   display: none; /* Usa inline-flex para manter o conteúdo em linha e centralizar */
   align-items: center; /* Centraliza verticalmente os ícones e texto */
   position: relative;
-  transition: padding-right 0.5s; /* Transição para o padding */
+  transition: padding-right 0.5s ease-in-out; /* Transição para o padding */
 }
 
 .btn-enviar:hover {
-  background: url(imgs/elementos/textura-damasco.png) no-repeat 50% 20%;
+  /* background: url(imgs/elementos/textura-damasco.png) no-repeat 50% 20%;
   background-size: cover;
   background-color: var(--fuligem);
-  background-blend-mode: overlay;
+  background-blend-mode: overlay; */
+  background-color: #f15217;
+  color: var(--aluminio);
+  border: 1px solid var(--brasa);
+  box-shadow: 0 0 20px rgba(255, 69, 0, 1), 0 0 30px rgba(255, 69, 0, 0.8), 0 0 40px rgba(255, 69, 0, 0.6);
   transform: scale(1.02);
-  color: var(--brasa);
 }
 
 .btn-enviar:hover span {
@@ -251,7 +252,7 @@ input[type="radio"]:checked + .form-opcao .texts h3 {
   transform: translateX(30px); /* Mantém os ícones fora da área visível */
   opacity: 0;
   position: absolute;
-  transition: transform 0.3s ease, opacity 0.3s ease; /* Transições para os ícones */
+  transition: all 0.3s ease-in-out /* Transições para os ícones */
 }
 
 .icones-btn-whats i {
@@ -267,12 +268,12 @@ input[type="radio"]:checked + .form-opcao .texts h3 {
 
 .btn-enviar:hover .icones-btn-whats i {
   display: inline;
-  color: var(--brasa);
+  color: var(--aluminio);
 }
 
-.seta {
+.icones-btn-whats .seta {
   margin: auto 0 auto 0;
-  font-size: clamp(0.8rem, 2vw, 1.8rem);
+  font-size: clamp(0.8rem, 2vw, 1.8rem)
 }
 
 .aviso {

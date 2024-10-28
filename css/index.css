@@ -47,6 +47,7 @@ main {
     margin-bottom: 6rem;
     width: 100%;
     overflow: hidden;
+    max-height: 600px;
 }
 
 
@@ -105,7 +106,7 @@ main {
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
-    margin-top: 5rem;
+    margin: 5rem 0;
 }
 
 .card-cutelaria {
@@ -122,6 +123,7 @@ main {
     transition: all 0.3s ease;
     transform-style: preserve-3d; /* Habilita o efeito 3D */ /*O chat disse que era pra deixar tudo do mesmo tamanho quando aumenta, mas não sei se precisa realmente 😔*/
     cursor: pointer;
+    will-change: transform;
 }
 
 .card-cutelaria:hover {
@@ -143,6 +145,7 @@ main {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     transform-style: preserve-3d; /* Habilita o efeito 3D */
     cursor: pointer;
+    will-change: transform;
 }
 
 .card-blocos:hover {
@@ -163,6 +166,7 @@ main {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     transform-style: preserve-3d; /* Habilita o efeito 3D */
     cursor: pointer;
+    will-change: transform;
 }
 
 .card-restauracao:hover {
@@ -220,8 +224,7 @@ main {
     justify-content: space-between;
     align-items: center;
     flex-direction: column;
-    width: 80%;
-    background-color: var(--fuligem);
+    width: 70%;
     border-radius: 10px;
     border: 1px solid black;
     box-shadow: var(--fuligem) 6px 4.8px 6.4px;
@@ -229,85 +232,159 @@ main {
     background-size: cover;
     background-color: var(--fuligem);
     background-blend-mode: overlay; /* Mistura as duas camadas de cor */
-    transition: all 0.3s ease;
+    transition: transform 0.3s ease;
+    will-change: transform;
     transform-style: preserve-3d;
     cursor: pointer;
-    margin: 0 auto 0 auto;
-    padding: 1.5rem;
-    overflow: hidden;
+    margin: 0 auto;
 }
 
-.rifa:hover {
-    transform: scale(1.01) translateZ(20px);
+/* .rifa:hover {
+    transform: scale(1.01) translateZ(10px);
     box-shadow: var(--fuligem) 12px 9.6px 12.8px;
-}
+} */
+
 
 .rifa-titulo h1 {
     font-size: clamp(1.5rem, 2vw, 3rem);
     text-align: center;
     text-transform: uppercase;
-    margin: 5rem 0 2rem 0rem;
+    margin: 1rem 0;
     color: var(--brasa);
+}
+
+.rifa-titulo h2 {
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 0.5rem;
+}
+
+.timer {
+    text-align: center;
+    font-size: clamp(1.5rem, 2vw, 3.5rem);
+    font-family: 'DIGITAL-7';
+    background-color: var(--prata);
+    color: red;
+    padding: 10px;
+    flex: 0 1 auto;
+    margin: 2rem 0;
+    border-radius: 10px;
+    border: 2px solid var(--cinza);
 }
 
 .rifa-conteudo {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     align-items: center;
-    overflow: hidden;
-    padding-bottom: 3rem;
+    gap: 3rem;
+    margin: 0 0 3rem 0;
 }
 
 .rifa-imagem {
-    width: 20rem;
-    height: 22rem;
-    height: fit-content;
+    width: 24rem;
+    height: 26rem;
     border-radius: 10px;
-    border: 1px solid var(--fuligem);
+    border: 2px solid var(--fuligem);
     overflow: hidden;
 }
 
 .rifa-imagem img {
-    width: 20rem;
-    height: 22rem;
+    width: 24rem;
+    height: 26rem;
     border-radius: 10px;
-    object-fit: contain;
+    object-fit: cover;
     text-align: center;
     margin: 0 auto;
-    flex-grow: 1;
+    transition: transform 0.3s ease-in-out;
 }
 
+.rifa-imagem:hover img {
+    transform: scale(1.1);
+}
 
 .rifa-info {
-    width: 45%;
-    font-size: clamp(0.8rem, 2vw, 1.5rem);
+    font-size: clamp(0.8rem, 2vw, 1.6rem);
     text-align: center;
 }
 
 .rifa-info p {
     padding: 1rem;
+    text-align: start;
 }
 
-.rifa-botao button {
-    display: block;
+.btn-enviar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto 5rem auto;
     font-weight: bold;
-    font-size: clamp(1.2rem, 2vw, 2rem);
-    padding: 1rem;
-    margin-bottom: 3rem;
+    font-size: clamp(2rem, 2vw, 4rem);
+    padding: 0.5rem;
     background-color: var(--brasa);
     border: 1px solid black;
     color: var(--fuligem);
     border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+    white-space: nowrap;
+    transition: background-color 0.4s ease, transform 0.4s ease; /* Transições */
+    width: 30%;
 }
-
-.rifa-botao button:hover {
+  
+  .btn-enviar span {
+    cursor: pointer;
+    display: none; /* Usa inline-flex para manter o conteúdo em linha e centralizar */
+    align-items: center; /* Centraliza verticalmente os ícones e texto */
+    position: relative;
+    transition: padding-right 0.5s ease-in-out; /* Transição para o padding */
+  }
+  
+.btn-enviar:hover {
+    /* background: url(imgs/elementos/textura-damasco.png) no-repeat 50% 20%;
+    background-size: cover;
+    background-color: var(--fuligem);
+    background-blend-mode: overlay; */
     background-color: #f15217;
     color: var(--aluminio);
-    transition: all 0.3s ease-out;
     border: 1px solid var(--brasa);
     box-shadow: 0 0 20px rgba(255, 69, 0, 1), 0 0 30px rgba(255, 69, 0, 0.8), 0 0 40px rgba(255, 69, 0, 0.6);
-    
-}
+    transform: scale(1.02);
+  }
+  
+.btn-enviar:hover span {
+    display: inline-flex;
+  }
+  
+.icones-btn-whats {
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Altera para flex para manter ícones em linha */
+    transform: translateX(30px); /* Mantém os ícones fora da área visível */
+    opacity: 0;
+    position: absolute;
+    transition: all 0.3s ease-in-out /* Transições para os ícones */
+  }
+  
+.icones-btn-whats i {
+    color: var(--fuligem);
+    padding-left: 1rem;
+    font-size: clamp(2rem, 2vw, 3rem);
+  }
+  
+.btn-enviar:hover .icones-btn-whats {
+    transform: translateX(0); /* Desliza os ícones para dentro */
+    opacity: 1; /* Torna os ícones visíveis */
+  }
+  
+.btn-enviar:hover .icones-btn-whats i {
+    display: inline;
+    color: var(--aluminio);
+  }
+  
+.icones-btn-whats .seta {
+    margin: auto 0 auto 0;
+    font-size: clamp(0.8rem, 2vw, 1.8rem)
+  }
 
 /*--------------------------MEDIA QUERIES--------------------------*/
 

@@ -190,7 +190,6 @@ function fecharAviso() {
 
 
 
-
 // Limpar seleções dos botões radio
   document.getElementById('resetBtn').addEventListener('click', function() {
     document.getElementById('formulario-1').reset();
