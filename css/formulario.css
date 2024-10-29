@@ -35,27 +35,45 @@ button {
     cursor: pointer;
 }
 
+.title  {
+  margin-top: 1.5rem;
+  text-align: start;
+  text-transform: uppercase;
+  font-size: 1.8rem;
+  display: inline-block;
+  border-bottom: 2px solid var(--brasa);
+  padding-bottom: 0.2rem;
+  color: var(--aluminio);
+}
+
+.aviso {
+  margin-top: 0.8rem;
+  margin-bottom: 1.5rem;
+  max-width: 800px;
+  height: auto;
+  text-align: start;
+  font-size: 1.2rem;
+  color: var(--aluminio);
+}
+
+.aviso strong {
+  color: var(--brasa);
+}
+
+.aviso span {
+  text-transform: uppercase;
+  color: var(--brasa);
+}
 
 main {
   margin-left: clamp(10rem, 5vw, 15rem);
   margin-right: clamp(10rem, 5vw, 15rem);
-  margin-top: 5rem;
   transition: all 0.3s ease-in-out;
 }
 
-.instrucao {
-  font-size: clamp(1.5rem, 2vw, 3rem);
-  text-align: center;
-  margin-bottom: 5rem;
-  color: var(--incandescente);
-}
-
-.instrucao p {
-  color: var(--aluminio);
-  text-transform: uppercase;
-}
 
 form {
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -75,7 +93,14 @@ form:hover {
   border-radius: 0;
 }
 
+form h1 {
+  position: absolute;
+  top: 5px;
+
+}
+
 label {
+  margin-top: 1.5rem;
   cursor: pointer;
   border-radius: 10px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.7);
@@ -96,7 +121,7 @@ input[type="radio"] {
 
 
 h1 {
-  font-size: clamp(2.3rem, 2vw, 3rem);
+  font-size: clamp(1.5rem, 2vw, 2.5rem);
   text-align: center;
   color: var(--brasa);
   text-transform: uppercase;
@@ -135,10 +160,18 @@ h4 a:hover {
 }
 
 .form-opcao img {
-  width: 22rem;
-  height: 22rem;
+  width: 18rem;
+  height: 20rem;
   border-radius: 10px 10px 0 0;
   transition: all 0.3s ease;
+  object-fit: cover;
+}
+
+#formulario-1 .form-opcao {
+  background-color: var(--prata);
+}
+
+#formulario-1 .form-opcao img {
   object-fit: cover;
 }
 
@@ -150,11 +183,11 @@ h4 a:hover {
   background-color: var(--fuligem);
   display: flex;
   justify-content: center;
-  width: 22rem;
+  width: 18rem;
   border-radius: 0 0 8px 8px;
 }
 .texts h3 {
-  font-size: clamp(1.5rem, 2vw, 2rem);
+  font-size: clamp(1.2rem, 2vw, 1.8rem);
 }
 
 .estilo-faca, .estilo-cutelo, .estilo-machado, .tipo-couro, .tipo-madeira {
@@ -201,6 +234,7 @@ input[type="radio"]:checked + .form-opcao .texts h3 {
   overflow: visible;
   padding: 2rem 0;
 }
+
 
 .btn-enviar {
   display: flex;
@@ -276,7 +310,7 @@ input[type="radio"]:checked + .form-opcao .texts h3 {
   font-size: clamp(0.8rem, 2vw, 1.8rem)
 }
 
-.aviso {
+.msg-aviso {
   display: none;
   position: fixed;
   z-index: 9999;

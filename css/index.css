@@ -73,13 +73,18 @@ main {
 .destaques {
     border-radius: 10px;
     overflow: hidden;
+    background: url(imgs/elementos/textura-damasco.png) no-repeat 50% 20%;
+    background-size: cover;
+    background-color: var(--fuligem);
+    background-blend-mode: overlay;
+    padding: 2rem 0;
 }
 
 .destaques h1 {
     text-align: center;
     text-transform: uppercase;
     color: var(--brasa);
-    padding-bottom: 2rem;
+    padding-bottom: 1.5rem;
     font-size: clamp(2.2rem, 2vw, 3rem);
 }
 
@@ -183,22 +188,26 @@ main {
     font-size: clamp(1.5rem, 2vw, 3rem);
     text-align: center;
     background-color: rgba(0, 0, 0, 0.5);
+    padding: 8px 0;
 }
 
 .explorar-card {
     position: absolute;
     bottom: 0;
     width: 100%;
-    background-color: rgba(0, 0, 0, 0.2);
     padding-left: 3rem;
     padding-bottom: 1.5rem;
 }
 
-.explorar-card h1 {
+.explorar-card p {
     text-align: left;
     font-size: clamp(1.2rem, 2vw, 2.5rem);
     padding-bottom: 0.5rem;
+    text-shadow: 2px 2px 2px black;
+    font-weight: bold;
 }
+
+
 
 .explorar-card button {
     font-weight: bold;

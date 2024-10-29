@@ -178,12 +178,12 @@ function enviarWhatsApp() {
 }
 
 function mostrarAviso() {
-  const aviso = document.getElementById('aviso');
+  const aviso = document.getElementById('msg-aviso');
   aviso.style.display = 'block';
 }
 
 function fecharAviso() {
-  const aviso = document.getElementById('aviso');
+  const aviso = document.getElementById('msg-aviso');
   aviso.style.display = 'none';
 }
 

@@ -52,7 +52,7 @@
                 </li>
                 <li>
                     <a href="formulario.html">
-                        <i class="fa-solid fa-list"></i>
+                        <i class="fas fa-pencil-ruler"></i>
                         Personalizar
                     </a>
                 </li>
@@ -106,7 +106,7 @@
                         </li>
                         <li>
                             <a href="formulario.html">
-                                <i class="fa-solid fa-list"></i>
+                                <i class="fas fa-pencil-ruler"></i>
                                 Personalizar
                             </a>
                         </li>
@@ -154,28 +154,28 @@
     <!-- Fim da NavBar -->
 
     <!-- Container para a mensagem de aviso -->
-    <div id="aviso" class="aviso" style="display: none;">
+    <div id="msg-aviso" class="msg-aviso" style="display: none;">
         <div class="conteudo-aviso">
             <span id="fechar" class="fechar" onclick="fecharAviso()">✖</span>
             Por favor, selecione UMA opção em cada menu de seleção.
         </div>
     </div>
 
+
     <!-- Início da Main -->
     <main>
 
-        <div class="instrucao">
-            <p>
-                Selecione as opções para escolher como você gostaria da sua ferramenta
-            </p>
-        </div>
+        <h1 class="title">personalização <i class="fa-sharp fa-solid fa-cubes" style="color: #f05e1b;"></i></h1>
+        <p class="aviso">
+            <strong>Atenção:</strong> Selecione uma opção de cada do menu a seguir para montar a sua ferramenta. Após fazer suas escolhas, adicione quaisquer comentários quiser na área <span>"Comentários"</span>, localizada mais abaixo. Quando estiver tudo pronto, mande as suas escolhas para o nosso WhatsApp clicando no botão <span>"Enviar"</span> 
+        </p>
 
-        <h1>Tipo de ferramenta</h1>
         <form id="formulario-1">
+            <h1>Tipo de ferramenta</h1>
             <label>
                 <input type="radio" name="tipo-ferramenta" value="Faca" required>
                 <div class="form-opcao">
-                    <img src="css/imgs/formulario/faca.jpg" alt="">
+                    <img src="css/imgs/formulario/faca.png" alt="">
                     <div class="texts">
                         <h3>Faca</h3>
                     </div>
@@ -185,7 +185,7 @@
             <label>
                 <input type="radio" name="tipo-ferramenta" value="Cutelo" required>
                 <div class="form-opcao">
-                    <img src="css/imgs/formulario/cutelo.jpg" alt="cutelo">
+                    <img src="css/imgs/formulario/cutelo.png" alt="cutelo">
                     <div class="texts">
                         <h3>Cutelo</h3>
                     </div>
@@ -195,7 +195,7 @@
             <label>
                 <input type="radio" name="tipo-ferramenta" value="Machado" required>
                 <div class="form-opcao">
-                    <img src="css/imgs/formulario/machado.jpg" alt="machado">
+                    <img src="css/imgs/formulario/machado.png" alt="machado">
                     <div class="texts">
                         <h3>Machado</h3>
                     </div>

@@ -37,7 +37,7 @@
 }
 
 .heading p {
-    font-size: 1.1rem;
+    font-size: 1.3rem;
     color: var(--aluminio);
     margin-bottom: 2.1rem; 
 }
@@ -80,13 +80,13 @@
 }
 
 .about-content h2 {
-    font-size: 1.4rem; 
+    font-size: 1.5rem; 
     margin-bottom: 0.9rem; 
     color: var(--brasa);
 }
 
 .about-content p {
-    font-size: 1.1rem; 
+    font-size: 1.2rem; 
     line-height: 1.5;
     color: var(--aluminio);
 }
