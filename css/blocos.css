@@ -172,6 +172,7 @@ h2 {
     border-radius: 0.5rem;
     text-decoration: none;
     font-weight: bold;
+    font-size: 1.2rem;
     transition: transform 0.4s ease;
 }
 
