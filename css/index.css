@@ -194,7 +194,7 @@ main {
 
 .explorar-card p {
     text-align: left;
-    font-size: clamp(1.2rem, 2vw, 2.5rem);
+    font-size: clamp(1.8rem, 2vw, 2.5rem);
     padding-bottom: 0.5rem;
     text-shadow: 2px 2px 2px black;
     font-weight: bold;
@@ -560,7 +560,11 @@ main {
         border-radius: 10px;
         object-fit: cover;
     }
+}
 
+/* 960px = ?rem */
+
+@media (max-width: 950px) {
     .rifa-imagem {
         width: 20rem;
         height: 22rem;
@@ -570,6 +574,10 @@ main {
         width: 18rem;
         height: 20rem;
     }
+
+    .rifa-conteudo {
+        flex-direction: column;
+    }
 }
 
 /* 768px = 48rem */
@@ -578,9 +586,5 @@ main {
     main {
         margin-left: 2rem;
         margin-right: 2rem;
-    }
-
-    .rifa-conteudo {
-        flex-direction: column;
-    }
+    } 
 }
