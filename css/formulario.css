@@ -248,7 +248,7 @@ input[type="radio"]:checked + .form-opcao .texts h3 {
   border: 2px solid var(--fuligem);
   border-radius: 10px;
   font-weight: bold;
-  transition: all 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out;
 }
 
 .reset:hover {
@@ -259,13 +259,13 @@ input[type="radio"]:checked + .form-opcao .texts h3 {
   box-shadow: 0 0 20px rgba(255, 69, 0, 1), 0 0 30px rgba(255, 69, 0, 0.8), 0 0 40px rgba(255, 69, 0, 0.6);
 }
 
-.reset:focus {
+/* .reset:focus {
   transform: scale(1.05);
   color: var(--aluminio);
   background-color: var(--incandescente);
   border: 2px solid var(--brasa);
   box-shadow: 0 0 20px rgba(255, 69, 0, 1), 0 0 30px rgba(255, 69, 0, 0.8), 0 0 40px rgba(255, 69, 0, 0.6);
-}
+} */
 
 .comentarios {
   display: flex;
@@ -341,7 +341,7 @@ input[type="radio"]:checked + .form-opcao .texts h3 {
 }
 
 .btn-enviar:hover {
-  transform: scale(1.02);
+  transform: scale(1.05);
 }
 
 .btn-enviar:hover span {
