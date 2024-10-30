@@ -138,6 +138,28 @@
     transform: scale(1.1);
 }
 
+/*sauhsuahs*/
+
+.sobre-sergio {
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.photo {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid var(--aluminio);
+    margin-bottom: 1rem;
+}
+
+.sobre-sergio p {
+    font-size: 1.2rem;
+}
+
 
 /*estilização card serviços*/
 
@@ -147,7 +169,7 @@
 
 .title h1 {
     text-align: center;
-    padding-top: 3.1rem;
+    padding-top: 2rem;
     font-size: 2.6rem; 
     display: inline-block;
     border-bottom: 4px solid var(--brasa); 
@@ -159,7 +181,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 4.6rem auto; 
+    margin: 2rem auto; 
     text-align: center;
 }
 
@@ -216,8 +238,9 @@
 }
 
 .card p {
+    height: 10rem;
     font-size: 1rem; 
-    margin-bottom: 1.8rem; 
+    margin-bottom: 1.8rem;
     line-height: 1.5;
     color: var(--fuligem);
 }
@@ -238,6 +261,18 @@
     box-shadow: 0 0 20px rgba(255, 69, 0, 1), 0 0 30px rgba(255, 69, 0, 0.8), 0 0 40px rgba(255, 69, 0, 0.6);
 }
 
+@media screen and (max-width: 1390px) {
+    .card p {
+        height: 14rem;
+    }
+}
+
+@media screen and (max-width: 1350px) {
+    .card p {
+        height: 17rem;
+    }
+}
+
 @media screen and (max-width: 1200px) {
     .services {
         display: flex;
@@ -247,6 +282,10 @@
     .card {
         display: flex;
         margin: 1.25rem 0;
+    }
+
+    .card p {
+        height: 4rem;
     }
 } 
 
