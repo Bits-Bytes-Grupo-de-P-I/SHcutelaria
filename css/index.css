@@ -90,9 +90,6 @@ main {
     height: 22rem;
     margin-right: 2rem;
     border-radius: 10px;
-    border: 1px solid var(--fuligem);
-    box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
-    overflow: hidden;
   }
 
 .carousel-cell img {
@@ -100,6 +97,8 @@ main {
     height: 22rem;
     border-radius: 10px;
     object-fit: cover;
+    border: 1px solid var(--fuligem);
+    box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
 }
 
 .area-serviços {
@@ -278,12 +277,17 @@ main {
 }
 
 .rifa-imagem {
-    width: 22rem;
-    height: 24rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 23rem;
+    height: 25rem;
     border-radius: 10px;
-    border: 2px solid var(--fuligem);
+    background: url(imgs/formulario/aço.jpg);
     overflow: hidden;
     transition: all 0.3s ease-in-out;
+    padding: 0.5rem;
+    /* box-shadow: rgba(240, 94, 27, 0.56) 0px 22px 70px 4px; */
 }
 
 .rifa-imagem img {
@@ -291,8 +295,6 @@ main {
     height: 24rem;
     border-radius: 10px;
     object-fit: cover;
-    text-align: center;
-    margin: 0 auto;
     transition: all 0.3s ease-in-out;
 }
 
@@ -304,14 +306,37 @@ main {
 .rifa-info p {
     background-color: var(--prata);
     border-radius: 10px;
+    border: 2px solid var(--aluminio);
     padding: 0.5rem;
     margin: 0.5rem 0;
     text-align: start;
     color: var(--fuligem);
 }
 
+.rifa-info span {
+    font-weight: bold;
+    color: var(--fuligem);
+}
+
 .rifa-blocos {
-    
+    font-size: 1.5rem;
+}
+
+.rifa-blocos button {
+    background-color: var(--brasa);
+    color: var(--fuligem);
+    border: 1px solid var(--fuligem);
+    border-radius: 10px;
+    padding: 0.5rem;
+    transition: all 0.3s ease-in-out;
+}
+
+.rifa-blocos i {
+    color: #161616;
+}
+
+.rifa-blocos:hover button{
+    transform: scale(1.05);
 }
 
 .btn-enviar {
