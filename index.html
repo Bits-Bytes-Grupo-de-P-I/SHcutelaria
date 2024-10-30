@@ -25,7 +25,7 @@
     <link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet" href="css/navbar_footer.css">
     <link rel="stylesheet" href="css/flickity.css">
-    <link rel="stylesheet" href="css/fonte/fonte.css">
+    <link rel="icon" href="css/imgs/elementos/logo-aba.png">
 
     <script src="js/index.js" defer></script>
     <script src="js/navbar.js" defer></script>
@@ -137,7 +137,7 @@
                         <ul>
                             <li class="converse">
                                 <a href="login.html"><i class="fa-solid fa-headset"></i>
-                                    Converse Conosco
+                                    Fale Conosco
                                 </a>
                             </li>
                         </ul>
@@ -159,10 +159,12 @@
     <div class="banner">
         <div class="carousel"
             data-flickity='{ "imagesLoaded": true, "percentPosition": false, "wrapAround": true}'>
-                <video autoplay muted loop>
-                    <source src="css/imgs/elementos/banner-faca.mp4" type="video/mp4">
+                <video autoplay muted loop poster="thumbnail.jpg" preload="metadata">
+                    <source src="css/imgs/elementos/banner-1.mp4" type="video/mp4">
                 </video>
-                <img src="css/imgs/elementos/banner2.png" alt="">
+                <video autoplay muted loop poster="thumbnail.jpg" preload="metadata">
+                    <source src="css/imgs/elementos/banner-2.mp4" type="video/mp4">
+                </video>
                 <img src="css/imgs/elementos/banner3.png" alt="">
         </div>
     </div>
@@ -273,22 +275,43 @@
                     </div>
 
                     <div class="rifa-info">
-                        <p>Faca do estilo: ""</p>
-                        <p>Tamanho:  ""</p>
-                        <p>Material da lâmina:  ""</p>
-                        <p>Material do cabo:  ""</p>
-                        <p>Material da bainha:  ""</p>
+                        <p>Faca do estilo: Chef</p>
+                        <p>Tamanho: 25 centímetros</p>
+                        <p>Material da lâmina: Aço</p>
+                        <p>Material do cabo: Leopard Wood</p>
+                        <p>Material da bainha: Couro bovino</p>
                     </div>
 
                 </div>
 
-                <button type="button" class="btn-enviar">
-                    Participar
-                    <span class="icones-btn-whats">
-                        <i class="fa-solid fa-arrow-right seta"></i>
-                        <i class="fa-brands fa-whatsapp"></i>
-                    </span>
-                </button>
+                <a href="#" class="btn-enviar">
+                    <button type="button">
+                        Participar
+                        <span class="icones-btn-whats">
+                            <i class="fa-solid fa-arrow-right seta"></i>
+                            <i class="fa-brands fa-whatsapp"></i>
+                        </span>
+                    </button>
+                </a>
+        
+                <a href="#" class="btn-mobile">
+                    <button type="button">
+                        Participar
+                        <span class="icones-mobile">
+                            <i class="fa-solid fa-arrow-right seta"></i>
+                            <i class="fa-brands fa-whatsapp"></i>
+                        </span>
+                    </button>
+                </a>
+
+                <div class="rifa-blocos">
+                    Participe também de sorteios de blocos estabilizados! 
+                    <a href="#">
+                        <button>
+                            Sorteio de Blocos <i class="fa-sharp fa-solid fa-cubes"></i>
+                        </button>
+                    </a>
+                </div>
 
             </div>
 

@@ -44,6 +44,7 @@ main {
 
 .title  {
   margin-top: 1.5rem;
+  margin-bottom: 0.8rem;
   text-align: start;
   text-transform: uppercase;
   font-size: 1.8rem;
@@ -82,19 +83,12 @@ form {
   background-size: cover;
   background-color: var(--fuligem);
   background-blend-mode: overlay;
-  border-radius: 10px;
+  border-radius: 0 0 10px 10px;
   padding: 2.5rem;
   padding-top: 3.5rem;
-  border: 2px solid var(--fuligem);
   box-shadow: rgba(0, 0, 0, 0.7) 0px 5px 15px;
   gap: 5rem;
 }
-  
-form:hover {
-  transition: all 0.3s ease-in-out;
-  border-radius: 0;
-}
-
 
 form h1 {
   position: absolute;
@@ -122,31 +116,39 @@ input[type="radio"] {
 }
 
 
-h1 {
+.titulo-formulario {
   font-size: clamp(1.5rem, 2vw, 2.5rem);
   text-align: center;
   color: var(--brasa);
   text-transform: uppercase;
   font-weight: bold;
-  margin-bottom: 1rem;
+  background: url(imgs/elementos/textura-damasco.png) no-repeat 50% 20%;
+  background-size: cover;
+  background-color: var(--fuligem);
+  background-blend-mode: overlay;
+  border-radius: 10px 10px 0 0;
+  padding: 0.5rem 0rem;
 }
 
-h4 {
+.subtitulo-formulario {
   text-decoration: none;
   font-style: italic;
   text-align: center;
   color: var(--aluminio);
   font-size: clamp(1rem, 2vw, 1.3rem);
   margin-top: -0.5rem;
-  margin-bottom: 1rem;
+  background: url(imgs/elementos/textura-damasco.png) no-repeat 50% 20%;
+  background-size: cover;
+  background-color: var(--fuligem);
+  background-blend-mode: overlay;
 }
 
-h4 a {
+.subtitulo-formulario a {
   text-decoration: underline;
   color: var(--brasa);
 }
 
-h4 a:hover {
+.subtitulo-formulario a:hover {
   color: var(--incandescente);
 }
 
@@ -220,8 +222,7 @@ input[type="radio"]:checked + .form-opcao .texts h3 {
   background-size: cover;
   background-color: var(--fuligem);
   background-blend-mode: overlay;
-  border: 2px solid var(--fuligem);
-  border-radius: 10px;
+  border-radius: 0 0 10px 10px;
   box-shadow: rgba(0, 0, 0, 0.7) 5px 10px 30px;
   margin-bottom: 6rem;
 }
@@ -487,6 +488,22 @@ form {
   justify-content: space-between;
 }
 
+form::-webkit-scrollbar {
+  width: 12px;
+}
+
+form::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+form::-webkit-scrollbar-thumb {
+  background-color: #F05E1B;
+  border-radius: 10px;
+}
+
+form::-webkit-scrollbar-thumb:hover {
+  background-color: var(--incandescente);
+}
 
 #formulario-7 {
   justify-content: center;

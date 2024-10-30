@@ -45,9 +45,7 @@ main {
     background-color: var(--fuligem);
     border: 2px solid var(--fuligem);
     margin-bottom: 6rem;
-    width: 100%;
     overflow: hidden;
-    max-height: 600px;
 }
 
 
@@ -55,23 +53,22 @@ main {
 
 
 .carousel img { 
-    display: block;  
     width: 100%;
-    height: auto;
-    border-radius: 10px;
+    height: auto; /* Permite que a altura seja ajustada proporcionalmente */
+    max-width: 100%; /* Garante que o vídeo não ultrapasse a largura do contêiner */
+    object-fit: cover; 
 }
 
 .carousel video { 
-    display: block;  
     width: 100%;
-    height: auto;
-    z-index: 1;
+    height: auto; /* Permite que a altura seja ajustada proporcionalmente */
+    max-width: 100%; /* Garante que o vídeo não ultrapasse a largura do contêiner */
+    object-fit: cover; 
 }
 
 /*--------------DESTAQUES--------------*/
 
 .destaques {
-    border-radius: 10px;
     overflow: hidden;
     background: url(imgs/elementos/textura-damasco.png) no-repeat 50% 20%;
     background-size: cover;
@@ -207,8 +204,6 @@ main {
     font-weight: bold;
 }
 
-
-
 .explorar-card button {
     font-weight: bold;
     font-size: clamp(0.8rem, 2vw, 2rem);
@@ -229,6 +224,7 @@ main {
 
 
 .rifa {
+    position: relative;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -242,16 +238,8 @@ main {
     background-color: var(--fuligem);
     background-blend-mode: overlay; /* Mistura as duas camadas de cor */
     transition: transform 0.3s ease;
-    will-change: transform;
-    transform-style: preserve-3d;
-    cursor: pointer;
     margin: 0 auto;
 }
-
-/* .rifa:hover {
-    transform: scale(1.01) translateZ(10px);
-    box-shadow: var(--fuligem) 12px 9.6px 12.8px;
-} */
 
 
 .rifa-titulo h1 {
@@ -270,7 +258,7 @@ main {
 
 .timer {
     text-align: center;
-    font-size: clamp(1.5rem, 2vw, 3.5rem);
+    font-size: 3rem;
     font-family: 'DIGITAL-7';
     background-color: var(--prata);
     color: red;
@@ -285,40 +273,45 @@ main {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    gap: 3rem;
+    gap: 2rem;
     margin: 0 0 3rem 0;
 }
 
 .rifa-imagem {
-    width: 24rem;
-    height: 26rem;
+    width: 22rem;
+    height: 24rem;
     border-radius: 10px;
     border: 2px solid var(--fuligem);
     overflow: hidden;
+    transition: all 0.3s ease-in-out;
 }
 
 .rifa-imagem img {
-    width: 24rem;
-    height: 26rem;
+    width: 22rem;
+    height: 24rem;
     border-radius: 10px;
     object-fit: cover;
     text-align: center;
     margin: 0 auto;
-    transition: transform 0.3s ease-in-out;
-}
-
-.rifa-imagem:hover img {
-    transform: scale(1.1);
+    transition: all 0.3s ease-in-out;
 }
 
 .rifa-info {
-    font-size: clamp(0.8rem, 2vw, 1.6rem);
+    font-size: clamp(1.2rem, 2vw, 1.6rem);
     text-align: center;
 }
 
 .rifa-info p {
-    padding: 1rem;
+    background-color: var(--prata);
+    border-radius: 10px;
+    padding: 0.5rem;
+    margin: 0.5rem 0;
     text-align: start;
+    color: var(--fuligem);
+}
+
+.rifa-blocos {
+    
 }
 
 .btn-enviar {
@@ -336,23 +329,26 @@ main {
     position: relative;
     overflow: hidden;
     white-space: nowrap;
-    transition: background-color 0.4s ease, transform 0.4s ease; /* Transições */
-    width: 30%;
-}
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    width: 26%;
+  }
   
-  .btn-enviar span {
+.btn-enviar button {
+    background-color: var(--brasa);
+    color: var(--fuligem);
+    border: none;
+    font-weight: bold;
+}
+
+.btn-enviar span {
     cursor: pointer;
-    display: none; /* Usa inline-flex para manter o conteúdo em linha e centralizar */
-    align-items: center; /* Centraliza verticalmente os ícones e texto */
+    display: none;
+    align-items: center;
     position: relative;
-    transition: padding-right 0.5s ease-in-out; /* Transição para o padding */
+    transition: padding-right 0.5s ease-in-out;
   }
   
 .btn-enviar:hover {
-    /* background: url(imgs/elementos/textura-damasco.png) no-repeat 50% 20%;
-    background-size: cover;
-    background-color: var(--fuligem);
-    background-blend-mode: overlay; */
     background-color: #f15217;
     color: var(--aluminio);
     border: 1px solid var(--brasa);
@@ -364,14 +360,18 @@ main {
     display: inline-flex;
   }
   
+.btn-enviar:hover button {
+    color: var(--aluminio);
+}
+
 .icones-btn-whats {
     display: flex;
     justify-content: center;
-    align-items: center; /* Altera para flex para manter ícones em linha */
-    transform: translateX(30px); /* Mantém os ícones fora da área visível */
+    align-items: center;
+    transform: translateX(30px);
     opacity: 0;
     position: absolute;
-    transition: all 0.3s ease-in-out /* Transições para os ícones */
+    transition: all 0.3s ease-in-out
   }
   
 .icones-btn-whats i {
@@ -381,8 +381,8 @@ main {
   }
   
 .btn-enviar:hover .icones-btn-whats {
-    transform: translateX(0); /* Desliza os ícones para dentro */
-    opacity: 1; /* Torna os ícones visíveis */
+    transform: translateX(0);
+    opacity: 1;
   }
   
 .btn-enviar:hover .icones-btn-whats i {
@@ -391,11 +391,69 @@ main {
   }
   
 .icones-btn-whats .seta {
-    margin: auto 0 auto 0;
+    padding-left: 0.5rem;
     font-size: clamp(0.8rem, 2vw, 1.8rem)
   }
 
+/* Botão "Enviar" para mobile */
+
+.btn-mobile {
+    display: none;
+    background-color: var(--brasa);
+    color: var(--fuligem);
+    border: 1px solid var(--fuligem);
+    border-radius: 10px;
+    padding: 0.8rem;
+    font-size: clamp(2rem, 2vw, 4rem);
+    font-weight: bold;
+    margin: 0 auto 5rem auto;
+  }
+  
+.btn-mobile button {
+    background-color: var(--brasa);
+    color: var(--fuligem);
+    border: none;
+    font-weight: bold;
+}
+
+.btn-mobile:hover {
+    background-color: #f15217;
+    color: var(--aluminio);
+    border: 1px solid var(--brasa);
+    box-shadow: 0 0 20px rgba(255, 69, 0, 1), 0 0 30px rgba(255, 69, 0, 0.8), 0 0 40px rgba(255, 69, 0, 0.6);
+    transform: scale(1.02);
+  }
+  
+.btn-mobile:hover button {
+    color: var(--aluminio);
+}
+
+.btn-mobile:hover .icones-mobile i {
+    color: var(--aluminio);
+  }
+  
+.icones-mobile .seta {
+    margin: auto 0;
+    font-size: 1.5rem
+  }
+  
+.icones-mobile i {
+    color: var(--fuligem);
+    font-size: clamp(2rem, 2vw, 3rem);
+  }
+
 /*--------------------------MEDIA QUERIES--------------------------*/
+
+@media (max-width: 1500px) {
+  
+.btn-mobile {
+    display: block;
+}
+    
+.btn-enviar {
+    display: none;
+}
+}
 
 
 /* 1264px = 79rem */
@@ -465,13 +523,27 @@ main {
         border-radius: 10px;
         object-fit: cover;
     }
+
+    .rifa-imagem {
+        width: 20rem;
+        height: 22rem;
+    }
+
+    .rifa-imagem img {
+        width: 20rem;
+        height: 22rem;
+    }
 }
 
 /* 768px = 48rem */
 
 @media (max-width: 48rem) {
     main {
-        margin-left: 2.5rem;
-        margin-right: 2.5rem;
+        margin-left: 2rem;
+        margin-right: 2rem;
+    }
+
+    .rifa-conteudo {
+        flex-direction: column;
     }
 }
