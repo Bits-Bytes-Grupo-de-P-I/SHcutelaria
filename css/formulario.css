@@ -14,6 +14,7 @@
     --aluminio: #D0D5DB;
     --brasa: #F05E1B;
     --incandescente: #f15217;
+    --uatizapi: #25D366;
 }
 
 body {
@@ -84,19 +85,9 @@ form {
   background-color: var(--fuligem);
   background-blend-mode: overlay;
   border-radius: 0 0 10px 10px;
-  padding: 2.5rem;
-  padding-top: 3.5rem;
+  padding: 1.5rem;
   box-shadow: rgba(0, 0, 0, 0.7) 0px 5px 15px;
   gap: 5rem;
-}
-
-form h1 {
-  position: absolute;
-  top: 1rem;
-  left: 50%; /* Move o h1 para o centro do form */
-  transform: translateX(-50%); /* Centraliza o h1 no eixo X */
-  font-size: clamp(1.5rem, 2vw, 2.2rem);
-  white-space: nowrap; /* Evita quebra de linha no título */
 }
 
 label {
@@ -117,9 +108,9 @@ input[type="radio"] {
 
 
 .titulo-formulario {
-  font-size: clamp(1.5rem, 2vw, 2.5rem);
+  font-size: clamp(1.3rem, 2vw, 2.2rem);
   text-align: center;
-  color: var(--brasa);
+  color: var(--aluminio);
   text-transform: uppercase;
   font-weight: bold;
   background: url(imgs/elementos/textura-damasco.png) no-repeat 50% 20%;
@@ -128,11 +119,11 @@ input[type="radio"] {
   background-blend-mode: overlay;
   border-radius: 10px 10px 0 0;
   padding: 0.5rem 0rem;
+  text-shadow: 2px 2px 2px black;
 }
 
 .subtitulo-formulario {
   text-decoration: none;
-  font-style: italic;
   text-align: center;
   color: var(--aluminio);
   font-size: clamp(1rem, 2vw, 1.3rem);
@@ -141,11 +132,14 @@ input[type="radio"] {
   background-size: cover;
   background-color: var(--fuligem);
   background-blend-mode: overlay;
+  text-shadow: 2px 2px 2px black;
+  font-weight: normal;
 }
 
 .subtitulo-formulario a {
   text-decoration: underline;
   color: var(--brasa);
+  font-style: italic;
 }
 
 .subtitulo-formulario a:hover {
@@ -164,14 +158,14 @@ input[type="radio"] {
 }
 
 .form-opcao img {
-  width: 18rem;
-  height: 20rem;
+  width: 16rem;
+  height: 18rem;
   border-radius: 10px 10px 0 0;
   transition: all 0.3s ease;
   object-fit: cover;
 }
 
-#formulario-1 .form-opcao {
+#formulario-1 .form-opcao, #formulario-2 .form-opcao {
   background-color: var(--prata);
 }
 
@@ -187,7 +181,7 @@ input[type="radio"] {
   background-color: var(--fuligem);
   display: flex;
   justify-content: center;
-  width: 18rem;
+  
   border-radius: 0 0 8px 8px;
 }
 .texts h3 {
@@ -198,8 +192,11 @@ input[type="radio"] {
   display: none;
 }
 
+input[type="radio"]:checked + .titulo-formulario {
+  color: var(--brasa);
+}
 
-input[type="radio"]:checked + .form-opcao{
+input[type="radio"]:checked + .form-opcao {
   color: var(--brasa);
   transition: all 0.3s ease-out;
   box-shadow: 0 0 20px rgba(255, 103, 0, 0.7), 0 0 40px rgba(255, 103, 0, 0.5), 0 0 60px rgba(255, 103, 0, 0.3);
@@ -238,6 +235,81 @@ input[type="radio"]:checked + .form-opcao .texts h3 {
   padding: 2rem 0;
 }
 
+.reset {
+  display: block;
+  margin-right: 2rem;
+  margin-left: auto;
+  margin-bottom: 4rem;
+  margin-top: -3rem;
+  font-size: clamp(1.5rem, 2vw, 2rem);
+  padding: 1rem;
+  background-color: var(--brasa);
+  color: var(--fuligem);
+  border: 2px solid var(--fuligem);
+  border-radius: 10px;
+  font-weight: bold;
+  transition: all 0.3s ease-in-out;
+}
+
+.reset:hover {
+  transform: scale(1.05);
+  color: var(--aluminio);
+  background-color: var(--incandescente);
+  border: 2px solid var(--brasa);
+  box-shadow: 0 0 20px rgba(255, 69, 0, 1), 0 0 30px rgba(255, 69, 0, 0.8), 0 0 40px rgba(255, 69, 0, 0.6);
+}
+
+.reset:focus {
+  transform: scale(1.05);
+  color: var(--aluminio);
+  background-color: var(--incandescente);
+  border: 2px solid var(--brasa);
+  box-shadow: 0 0 20px rgba(255, 69, 0, 1), 0 0 30px rgba(255, 69, 0, 0.8), 0 0 40px rgba(255, 69, 0, 0.6);
+}
+
+.comentarios {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.comentarios textarea {
+  background-color: var(--fuligem);
+  border: 2px solid var(--fuligem);
+  border-radius: 0 0 10px 10px;
+  color: var(--aluminio);
+  min-height: 300px;
+  min-width: 60%;
+  resize: none;
+  margin-bottom: 6rem;
+  box-shadow: rgba(0, 0, 0, 0.7) 5px 10px 30px;
+  text-align: start;
+  vertical-align: top;
+  font-size: 1.3rem;
+  padding: 2rem 1.5rem;
+}
+
+.comentarios textarea:focus {
+  outline: none !important;
+  border: 2px solid var(--brasa);
+  border-radius: 10px;
+}
+
+.comentarios h1 {
+  font-size: clamp(1.3rem, 2vw, 2.2rem);
+  text-align: center;
+  color: var(--aluminio);
+  text-transform: uppercase;
+  font-weight: bold;
+  background: url(imgs/elementos/textura-damasco.png) no-repeat 50% 20%;
+  background-size: cover;
+  background-color: var(--fuligem);
+  background-blend-mode: overlay;
+  border-radius: 10px 10px 0 0;
+  padding: 0.5rem 0rem;
+  min-width: 60%;
+}
 
 .btn-enviar {
   display: flex;
@@ -247,8 +319,8 @@ input[type="radio"]:checked + .form-opcao .texts h3 {
   font-weight: bold;
   font-size: clamp(2rem, 2vw, 4rem);
   padding: 0.5rem;
-  background-color: var(--brasa);
-  border: 1px solid black;
+  background-color: var(--uatizapi);
+  border: 2px solid var(--fuligem);
   color: var(--fuligem);
   border-radius: 10px;
   position: relative;
@@ -256,6 +328,8 @@ input[type="radio"]:checked + .form-opcao .texts h3 {
   white-space: nowrap;
   transition: background-color 0.3s ease, transform 0.3s ease;
   width: 15%;
+  height: 80px;
+  box-shadow: rgba(0, 0, 0, 0.7) 5px 10px 30px;
 }
 
 .btn-enviar span {
@@ -267,10 +341,6 @@ input[type="radio"]:checked + .form-opcao .texts h3 {
 }
 
 .btn-enviar:hover {
-  background-color: #f15217;
-  color: var(--aluminio);
-  border: 1px solid var(--brasa);
-  box-shadow: 0 0 20px rgba(255, 69, 0, 1), 0 0 30px rgba(255, 69, 0, 0.8), 0 0 40px rgba(255, 69, 0, 0.6);
   transform: scale(1.02);
 }
 
@@ -301,7 +371,7 @@ input[type="radio"]:checked + .form-opcao .texts h3 {
 
 .btn-enviar:hover .icones-btn-whats i {
   display: inline;
-  color: var(--aluminio);
+  color: var(--fuligem);
 }
 
 .icones-btn-whats .seta {
@@ -313,26 +383,21 @@ input[type="radio"]:checked + .form-opcao .texts h3 {
 
 .btn-mobile {
   display: none;
-  background-color: var(--brasa);
+  background-color: var(--uatizapi);
   color: var(--fuligem);
-  border: 1px solid var(--fuligem);
+  border: 2px solid var(--fuligem);
   border-radius: 10px;
   padding: 0.8rem;
   font-size: clamp(2rem, 2vw, 4rem);
   font-weight: bold;
   margin: 0 auto 5rem auto;
+  transition: all 0.3s ease-in-out;
+  box-shadow: rgba(0, 0, 0, 0.7) 5px 10px 30px;
 }
 
 .btn-mobile:hover {
-  background-color: #f15217;
-  color: var(--aluminio);
-  border: 1px solid var(--brasa);
-  box-shadow: 0 0 20px rgba(255, 69, 0, 1), 0 0 30px rgba(255, 69, 0, 0.8), 0 0 40px rgba(255, 69, 0, 0.6);
+  /* border: 4px solid #147537; */
   transform: scale(1.02);
-}
-
-.btn-mobile:hover .icones-mobile i {
-  color: var(--aluminio);
 }
 
 .icones-mobile .seta {
@@ -423,7 +488,7 @@ h2 {
 .whatsapp-button {
   display: inline-block;
   padding: 0.6rem 1.25rem;
-  background-color: #25D366; 
+  background-color: var(--uatizapi); 
   color: var(--carbono);
   text-align: center;
   border-radius: 0.5rem;
@@ -450,7 +515,6 @@ h2 {
 }
 }
 
-
 /* 1456px = 93rem */
 
 @media (max-width: 91rem) {
@@ -464,6 +528,13 @@ h2 {
 .texts {
   width: 14rem;
 }
+
+.comentarios textarea, .comentarios h1 {
+  width: 80%;
+}
+
+
+
 }
 
 /* 1264px = 79rem */
@@ -475,7 +546,16 @@ h2 {
   margin-right: 0 !important;
 }
 
+.form-opcao img {
+  width: 12rem;
+  height: 14rem;
 }
+
+.texts {
+  width: 12rem;
+}
+}
+
 
 /* 1008px = 63rem */
 

@@ -119,6 +119,9 @@ function enviarWhatsApp() {
   const couroTipo = document.querySelector('input[name="couro-tipo"]:checked');
   const madeiraTipo = document.querySelector('input[name="madeira-tipo"]:checked');
   
+  // Obtém o campo de comentários
+  const comentarios = document.getElementById('comentarios');
+
   // Verifica se o tipo de ferramenta foi selecionado
   if (!tipoFerramenta || !materialLamina || !materialCabo || !tipoBainha) {
       mostrarAviso();
@@ -144,28 +147,37 @@ function enviarWhatsApp() {
   }
 
   // Monta a mensagem somente com os valores selecionados
-  let mensagem = `Tipo de Ferramenta: ${tipoFerramenta.value}\n`;
-  mensagem += `Material da Lâmina: ${materialLamina.value}\n`;
-  mensagem += `Material do Cabo: ${materialCabo.value}\n`;
-  mensagem += `Tipo de Bainha: ${tipoBainha.value}\n`;
+  let mensagem = `---------------------------\n`
+  mensagem += `Tipo de Ferramenta: *${tipoFerramenta.value.toUpperCase()}*\n\n`;
+  mensagem += `Material da Lâmina: *${materialLamina.value.toUpperCase()}*\n\n`;
+  mensagem += `Material do Cabo: *${materialCabo.value.toUpperCase().toUpperCase()}*\n\n`;
+  mensagem += `Tipo de Bainha: *${tipoBainha.value.toUpperCase().toUpperCase()}*\n\n`;
 
   // Adiciona o estilo da ferramenta se selecionado
   if (facaEstilo) {
-      mensagem += `Estilo de Faca: ${facaEstilo.value}\n`;
+      mensagem += `Estilo de Faca: *${facaEstilo.value.toUpperCase()}*\n\n`;
   }
+  // Se cuteloEstilo e machadoEstilo forem definidos, inclua as condições abaixo
   if (cuteloEstilo) {
-      mensagem += `Estilo de Cutelo: ${cuteloEstilo.value}\n`;
+      mensagem += `Estilo de Cutelo: *${cuteloEstilo.value.toUpperCase()}*\n\n`;
   }
   if (machadoEstilo) {
-      mensagem += `Estilo de Machado: ${machadoEstilo.value}\n`;
+      mensagem += `Estilo de Machado: *${machadoEstilo.value.toUpperCase()}*\n\n`;
   }
 
   // Adiciona o tipo de couro ou madeira se selecionado
   if (couroTipo) {
-      mensagem += `Tipo de Couro: ${couroTipo.value}\n`;
+      mensagem += `Tipo de Couro: *${couroTipo.value.toUpperCase()}*\n\n`;
   } else if (madeiraTipo) {
-      mensagem += `Tipo de Madeira: ${madeiraTipo.value}\n`;
+      mensagem += `Tipo de Madeira: *${madeiraTipo.value.toUpperCase()}*\n\n`;
   }
+
+  // Adiciona comentários se houver algum
+  if (comentarios && comentarios.value.trim()) {
+    mensagem += `Comentários: *${comentarios.value.trim().toUpperCase()}*\n\n`;
+  }
+
+  mensagem += `---------------------------\n`
 
   // URL encode da mensagem
   const urlMensagem = encodeURIComponent(mensagem);
@@ -176,6 +188,7 @@ function enviarWhatsApp() {
   // Abrir a URL no WhatsApp
   window.open(whatsappURL, '_blank');
 }
+
 
 function mostrarAviso() {
   const aviso = document.getElementById('msg-aviso');
@@ -188,17 +201,29 @@ function fecharAviso() {
 }
 
 
+// // Limpar seleções dos botões radio
+//   document.getElementById('resetBtn').addEventListener('click', function() {
+//     document.getElementById('formulario-1').reset();
+//     document.getElementById('formulario-2').reset();
+//     document.getElementById('formulario-3').reset();
+//     document.getElementById('formulario-4').reset();
+//     document.getElementById('formulario-5').reset();
+//     document.getElementById('formulario-6').reset();
+//     document.getElementById('formulario-7').reset();
+//     document.getElementById('formulario-8').reset();
+//     document.getElementById('formulario-9').reset();
+//   });
 
-
-// Limpar seleções dos botões radio
-  document.getElementById('resetBtn').addEventListener('click', function() {
-    document.getElementById('formulario-1').reset();
-    document.getElementById('formulario-2').reset();
-    document.getElementById('formulario-3').reset();
-    document.getElementById('formulario-4').reset();
-    document.getElementById('formulario-5').reset();
-    document.getElementById('formulario-6').reset();
-    document.getElementById('formulario-7').reset();
-    document.getElementById('formulario-8').reset();
-    document.getElementById('formulario-9').reset();
-  });
+document.getElementById('resetBtn').addEventListener('click', function() {
+  for (let i = 1; i <= 9; i++) {
+      const formulario = document.getElementById(`formulario-${i}`);
+      if (formulario) {
+          // Seleciona todos os inputs do tipo radio dentro do formulário
+          const radios = formulario.querySelectorAll('input[type="radio"]');
+          // Desmarca cada radio
+          radios.forEach(radio => {
+              radio.checked = false;
+          });
+      }
+  }
+});

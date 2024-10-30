@@ -38,7 +38,7 @@
     <nav>
 
         <div class="logo-nav">
-            <img src="css/imgs/elementos/logo.png" alt="">
+            <img src="css/imgs/elementos/logo-cortada.png" alt="">
         </div>
         
 
@@ -167,7 +167,7 @@
 
         <h1 class="title">personalização <i class="fas fa-pencil-ruler" style="color: #F05E1B;"></i></h1>
         <p class="aviso">
-            <strong>Atenção:</strong> Selecione uma opção de cada do menu a seguir para montar a sua ferramenta. Após fazer suas escolhas, adicione quaisquer comentários quiser na área <span>"Comentários"</span>, localizada mais abaixo. Quando estiver tudo pronto, mande as suas escolhas para o nosso WhatsApp clicando no botão <span>"Enviar"</span> 
+            Selecione uma opção de cada do menu a seguir para montar a sua ferramenta, adicione quaisquer comentários quiser na área <span>"Comentários"</span>, e quando estiver tudo pronto, mande as suas escolhas clicando no botão <span>"Enviar"</span> 
         </p>
 
         <h1 class="titulo-formulario">Tipo de ferramenta</h1>
@@ -211,7 +211,7 @@
                 <label>
                     <input type="radio" name="faca-estilo" value="Chef" required>
                     <div class="form-opcao">
-                        <img src="css/imgs/formulario/carbono.jpg" alt="Carbono">
+                        <img src="css/imgs/formulario/chef.png" alt="Carbono">
                         <div class="texts">
                             <h3>Chef</h3>
                         </div>
@@ -229,7 +229,7 @@
                 <label>
                     <input type="radio" name="faca-estilo" value="Japonesa" required>
                     <div class="form-opcao">
-                        <img src="css/imgs/elementos/messi.jpg" alt="Carbono">
+                        <img src="css/imgs/formulario/japonesa.png" alt="Carbono">
                         <div class="texts">
                             <h3>Japonesa</h3>
                         </div>
@@ -238,7 +238,7 @@
             </form>
         </div>
 
-        <div class="estilo-cutelo">
+        <!-- <div class="estilo-cutelo">
             
             <h1 class="titulo-formulario">Estilo de cutelo</h1>
             <form id="formulario-3">            
@@ -261,9 +261,9 @@
                     </div>
                 </label>
             </form>
-        </div>
+        </div> -->
 
-        <div class="estilo-machado">
+        <!-- <div class="estilo-machado">
             
             <h1 class="titulo-formulario">Estilo de machado</h1>
             <form id="formulario-4">   
@@ -295,7 +295,7 @@
                     </div>
                 </label>
             </form>
-        </div>
+        </div> -->
 
         <h1 class="titulo-formulario">Material da lâmina</h1>
         <form id="formulario-5">
@@ -456,7 +456,7 @@
             <h1 class="titulo-formulario">Tipo de couro</h1>
             <form id="formulario-8">
                 <label style="margin-right: 10rem;">
-                    <input type="radio" name="couro-tipo" value="Boto" required>
+                    <input type="radio" name="couro-tipo" value="Bovino" required>
                     <div class="form-opcao">
                         <img src="css/imgs/formulario/bovino.jpg" alt="Carbono">
                         <div class="texts">
@@ -465,7 +465,7 @@
                     </div>
                 </label>
                 <label>
-                    <input type="radio" name="couro-tipo" value="Rosa" required>
+                    <input type="radio" name="couro-tipo" value="Jacaré" required>
                     <div class="form-opcao">
                         <img src="css/imgs/formulario/jacaré.jpg" alt="Carbono">
                         <div class="texts">
@@ -481,7 +481,7 @@
             <h1 class="titulo-formulario">Tipo de madeira</h1>
             <form id="formulario-9">
                 <label style="margin-right: 10rem;">
-                    <input type="radio" name="madeira-tipo" value="Menino de pau" required>
+                    <input type="radio" name="madeira-tipo" value="Spalted" required>
                     <div class="form-opcao">
                         <img src="css/imgs/catalogo/spalted-extra-13.jpg" alt="Carbono">
                         <div class="texts">
@@ -490,7 +490,7 @@
                     </div>
                 </label>
                 <label>
-                    <input type="radio" name="madeira-tipo" value="Menino" required>
+                    <input type="radio" name="madeira-tipo" value="Leopard Wood" required>
                     <div class="form-opcao">
                         <img src="css/imgs/catalogo/leopard-extra-1.jpg" alt="Carbono">
                         <div class="texts">
@@ -501,7 +501,13 @@
             </form>
         </div>
 
-        <!-- <button type="button" id="resetBtn">Limpar Seleções</button>  -->
+        <button type="button" id="resetBtn" class="reset">Limpar Seleções</button> 
+
+        <div class="comentarios">
+            <h1>Comentários</h1>
+            <textarea name="" id="comentarios" placeholder="Quais detalhes você deseja inserir?"></textarea>
+        </div>
+
 
         <!-- Botão de enviar pro whatsapp -->
         <button type="button" class="btn-enviar" onclick="enviarWhatsApp()">
@@ -566,7 +572,7 @@
         </div>
 
         <div class="logo-footer">
-            <img src="css/imgs/elementos/logo.png" alt="Logo da empresa">
+            <img src="css/imgs/elementos/logo-cortada.png" alt="Logo da empresa">
             <p>Desde 2018</p>
         </div>
 
