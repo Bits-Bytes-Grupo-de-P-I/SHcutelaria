@@ -139,8 +139,9 @@
                 });
                 const data = await response.json();
                 if (data.token) {
-                    authToken = data.token;
+                    authToken = data.token; // Aqui que deve colocar o código pra redirecionar pra página inicial
                     document.getElementById('output').innerText = 'Login bem-sucedido! Token armazenado.';
+                    console.log(data)
                 } else {
                     document.getElementById('output').innerText = JSON.stringify(data, null, 2);
                 }
@@ -161,6 +162,7 @@
                     headers: { 'Authorization': 'Bearer ' + authToken }
                 });
                 const data = await response.json();
+                console.log(data)
                 document.getElementById('output').innerText = JSON.stringify(data, null, 2);
             } catch (error) {
                 document.getElementById('output').innerText = 'Erro: ' + error.message;
