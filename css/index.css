@@ -1,11 +1,8 @@
 * {
     color: var(--aluminio);
     font-family: 'PLAYFAIR';
-<<<<<<< Updated upstream
     margin: 0;
     padding: 0;
-=======
->>>>>>> Stashed changes
 }
 
 :root {
@@ -18,28 +15,10 @@
     --incandescente: #f15217;
 }
 
-<<<<<<< Updated upstream
 body {
     background-color: var(--carbono);
     box-sizing: border-box;
     min-height: 100vh;
-=======
-/*EFEITOS DE HOVER DO TOPO*/
-.menu a:hover, .sac a:hover, .login a:hover, .sac a:hover {
-    color: var(--brasa);
-    text-shadow: 
-                0 0 20px rgba(255, 69, 0, 1),
-                0 0 40px rgba(255, 69, 0, 0.8),
-                0 0 60px rgba(255, 69, 0, 0.6),
-                0 0 80px rgba(255, 69, 0, 0.4);
-    transition: all 0.3s ease;
-}
-
-
-body {
-    background-color: var(--carbono);
-    box-sizing: border-box;
->>>>>>> Stashed changes
 }
 
 img {
@@ -55,22 +34,10 @@ button {
     cursor: pointer;
 }
 
-nav {
-    background: url(imgs/textura-damasco.jpg) no-repeat center;
-    background-size: cover;
-    padding: 0 10rem;
-    width: 100%;
-    position: relative;
-    top: 0;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
 
 main {
     margin-left: clamp(10rem, 5vw, 15rem);
     margin-right: clamp(10rem, 5vw, 15rem);
-<<<<<<< Updated upstream
     margin-top: 8rem;
 }
 
@@ -206,23 +173,14 @@ main {
     box-shadow: var(--fuligem) 12px 9.6px 12.8px;
 }
 
-<<<<<<< Updated upstream
 .titulo-card .rifa-titulo {
     position: absolute;
     top: 0;
-=======
-.titulo-card {
-    position: absolute;
-    width: 100%;
-    top: 0;
-    background-color: rgba(0, 0, 0, 0.5);
->>>>>>> Stashed changes
 }
 
 .titulo-card h1 {
     font-size: clamp(1.5rem, 2vw, 3rem);
     text-align: center;
-<<<<<<< Updated upstream
     background-color: rgba(0, 0, 0, 0.5);
     padding: 8px 0;
 }
@@ -261,7 +219,6 @@ main {
     box-shadow: 0 0 20px rgba(255, 69, 0, 1), 0 0 30px rgba(255, 69, 0, 0.8), 0 0 40px rgba(255, 69, 0, 0.6);
 }
 
-<<<<<<< Updated upstream
 
 .rifa {
     position: relative;
