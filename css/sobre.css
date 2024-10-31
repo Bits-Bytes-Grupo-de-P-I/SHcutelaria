@@ -1,0 +1,360 @@
+:root {
+    --fuligem: #161616;
+    --carbono: #232323;
+    --cinza: #383838;
+    --prata: #C0C0C0;
+    --aluminio: #D0D5DB;
+    --brasa: #F05E1B;
+    --incandescente: #f15217;
+}
+
+* {
+    color: var(--aluminio);
+    font-family: 'PLAYFAIR';
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.heading {
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    margin: 1.25rem auto; 
+}
+
+.heading h1 {
+    font-size: 3.1rem; 
+    color: var(--aluminio);
+    margin-bottom: 1.5rem; 
+    position: relative;
+    display: inline-block;
+    border-bottom: 4px solid var(--brasa); 
+    padding-bottom: 0.2rem; 
+}
+
+.heading p {
+    font-size: 1.3rem;
+    color: var(--aluminio);
+    margin-bottom: 2.1rem; 
+}
+
+.container {
+    width: 100%;
+    margin: 0 auto;
+    padding: 1rem 1rem; 
+    background-color: var(--fuligem);
+    border-radius: 0.5rem;
+}
+
+.about {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.about-image {
+    flex: 1;
+    margin-right: 2.5rem; 
+    overflow: hidden;
+}
+
+.about-image img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    transition: 0.5s ease;
+    border-radius: 0.5rem;
+}
+
+.about-image:hover img {
+    transform: scale(1.1);
+}
+
+.about-content {
+    flex: 1;
+}
+
+.about-content h2 {
+    font-size: 1.5rem; 
+    margin-bottom: 0.9rem; 
+    color: var(--brasa);
+}
+
+.about-content p {
+    font-size: 1.2rem; 
+    line-height: 1.5;
+    color: var(--aluminio);
+}
+
+.about-content .read-more {
+    display: inline-block;
+    padding: 0.6rem 1.25rem; 
+    background-color: #b12424;
+    color: var(--aluminio);
+    font-size: 1.1rem; 
+    text-decoration: none;
+    border-radius: 1.5rem; 
+    margin-top: 0.9rem; 
+    transition: 0.3s;
+}
+
+.about-content .read-more:hover {
+    background-color: #db0f0f;
+}
+
+.social-links {
+    padding-top: 2rem;
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+    display: flex;
+    gap: 15px;
+}
+
+.social-links i {
+    color: var(--fuligem);
+}
+
+.social-links a {
+    background-color: var(--brasa);
+    font-size: 1.2rem;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.social-links a:hover {
+    background-color: var(--incandescente);
+    transform: scale(1.1);
+}
+
+/*sauhsuahs*/
+
+.sobre-sergio {
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.photo {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid var(--fuligem);
+    margin-bottom: 1rem;
+}
+
+.sobre-sergio p {
+    font-size: 1.2rem;
+}
+
+
+/*estilização card serviços*/
+
+.title {
+    text-align: center;
+}
+
+.title h1 {
+    text-align: center;
+    padding-top: 2rem;
+    font-size: 2.6rem; 
+    display: inline-block;
+    border-bottom: 4px solid var(--brasa); 
+    padding-bottom: 0.2rem;
+}
+
+.services {
+    width: 85%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 2rem auto; 
+    text-align: center;
+}
+
+.card {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    margin: 0 1.25rem;
+    padding: 1.25rem 1.25rem; 
+    background-color: var(--brasa);
+    border-radius: 0.6rem; 
+    cursor: pointer;
+}
+
+.card:hover {
+    background: url(imgs/elementos/textura-damasco.png) no-repeat 50% 20%;
+    background-size: cover;
+    background-color: var(--fuligem);
+    background-blend-mode: overlay;
+    transition: 0.4s ease;
+    transform: scale(1.02);
+}
+
+.card:hover i,
+.card:hover h2 {
+    color: var(--brasa);
+    transition: color 0.4s ease;
+}
+
+.card:hover .button {
+    background-color: var(--brasa);
+    color: var(--fuligem);
+}
+
+.card:hover p {
+    color: var(--aluminio);
+}
+
+.card .icon {
+    font-size: 2.1rem; 
+    margin-bottom: 0.6rem;
+}
+
+.card i {
+    color: var(--fuligem);
+}
+
+.card h2 {
+    font-size: 1.75rem; 
+    color: var(--fuligem);
+    margin-bottom: 1.25rem; 
+}
+
+.card p {
+    height: 10.5rem;
+    font-size: 1rem; 
+    margin-bottom: 1.8rem;
+    line-height: 1.5;
+    color: var(--fuligem);
+}
+
+.button {
+    margin-top: 1rem;
+    font-size: 0.9rem; 
+    text-decoration: none;
+    color: var(--aluminio);
+    background-color: var(--fuligem);
+    padding: 0.5rem 0.75rem; 
+    border-radius: 0.3rem;
+    letter-spacing: 1px;
+}
+
+.button:hover {
+    transition: all 0.4s ease-out;
+    border: 1px solid var(--brasa);
+    box-shadow: 0 0 20px rgba(255, 69, 0, 1), 0 0 30px rgba(255, 69, 0, 0.8), 0 0 40px rgba(255, 69, 0, 0.6);
+}
+
+@media screen and (max-width: 1390px) {
+    .card p {
+        height: 14rem;
+    }
+}
+
+@media screen and (max-width: 1350px) {
+    .card p {
+        height: 17rem;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .services {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .card {
+        display: flex;
+        margin: 1.25rem 0;
+    }
+
+    .card p {
+        height: 5rem;
+    }
+} 
+
+@media screen and (max-width: 980px) {
+    .heading {
+        padding: 0 1.25rem; 
+    }
+
+    .heading h1 {
+        font-size: 2.25rem; 
+    }
+
+    .heading p {
+        font-size: 1.0625rem; 
+        margin-bottom: 0;
+    }
+
+    .container {
+        padding: 0;
+    }
+
+    .about {
+        padding: 1.25rem;
+        flex-direction: column;
+    }
+
+    .about-image {
+        margin-right: 0;
+        margin-bottom: 1.25rem;
+    }
+
+    .about-content p {
+        padding: 0;
+        font-size: 1rem;
+    }
+
+    .about-content .read-more {
+        font-size: 1rem; 
+    }
+}
+
+@media screen and (max-width: 680px) {
+    .card p {
+        height: 8rem;
+    }
+}
+
+
+@media screen and (max-width: 480px) {
+    .card p {
+        height: 10rem;
+    }
+}
+
+@media screen and (max-width: 420px) {
+    .card p {
+        height: 16rem;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .card p {
+        height: 19rem;
+    }
+}
+
+@media screen and (max-width: 200px) {
+    .card p {
+        height: 25rem;
+    }
+}

@@ -5,7 +5,7 @@
     --prata: #C0C0C0;
     --aluminio: #D0D5DB;
     --brasa: #F05E1B;
-    --incandescente: #be4811;
+    --incandescente: #f15217;
 }
 
 .title  {
@@ -55,7 +55,7 @@
     cursor: pointer;
     box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25),
     0 10px 10px rgba(0, 0, 0, 0.22);
-    transition: .4s;
+    transition: 0.4s;
     background-color: var(--fuligem);
     overflow: visible;
     display: flex;
@@ -172,6 +172,7 @@ h2 {
     border-radius: 0.5rem;
     text-decoration: none;
     font-weight: bold;
+    font-size: 1.2rem;
     transition: transform 0.4s ease;
 }
 
@@ -239,6 +240,10 @@ h2 {
     color: #d3d3cf;
 }
 
+.modal-info i:hover {
+    cursor: pointer;
+} 
+
 .close {
     font-size: 1.75rem;
     font-weight: bold;
@@ -267,30 +272,21 @@ h2 {
     transform: scale(1.03);
 }
 
-.info-message {
+#info-message {
     position: absolute;
-    top: 40%;
-    left: 50%;
-    transform: translate(-50%, -40%);
+    display: none;
     background-color: #414040;
-    border: 1px solid #ccc;
-    border-radius: 0.5rem;
-    padding: 1rem;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    z-index: 1000; 
-    font-size: 0.8rem;
+    border: 1px solid var(--fuligem);
     color: var(--aluminio);
+    padding: 10px;
+    z-index: 1000;
     max-width: 200px;
     height: auto;
-    width: auto;
-    white-space: normal; 
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
 }
 
-#info-icon {
-    color: var(--aluminio);
-}
-
-.info-message button {
+#info-message button {
     background-color: var(--brasa);
     color: #000;
     border: none;
@@ -301,7 +297,7 @@ h2 {
     transition: all 0.3s ease-out;
 }
 
-.info-message button:hover {
+#info-message button:hover {
     box-shadow: 0 0 20px rgba(255, 69, 0, 1), 0 0 30px rgba(255, 69, 0, 0.8), 0 0 40px rgba(255, 69, 0, 0.6); 
     color: var(--aluminio);
 }

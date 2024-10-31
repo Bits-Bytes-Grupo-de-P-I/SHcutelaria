@@ -2,5 +2,12 @@
     font-family: 'PLAYFAIR';
     font-style: normal;
     font-display: swap;
-    src: url(PlayfairDisplay-VariableFont_wght.ttf) format('ttf');
+    src: url(PlayfairDisplay-VariableFont_wght.ttf) format('truetype');
    }
+
+@font-face {
+    font-family: 'DIGITAL-7';
+    font-style: normal;
+    font-display: swap;
+    src: url(digital-7.ttf) format('truetype');
+}

@@ -1,0 +1,182 @@
+* {
+    color: var(--aluminio);
+    font-family: 'PLAYFAIR', serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --fuligem: #161616;
+    --carbono: #232323;
+    --cinza: #383838;
+    --prata: #C0C0C0;
+    --aluminio: #D0D5DB;
+    --brasa: #F05E1B;
+    --incandescente: #f15217;
+}
+
+body {
+    background-color: var(--carbono);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+img {
+    position: absolute;
+    top: 50px;
+    left: 50%; /* Coloca o item no meio da largura do contêiner */
+    transform: translateX(-50%); /* Move o item para a esquerda pela metade da sua largura */
+    width: 200px;
+    height: auto;
+    transition: all 0.3s ease-in;
+}
+
+img:hover {
+    transform: translateX(-50%) scale(1.05);
+}
+
+.container-login {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+    margin-top: 3rem;
+}
+
+.entrar, .contato {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 3rem 3rem;
+    background: url(imgs/elementos/textura-damasco.png) no-repeat 50% 20%;
+    background-size: cover;
+    background-color: var(--fuligem);
+    background-blend-mode: overlay;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.7) 0px 5px 15px;
+    height: 38rem;
+}
+
+.entrar {
+
+}
+
+.cadastro {
+
+}
+
+.contato {
+
+}
+
+.cadastro {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 3rem 3rem;
+    background: url(imgs/elementos/textura-damasco.png) no-repeat 50% 20%;
+    background-size: cover;
+    background-color: var(--fuligem);
+    background-blend-mode: overlay;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.7) 0px 5px 15px;
+    height: 38rem;
+}
+
+.entrar i, .contato i, .cadastro i {
+    color: var(--brasa);
+    padding-left: 0.5rem;
+    font-size: 2rem;
+}
+
+
+.entrar h1, .contato h1, .cadastro h1 {
+    position: absolute;
+    top: 2rem;
+    text-align: start;
+    color: var(--aluminio);
+    font-weight: bold;
+    font-size: 2.5rem;
+    color: var(--brasa);
+}
+
+.dados {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    color: var(--aluminio);
+    font-size: 1.6rem;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    color: var(--brasa);
+}
+
+input[type="text"], input[type="password"], input[type="email"] {
+    width: 25rem;
+    padding: 1rem;
+    padding-left: 0.5rem;
+    margin-top: 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    font-size: 1.2rem;
+    color: var(--fuligem);
+}
+
+
+input::placeholder {
+    color: var(--carbono);
+    font-style: italic;
+}
+
+button {
+    width: 40%; /* Define a largura do botão como 40% da tela */
+    padding: 1rem; /* Ajuste o padding conforme necessário */
+    color: var(--fuligem);
+    background-color: var(--brasa);
+    border: none;
+    border-radius: 10px;
+    font-size: 1.4rem;
+    cursor: pointer;
+    transition: all 0.3s ease-in;
+    text-align: center; /* Alinha o texto no centro */
+    margin: 2rem auto; /* Centraliza o botão horizontalmente e adiciona margem vertical */
+}
+
+button:hover {
+    transform: scale(1.05);
+    background-color: #f15217;
+    color: var(--aluminio);
+    transition: all 0.3s ease-out;
+    border: 1px solid var(--brasa);
+    box-shadow: 0 0 20px rgba(255, 69, 0, 1), 0 0 30px rgba(255, 69, 0, 0.8), 0 0 40px rgba(255, 69, 0, 0.6);
+}
+
+
+p {
+    display: block;
+    text-align: center;
+    font-size: 1.6rem;
+    margin-top: 2rem;
+}
+
+.link-cadastro {
+    font-size: 2rem;
+    display: block;
+    color: var(--brasa);
+    margin-top: 1.2rem;
+}
+
+.link-cadastro:hover {
+    transition: all 0.3s ease-in-out;
+    transform: scale(1.05);
+    color: var(--incandescente);
+}
