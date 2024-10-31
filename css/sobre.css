@@ -238,7 +238,7 @@
 }
 
 .card p {
-    height: 10rem;
+    height: 10.5rem;
     font-size: 1rem; 
     margin-bottom: 1.8rem;
     line-height: 1.5;
@@ -246,6 +246,7 @@
 }
 
 .button {
+    margin-top: 1rem;
     font-size: 0.9rem; 
     text-decoration: none;
     color: var(--aluminio);
@@ -285,7 +286,7 @@
     }
 
     .card p {
-        height: 4rem;
+        height: 5rem;
     }
 } 
 
@@ -324,5 +325,36 @@
 
     .about-content .read-more {
         font-size: 1rem; 
+    }
+}
+
+@media screen and (max-width: 680px) {
+    .card p {
+        height: 8rem;
+    }
+}
+
+
+@media screen and (max-width: 480px) {
+    .card p {
+        height: 10rem;
+    }
+}
+
+@media screen and (max-width: 420px) {
+    .card p {
+        height: 16rem;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .card p {
+        height: 19rem;
+    }
+}
+
+@media screen and (max-width: 200px) {
+    .card p {
+        height: 25rem;
     }
 }
