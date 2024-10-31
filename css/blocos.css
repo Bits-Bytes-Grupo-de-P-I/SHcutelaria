@@ -99,7 +99,7 @@ h3 {
     overflow: hidden;
 }
 
-p {
+.texts p {
     text-align: center;
     color: #d2dec3;
     font-size: 1rem;
