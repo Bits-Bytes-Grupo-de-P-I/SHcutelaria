@@ -452,6 +452,7 @@ input[type="radio"]:checked + .form-opcao .texts h3 {
 
 .container-instructions {
   max-width: 800px;
+  margin-bottom: 2rem;
   margin-left: clamp(5rem, 5vw, 15rem);
   margin-right: clamp(5rem, 5vw, 15rem);
 }

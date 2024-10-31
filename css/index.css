@@ -235,6 +235,7 @@ main {
     background-blend-mode: overlay; /* Mistura as duas camadas de cor */
     transition: transform 0.3s ease;
     margin: 0 auto;
+    margin-bottom: 2rem;
 }
 
 

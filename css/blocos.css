@@ -131,6 +131,7 @@ button:hover {
 
 .container-instructions {
     max-width: 800px;
+    margin-bottom: 2rem;
 }
 
 h2 {
