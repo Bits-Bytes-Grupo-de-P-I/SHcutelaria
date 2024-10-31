@@ -137,12 +137,13 @@ input[type="radio"] {
 }
 
 .subtitulo-formulario a {
-  text-decoration: underline;
+  text-decoration: none;
   color: var(--brasa);
   font-style: italic;
 }
 
 .subtitulo-formulario a:hover {
+  text-decoration: underline;
   color: var(--incandescente);
 }
 
@@ -292,7 +293,7 @@ input[type="radio"]:checked + .form-opcao .texts h3 {
 
 .comentarios textarea:focus {
   outline: none !important;
-  border: 2px solid var(--brasa);
+  border-color: var(--brasa);
   border-radius: 10px;
 }
 
