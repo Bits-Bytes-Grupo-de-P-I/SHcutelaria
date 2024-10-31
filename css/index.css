@@ -55,8 +55,6 @@ button {
     cursor: pointer;
 }
 
-<<<<<<< Updated upstream
-=======
 nav {
     background: url(imgs/textura-damasco.jpg) no-repeat center;
     background-size: cover;
@@ -68,7 +66,6 @@ nav {
     justify-content: space-between;
     align-items: center;
 }
->>>>>>> Stashed changes
 
 main {
     margin-left: clamp(10rem, 5vw, 15rem);
