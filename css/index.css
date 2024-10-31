@@ -15,7 +15,7 @@
     --prata: #C0C0C0;
     --aluminio: #D0D5DB;
     --brasa: #F05E1B;
-    --incandescente: #be4811;
+    --incandescente: #f15217;
 }
 
 <<<<<<< Updated upstream
@@ -81,8 +81,8 @@ main {
     background-color: var(--fuligem);
     border: 2px solid var(--fuligem);
     margin-bottom: 6rem;
-    width: 100%;
     overflow: hidden;
+    max-height: 600px;
 }
 
 
@@ -90,32 +90,36 @@ main {
 
 
 .carousel img { 
-    display: block;  
     width: 100%;
-    height: auto;
-    border-radius: 10px;
+    height: auto; /* Permite que a altura seja ajustada proporcionalmente */
+    max-width: 100%; /* Garante que o vídeo não ultrapasse a largura do contêiner */
+    object-fit: cover; 
 }
 
 .carousel video { 
-    display: block;  
     width: 100%;
-    height: auto;
-    z-index: 1;
+    height: auto; /* Permite que a altura seja ajustada proporcionalmente */
+    max-width: 100%; /* Garante que o vídeo não ultrapasse a largura do contêiner */
+    object-fit: cover; 
 }
 
 /*--------------DESTAQUES--------------*/
 
 .destaques {
-    border-radius: 10px;
     overflow: hidden;
+    background: url(imgs/elementos/textura-damasco.png) no-repeat 50% 20%;
+    background-size: cover;
+    background-color: var(--fuligem);
+    background-blend-mode: overlay;
+    padding: 2rem 0;
 }
 
 .destaques h1 {
     text-align: center;
     text-transform: uppercase;
     color: var(--brasa);
-    padding-bottom: 2rem;
-    font-size: 3rem;
+    padding-bottom: 1.5rem;
+    font-size: clamp(2.2rem, 2vw, 3rem);
 }
 
 .carousel-cell {
@@ -123,10 +127,6 @@ main {
     height: 22rem;
     margin-right: 2rem;
     border-radius: 10px;
-    border: 1px solid var(--fuligem);
-    box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
-    counter-increment: carousel-cell;
-    overflow: hidden;
   }
 
 .carousel-cell img {
@@ -134,143 +134,8 @@ main {
     height: 22rem;
     border-radius: 10px;
     object-fit: cover;
-=======
-}
-
-
-.logo img {
-    width: 200px;
-    height: auto;
-    max-width: 100%;
-    color: var(--aluminio);
-}
-
-.ativar-menu {
-    display: none;
-    font-size: 1.8rem;
-    background: none;
-    border: none;
-    color: white;
-    cursor: pointer;
-    position: absolute;
-}
-
-.menu {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    flex-wrap: wrap;
-    text-align: center;
-    font-size: 1.5rem;
-    width: 100%;
-    height: 5rem;
-    text-transform: uppercase;
-}
-
-.menu ul {
-    display: flex;
-    justify-content: space-around;
-    list-style: none;
-}
-
-.menu li {
-    display: flex;
-    padding: 0 1rem;
-}
-
-.menu li a {
-    display: flex;
-    font-size: clamp(1rem, 2vw, 1.5rem);
-    padding: 1rem;
-}
-
-.menu i {
-    padding-right: 0.9rem;
-}
-
-.menu i {
-    color: var(--incandescente);
-}
-
-
-.atendimento {
-    display: flex;
-    gap: 2rem;
-    color: var(--aluminio);
-}
-
-.login {
-    text-align: center;
-    font-size: 1.5rem;
-    cursor: pointer;
-    list-style: none;
-}
-
-.login i {
-    font-size: 2rem;
-    color: var(--incandescente);
-}
-
-.sac {
-    text-align: center;
-    font-size: 1.5rem;
-    cursor: pointer;
-    list-style: none;
-}
-
-.sac i {
-    font-size: 2rem;
-    color: var(--incandescente);
-}
-
-
-.banner {
-    color: var(--brasa);
-    background-color: var(--fuligem);
-    background: url(imgs/faca-cabo-vermelho.jpg) no-repeat 50% 35%;
-    background-size: cover;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 3rem;
-    height: 35rem;
-    max-width: 100vw;
-}
-
-.destaques {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-direction: column;
-    margin-bottom: 2rem;
-    text-align: center;
-}
-
-.destaques h1 {
-    color: var(--brasa);
-    font-size: 3rem;
-    margin-bottom: 2rem;
-    text-transform: uppercase;
-}
-
-.carrossel-destaques {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-direction: row;
-    flex-wrap: wrap;
-    gap: 5rem;
-    overflow: visible;
-    margin-bottom: 5rem;
-}
-
-.card-destaque {
-    width: 20rem;
-    height: 18rem;
-    background-color: var(--prata);
-    border-radius: 10px;
-    box-shadow: var(--fuligem) 6px 4.8px 6.4px;
->>>>>>> Stashed changes
+    border: 1px solid var(--fuligem);
+    box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
 }
 
 .area-serviços {
@@ -279,10 +144,7 @@ main {
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
-<<<<<<< Updated upstream
-    margin-top: 5rem;
-=======
->>>>>>> Stashed changes
+    margin: 5rem 0;
 }
 
 .card-cutelaria {
@@ -293,12 +155,12 @@ main {
     border-radius: 10px;
     border: 1px solid black;
     box-shadow: var(--fuligem) 6px 4.8px 6.4px;
-    background: url(imgs/faca-bainha-de-couro.jpg) no-repeat 50% 70%;
+    background: url(imgs/elementos/faca-bainha-de-couro.jpg) no-repeat 50% 70%;
     background-size: cover;
     margin-bottom: 2rem;
     transition: all 0.3s ease;
     transform-style: preserve-3d; /* Habilita o efeito 3D */ /*O chat disse que era pra deixar tudo do mesmo tamanho quando aumenta, mas não sei se precisa realmente 😔*/
-    cursor: pointer;
+    will-change: transform;
 }
 
 .card-cutelaria:hover {
@@ -315,11 +177,11 @@ main {
     border-radius: 10px;
     border: 1px solid black;
     box-shadow: var(--fuligem) 6px 4.8px 6.4px;
-    background: url(imgs/blocos-de-cima.jpg) no-repeat 50% 90%;
+    background: url(imgs/elementos/blocos-de-cima.jpg) no-repeat 50% 90%;
     background-size: cover;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     transform-style: preserve-3d; /* Habilita o efeito 3D */
-    cursor: pointer;
+    will-change: transform;
 }
 
 .card-blocos:hover {
@@ -335,11 +197,11 @@ main {
     border-radius: 10px;
     border: 1px solid black;
     box-shadow: var(--fuligem) 6px 4.8px 6.4px;
-    background: url(imgs/facas-e-blocos.jpg) no-repeat 40% 90%;
+    background: url(imgs/elementos/facas-e-blocos.jpg) no-repeat 40% 90%;
     background-size: cover;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     transform-style: preserve-3d; /* Habilita o efeito 3D */
-    cursor: pointer;
+    will-change: transform;
 }
 
 .card-restauracao:hover {
@@ -365,32 +227,26 @@ main {
     text-align: center;
 <<<<<<< Updated upstream
     background-color: rgba(0, 0, 0, 0.5);
-=======
->>>>>>> Stashed changes
+    padding: 8px 0;
 }
 
 .explorar-card {
     position: absolute;
     bottom: 0;
     width: 100%;
-    background-color: rgba(0, 0, 0, 0.2);
     padding-left: 3rem;
     padding-bottom: 1.5rem;
 }
 
-.explorar-card h1 {
+.explorar-card p {
     text-align: left;
-    font-size: clamp(1.2rem, 2vw, 2.5rem);
-<<<<<<< Updated upstream
+    font-size: clamp(1.8rem, 2vw, 2.5rem);
     padding-bottom: 0.5rem;
-}
-
-.explorar-card button, .ri {
-=======
+    text-shadow: 2px 2px 2px black;
+    font-weight: bold;
 }
 
 .explorar-card button {
->>>>>>> Stashed changes
     font-weight: bold;
     font-size: clamp(0.8rem, 2vw, 2rem);
     padding: 1rem;
@@ -411,100 +267,278 @@ main {
 <<<<<<< Updated upstream
 
 .rifa {
+    position: relative;
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-direction: column;
-    width: 80%;
-    background-color: var(--fuligem);
+    width: 70%;
     border-radius: 10px;
     border: 1px solid black;
     box-shadow: var(--fuligem) 6px 4.8px 6.4px;
-    background: url(imgs/textura-damasco.png) no-repeat 50% 20%;
+    background: url(imgs/elementos/textura-damasco.png) no-repeat 50% 20%;
     background-size: cover;
-    background-color: var(--carbono);
+    background-color: var(--fuligem);
     background-blend-mode: overlay; /* Mistura as duas camadas de cor */
-    transition: all 0.3s ease;
-    transform-style: preserve-3d;
-    cursor: pointer;
-    margin: 0 auto 0 auto;
-    padding: 1.5rem;
-    overflow: hidden;
+    transition: transform 0.3s ease;
+    margin: 0 auto;
+    margin-bottom: 2rem;
 }
 
-.rifa:hover {
-    transform: scale(1.01) translateZ(20px);
-    box-shadow: var(--fuligem) 12px 9.6px 12.8px;
-}
 
 .rifa-titulo h1 {
     font-size: clamp(1.5rem, 2vw, 3rem);
     text-align: center;
     text-transform: uppercase;
-    margin: 5rem 0 2rem 0rem;
+    margin: 1rem 0;
     color: var(--brasa);
+}
+
+.rifa-titulo h2 {
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 0.5rem;
+}
+
+.timer {
+    text-align: center;
+    font-size: 3rem;
+    font-family: 'DIGITAL-7';
+    background-color: var(--prata);
+    color: red;
+    padding: 10px;
+    flex: 0 1 auto;
+    margin: 2rem 0;
+    border-radius: 10px;
+    border: 2px solid var(--cinza);
 }
 
 .rifa-conteudo {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     align-items: center;
-    overflow: hidden;
-    padding-bottom: 3rem;
+    gap: 2rem;
+    margin: 0 0 3rem 0;
 }
 
 .rifa-imagem {
-    width: 20rem;
-    height: 22rem;
-    height: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 23rem;
+    height: 25rem;
     border-radius: 10px;
-    border: 1px solid var(--fuligem);
+    background: url(imgs/formulario/aço.jpg);
     overflow: hidden;
+    transition: all 0.3s ease-in-out;
+    padding: 0.5rem;
+    /* box-shadow: rgba(240, 94, 27, 0.56) 0px 22px 70px 4px; */
 }
 
 .rifa-imagem img {
-    width: 20rem;
-    height: 22rem;
+    width: 22rem;
+    height: 24rem;
     border-radius: 10px;
-    object-fit: contain;
-    text-align: center;
-    margin: 0 auto;
-    flex-grow: 1;
+    object-fit: cover;
+    transition: all 0.3s ease-in-out;
 }
 
-
 .rifa-info {
-    width: 45%;
-    font-size: clamp(0.8rem, 2vw, 1.5rem);
+    font-size: clamp(1.2rem, 2vw, 1.6rem);
     text-align: center;
 }
 
 .rifa-info p {
-    padding: 1rem;
+    background-color: var(--prata);
+    border-radius: 10px;
+    border: 2px solid var(--aluminio);
+    padding: 0.5rem;
+    margin: 0.5rem 0;
+    text-align: start;
+    color: var(--fuligem);
 }
 
-.rifa-botao button {
-    display: block;
+.rifa-info span {
     font-weight: bold;
-    font-size: clamp(1.2rem, 2vw, 2rem);
+    color: var(--fuligem);
+}
+
+.rifa-blocos {
+    font-size: 2rem;
+    text-align: center;
+}
+
+.rifa-blocos button {
+    display: block;
+    margin: 0 auto;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    background-color: var(--brasa);
+    color: var(--fuligem);
+    border: 1px solid var(--fuligem);
+    border-radius: 10px;
     padding: 1rem;
-    margin-bottom: 3rem;
+    transition: transform 0.3s ease-in-out;
+    font-weight: bold;
+}
+
+.rifa-blocos i {
+    transition: transform 0.3s ease-in-out;
+    color: #161616;
+}
+
+.rifa-blocos:hover button{
+    background-color: #f15217;
+    color: var(--aluminio);
+    border: 1px solid var(--brasa);
+    box-shadow: 0 0 20px rgba(255, 69, 0, 1), 0 0 30px rgba(255, 69, 0, 0.8), 0 0 40px rgba(255, 69, 0, 0.6);
+    transform: scale(1.02);
+}
+
+.rifa-blocos:hover i {
+    color: var(--aluminio);
+}
+
+.btn-enviar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto 5rem auto;
+    font-weight: bold;
+    font-size: clamp(2rem, 2vw, 4rem);
+    padding: 0.5rem;
     background-color: var(--brasa);
     border: 1px solid black;
     color: var(--fuligem);
     border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+    white-space: nowrap;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    width: 26%;
+  }
+  
+.btn-enviar button {
+    background-color: var(--brasa);
+    color: var(--fuligem);
+    border: none;
+    font-weight: bold;
 }
 
-.rifa-botao button:hover {
+.btn-enviar span {
+    cursor: pointer;
+    display: none;
+    align-items: center;
+    position: relative;
+    transition: padding-right 0.5s ease-in-out;
+  }
+  
+.btn-enviar:hover {
     background-color: #f15217;
     color: var(--aluminio);
-    transition: all 0.3s ease-out;
     border: 1px solid var(--brasa);
     box-shadow: 0 0 20px rgba(255, 69, 0, 1), 0 0 30px rgba(255, 69, 0, 0.8), 0 0 40px rgba(255, 69, 0, 0.6);
-    
+    transform: scale(1.02);
+  }
+  
+.btn-enviar:hover span {
+    display: inline-flex;
+  }
+  
+.btn-enviar:hover button {
+    color: var(--aluminio);
 }
 
+.icones-btn-whats {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateX(30px);
+    opacity: 0;
+    position: absolute;
+    transition: all 0.3s ease-in-out
+  }
+  
+.icones-btn-whats i {
+    color: var(--fuligem);
+    padding-left: 1rem;
+    font-size: clamp(2rem, 2vw, 3rem);
+  }
+  
+.btn-enviar:hover .icones-btn-whats {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  
+.btn-enviar:hover .icones-btn-whats i {
+    display: inline;
+    color: var(--aluminio);
+  }
+  
+.icones-btn-whats .seta {
+    padding-left: 0.5rem;
+    font-size: clamp(0.8rem, 2vw, 1.8rem)
+  }
+
+/* Botão "Enviar" para mobile */
+
+.btn-mobile {
+    display: none;
+    background-color: var(--brasa);
+    color: var(--fuligem);
+    border: 1px solid var(--fuligem);
+    border-radius: 10px;
+    padding: 0.8rem;
+    font-size: clamp(2rem, 2vw, 4rem);
+    font-weight: bold;
+    margin: 0 auto 5rem auto;
+  }
+  
+.btn-mobile button {
+    background-color: var(--brasa);
+    color: var(--fuligem);
+    border: none;
+    font-weight: bold;
+}
+
+.btn-mobile:hover {
+    background-color: #f15217;
+    color: var(--aluminio);
+    border: 1px solid var(--brasa);
+    box-shadow: 0 0 20px rgba(255, 69, 0, 1), 0 0 30px rgba(255, 69, 0, 0.8), 0 0 40px rgba(255, 69, 0, 0.6);
+    transform: scale(1.02);
+  }
+  
+.btn-mobile:hover button {
+    color: var(--aluminio);
+}
+
+.btn-mobile:hover .icones-mobile i {
+    color: var(--aluminio);
+  }
+  
+.icones-mobile .seta {
+    margin: auto 0;
+    font-size: 1.5rem
+  }
+  
+.icones-mobile i {
+    color: var(--fuligem);
+    font-size: clamp(2rem, 2vw, 3rem);
+  }
+
 /*--------------------------MEDIA QUERIES--------------------------*/
+
+@media (max-width: 1500px) {
+  
+.btn-mobile {
+    display: block;
+}
+    
+.btn-enviar {
+    display: none;
+}
+}
 
 
 /* 1264px = 79rem */
@@ -512,120 +546,43 @@ main {
 @media (max-width: 79rem) {
     
 
-    .carousel-cell {
-        width: 12rem;
-        height: 16rem;
-        counter-increment: carousel-cell;
-        overflow: hidden;
-      }
-    
-    .carousel-cell img {
-        width: 12rem;
-        height: 16rem;
-        border-radius: 10px;
-        object-fit: cover;
-    }
-    
-=======
-/*Estiliação do meu footer*/
-
-footer {
-    background-color: var(--fuligem);
-    margin-top: 6rem;
-    display: flex;
-    justify-content: space-between;
-    padding: 1.8rem 10rem;
-    font-size: clamp(0.7rem, 2vw, 1.3rem);
-}
-
-.logo p {
-    margin: 0;
-    text-align: center;
-    color: var(--brasa);
-    font-style: italic;
-}
-
-.logo img { 
-    width: 150px; 
-    height: auto; 
-    max-width: 100%;
-}
-
-footer h2 {
-    display: inline-block;
-    border-bottom: 2px solid var(--brasa);
-    padding-bottom: 0.4rem;
-    margin: 0; /*remover espaço abaixo da linha ´-´*/
-}
-
-footer ul {
-    list-style: none;
-    padding: 0;
-}
-
-footer li {
-    margin-bottom: 0.6rem;
-    color: #fff;
-    transition: color 0.5s ease;
-    font-size: clamp(0.9rem, 2vw, 1.1rem);
-}
-
-footer a {
-    color: #fff;
-    transition: color 0.5s ease;
-    font-size: clamp(0.9rem, 2vw, 1.1rem);
-}
-
-footer i {
-    margin-right: 0.4rem;
-    width: 1.2rem;
-    height: 1.2rem;
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    transition: color 0.5s ease;
-}
-
-/*EFEITOS DE HOVER DO FOOTER*/
-
-footer li:hover, footer li:hover a, footer li:hover i {
-    color: var(--brasa);
-    text-shadow: 
-                0 0 20px rgba(255, 69, 0, 1),
-                0 0 40px rgba(255, 69, 0, 0.8),
-                0 0 60px rgba(255, 69, 0, 0.6),
-                0 0 80px rgba(255, 69, 0, 0.4);
-    transition: all 0.3s ease;
-}
-
-/*Cabo footer pae*/
-
-@media (max-width: 1250px) {
->>>>>>> Stashed changes
-    .card-cutelaria {
-        height: 20rem;
+.carousel-cell {
+    width: 12rem;
+    height: 16rem;
+    counter-increment: carousel-cell;
+    overflow: hidden;
     }
 
-    .card-blocos {
-        width: 100%;
-        height: 20rem;
-        margin-bottom: 2rem;
-    }
+.carousel-cell img {
+    width: 12rem;
+    height: 16rem;
+    border-radius: 10px;
+    object-fit: cover;
+}
 
-    .card-restauracao {
-        width: 100%;
-        margin-bottom: 2rem;
-        height: 20rem;
-    }
+.card-cutelaria {
+    height: 20rem;
+}
 
-    .explorar-card {
-        padding-left: 1rem;
-    }
-<<<<<<< Updated upstream
+.card-blocos {
+    width: 100%;
+    height: 20rem;
+    margin-bottom: 2rem;
+}
 
-    .rifa {
-        width: 100%;
-    }
+.card-restauracao {
+    width: 100%;
+    margin-bottom: 2rem;
+    height: 20rem;
+}
+
+.explorar-card {
+    padding-left: 1rem;
+}
+
+.rifa {
+    width: 100%;
+}
 }
 
 
@@ -653,84 +610,29 @@ footer li:hover, footer li:hover a, footer li:hover i {
     }
 }
 
+/* 960px = ?rem */
+
+@media (max-width: 950px) {
+    .rifa-imagem {
+        width: 20rem;
+        height: 22rem;
+    }
+
+    .rifa-imagem img {
+        width: 18rem;
+        height: 20rem;
+    }
+
+    .rifa-conteudo {
+        flex-direction: column;
+    }
+}
+
 /* 768px = 48rem */
 
 @media (max-width: 48rem) {
     main {
-        margin-left: 2.5rem;
-        margin-right: 2.5rem;
-    }
-}
-=======
-}
-
-/*-------------------Responsividade-------------------*/
-
-@media (max-width: 1050px) {
-    footer {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    .logo {
-        order: -1; /*faz a logo aparecer primeiro*/
-        align-self: center;
-        margin-bottom: 2rem;
-    }
-
-    .logo img {
-        width: 120px;
-    }
-}
-
-@media (max-width: 767px) {
-    main {
         margin-left: 2rem;
         margin-right: 2rem;
-    }
-
-    .menu {
-        display: flex;
-        justify-content: start;
-    }
-
-    .menu ul {
-        display: none;
-    }
-
-    .menu ul.mostrar {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        padding: 1rem 0.5rem;
-        background-color: var(--carbono);
-        border-radius: 10px;
-    }
-
-    .menu ul li{
-        display: block;
-        width: 100%;
-        text-align: center;
-        padding: 1rem 0.5rem;
-        border: 1px top bottom var(--fuligem);
-    }
-
-    .menu ul li a {
-        display: block;
-    }
-
-    .menu ul li:hover {
-        background-color: var(--fuligem);
-    }
-
-    .ativar-menu {
-        display: flex;
-        margin-left: 2rem;
-    }
-
-    .logo img {
-        width: 100px;
-    }
+    } 
 }
->>>>>>> Stashed changes

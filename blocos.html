@@ -1,9 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <script type="text/javascript" data-cmp-ab="1" src="https://cdn.consentmanager.net/delivery/autoblocking/373a1c6da17ac.js" data-cmp-host="c.delivery.consentmanager.net" data-cmp-cdn="cdn.consentmanager.net" data-cmp-codesrc="16"></script>
+    <script type="text/javascript" data-cmp-ab="1" src="https://cdn.consentmanager.net/delivery/autoblocking/373a1c6da17ac.js" data-cmp-host="c.delivery.consentmanager.net" data-cmp-cdn="cdn.consentmanager.net" data-cmp-codesrc="16">
+    </script>
+
     <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-2DK3TNK83B"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-2DK3TNK83B">
+    </script>
+    
     <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
@@ -11,8 +15,7 @@
 
     gtag('config', 'G-2DK3TNK83B');
     </script>
-    
-    
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SH cutelaria</title>
@@ -21,8 +24,10 @@
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/navbar_footer.css">
     <link rel="stylesheet" href="css/blocos.css">
+    <link rel="icon" href="css/imgs/elementos/logo-aba.png">
     
-    <script src="js/index.js"></script>
+    <script src="js/navbar.js"></script>
+    <script src="js/blocos.js"></script>
 
 </head>
 <body>
@@ -31,38 +36,38 @@
     <nav>
 
         <div class="logo-nav">
-            SH Cutelaria
+            <img src="css/imgs/elementos/logo-cortada.png" alt="">
         </div>
         
 
         <div class="menu">
             <ul>
                 <li>
-                    <a href="">
+                    <a href="index.html">
                         <i class="fa-solid fa-house"></i>
                         Início
                     </a>
                 </li>
                 <li>
-                    <a href="">
-                        <i class="fa-solid fa-list"></i>
+                    <a href="formulario.html">
+                        <i class="fas fa-pencil-ruler"></i>
                         Personalizar
                     </a>
                 </li>
                 <li>
-                    <a href="">
+                    <a href="blocos.html">
                         <i class="fa-sharp fa-solid fa-cubes"></i>
                         Blocos
                     </a>
                 </li>
                 <li>
-                    <a href="">
+                    <a href="restauracao.html">
                         <i class="fa-solid fa-hammer"></i>
                         Restauração
                     </a>
                 </li>
                 <li> 
-                    <a href="">
+                    <a href="sobre.html">
                         <i class="fa-duotone fa-solid fa-circle-info"></i>
                         Sobre
                     </a>
@@ -73,14 +78,9 @@
 
         <div class="atendimento">
             <ul>
-                <li class="login">
-                    <a href=""><i class="fa-solid fa-right-to-bracket"></i>
-                        Login
-                    </a>
-                </li>
-                <li class="sac">
-                    <a href=""><i class="fa-solid fa-headset"></i>
-                        SAC
+                <li class="converse">
+                    <a href="login.html"><i class="fa-solid fa-headset"></i>
+                        Fale Conosco
                     </a>
                 </li>
             </ul>
@@ -97,31 +97,31 @@
                     </div>
                     <ul>
                         <li>
-                            <a href="">
+                            <a href="index.html">
                                 <i class="fa-solid fa-house"></i>
                                 Início
                             </a>
                         </li>
                         <li>
-                            <a href="">
-                                <i class="fa-solid fa-list"></i>
+                            <a href="formulario.html">
+                                <i class="fas fa-pencil-ruler"></i>
                                 Personalizar
                             </a>
                         </li>
                         <li>
-                            <a href="">
+                            <a href="blocos.html">
                                 <i class="fa-sharp fa-solid fa-cubes"></i>
                                 Blocos
                             </a>
                         </li>
                         <li>
-                            <a href="">
+                            <a href="restauracao.html">
                                 <i class="fa-solid fa-hammer"></i>
                                 Restauração
                             </a>
                         </li>
                         <li>
-                            <a href="">
+                            <a href="sobre.html">
                                 <i class="fa-duotone fa-solid fa-circle-info"></i>
                                 Sobre
                             </a>
@@ -131,14 +131,9 @@
 
                 <div class="atendimento-reduzido">
                     <ul>
-                        <li class="login-reduzido">
-                            <a href=""><i class="fa-solid fa-right-to-bracket"></i>
-                                Login
-                            </a>
-                        </li>
-                        <li class="sac-reduzido">
+                        <li class="converse">
                             <a href=""><i class="fa-solid fa-headset"></i>
-                                SAC
+                                Fale Conosco
                             </a>
                         </li>
                     </ul>
@@ -156,136 +151,385 @@
     </nav>
     <!-- Fim da NavBar -->
 
-
-
     <!-- Início da Main -->
     <main>
+        <h1 class="title">Amostras <i class="fa-sharp fa-solid fa-cubes" style="color: #f05e1b;"></i></h1>
+        <p class="aviso">
+            <strong>Atenção:</strong> As imagens a seguir são exemplos de blocos já produzidos. Os blocos disponíveis para compra podem variar nos materiais exibidos nas amostras e nas cores. Para consultar o catálogo atualizado, entre em contato via <a href="http://" target="_blank" rel="noopener noreferrer">WhatsApp.</a> 
+        </p>
         <div class="gallery">
-            
             <div class="content">
-                <img src="css/imgs/baleia-cat.jpg" alt="">
+                <img class="imgCat" src="css/imgs/catalogo/baleia-cat.jpg" alt="">
                 <div class="texts">
                     <h3>Osso de Baleia</h3>
                     <p>Feito a partir de ossos de baleia, tratado e estabilizado em resina.</p>
-                    <!-- <h6>R$ 200,00 - R$ 350,00</h6> -->
                 </div>
-                <button>Ver Mais</button>
+                <button onclick="toggleModal('modal-baleia')">Ver Mais</button>
             </div>
 
             <div class="content">
-                <img src="css/imgs/curly-cat.jpg" alt="">
+                <img class="imgCat" src="css/imgs/catalogo/curly-cat.jpg" alt="">
                 <div class="texts">
                     <h3>Curly Mango</h3>
                     <p>Madeira de mango estabilizada em resina para maior durabilidade.</p>
-                    <!-- <h6>R$ 10,00 - R$ 50,00</h6> -->
                 </div>
-                <button>Ver Mais</button>
+                <button onclick="toggleModal('modal-curly')">Ver Mais</button>
             </div>
 
             <div class="content">
-                <img src="css/imgs/black-cat.jpg" alt="">
+                <img class="imgCat" src="css/imgs/catalogo/black-cat.jpg" alt="">
                 <div class="texts">
                     <h3>Black Palm</h3>
                     <p>Palmeira negra estabilizada, ideal para acabamentos únicos.</p>
-                    <!-- <h6>R$ 2,00 - R$ 30,00</h6> -->
                 </div>
-                <button>Ver Mais</button>
+                <button onclick="toggleModal('modal-black')">Ver Mais</button>
             </div>
 
             <div class="content">
-                <img src="css/imgs/hibrido-cat.jpg" alt="">
+                <img class="imgCat" src="css/imgs/catalogo/hibrido-cat.jpg" alt="">
                 <div class="texts">
                     <h3>Híbrido</h3>
                     <p>Combinação de madeira e resina, oferecendo beleza e resistência.</p>
-                    <!-- <h6>R$ 20,00 - R$ 500,00</h6> -->
                 </div>
-                <button>Ver Mais</button>
+                <button onclick="toggleModal('modal-hibrido')">Ver Mais</button>
             </div>
 
             <div class="content">
-                <img src="css/imgs/leopard-cat.jpg" alt="">
+                <img class="imgCat" src="css/imgs/catalogo/leopard-cat.jpg" alt="">
                 <div class="texts">
                     <h3>Leopard Wood</h3>
                     <p>Madeira de leopard com acabamento estabilizado e exclusivo.</p>
-                    <!-- <h6>R$ 20,00 - R$ 500,00</h6> -->
                 </div>
-                <button>Ver Mais</button>
+                <button onclick="toggleModal('modal-leopard')">Ver Mais</button>
             </div>
 
             <div class="content">
-                <img src="css/imgs/resina-cat.jpg" alt="">
+                <img class="imgCat" src="css/imgs/catalogo/resina-cat.jpg" alt="">
                 <div class="texts">
                     <h3>Resina</h3>
                     <p>Bloco sólido feito inteiramente de resina estabilizada.</p>
-                    <!-- <h6>R$ 20,00 - R$ 500,00</h6> -->
                 </div>
-                <button>Ver Mais</button>
+                <button onclick="toggleModal('modal-resina')">Ver Mais</button>
             </div>
 
             <div class="content">
-                <img src="css/imgs/spalted-cat.jpg" alt="">
+                <img class="imgCat" src="css/imgs/catalogo/spalted-cat.jpg" alt="">
                 <div class="texts">
                     <h3>Spalted</h3>
                     <p>Madeira spalted tratada, destacando seus padrões naturais.</p>
-                    <!-- <h6>R$ 20,00 - R$ 500,00</h6> -->
+                </div>
+                <button onclick="toggleModal('modal-spalted')">Ver Mais</button>
+            </div>
+
+            <div class="content invisible">
+                <img class="imgCat" src="css/imgs/catalogo/spalted-cat.jpg" alt="">
+                <div class="texts">
+                    <h3>Spalted</h3>
+                    <p>Madeira spalted tratada, destacando seus padrões naturais.</p>
                 </div>
                 <button>Ver Mais</button>
             </div>
 
         </div>
-    </main>
-    <!-- Fim da Main -->
 
-    
+        <div class="container-instructions">
+            <h2>Como Adquirir seu bloco</h2>
+            <ol class="instructions">
+                <li><strong>Explore o Catálogo:</strong> Navegue pelos modelos exibidos no catálogo para visualizar os exemplos de blocos feitos com diferentes materiais.</li>
+                <li><strong>Contato pelo WhatsApp:</strong> Clique no botão abaixo para ser direcionado ao WhatsApp do artesão.</li>
+                <li><strong>Consulte o Catálogo Atualizado:</strong> No WhatsApp, consulte o catálogo atualizado com as cores e padrões disponíveis.</li>
+                <li><strong>Escolha Seu Bloco:</strong> Escolha o bloco que deseja adquirir e finalize sua compra diretamente com o artesão.</li>
+                <li><strong>Atenção aos Detalhes:</strong> Caso deseje um bloco em tamanho personalizado, o valor pode variar conforme a solicitação.</li>
+            </ol>
+            <a href="" class="whatsapp-button">Contato pelo WhatsApp</a>
+        </div>
+
+        <!--Inicio das divs suspensas-->
+
+        <div id="info-message">
+            <p></p>
+            <button onclick="closeInfo()">Entendi</button>
+        </div>
+
+        <div id="modal-baleia" class="modal" style="display: none;">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div class="modal-info">
+                        <h3>Costela e Vértebra de Baleia</h3>
+                        <p>Preço: R$ 225,00</p>
+                        <p>
+                            Dimensões: 30 x 52 x 140mm<br>
+                            <i id="info-icon-baleia" class="info-icon fas fa-info-circle info-icon" onclick="toggleInfo('baleia', 'Medidas padrão que podem ter variações.')"></i>
+                        </p>
+                    </div>
+                    <span class="close" onclick="toggleModal('modal-baleia')">&times;</span>
+                </div>
+                <div class="modal-body">
+                    <img src="css/imgs/catalogo/baleia-extra-1.jpg" alt="Foto bloco estabilizado baleia extra 1" loading="lazy">
+                    <img src="css/imgs/catalogo/baleia-extra-2.jpg" alt="Foto bloco estabilizado baleia extra 2" loading="lazy">
+                    <img src="css/imgs/catalogo/baleia-extra-3.jpg" alt="Foto bloco estabilizado baleia extra 3" loading="lazy">
+                    <img src="css/imgs/catalogo/baleia-extra-4.jpg" alt="Foto bloco estabilizado baleia extra 4" loading="lazy">
+                    <img src="css/imgs/catalogo/baleia-extra-5.jpg" alt="Foto bloco estabilizado baleia extra 5" loading="lazy">
+                    <img src="css/imgs/catalogo/baleia-extra-6.jpg" alt="Foto bloco estabilizado baleia extra 6" loading="lazy">
+                    <img src="css/imgs/catalogo/baleia-extra-7.jpg" alt="Foto bloco estabilizado baleia extra 7" loading="lazy">
+                    <img src="css/imgs/catalogo/baleia-extra-8.jpg" alt="Foto bloco estabilizado baleia extra 8" loading="lazy">
+                </div>
+                <div style="text-align: center;">
+                    <a href="" class="whatsapp-button">Contato pelo WhatsApp</a>
+                </div>
+            </div>
+        </div>
+
+        <div id="modal-curly" class="modal" style="display: none;">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div class="modal-info">
+                        <h3>Curly Mango Estabilizado</h3>
+                        <p>Preço: R$ 110,00</p>
+                        <p>
+                            Dimensões: 30 x 52 x 140mm<br>
+                            <i id="info-icon-curly" class="info-icon fas fa-info-circle info-icon" onclick="toggleInfo('curly', 'Medidas padrão que podem ter variações.')"></i>
+                        </p>
+                    </div>
+                    <span class="close" onclick="toggleModal('modal-curly')">&times;</span>
+                </div>
+                <div class="modal-body">
+                    <img src="css/imgs/catalogo/curly-extra-1.jpg" alt="Foto bloco estabilizado curly extra 1" loading="lazy">
+                    <img src="css/imgs/catalogo/curly-extra-2.jpg" alt="Foto bloco estabilizado curly extra 2" loading="lazy">
+                    <img src="css/imgs/catalogo/curly-extra-3.jpg" alt="Foto bloco estabilizado curly extra 3" loading="lazy">
+                    <img src="css/imgs/catalogo/curly-extra-4.jpg" alt="Foto bloco estabilizado curly extra 4" loading="lazy">
+                    <img src="css/imgs/catalogo/curly-extra-5.jpg" alt="Foto bloco estabilizado curly extra 5" loading="lazy">
+                    <img src="css/imgs/catalogo/curly-extra-6.jpg" alt="Foto bloco estabilizado curly extra 6" loading="lazy">
+                    <img src="css/imgs/catalogo/curly-extra-7.jpg" alt="Foto bloco estabilizado curly extra 7" loading="lazy">
+                    <img src="css/imgs/catalogo/curly-extra-8.jpg" alt="Foto bloco estabilizado curly extra 8" loading="lazy">
+                </div>
+                <div style="text-align: center;">
+                    <a href="" class="whatsapp-button">Contato pelo WhatsApp</a>
+                </div>
+            </div>
+        </div>
+
+        <div id="modal-black" class="modal" style="display: none;">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div class="modal-info">
+                        <h3>Black Palm Estabilizado</h3>
+                        <p>Preço: R$ ??,??</p>
+                        <p>
+                            Dimensões: 30 x 52 x 140mm<br>
+                            <i id="info-icon-black" class="info-icon fas fa-info-circle info-icon" onclick="toggleInfo('black', 'Medidas padrão que podem ter variações.')"></i>
+                        </p>
+                    </div>
+                    <span class="close" onclick="toggleModal('modal-black')">&times;</span>
+                </div>
+                <div class="modal-body">
+                    <img src="css/imgs/catalogo/black-extra-1.jpg" alt="Foto bloco estabilizado black palm extra 1" loading="lazy">
+                    <img src="css/imgs/catalogo/black-extra-2.jpg" alt="Foto bloco estabilizado black palm extra 2" loading="lazy">
+                </div>
+                <div style="text-align: center;">
+                    <a href="" class="whatsapp-button">Contato pelo WhatsApp</a>
+                </div>
+            </div>
+        </div>
+
+        <div id="modal-hibrido" class="modal" style="display: none;">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div class="modal-info">
+                        <h3>Madeira Estabilizado em Resina</h3>
+                        <p>Preço: R$ 225,00</p>
+                        <p>
+                            Dimensões: 30 x 52 x 140mm<br>
+                            <i id="info-icon-hibrido" class="info-icon fas fa-info-circle info-icon" onclick="toggleInfo('hibrido', 'Medidas padrão que podem ter variações.')"></i>
+                        </p>
+                    </div>
+                    <span class="close" onclick="toggleModal('modal-hibrido')">&times;</span>
+                </div>
+                <div class="modal-body">
+                    <img src="css/imgs/catalogo/hibrido-extra-1.jpg" alt="Foto bloco estabilizado híbrido extra 1" loading="lazy">
+                    <img src="css/imgs/catalogo/hibrido-extra-2.jpg" alt="Foto bloco estabilizado híbrido extra 2" loading="lazy">
+                    <img src="css/imgs/catalogo/hibrido-extra-3.jpg" alt="Foto bloco estabilizado híbrido extra 3" loading="lazy">
+                </div>
+                <div style="text-align: center;">
+                    <a href="" class="whatsapp-button">Contato pelo WhatsApp</a>
+                </div>
+            </div>
+        </div>
+
+        <div id="modal-leopard" class="modal" style="display: none;">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div class="modal-info">
+                        <h3>Madeira Leopard Estabilazado</h3>
+                        <p>Preço: R$ 110,00</p>
+                        <p>
+                            Dimensões: 30 x 52 x 140mm<br>
+                            <i id="info-icon-leopard" class="info-icon fas fa-info-circle info-icon" onclick="toggleInfo('leopard', 'Medidas padrão que podem ter variações.')"></i>
+                        </p>
+                    </div>
+                    <span class="close" onclick="toggleModal('modal-leopard')">&times;</span>
+                </div>
+                <div class="modal-body">
+                    <img src="css/imgs/catalogo/leopard-extra-1.jpg" alt="Foto bloco estabilizado leopard extra 1" loading="lazy">
+                    <img src="css/imgs/catalogo/leopard-extra-2.jpg" alt="Foto bloco estabilizado leopard extra 2" loading="lazy">
+                    <img src="css/imgs/catalogo/leopard-extra-3.jpg" alt="Foto bloco estabilizado leopard extra 3" loading="lazy">
+                    <img src="css/imgs/catalogo/leopard-extra-4.jpg" alt="Foto bloco estabilizado leopard extra 4" loading="lazy">
+                    <img src="css/imgs/catalogo/leopard-extra-5.jpg" alt="Foto bloco estabilizado leopard extra 5" loading="lazy">
+                    <img src="css/imgs/catalogo/leopard-extra-6.jpg" alt="Foto bloco estabilizado leopard extra 6" loading="lazy">
+                </div>
+                <div style="text-align: center;">
+                    <a href="" class="whatsapp-button">Contato pelo WhatsApp</a>
+                </div>
+            </div>
+        </div>
+
+        <div id="modal-resina" class="modal" style="display: none;">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div class="modal-info">
+                        <h3>Resina Estabilazada</h3>
+                        <p>Preço: R$ 35,00 - 80,00</p>
+                        <p>
+                            Dimensões: 30 x 52 x 140mm<br>
+                            <i id="info-icon-resina" class="info-icon fas fa-info-circle info-icon" onclick="toggleInfo('resina', 'Medidas padrão que podem ter variações.')"></i>
+                        </p>
+                    </div>
+                    <span class="close" onclick="toggleModal('modal-resina')">&times;</span>
+                </div>
+                <div class="modal-body">
+                    <img src="css/imgs/catalogo/resina-extra-1.jpg" alt="Foto bloco estabilizado resina extra 1" loading="lazy">
+                    <img src="css/imgs/catalogo/resina-extra-2.jpg" alt="Foto bloco estabilizado resina extra 2" loading="lazy">
+                    <img src="css/imgs/catalogo/resina-extra-3.jpg" alt="Foto bloco estabilizado resina extra 3" loading="lazy">
+                    <img src="css/imgs/catalogo/resina-extra-4.jpg" alt="Foto bloco estabilizado resina extra 4" loading="lazy">
+                    <img src="css/imgs/catalogo/resina-extra-5.jpg" alt="Foto bloco estabilizado resina extra 5" loading="lazy">
+                    <img src="css/imgs/catalogo/resina-extra-6.jpg" alt="Foto bloco estabilizado resina extra 6" loading="lazy">
+                </div>
+                <div style="text-align: center;">
+                    <a href="" class="whatsapp-button">Contato pelo WhatsApp</a>
+                </div>
+            </div>
+        </div>
+
+        <div id="modal-spalted" class="modal" style="display: none;">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div class="modal-info">
+                        <h3>Madeira Spalted Estabilazado</h3>
+                        <p>Preço: R$ 110,00</p>
+                        <p>
+                            Dimensões: 30 x 52 x 140mm<br>
+                            <i id="info-icon-spalted" class="info-icon fas fa-info-circle info-icon" onclick="toggleInfo('spalted', 'Medidas padrão que podem ter variações.')"></i>
+                        </p>
+                    </div>
+                    <span class="close" onclick="toggleModal('modal-spalted')">&times;</span>
+                </div>
+                <div class="modal-body">
+                    <img src="css/imgs/catalogo/spalted-extra-1.jpg" alt="Foto bloco estabilizado spalted extra 1" loading="lazy">
+                    <img src="css/imgs/catalogo/spalted-extra-2.jpg" alt="Foto bloco estabilizado spalted extra 2" loading="lazy">
+                    <img src="css/imgs/catalogo/spalted-extra-3.jpg" alt="Foto bloco estabilizado spalted extra 3" loading="lazy">
+                    <img src="css/imgs/catalogo/spalted-extra-4.jpg" alt="Foto bloco estabilizado spalted extra 4" loading="lazy">
+                    <img src="css/imgs/catalogo/spalted-extra-5.jpg" alt="Foto bloco estabilizado spalted extra 5" loading="lazy">
+                    <img src="css/imgs/catalogo/spalted-extra-6.jpg" alt="Foto bloco estabilizado spalted extra 6" loading="lazy">
+                    <img src="css/imgs/catalogo/spalted-extra-7.jpg" alt="Foto bloco estabilizado spalted extra 7" loading="lazy">
+                    <img src="css/imgs/catalogo/spalted-extra-8.jpg" alt="Foto bloco estabilizado spalted extra 8" loading="lazy">
+                    <img src="css/imgs/catalogo/spalted-extra-9.jpg" alt="Foto bloco estabilizado spalted extra 9" loading="lazy">
+                    <img src="css/imgs/catalogo/spalted-extra-10.jpg" alt="Foto bloco estabilizado spalted extra 10" loading="lazy">
+                    <img src="css/imgs/catalogo/spalted-extra-11.jpg" alt="Foto bloco estabilizado spalted extra 11" loading="lazy">
+                    <img src="css/imgs/catalogo/spalted-extra-12.jpg" alt="Foto bloco estabilizado spalted extra 12" loading="lazy">
+                    <img src="css/imgs/catalogo/spalted-extra-13.jpg" alt="Foto bloco estabilizado spalted extra 13" loading="lazy">
+                    <img src="css/imgs/catalogo/spalted-extra-14.jpg" alt="Foto bloco estabilizado spalted extra 14" loading="lazy">
+                </div>
+                <div>
+                    <a href="" class="whatsapp-button">Contato pelo WhatsApp</a>
+                </div>
+            </div>
+        </div>
+
+    </main>
+    <!-- Fim da Main -->    
+
     <!-- Início do Footer -->
     <footer>
-        <div>
-            <h2>Institucional</h2>
-            <ul>
-                <li><a href="">Como comprar</a></li>
-                <li><a href="">Segurança</a></li>
-                <li><a href="">Envio</a></li>
-                <li><a href="">Pagamento</a></li>
-                <li><a href="">Política de privacidade</a></li>
-                <li><a href="">Sobre</a></li>
-                <li><a href="">Fale conosco</a></li>
-            </ul>
-        </div>
+        <div class="container">
+          <div class="wrapper">
+            <div class="footer-widget">
+                <a href="#">
+                    <img src="css/imgs/elementos/logo-cortada.png" class="logo"/>
+                </a>
+                <p class="desc">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos
+                    deserunt magni recusandae ut! Natus?
+                </p>
 
-        <div>
-            <h2>Serviços</h2>
-            <ul>
-                <li><a href="">Ferramentas personalizadas</a></li>
-                <li><a href="">Catálogo atualizado</a></li>
-                <li><a href="">Restauração de ferramentas</a></li>
-            </ul>
-        </div>
+                <ul class="socials">
+                    <li>
+                        <a href="#">
+                            <i class="fab fa-tiktok"></i>
+                        </a>
+                    </li>
 
-        <div class="logo-footer">
-            <img src="css/imgs/logo-faca.jpg" alt="Logo da empresa">
-            <p>Desde 2018</p>
-        </div>
+                    <li>
+                        <a href="#">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </li>
 
-        <div>
-            <h2>Redes Socias</h2>
-            <ul>
-                <li><a href=""><i class="fa-brands fa-instagram"></i>SHcutelaria</a></li>
-                <li><a href=""><i class="fa-brands fa-whatsapp"></i>Sérgio SH cutelaria</a></li>
-                <li><a href=""><i class="fa-brands fa-youtube"></i>sergiohonorato353</a></li>
-                <li><a href=""><i class="fa-brands fa-tiktok"></i>SH cutelaria</a></li>
-            </ul>
-        </div>
+                    <li>
+                        <a href="#">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </li>
 
-        <div>
-            <h2>Forma de Pagamento</h2>
-            <ul>
-                <li><i class="fa-brands fa-pix"></i>Pix</li>
-                <li><i class="fa-regular fa-credit-card"></i>Link Cartão</li>
-            </ul>
+                    <li>
+                        <a href="#">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                    </li>
+
+                </ul>
+            </div>
+
+            <div class="footer-widget">
+                <h6>Institucional</h6>
+                <ul class="links">
+                    <li><a href="">Como comprar</a></li>
+                    <li><a href="">Segurança</a></li>
+                    <li><a href="">Envio</a></li>
+                    <li><a href="">Pagamento</a></li>
+                    <li><a href="">Política de privacidade</a></li>
+                    <li><a href="">Sobre</a></li>
+                    <li><a href="">Fale conosco</a></li>
+                </ul>
+            </div>
+            <div class="footer-widget">
+                <h6>Serviços</h6>
+                <ul class="links">
+                    <li><a href="">Ferramentas personalizadas</a></li>
+                    <li><a href="">Catálogo atualizado</a></li>
+                    <li><a href="">Restauração de ferramentas</a></li>
+                </ul>
+            </div>
+            <div class="footer-widget">
+                <h6>Pagamento</h6>
+                <ul class="links">
+                    <li><a href="#"><i class="fa-brands fa-pix"></i> Pix</a></li>
+                    <li><a href="#"><i class="fa-regular fa-credit-card"></i> Cartão</a></li>
+                </ul>
+                </div>
+            </div>
+            <div class="copyright-wrapper">
+                <p>
+                    Design and Developed by
+                    <a href="#" target="blank">Bits_Bytes</a>
+                </p>
+            </div>
         </div>
-    </footer>
+      </footer>
     <!-- Fim do Footer -->
     
+    <a class="btn-whats-fixo" href="">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
 
 </body>
 </html>

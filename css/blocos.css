@@ -1,10 +1,3 @@
-body {
-    background: url(imgs/textura-damasco.png) no-repeat 50% 20%;
-    background-size: cover;
-    background-color: var(--carbono);
-    background-blend-mode: overlay;
-}
-
 :root {
     --fuligem: #161616;
     --carbono: #232323;
@@ -12,38 +5,65 @@ body {
     --prata: #C0C0C0;
     --aluminio: #D0D5DB;
     --brasa: #F05E1B;
-    --incandescente: #be4811;
+    --incandescente: #f15217;
 }
 
-a {
-    text-decoration: none;
+.title  {
+    margin-top: 1.5rem;
+    text-align: start;
+    text-transform: uppercase;
+    font-size: 1.8rem;
+    display: inline-block;
+    border-bottom: 2px solid var(--brasa);
+    padding-bottom: 0.2rem;
+}
+
+.aviso {
+    margin-top: 0.8rem;
+    max-width: 800px;
+    height: auto;
+    text-align: start;
+    font-size: 1.2rem;
+}
+
+.aviso strong {
+    color: var(--brasa);
+}
+
+.aviso a {
+    text-transform: uppercase;
+    color: #25D366;
+    text-decoration: underline;
 }
 
 .gallery {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between; /*muda espaçamento aqui lindo*/
+    justify-content: space-between;
     align-items: center;
     width: 100%;
-    margin: 3rem 0;
+    margin: 1.7rem 0;
     gap: 1rem;
 }
 
 .content {
-    flex-basis: calc(23% - 1rem); /* Define largura com ajuste de gap */
+    flex-basis: calc(23% - 1rem);
     margin: 0.8rem 0;
     box-sizing: border-box;
     text-align: center;
     border-radius: 10px;
     cursor: pointer;
-    /* padding-top: 0.6rem; */
     box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25),
     0 10px 10px rgba(0, 0, 0, 0.22);
-    transition: .4s;
-    background: var(--fuligem);
+    transition: 0.4s;
+    background-color: var(--fuligem);
     overflow: visible;
     display: flex;
     flex-direction: column;
+}
+
+.invisible {
+    visibility: hidden;
 }
 
 .content:hover {
@@ -52,7 +72,7 @@ a {
     transform: translate(0px, -8px);
 }
 
-img {
+.imgCat {
     width: 100%;
     height: auto;
     object-fit: contain;
@@ -60,8 +80,7 @@ img {
     margin: 0 auto;
     display: block;
     flex-grow: 1;
-    border-radius: 10px 10px 0 0;
-    /* margin-bottom: 0.4rem; */
+    border-radius: 1.2rem 1.2rem 0 0;
 }
 
 .texts {
@@ -80,20 +99,13 @@ h3 {
     overflow: hidden;
 }
 
-p {
+.texts p {
     text-align: center;
     color: #d2dec3;
     font-size: 1rem;
     height: 55px;
     overflow: hidden;
 }
-
-/* h6 { 
-    font-size: 1.1rem;
-    text-align: center;
-    color: #fff;
-    margin: 0;
-} */
 
 button {
     text-align: center;
@@ -105,8 +117,7 @@ button {
     outline: none;
     cursor: pointer;
     margin-top: 0.1rem;
-    border-bottom-right-radius: 1.2rem; 
-    border-bottom-left-radius: 1.2rem;
+    border-radius: 0 0 1.2rem 1.2rem;
     background-color: var(--brasa);
 }
 
@@ -118,60 +129,223 @@ button:hover {
     box-shadow: 0 0 20px rgba(255, 69, 0, 1), 0 0 30px rgba(255, 69, 0, 0.8), 0 0 40px rgba(255, 69, 0, 0.6);
 }
 
-/* @media(max-width: 1000px) {
-    .content {
-        width: 45%;
-    }
+.container-instructions {
+    max-width: 800px;
+    margin-bottom: 2rem;
 }
 
-@media(max-width: 750px) {
-    .content {
-        width: 40%;
-    }
-} */
+h2 {
+    font-size: 1.6rem;
+    color: var(--aluminio);
+    display: inline-block;
+    border-bottom: 2px solid var(--brasa);
+    padding-bottom: 0.2rem;
+}
+
+.instructions {
+    list-style-type: decimal;
+    padding-left: 1.25rem;
+    margin: 1.5rem 0;
+}
+
+.instructions li {
+    margin: 0.7rem 0;
+    line-height: 1.5;
+    font-size: 1.2rem;
+}
+
+.instructions strong {
+    color: var(--brasa);
+}
+
+.instructions li::marker {
+    color: var(--brasa); 
+    font-weight: bold; 
+    font-size: 1.4rem; 
+}
+
+.whatsapp-button {
+    display: inline-block;
+    padding: 0.6rem 1.25rem;
+    background-color: #25D366; 
+    color: var(--carbono);
+    text-align: center;
+    border-radius: 0.5rem;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.2rem;
+    transition: transform 0.4s ease;
+}
+
+.whatsapp-button:hover {
+    transform: scale(1.04);
+}
+
+/*Estilização das divs suspensas*/
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1.25rem;
+    box-sizing: border-box;
+}
+
+.modal-content {
+    background: url(imgs/textura-damasco.png) no-repeat 50% 20%;
+    background-size: cover;
+    background-color: var(--fuligem);
+    background-blend-mode: overlay;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2), 
+    0 6px 20px rgba(0, 0, 0, 0.19);
+    padding: 1.25rem;
+    border-radius: 0.5rem;
+    max-width: 80%;
+    max-height: 80%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    scrollbar-width: none;
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 1.2rem;
+    border-bottom: 2px solid var(--brasa);
+    padding-bottom: 0.6rem;
+}
+
+.modal-info {
+    flex-grow: 1;
+    margin-right: 0.6rem;
+}
+
+.modal-info h3 {
+    margin: 0.2rem 0;
+    font-size: 1.5em;
+    color: var(--brasa);
+}
+
+.modal-info p {
+    margin: 0.3rem 0;
+    font-size: 1.1em;
+    color: #d3d3cf;
+}
+
+.modal-info i:hover {
+    cursor: pointer;
+} 
+
+.close {
+    font-size: 1.75rem;
+    font-weight: bold;
+    cursor: pointer;
+    margin-left: 0.6rem;
+    color: var(--brasa);
+}
+
+.modal-body {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.4rem;
+    margin-bottom: 1rem;
+}
+
+.modal-body img {
+    width: 22%;
+    height: auto;
+    transition: transform 0.3s;
+    object-fit: contain;
+    border-radius: 0.5rem;
+}
+
+.modal-body img:hover {
+    transform: scale(1.03);
+}
+
+#info-message {
+    position: absolute;
+    display: none;
+    background-color: #414040;
+    border: 1px solid var(--fuligem);
+    color: var(--aluminio);
+    padding: 10px;
+    z-index: 1000;
+    max-width: 200px;
+    height: auto;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+}
+
+#info-message button {
+    background-color: var(--brasa);
+    color: #000;
+    border: none;
+    border-radius: 0.25rem;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    margin-top: 0.5rem;
+    transition: all 0.3s ease-out;
+}
+
+#info-message button:hover {
+    box-shadow: 0 0 20px rgba(255, 69, 0, 1), 0 0 30px rgba(255, 69, 0, 0.8), 0 0 40px rgba(255, 69, 0, 0.6); 
+    color: var(--aluminio);
+}
 
 @media (max-width: 1200px) {
     .content {
-        flex-basis: calc(25% - 1rem); /* 4 cards por linha */
-    }
-
-    img {
-
-    }
-
-    p {
-
-    }
-
-    h6 {
-
-    }
-
-    button {
-
+        flex-basis: calc(25% - 1rem);
     }
 }
 
 @media (max-width: 992px) {
     .content {
-        flex-basis: calc(33.333% - 1rem); /* 3 cards por linha */
+        flex-basis: calc(33.333% - 1rem);
     }
 }
 
 @media (max-width: 768px) {
     .content {
-        flex-basis: calc(50% - 1rem); /* 2 cards por linha */
+        flex-basis: calc(50% - 1rem); 
+    }
+
+    .modal-body img {
+        width: 45%; 
+    }
+
+    .modal-content {
+        max-width: 95%; 
     }
 }
 
 @media (max-width: 576px) {
 
+    .title {
+        margin-top: 0.7rem;
+    }
+
+    .aviso {
+        font-size: 1.1rem;
+    }
+
     .gallery {
+        margin: 1rem 0;
         gap: 0.1rem;
     }
 
     .content {
-        flex-basis: calc(50% - 1rem); /* 2 cards por linha */
+        flex-basis: calc(50% - 1rem); 
     }
 
     img {
@@ -188,7 +362,33 @@ button:hover {
         height: 40px;
     }
 
-    button {
+    h2 {
+        font-size: 1.5rem;
+    }
 
+    .instructions li {
+        font-size: 1.1rem;
+    }
+
+    .modal-info h3 {
+        font-size: 1.2em; 
+    }
+
+    .modal-info p {
+        font-size: 0.9em; 
+    }
+
+    .close {
+        font-size: 24px; 
+    }
+}
+
+@media (max-width: 480px) {
+    .modal-body img {
+        width: 45%; 
+    }
+
+    .close {
+        font-size: 1.5rem; 
     }
 }

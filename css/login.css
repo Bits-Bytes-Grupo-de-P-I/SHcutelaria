@@ -1,0 +1,220 @@
+* {
+    color: var(--aluminio);
+    font-family: 'PLAYFAIR', serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    text-align: center;
+    color: var(--fuligem);
+    font-size: 16pt;
+}
+
+:root {
+    --fuligem: #161616;
+    --carbono: #232323;
+    --cinza: #383838;
+    --prata: #C0C0C0;
+    --aluminio: #D0D5DB;
+    --brasa: #F05E1B;
+    --incandescente: #f15217;
+}
+
+body {
+    background: url(imgs/elementos/textura-damasco.png) no-repeat;
+    background-size: cover;
+    background-color: var(--fuligem);
+    background-blend-mode: overlay; /* Mistura as duas camadas de cor */
+    min-height: 100vh;
+}
+
+img {
+    width: 200px;
+    height: auto;
+    position: absolute;
+    top: 50px;
+    left: 20%;
+    transform: translateX(-50%);
+    transition: all 0.15s ease-in;
+}
+
+img:hover {
+    transform: translate(-50%) scale(1.05);
+}
+
+#login {
+    display: block;
+}
+
+#cadastro, #contato, .teste {
+    display: none;
+}
+
+.container {
+    box-sizing: border-box;
+    background-color: var(--carbono);
+    height: 100vh;
+    width: max(40%, 600px);
+    padding: 10px;
+    border-radius: 0 20px 20px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+h1 {
+    font-size: 3rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    margin-top: 1rem;
+}
+
+form {
+    width: min(400px, 100%);
+    margin-top: 20px;
+    margin-bottom: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+form > div {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+form label {
+    flex-shrink: 0;
+    height: 50px;
+    width: 50px;
+    background-color: var(--brasa);
+    fill: var(--fuligem);
+    color: var(--fuligem);
+    border-radius: 10px 0 0 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+form label span {
+    color: var(--fuligem);
+    font-weight: 700;
+}
+
+form input {
+    box-sizing: border-box;
+    flex-grow: 1;
+    min-width: 0;
+    height: 50px;
+    padding: 1em;
+    font: inherit;
+    border-radius: 0 10px 10px 0;
+    border: 2px solid var(--fuligem);
+    border-left: none;
+    background-color: var(--fuligem);
+    transition: 150ms ease;
+}
+
+form input:hover{
+    border-color: var(--brasa);
+  }
+
+form input:focus{
+    outline: none;
+    border-color: var(--incandescente);
+    box-shadow: none;
+  }
+
+div:has(input:focus) > label{
+    background-color: var(--fuligem);
+    fill: var(--brasa);
+    box-shadow: 0 0 20px rgba(255, 69, 0, 1), 0 0 30px rgba(255, 69, 0, 0.8), 0 0 40px rgba(255, 69, 0, 0.6);
+    border: 2px solid var(--brasa);
+    border-right: none;
+  }
+
+div:has(input:focus) > label span {
+    color: var(--brasa);
+}
+
+form input::placeholder{
+    color: var(--aluminio);
+  }
+
+form button{
+    margin-top: 1rem;
+    border: none;
+    border-radius: 1000px;
+    padding: .85rem 2rem;
+    background-color: var(--brasa);
+    color: var(--fuligem);
+    font: inherit;
+    font-weight: 600;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: 150ms ease;
+    box-shadow: var(--fuligem) 6px 4.8px 6.4px;
+  }
+
+form button:hover{
+    background-color: var(--incandescente);
+    color: var(--aluminio);
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(255, 69, 0, 1), 0 0 30px rgba(255, 69, 0, 0.8), 0 0 40px rgba(255, 69, 0, 0.6);
+  }
+
+form button:focus{
+    outline: none;
+    background-color: var(--prata);
+  }
+
+a{
+    text-decoration: none;
+    color: var(--brasa);
+  }
+
+a:hover{
+    text-decoration: underline;
+  }
+
+@media(max-width: 1100px){
+
+.container{
+      width: min(600px, 100%);
+      border-radius: 0;
+    }
+  }
+
+@media(max-width: 600px){
+
+.container{
+        font-size: 14pt;
+    }
+}
+
+@media(max-width: 360px){
+
+.container{
+        font-size: 12pt;
+    }
+}
+
+form div.incorrect label{
+    background-color: #f06272;
+  }
+
+form div.incorrect input{
+    border-color: #f06272;
+  }
+
+#error-message{
+    color:#f06272;
+  }
+

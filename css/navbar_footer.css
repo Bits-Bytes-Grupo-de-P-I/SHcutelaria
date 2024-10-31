@@ -1,8 +1,31 @@
 * {
     color: var(--aluminio);
-    font-family: 'PLAYFAIR';
+    font-family: 'PLAYFAIR', serif;
     margin: 0;
     padding: 0;
+}
+
+body {
+    scrollbar-width: thin;
+    scrollbar-color: var(--brasa) var(--fuligem);
+}
+
+body:active {
+    scrollbar-color: var(--incandescente) var(--fuligem);
+}
+
+/* Define a cor do "thumb" (parte móvel da barra) */
+body::-webkit-scrollbar-thumb {
+    background-color: var(--brasa);
+}
+
+body::-webkit-scrollbar-thumb:active {
+    background-color: var(--incandescente);
+}
+  
+/* Cor do thumb ao passar o mouse */
+body::-webkit-scrollbar-thumb:hover {
+    background-color: var(--incandescente); /* Um tom mais escuro para o hover */
 }
 
 :root {
@@ -12,11 +35,11 @@
     --prata: #C0C0C0;
     --aluminio: #D0D5DB;
     --brasa: #F05E1B;
-    --incandescente: #be4811;
+    --incandescente: #f15217;
 }
 
 /*EFEITO DE HOVER INCANDESCENTE DO TOPO*/
-.menu a:hover, .sac a:hover, .login a:hover, .sac a:hover, .menu-reduzido a:hover, .atendimento-reduzido a:hover {
+.menu a:hover, .converse a:hover, .login a:hover, .converse a:hover, .menu-reduzido a:hover, .atendimento-reduzido a:hover {
     color: var(--brasa);
     text-shadow: 
                 0 0 20px rgba(255, 69, 0, 1),
@@ -47,15 +70,16 @@ button {
 }
 
 nav {
-    background: url(imgs/textura-damasco.png) no-repeat 50% 20%;
+    background: url(imgs/elementos/textura-damasco.png) no-repeat 50% 20%;
     background-size: cover;
-    background-color: var(--carbono);
+    background-color: var(--fuligem);
     background-blend-mode: overlay; /* Mistura as duas camadas de cor */
     position: relative;
     top: 0;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
+    border-bottom: 1px solid var(--fuligem);
 }
 
 main {
@@ -65,14 +89,23 @@ main {
 
 
 .logo-nav {
-    font-size: 2rem;
+    font-size: 1.8rem;
     text-wrap: nowrap;
     color: var(--aluminio);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo-nav img {
+    width: 150px; 
+    height: auto; 
+    max-width: 100%;
 }
 
 .ativar-menu {
     display: none;
-    font-size: 2.5rem;
+    font-size: 2rem;
     position: absolute;
 }
 
@@ -82,9 +115,10 @@ main {
 
 .fechar-menu {
     display: none;
-    font-size: 2.5rem;
-    position: absolute;
+    font-size: 2rem;
     padding: 1rem;
+    position: relative;
+    justify-content: flex-end;
 }
 
 .fechar-menu i {
@@ -92,7 +126,7 @@ main {
 }
 
 /*EFEITO DE HOVER INCANDESCENTE DO TOPO*/
-.menu a:hover, .sac a:hover, .login a:hover, .sac a:hover, .menu-reduzido a:hover, .atendimento-reduzido a:hover {
+.menu a:hover, .converse a:hover, .login a:hover, .converse a:hover, .menu-reduzido a:hover, .atendimento-reduzido a:hover {
     color: var(--brasa);
     text-shadow: 
                 0 0 20px rgba(255, 69, 0, 1),
@@ -124,7 +158,7 @@ main {
 }
 
 .menu a, .atendimento a {
-    font-size: clamp(0.5rem, 2vw, 1.2rem);
+    font-size: clamp(0.5rem, 2vw, 1.1rem);
     
 }
 
@@ -171,6 +205,12 @@ main {
 .menu-reduzido i, .atendimento-reduzido i{
     padding-right: 0.5rem;
     color: var(--incandescente);
+    margin-right: 0.4rem;
+    width: 1.2rem;
+    height: 1.2rem;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .atendimento-reduzido ul {
@@ -179,76 +219,164 @@ main {
 
 .atendimento-reduzido li {
     justify-content: space-between;
+    padding: 1rem 0;
 }
 
-/*Estiliação do meu footer*/
+.atendimento-reduzido li:hover {
+    background-color: var(--fuligem);
+    transition: all 0.2s ease;
+}
+
+.btn-whats-fixo {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    font-size: 3rem;
+    margin: 20px;
+    transition: transform 0.3s ease;
+}
+
+.btn-whats-fixo i {
+    color: var(--brasa);
+}
+
+.btn-whats-fixo:hover, .btn-whats-fixo:hover i {
+    text-shadow: 0 0 20px rgba(255, 69, 0, 1), 0 0 30px rgba(255, 69, 0, 0.8), 0 0 40px rgba(255, 69, 0, 0.6);
+    transform: scale(1.05);
+}
+
+/*Estilização do meu foote*/
 
 footer {
-    background: url(imgs/textura-damasco.png) no-repeat 50% 20%;
+    position: relative;
+    width: 100%;
+    height: auto;
+    padding-top: 2rem;
+    background: url(imgs/elementos/textura-damasco.png) no-repeat 50% 20%;
     background-size: cover;
-    background-color: var(--carbono);
-    background-blend-mode: overlay; /* Mistura as duas camadas */
     background-color: var(--fuligem);
-    margin-top: 6rem;
+    background-blend-mode: overlay;
+}
+  
+.container {
+    width: 100%;
+    max-width: 1320px;
+    margin: 0 auto;
+    padding: 0 0.8rem;
+}
+  
+.wrapper {
     display: flex;
     justify-content: space-between;
-    padding: 1.8rem 10rem;
-    font-size: clamp(0.7rem, 2vw, 1.3rem);
+    flex-direction: row;
+    flex-wrap: wrap;
 }
-
-.logo-footer p {
-    margin: 0;
-    text-align: center;
-    color: var(--brasa);
-    font-style: italic;
+  
+.wrapper .footer-widget {
+    width: calc(20% - 30px);
+    margin: 0 0.9375rem 3.125rem;
+    padding: 0 0.75rem;
 }
-
-.logo-footer img { 
-    width: 150px; 
-    height: auto; 
-    max-width: 100%;
+  
+.wrapper .footer-widget:nth-child(1) {
+    width: calc(40% - 50px);
+    margin-right: 0.9rem;
 }
-
-footer h2 {
-    display: inline-block;
-    border-bottom: 2px solid var(--brasa);
-    padding-bottom: 0.4rem;
-    margin: 0; /*remover espaço abaixo da linha ´-´*/
-    font-size: clamp(1.2rem, 2vw, 1.5rem);
+  
+.wrapper .footer-widget .logo {
+    margin-bottom: 1.8rem;
+    vertical-align: middle;
 }
-
-footer ul {
-    list-style: none;
-    padding: 0;
-    margin-top: 0.5rem;
+  
+.wrapper .footer-widget p {
+    margin-bottom: 1.8rem;
+    font-size: 1.2rem;
+    line-height: 1.4rem;
 }
-
-footer li {
-    margin-bottom: 0.6rem;
-    color: #fff;
-    transition: color 0.5s ease;
-    font-size: clamp(0.9rem, 2vw, 1.1rem);
-}
-
-footer a {
-    color: #fff;
-    transition: color 0.5s ease;
-    font-size: clamp(0.9rem, 2vw, 1.1rem);
-}
-
-footer i {
-    margin-right: 0.4rem;
-    width: 1.2rem;
-    height: 1.2rem;
-    display: inline-flex;
-    justify-content: center;
+  
+.wrapper .footer-widget .socials {
+    display: flex;
     align-items: center;
-    transition: color 0.5s ease;
+    justify-content: center;
+}
+  
+.wrapper .footer-widget .socials li {
+    list-style: none;
+}
+  
+.wrapper .footer-widget .socials li a {
+    width: 44px;
+    height: 44px;
+    margin-right: 0.8rem;
+    background-color: var(--brasa);
+    border-radius: 50%;
+    font-size: 1.5rem;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease-out;
 }
 
-/*EFEITOS DE HOVER DO FOOTER*/
-
-footer li:hover, footer li:hover a, footer li:hover i {
+.wrapper .footer-widget .socials li a i {
+    color: var(--fuligem);
+}
+  
+.wrapper .footer-widget .socials li a:hover {
+    transform: scale(1.1);
+}
+  
+.wrapper .footer-widget h6 {
+    color: var(--brasa);
+    margin: 10px 0 35px;
+    font-size: 1.4rem;
+    font-weight: 600;
+}
+  
+.wrapper .footer-widget .links li {
+    list-style: none;
+}
+  
+.wrapper .footer-widget .links li a {
+    color: var(--aluminio);
+    font-size: 1.1rem;
+    text-decoration: none;
+    text-transform: capitalize;
+    line-height: 2rem;
+    transition: all 0.3s ease-out;
+}
+  
+.wrapper .footer-widget .links li a:hover,
+.wrapper .footer-widget .links li a:hover * {
+    color: var(--brasa);
+    text-shadow: 
+                0 0 20px rgba(255, 69, 0, 1),
+                0 0 40px rgba(255, 69, 0, 0.8),
+                0 0 60px rgba(255, 69, 0, 0.6),
+                0 0 80px rgba(255, 69, 0, 0.4);
+    transition: all 0.3s ease;
+}
+  
+.copyright-wrapper {
+    padding: 2rem 0;
+    border-top: 1px solid var(--brasa);
+}
+  
+.copyright-wrapper p {
+    color: var(--aluminio);
+    font-size: 1rem;
+    font-weight: 500;
+    text-align: center;
+}
+  
+.copyright-wrapper p a {
+    color: inherit;
+    font-weight: 500;
+    text-decoration: none;
+    transition: all 0.3s ease-out;
+}
+  
+.copyright-wrapper p a:hover {
     color: var(--brasa);
     text-shadow: 
                 0 0 20px rgba(255, 69, 0, 1),
@@ -279,6 +407,7 @@ footer li:hover, footer li:hover a, footer li:hover i {
     .menu i {
         padding-bottom: 0.2rem;
     }
+
 
     .atendimento a {
         display: flex;
@@ -315,31 +444,9 @@ footer li:hover, footer li:hover a, footer li:hover i {
         padding-left: 1rem;
     }
 
-    footer {
-        flex-direction: column;
-        align-items: flex-start;
-        padding: 1.8rem 5rem;
-    }
-
-    footer ul {
-        margin-top: 0.3rem;
-    }
-
-    footer h2 {
-        text-align: start;
-        margin: 0.8rem;
-        margin-bottom: 0.5rem;
-        margin-left: 0;
-    }
-
-    .logo-footer {
-        order: -1; /*faz a logo aparecer primeiro*/
-        align-self: center;
-        margin-bottom: 2rem;
-    }
-
-    .logo-footer img {
-        width: 120px;
+    .btn-whats-fixo {
+        max-width: 50px;
+        height: 50px;
     }
 }
 
@@ -374,11 +481,6 @@ footer li:hover, footer li:hover a, footer li:hover i {
         color: var(--incandescente);
     }
 
-    .fechar-menu {
-        display: flex;
-        position: relative;
-        justify-content: flex-end;
-    }
 
     .fechar-menu:hover {
         cursor: pointer;
@@ -398,28 +500,51 @@ footer li:hover, footer li:hover a, footer li:hover i {
         display: none;
     }
 
+    .btn-whats-fixo {
+        max-width: 40px;
+        height: 40px;
+    }
 
+}
+
+/*992 px = 62rem*/
+
+@media (max-width: 992px) {
+    .container {
+      max-width: 960px;
+    }
+  
+    .wrapper .footer-widget,
+    .wrapper .footer-widget:nth-child(1) {
+      width: calc(50% - 30px);
+    }
 }
 
 /* 768px = 48rem */
 
 @media (max-width: 48rem) {
     main {
-        margin-left: 2.5rem;
-        margin-right: 2.5rem;
+        margin-left: 2rem;
+        margin-right: 2rem;
     }
 
-
-    footer {
-        padding: 1.5rem 2.5rem;
+    .container {
+        max-width: 720px;
+    }
+      
+    .wrapper .footer-widget,
+    .wrapper .footer-widget:nth-child(1) {
+        width: 100%;
+        margin: 0 10px 50px;
     }
 }
 
 /* 512px = 32rem */
 
 @media (max-width: 32rem) {
-    .navbar-reduzida {
+    .navbar-reduzida, .atendimento-reduzido li {
         width: 100%;
         height: 100%;
     }
+
 }

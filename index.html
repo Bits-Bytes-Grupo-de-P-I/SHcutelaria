@@ -1,9 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <script type="text/javascript" data-cmp-ab="1" src="https://cdn.consentmanager.net/delivery/autoblocking/373a1c6da17ac.js" data-cmp-host="c.delivery.consentmanager.net" data-cmp-cdn="cdn.consentmanager.net" data-cmp-codesrc="16"></script>
+    <script type="text/javascript" data-cmp-ab="1" src="https://cdn.consentmanager.net/delivery/autoblocking/373a1c6da17ac.js" data-cmp-host="c.delivery.consentmanager.net" data-cmp-cdn="cdn.consentmanager.net" data-cmp-codesrc="16">
+    </script>
+
     <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-2DK3TNK83B"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-2DK3TNK83B">
+    </script>
+    
     <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
@@ -11,7 +15,7 @@
 
     gtag('config', 'G-2DK3TNK83B');
     </script>
-
+    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SH cutelaria</title>
@@ -22,7 +26,10 @@
 <<<<<<< Updated upstream
     <link rel="stylesheet" href="css/navbar_footer.css">
     <link rel="stylesheet" href="css/flickity.css">
+    <link rel="icon" href="css/imgs/elementos/logo-aba.png">
+
     <script src="js/index.js" defer></script>
+    <script src="js/navbar.js" defer></script>
     <script src="js/flickity.js" defer></script>
 =======
     <script src="js/index.js" defer></script>
@@ -36,39 +43,39 @@
     <nav>
 <<<<<<< Updated upstream
 
-            <div class="logo-nav">
-                SH Cutelaria
-            </div>
+        <div class="logo-nav">
+            <img src="css/imgs/elementos/logo-cortada.png" alt="">
+        </div>
             
 
             <div class="menu">
                 <ul>
                     <li>
-                        <a href="">
+                        <a href="index.html">
                             <i class="fa-solid fa-house"></i>
                             Início
                         </a>
                     </li>
                     <li>
-                        <a href="">
-                            <i class="fa-solid fa-list"></i>
+                        <a href="formulario.html">
+                            <i class="fas fa-pencil-ruler"></i>
                             Personalizar
                         </a>
                     </li>
                     <li>
-                        <a href="">
+                        <a href="blocos.html">
                             <i class="fa-sharp fa-solid fa-cubes"></i>
                             Blocos
                         </a>
                     </li>
                     <li>
-                        <a href="">
+                        <a href="restauracao.html">
                             <i class="fa-solid fa-hammer"></i>
                             Restauração
                         </a>
                     </li>
                     <li> 
-                        <a href="">
+                        <a href="sobre.html">
                             <i class="fa-duotone fa-solid fa-circle-info"></i>
                             Sobre
                         </a>
@@ -79,14 +86,10 @@
 
             <div class="atendimento">
                 <ul>
-                    <li class="login">
-                        <a href=""><i class="fa-solid fa-right-to-bracket"></i>
-                            Login
-                        </a>
-                    </li>
-                    <li class="sac">
-                        <a href=""><i class="fa-solid fa-headset"></i>
-                            SAC
+                    <li class="converse">
+                        <a href="login.html">
+                            <i class="fa-solid fa-headset"></i>
+                            Fale Conosco
                         </a>
                     </li>
                 </ul>
@@ -103,31 +106,31 @@
                         </div>
                         <ul>
                             <li>
-                                <a href="">
+                                <a href="index.html">
                                     <i class="fa-solid fa-house"></i>
                                     Início
                                 </a>
                             </li>
                             <li>
-                                <a href="">
-                                    <i class="fa-solid fa-list"></i>
+                                <a href="formulario.html">
+                                    <i class="fas fa-pencil-ruler"></i>
                                     Personalizar
                                 </a>
                             </li>
                             <li>
-                                <a href="">
+                                <a href="blocos.html">
                                     <i class="fa-sharp fa-solid fa-cubes"></i>
                                     Blocos
                                 </a>
                             </li>
                             <li>
-                                <a href="">
+                                <a href="restauracao.html">
                                     <i class="fa-solid fa-hammer"></i>
                                     Restauração
                                 </a>
                             </li>
                             <li>
-                                <a href="">
+                                <a href="sobre.html">
                                     <i class="fa-duotone fa-solid fa-circle-info"></i>
                                     Sobre
                                 </a>
@@ -137,14 +140,9 @@
 
                     <div class="atendimento-reduzido">
                         <ul>
-                            <li class="login-reduzido">
-                                <a href=""><i class="fa-solid fa-right-to-bracket"></i>
-                                    Login
-                                </a>
-                            </li>
-                            <li class="sac-reduzido">
-                                <a href=""><i class="fa-solid fa-headset"></i>
-                                    SAC
+                            <li class="converse">
+                                <a href="login.html"><i class="fa-solid fa-headset"></i>
+                                    Fale Conosco
                                 </a>
                             </li>
                         </ul>
@@ -165,12 +163,16 @@
 
     <div class="banner">
         <div class="carousel"
-            data-flickity='{ "imagesLoaded": true, "percentPosition": false }'>
-                <video autoplay muted loop>
-                    <source src="css/imgs/banner-faca.mp4" type="video/mp4">
+            data-flickity='{"wrapAround": true, "cellAlign": "left", "contain": true, "prevNextButtons": false, "autoPlay": 5000, "pauseAutoPlayOnHover": false }'>
+                <video preload="auto" autoplay muted loop poster="thumbnail.jpg">
+                    <source src="css/imgs/elementos/banner-blocos-ofc.mp4" type="video/mp4">
                 </video>
-                <img src="css/imgs/banner2.png" alt="">
-            </div>
+                <video preload="auto" autoplay muted loop poster="thumbnail.jpg">
+                    <source src="css/imgs/elementos/banner-2.mp4" type="video/mp4">
+                </video>
+                <video preload="auto" autoplay muted loop poster="thumbnail.jpg">
+                    <source src="css/imgs/elementos/banner-restauracao-ofc.mp4" type="video/mp4">
+                </video>
         </div>
     </div>
 
@@ -180,30 +182,33 @@
     <div class="destaques">
     <h1>Destaques</h1>
         <div class="carousel"
-        data-flickity='{"wrapAround": true, "freeScroll": true,  "pageDots": false}'>
+        data-flickity='{"wrapAround": true, "freeScroll": true,  "pageDots": false, "autoPlay": 2000, "pauseAutoPlayOnHover": true, "prevNextButtons": false}'>
             <div class="carousel-cell">
-                <img src="css/imgs/destaques/faca-roxa-e-preta.jpg" alt="">
+                <img src="css/imgs/destaques/faca-roxa-e-preta.jpg" alt="" loading="lazy">
             </div>
             <div class="carousel-cell">
-                <img src="css/imgs/destaques/faca-dragao.jpg" alt="">
+                <img src="css/imgs/destaques/faca-dragao.jpg" alt="" loading="lazy">
             </div>
             <div class="carousel-cell">
-                <img src="css/imgs/destaques/blocos.jpg" alt="">
+                <img src="css/imgs/destaques/blocos.jpg" alt="" loading="lazy">
             </div>
             <div class="carousel-cell">
-                <img src="css/imgs/destaques/facas-enfileiradas.jpg" alt="">
+                <img src="css/imgs/destaques/damasco-2.jpg" alt="" loading="lazy">
             </div>
             <div class="carousel-cell">
-                <img src="css/imgs/destaques/faca-dentro-bainha.jpg" alt="">
+                <img src="css/imgs/destaques/facas-enfileiradas.jpg" alt="" loading="lazy">
             </div>
             <div class="carousel-cell">
-                <img src="css/imgs/destaques/1726946579954.jpg" alt="">
+                <img src="css/imgs/destaques/faca-cabo-preto.jpg" alt="" loading="lazy">
             </div>
             <div class="carousel-cell">
-                <img class="vertical" src="css/imgs/destaques/faca-cabo-vermelho.jpg" alt="">
+                <img src="css/imgs/destaques/1726946579954.jpg" alt="" loading="lazy">
             </div>
             <div class="carousel-cell">
-                <img src="css/imgs/destaques/1726946581344.jpg" alt="">
+                <img src="css/imgs/destaques/damasco-1.jpg" alt="" loading="lazy">
+            </div>
+            <div class="carousel-cell">
+                <img src="css/imgs/destaques/cabos-enfileirados.jpg" alt="" loading="lazy">
             </div>
         </div>
     </div>
@@ -293,78 +298,99 @@
 >>>>>>> Stashed changes
 
             <!-- Início CARD CUTELARIA -->
-            <a href="#">
                 <div class="card-cutelaria">
                     <div class="titulo-card">
                         <h1>CUTELARIA</h1>
                     </div>
                     <div class="explorar-card">
-                        <h1>Personalize sua ferramenta!</h1>
-                        <a href="#"><button>Explorar</button></a>
+                        <p>Personalize sua ferramenta!</p>
+                        <a href="formulario.html"><button>Explorar</button></a>
                     </div>
                 </div>
-            </a>
             <!-- Fim CARD CUTELARIA -->
 
 
 <<<<<<< Updated upstream
             <!-- Início CARD BLOCOS -->
-            <a href="blocos.html">
                 <div class="card-blocos">
                     <div class="titulo-card">
                         <h1>BLOCOS</h1>
                     </div>
                     <div class="explorar-card">
-                        <h1>Compre seu bloco!</h1>
+                        <p>Compre seu bloco!</p>
                         <a href="blocos.html"><button>Explorar</button></a>
                     </div>
                 </div>
-            </a>
             <!-- Fim CARD BLOCOS -->
 
             <!-- Início CARD RESTAURAÇÃO -->
-            <a href="#">
                 <div class="card-restauracao">
                     <div class="titulo-card">
                         <h1>RESTAURAÇÃO</h1>
                     </div>
                     <div class="explorar-card">
-                        <h1>Restaure sua ferramenta!</h1>
+                        <p>Restaure sua ferramenta!</p>
                         <a href="#"><button>Explorar</button></a>
                     </div>
                 </div>
-            </a>
             <!-- Fim CARD RESTAURAÇÃO -->
 
         </div>
         <!-- Início Área Serviços -->    
                 
 
-            <div class="rifa-titulo">
-                <h1>Concorra a uma faca grátis!</h1>
-            </div>
             <div class="rifa">
+
+                <div class="rifa-titulo">
+                    <h1>Concorra a uma faca grátis!</h1>
+                    <h2>Tempo até o fim do sorteio</h2>
+                </div>
+
+                <div class="timer" id="timer">00:00:00
+                </div>
 
                 <div class="rifa-conteudo">
 
                     <div class="rifa-imagem">
-                        <img src="css/imgs/curly-cat.jpg" alt="">
+                        <img src="css/imgs/destaques/faca-dragao.jpg" alt="" loading="lazy">
                     </div>
 
                     <div class="rifa-info">
-                        <p style="font-size: clamp(1.2rem, 2vw, 2.5rem)">Tempo até o fim do sorteio<br>00:00:00
-                        </p>
-                        <p style="text-align: start;">Faca do estilo: ""</p>
-                        <p style="text-align: start;">Tamanho:  ""</p>
-                        <p style="text-align: start;">Material da lâmina:  ""</p>
-                        <p style="text-align: start;">Material do cabo:  ""</p>
-                        <p style="text-align: start;">Material da bainha:  ""</p>
+                        <p><span>Estilo da faca</span>: Chef</p>
+                        <p><span>Tamanho</span>: 25 centímetros</p>
+                        <p><span>Material da lâmina</span>: Aço</p>
+                        <p><span>Material do cabo</span>: Leopard Wood</p>
+                        <p><span>Material da bainha</span>: Couro de jacaré</p>
                     </div>
 
                 </div>
 
-                <div class="rifa-botao">
-                    <a href="#"><button>Participar do sorteio</button>
+                <a href="#" class="btn-enviar">
+                    <button type="button">
+                        Participar
+                        <span class="icones-btn-whats">
+                            <i class="fa-solid fa-arrow-right seta"></i>
+                            <i class="fa-brands fa-whatsapp"></i>
+                        </span>
+                    </button>
+                </a>
+        
+                <a href="#" class="btn-mobile">
+                    <button type="button">
+                        Participar
+                        <span class="icones-mobile">
+                            <i class="fa-solid fa-arrow-right seta"></i>
+                            <i class="fa-brands fa-whatsapp"></i>
+                        </span>
+                    </button>
+                </a>
+
+                <div class="rifa-blocos">
+                    Participe também de sorteios de blocos estabilizados! 
+                    <a href="#">
+                        <button>
+                            Sorteio de Blocos <i class="fa-sharp fa-solid fa-cubes"></i>
+                        </button>
                     </a>
                 </div>
 
@@ -410,59 +436,93 @@
     <!-- Fim da Main -->
 
 
+    <!-- <a class="btn-whats-fixo" href="">
+        <img src="css/imgs/elementos/whatsapp.png" alt="">
+    </a> -->
+
+
     <!-- Início do Footer -->
     <footer>
-        <div>
-            <h2>Institucional</h2>
-            <ul>
-                <li><a href="">Como comprar</a></li>
-                <li><a href="">Segurança</a></li>
-                <li><a href="">Envio</a></li>
-                <li><a href="">Pagamento</a></li>
-                <li><a href="">Política de privacidade</a></li>
-                <li><a href="">Sobre</a></li>
-                <li><a href="">Fale conosco</a></li>
-            </ul>
-        </div>
+        <div class="container">
+          <div class="wrapper">
+            <div class="footer-widget">
+                <a href="#">
+                    <img src="css/imgs/elementos/logo-cortada.png" class="logo"/>
+                </a>
+                <p class="desc">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos
+                    deserunt magni recusandae ut! Natus?
+                </p>
 
-        <div>
-            <h2>Serviços</h2>
-            <ul>
-                <li><a href="">Ferramentas personalizadas</a></li>
-                <li><a href="">Catálogo atualizado</a></li>
-                <li><a href="">Restauração de ferramentas</a></li>
-            </ul>
-        </div>
+                <ul class="socials">
+                    <li>
+                        <a href="#">
+                            <i class="fab fa-tiktok"></i>
+                        </a>
+                    </li>
 
-<<<<<<< Updated upstream
-        <div class="logo-footer">
-            <img src="css/imgs/logo.png" alt="Logo da empresa">
-=======
-        <div class="logo">
-            <img src="css/imgs/logo-faca.jpg" alt="Logo da empresa">
->>>>>>> Stashed changes
-            <p>Desde 2018</p>
-        </div>
+                    <li>
+                        <a href="#">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </li>
 
-        <div>
-            <h2>Redes Socias</h2>
-            <ul>
-                <li><a href=""><i class="fa-brands fa-instagram"></i>SHcutelaria</a></li>
-                <li><a href=""><i class="fa-brands fa-whatsapp"></i>Sérgio SH cutelaria</a></li>
-                <li><a href=""><i class="fa-brands fa-youtube"></i>sergiohonorato353</a></li>
-                <li><a href=""><i class="fa-brands fa-tiktok"></i>SH cutelaria</a></li>
-            </ul>
-        </div>
+                    <li>
+                        <a href="#">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </li>
 
-        <div>
-            <h2>Forma de Pagamento</h2>
-            <ul>
-                <li><i class="fa-brands fa-pix"></i>Pix</li>
-                <li><i class="fa-regular fa-credit-card"></i>Link Cartão</li>
-            </ul>
+                    <li>
+                        <a href="#">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                    </li>
+
+                </ul>
+            </div>
+
+            <div class="footer-widget">
+                <h6>Institucional</h6>
+                <ul class="links">
+                    <li><a href="">Como comprar</a></li>
+                    <li><a href="">Segurança</a></li>
+                    <li><a href="">Envio</a></li>
+                    <li><a href="">Pagamento</a></li>
+                    <li><a href="">Política de privacidade</a></li>
+                    <li><a href="">Sobre</a></li>
+                    <li><a href="">Fale conosco</a></li>
+                </ul>
+            </div>
+            <div class="footer-widget">
+                <h6>Serviços</h6>
+                <ul class="links">
+                    <li><a href="">Ferramentas personalizadas</a></li>
+                    <li><a href="">Catálogo atualizado</a></li>
+                    <li><a href="">Restauração de ferramentas</a></li>
+                </ul>
+            </div>
+            <div class="footer-widget">
+                <h6>Pagamento</h6>
+                <ul class="links">
+                    <li><a href="#"><i class="fa-brands fa-pix"></i> Pix</a></li>
+                    <li><a href="#"><i class="fa-regular fa-credit-card"></i> Cartão</a></li>
+                </ul>
+                </div>
+            </div>
+            <div class="copyright-wrapper">
+                <p>
+                    Design and Developed by
+                    <a href="#" target="blank">Bits_Bytes</a>
+                </p>
+            </div>
         </div>
-    </footer>
+      </footer>
     <!-- Fim do Footer -->
+
+    <a class="btn-whats-fixo" href="">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
     
 </body>
 </html>

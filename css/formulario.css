@@ -1,0 +1,604 @@
+* {
+    color: var(--aluminio);
+    font-family: 'PLAYFAIR';
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --fuligem: #161616;
+    --carbono: #232323;
+    --cinza: #383838;
+    --prata: #C0C0C0;
+    --aluminio: #D0D5DB;
+    --brasa: #F05E1B;
+    --incandescente: #f15217;
+    --uatizapi: #25D366;
+}
+
+body {
+    background-color: var(--carbono);
+    box-sizing: border-box;
+    min-height: 100vh;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+a {
+    text-decoration: none;
+}
+
+button {
+    cursor: pointer;
+}
+
+
+main {
+  margin-left: clamp(10rem, 5vw, 15rem);
+  margin-right: clamp(10rem, 5vw, 15rem);
+  transition: all 0.3s ease-in-out;
+}
+
+.title  {
+  margin-top: 1.5rem;
+  margin-bottom: 0.8rem;
+  text-align: start;
+  text-transform: uppercase;
+  font-size: 1.8rem;
+  display: inline-block;
+  border-bottom: 2px solid var(--brasa);
+  padding-bottom: 0.2rem;
+  color: var(--aluminio);
+}
+
+.aviso {
+  margin-bottom: 1.5rem;
+  max-width: 800px;
+  height: auto;
+  text-align: start;
+  font-size: 1.2rem;
+  color: var(--aluminio);
+}
+
+.aviso strong {
+  color: var(--brasa);
+}
+
+.aviso span {
+  text-transform: uppercase;
+  color: var(--brasa);
+}
+
+
+form {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 6rem;
+  background: url(imgs/elementos/textura-damasco.png) no-repeat 50% 20%;
+  background-size: cover;
+  background-color: var(--fuligem);
+  background-blend-mode: overlay;
+  border-radius: 0 0 10px 10px;
+  padding: 1.5rem;
+  box-shadow: rgba(0, 0, 0, 0.7) 0px 5px 15px;
+  gap: 5rem;
+}
+
+label {
+  margin-top: 1.2rem;
+  cursor: pointer;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.7);
+}
+
+label:hover {
+  transition: all 0.3s ease-in-out;
+  transform: translate(0px, -8px);
+}
+
+input[type="radio"] {
+  display: none; /* Esconde os botões de rádio */
+}
+
+
+.titulo-formulario {
+  font-size: clamp(1.3rem, 2vw, 2.2rem);
+  text-align: center;
+  color: var(--aluminio);
+  text-transform: uppercase;
+  font-weight: bold;
+  background: url(imgs/elementos/textura-damasco.png) no-repeat 50% 20%;
+  background-size: cover;
+  background-color: var(--fuligem);
+  background-blend-mode: overlay;
+  border-radius: 10px 10px 0 0;
+  padding: 0.5rem 0rem;
+  text-shadow: 2px 2px 2px black;
+}
+
+.subtitulo-formulario {
+  text-decoration: none;
+  text-align: center;
+  color: var(--aluminio);
+  font-size: clamp(1rem, 2vw, 1.3rem);
+  margin-top: -0.5rem;
+  background: url(imgs/elementos/textura-damasco.png) no-repeat 50% 20%;
+  background-size: cover;
+  background-color: var(--fuligem);
+  background-blend-mode: overlay;
+  text-shadow: 2px 2px 2px black;
+  font-weight: normal;
+}
+
+.subtitulo-formulario a {
+  text-decoration: none;
+  color: var(--brasa);
+  font-style: italic;
+}
+
+.subtitulo-formulario a:hover {
+  text-decoration: underline;
+  color: var(--incandescente);
+}
+
+.form-opcao {
+  border: 1px solid var(--fuligem);
+  transition: transition 0.3s ease;
+  border-radius: 10px;
+  background-color: var(--carbono);
+}
+
+.form-opcao:hover {
+  border: 1px solid var(--brasa); /* Efeito de hover */
+}
+
+.form-opcao img {
+  width: 16rem;
+  height: 18rem;
+  border-radius: 10px 10px 0 0;
+  transition: all 0.3s ease;
+  object-fit: cover;
+}
+
+#formulario-1 .form-opcao, #formulario-2 .form-opcao {
+  background-color: var(--prata);
+}
+
+#formulario-1 .form-opcao img {
+  object-fit: cover;
+}
+
+.texts {
+  text-align: center;
+  padding: 0.8rem;
+  flex-grow: 0;
+  flex-wrap: wrap;
+  background-color: var(--fuligem);
+  display: flex;
+  justify-content: center;
+  
+  border-radius: 0 0 8px 8px;
+}
+.texts h3 {
+  font-size: clamp(1.2rem, 2vw, 1.8rem);
+}
+
+.estilo-faca, .estilo-cutelo, .estilo-machado, .tipo-couro, .tipo-madeira {
+  display: none;
+}
+
+input[type="radio"]:checked + .titulo-formulario {
+  color: var(--brasa);
+}
+
+input[type="radio"]:checked + .form-opcao {
+  color: var(--brasa);
+  transition: all 0.3s ease-out;
+  box-shadow: 0 0 20px rgba(255, 103, 0, 0.7), 0 0 40px rgba(255, 103, 0, 0.5), 0 0 60px rgba(255, 103, 0, 0.3);
+  transform: scale(1.05);
+  border: 1px solid var(--incandescente);
+}
+
+input[type="radio"]:checked + .form-opcao .texts {
+  background-color: var(--brasa);
+}
+
+input[type="radio"]:checked + .form-opcao .texts h3 {
+  color: var(--fuligem);
+  transition: transform 0.3s ease-out;
+}
+
+.carrossel-bugadao {
+  padding-top: 1rem;
+  background: url(imgs/elementos/textura-damasco.png) no-repeat 50% 20%;
+  background-size: cover;
+  background-color: var(--fuligem);
+  background-blend-mode: overlay;
+  border-radius: 0 0 10px 10px;
+  box-shadow: rgba(0, 0, 0, 0.7) 5px 10px 30px;
+  margin-bottom: 6rem;
+}
+
+.carousel:hover {
+  transition: all 0.3s ease-in-out;
+  border-radius: 0;
+}
+
+.carousel-cell {
+  margin-right: 3rem;
+  overflow: visible;
+  padding: 2rem 0;
+}
+
+.reset {
+  display: block;
+  margin-right: 2rem;
+  margin-left: auto;
+  margin-bottom: 4rem;
+  margin-top: -3rem;
+  font-size: clamp(1.5rem, 2vw, 2rem);
+  padding: 1rem;
+  background-color: var(--brasa);
+  color: var(--fuligem);
+  border: 2px solid var(--fuligem);
+  border-radius: 10px;
+  font-weight: bold;
+  transition: transform 0.3s ease-in-out;
+}
+
+.reset:hover {
+  transform: scale(1.05);
+  color: var(--aluminio);
+  background-color: var(--incandescente);
+  border: 2px solid var(--brasa);
+  box-shadow: 0 0 20px rgba(255, 69, 0, 1), 0 0 30px rgba(255, 69, 0, 0.8), 0 0 40px rgba(255, 69, 0, 0.6);
+}
+
+/* .reset:focus {
+  transform: scale(1.05);
+  color: var(--aluminio);
+  background-color: var(--incandescente);
+  border: 2px solid var(--brasa);
+  box-shadow: 0 0 20px rgba(255, 69, 0, 1), 0 0 30px rgba(255, 69, 0, 0.8), 0 0 40px rgba(255, 69, 0, 0.6);
+} */
+
+.comentarios {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.comentarios textarea {
+  background-color: var(--fuligem);
+  border: 2px solid var(--fuligem);
+  border-radius: 0 0 10px 10px;
+  color: var(--aluminio);
+  min-height: 300px;
+  min-width: 60%;
+  resize: none;
+  margin-bottom: 6rem;
+  box-shadow: rgba(0, 0, 0, 0.7) 5px 10px 30px;
+  text-align: start;
+  vertical-align: top;
+  font-size: 1.3rem;
+  padding: 2rem 1.5rem;
+}
+
+.comentarios textarea:focus {
+  outline: none !important;
+  border-color: var(--brasa);
+  border-radius: 10px;
+}
+
+.comentarios h1 {
+  font-size: clamp(1.3rem, 2vw, 2.2rem);
+  text-align: center;
+  color: var(--aluminio);
+  text-transform: uppercase;
+  font-weight: bold;
+  background: url(imgs/elementos/textura-damasco.png) no-repeat 50% 20%;
+  background-size: cover;
+  background-color: var(--fuligem);
+  background-blend-mode: overlay;
+  border-radius: 10px 10px 0 0;
+  padding: 0.5rem 0rem;
+  min-width: 60%;
+}
+
+.btn-enviar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto 5rem auto;
+  font-weight: bold;
+  font-size: clamp(2rem, 2vw, 4rem);
+  padding: 0.5rem;
+  background-color: var(--uatizapi);
+  border: 2px solid var(--fuligem);
+  color: var(--fuligem);
+  border-radius: 10px;
+  position: relative;
+  overflow: hidden;
+  white-space: nowrap;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  width: 15%;
+  height: 80px;
+  box-shadow: rgba(0, 0, 0, 0.7) 5px 10px 30px;
+}
+
+.btn-enviar span {
+  cursor: pointer;
+  display: none;
+  align-items: center;
+  position: relative;
+  transition: padding-right 0.5s ease-in-out;
+}
+
+.btn-enviar:hover {
+  transform: scale(1.05);
+}
+
+.btn-enviar:hover span {
+  display: inline-flex;
+}
+
+.icones-btn-whats {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: translateX(30px);
+  opacity: 0;
+  position: absolute;
+  transition: all 0.3s ease-in-out
+}
+
+.icones-btn-whats i {
+  color: var(--fuligem);
+  padding-left: 1rem;
+  font-size: clamp(2rem, 2vw, 3rem);
+}
+
+.btn-enviar:hover .icones-btn-whats {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+.btn-enviar:hover .icones-btn-whats i {
+  display: inline;
+  color: var(--fuligem);
+}
+
+.icones-btn-whats .seta {
+  margin: auto 0;
+  font-size: clamp(0.8rem, 2vw, 1.8rem)
+}
+
+/* Botão "Enviar" para mobile */
+
+.btn-mobile {
+  display: none;
+  background-color: var(--uatizapi);
+  color: var(--fuligem);
+  border: 2px solid var(--fuligem);
+  border-radius: 10px;
+  padding: 0.8rem;
+  font-size: clamp(2rem, 2vw, 4rem);
+  font-weight: bold;
+  margin: 0 auto 5rem auto;
+  transition: all 0.3s ease-in-out;
+  box-shadow: rgba(0, 0, 0, 0.7) 5px 10px 30px;
+}
+
+.btn-mobile:hover {
+  /* border: 4px solid #147537; */
+  transform: scale(1.02);
+}
+
+.icones-mobile .seta {
+  margin: auto 0;
+  font-size: 1.5rem
+}
+
+.icones-mobile i {
+  color: var(--fuligem);
+  font-size: clamp(2rem, 2vw, 3rem);
+}
+
+.msg-aviso {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.4);
+}
+
+.conteudo-aviso {
+  position: relative;
+  background: url(imgs/elementos/textura-damasco.png) no-repeat 50% 20%;
+  background-size: cover;
+  background-color: var(--fuligem);
+  background-blend-mode: overlay;
+  color: var(--brasa);
+  border-radius: 10px;
+  margin: 20% auto;
+  font-size: clamp(1.5rem, 2vw, 2.5rem);
+  text-align: center;
+  font-weight: bold;
+  padding: 2rem 1rem;
+  max-width: 40%;
+  border: 1px solid var(--fuligem);
+}
+
+.fechar {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 2rem;
+  cursor: pointer;
+  color: var(--brasa);
+}
+
+/* Instruções de como personalizar que eu roubei do Bernardo */
+
+.container-instructions {
+  max-width: 800px;
+  margin-bottom: 2rem;
+  margin-left: clamp(5rem, 5vw, 15rem);
+  margin-right: clamp(5rem, 5vw, 15rem);
+}
+
+h2 {
+  font-size: 1.6rem;
+  color: var(--aluminio);
+  display: inline-block;
+  border-bottom: 2px solid var(--brasa);
+  padding-bottom: 0.2rem;
+}
+
+.instructions {
+  list-style-type: decimal;
+  padding-left: 1.25rem;
+  margin: 1.5rem 0;
+}
+
+.instructions li {
+  margin: 0.7rem 0;
+  line-height: 1.5;
+  font-size: 1.2rem;
+}
+
+.instructions strong {
+  color: var(--brasa);
+}
+
+.instructions li::marker {
+  color: var(--brasa); 
+  font-weight: bold; 
+  font-size: 1.4rem; 
+}
+
+.whatsapp-button {
+  display: inline-block;
+  padding: 0.6rem 1.25rem;
+  background-color: var(--uatizapi); 
+  color: var(--carbono);
+  text-align: center;
+  border-radius: 0.5rem;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.2rem;
+  transition: transform 0.4s ease;
+}
+
+.whatsapp-button:hover {
+  transform: scale(1.04);
+}
+
+/* Media Queries */
+
+@media (max-width: 1500px) {
+  
+.btn-mobile {
+  display: block;
+}
+  
+.btn-enviar {
+  display: none;
+}
+}
+
+/* 1456px = 93rem */
+
+@media (max-width: 91rem) {
+  
+
+.form-opcao img {
+  width: 14rem;
+  height: 16rem;
+}
+
+.texts {
+  width: 14rem;
+}
+
+.comentarios textarea, .comentarios h1 {
+  width: 80%;
+}
+
+
+
+}
+
+/* 1264px = 79rem */
+
+@media (max-width: 79rem) {
+
+.container-instructions, .title, .aviso {
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+}
+
+.form-opcao img {
+  width: 12rem;
+  height: 14rem;
+}
+
+.texts {
+  width: 12rem;
+}
+}
+
+
+/* 1008px = 63rem */
+
+@media (max-width: 63rem) {
+  
+form {
+  overflow: scroll;
+  scroll-snap-type: x mandatory;
+  scroll-snap-align: center;
+  justify-content: space-between;
+}
+
+form::-webkit-scrollbar {
+  width: 12px;
+}
+
+form::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+form::-webkit-scrollbar-thumb {
+  background-color: #F05E1B;
+  border-radius: 10px;
+}
+
+form::-webkit-scrollbar-thumb:hover {
+  background-color: var(--incandescente);
+}
+
+#formulario-7 {
+  justify-content: center;
+}
+
+}
+
+/* 650px = ?rem */
+
+@media (max-width: 650px) {
+
+#formulario-7 {
+  justify-content: space-between;
+}
+
+}
