@@ -18,21 +18,25 @@
     <title>SH Cutelaria</title>
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/login.css">
+
+    <script src="js/login.js" defer></script>
+
 </head>
 <body>
 
     <!-- Início da Main -->
     <main>
-        <a href="index.html"><img src="css/imgs/elementos/logo-nav.png" alt="Logo"></a>
-        <div class="container-login">
 
-            <div class="contato">
-                <h1>Contato <i class="fa-solid fa-headset"></i></h1>
+        <div class="container">
+            <a href="index.html"><img src="css/imgs/elementos/logo.png" alt="Logo"></a>
+            <div id="contato">
+                <h1>Contato</h1>
                 <form id="contactForm" action="#" method="post">
-                    <div class="dados">
-                        <label for="contactEmail">E-mail</label>
+                    <div>
+                        <label for="contactEmail">
+                            <span>@</span>
+                        </label>
                         <input type="email" id="contactEmail" required placeholder="E-mail">
                     </div>
                     <button type="submit">Enviar</button>
@@ -40,50 +44,63 @@
                 </form>
             </div>
 
-            <div class="entrar">
-                <h1>Login <i class="fa-solid fa-right-to-bracket"></i></h1>
+            <div id="login">
+                <h1>Login</h1>
                 <form id="loginForm" action="#" method="post">
-                    <div class="dados">
-                        <label for="loginEmail">Email</label>
+                    <div>
+                        <label for="loginEmail">
+                            <span>@</span>
+                        </label>
                         <input type="email" id="loginEmail" required placeholder="E-mail">
                     </div>
                     <div class="dados">
-                        <label for="loginPassword">Senha</label>
+                        <label for="loginPassword">
+                            <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="M240-80q-33 0-56.5-23.5T160-160v-400q0-33 23.5-56.5T240-640h40v-80q0-83 58.5-141.5T480-920q83 0 141.5 58.5T680-720v80h40q33 0 56.5 23.5T800-560v400q0 33-23.5 56.5T720-80H240Zm240-200q33 0 56.5-23.5T560-360q0-33-23.5-56.5T480-440q-33 0-56.5 23.5T400-360q0 33 23.5 56.5T480-280ZM360-640h240v-80q0-50-35-85t-85-35q-50 0-85 35t-35 85v80Z"/></svg>
+                        </label>
                         <input type="password" id="loginPassword" required placeholder="Senha">
                     </div>
                     <button type="submit">Entrar</button>
-                    <p>Não tem uma conta? <a href="#registerForm" class="link-cadastro">Cadastre-se</a></p>
                 </form>
+                <p>Não tem uma conta? <a href="#registerForm" class="link-cadastro" onclick="alternarDisplay()">Cadastre-se</a></p>
             </div>
 
-            <div class="cadastro">
-                <h1>Cadastro <i class="fa-solid fa-user"></i></h1>
+            <div id="cadastro">
+                <h1>Cadastro</h1>
                 <form id="registerForm" action="#" method="post">
-                    <div class="dados">
-                        <label for="registerName">Nome de Usuário</label>
+                    <div>
+                        <label for="registerName">
+                            <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="M480-480q-66 0-113-47t-47-113q0-66 47-113t113-47q66 0 113 47t47 113q0 66-47 113t-113 47ZM160-160v-112q0-34 17.5-62.5T224-378q62-31 126-46.5T480-440q66 0 130 15.5T736-378q29 15 46.5 43.5T800-272v112H160Z"/></svg>
+                        </label>
                         <input type="text" id="registerName" required placeholder="Nome de usuário">
                     </div>
-                    <div class="dados">
-                        <label for="registerEmail">Email</label>
+                    <div>
+                        <label for="registerEmail">
+                            <span>@</span>
+                        </label>
                         <input type="email" id="registerEmail" required placeholder="E-mail">
                     </div>
-                    <div class="dados">
-                        <label for="registerPassword">Senha</label>
+                    <div>
+                        <label for="registerPassword">
+                            <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="M240-80q-33 0-56.5-23.5T160-160v-400q0-33 23.5-56.5T240-640h40v-80q0-83 58.5-141.5T480-920q83 0 141.5 58.5T680-720v80h40q33 0 56.5 23.5T800-560v400q0 33-23.5 56.5T720-80H240Zm240-200q33 0 56.5-23.5T560-360q0-33-23.5-56.5T480-440q-33 0-56.5 23.5T400-360q0 33 23.5 56.5T480-280ZM360-640h240v-80q0-50-35-85t-85-35q-50 0-85 35t-35 85v80Z"/></svg>
+                        </label>
                         <input type="password" id="registerPassword" required placeholder="Senha">
                     </div>
                     <button type="submit">Cadastrar</button>
                 </form>
+                <p>já tem uma conta? <a href="#" onclick="alternarDisplay()">Login</a></p>
+            </div>
+
+            <div class="teste">
+                <h2>Perfil do Usuário</h2>
+                <button id="profileButton">Ver Perfil</button>
+                <div id="result">
+                    <strong>Resultado:</strong>
+                    <pre id="output"></pre>
+                </div>
             </div>
             
         </div>
 
-        <h2>Perfil do Usuário</h2>
-        <button id="profileButton">Ver Perfil</button>
-
-        <div id="result">
-            <strong>Resultado:</strong>
-            <pre id="output"></pre>
-        </div>
     </main>
     <!-- Fim da Main -->
 

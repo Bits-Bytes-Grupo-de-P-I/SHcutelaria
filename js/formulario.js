@@ -147,7 +147,7 @@ function enviarWhatsApp() {
   }
 
   // Monta a mensagem somente com os valores selecionados
-  let mensagem = `---------------------------\n`
+  let mensagem = `---------------------------\n\n`
   mensagem += `Tipo de Ferramenta: *${tipoFerramenta.value.toUpperCase()}*\n\n`;
   mensagem += `Material da Lâmina: *${materialLamina.value.toUpperCase()}*\n\n`;
   mensagem += `Material do Cabo: *${materialCabo.value.toUpperCase().toUpperCase()}*\n\n`;
@@ -200,19 +200,6 @@ function fecharAviso() {
   aviso.style.display = 'none';
 }
 
-
-// // Limpar seleções dos botões radio
-//   document.getElementById('resetBtn').addEventListener('click', function() {
-//     document.getElementById('formulario-1').reset();
-//     document.getElementById('formulario-2').reset();
-//     document.getElementById('formulario-3').reset();
-//     document.getElementById('formulario-4').reset();
-//     document.getElementById('formulario-5').reset();
-//     document.getElementById('formulario-6').reset();
-//     document.getElementById('formulario-7').reset();
-//     document.getElementById('formulario-8').reset();
-//     document.getElementById('formulario-9').reset();
-//   });
 
 document.getElementById('resetBtn').addEventListener('click', function() {
   for (let i = 1; i <= 9; i++) {

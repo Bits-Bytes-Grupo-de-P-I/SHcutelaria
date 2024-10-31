@@ -6,6 +6,12 @@
     box-sizing: border-box;
 }
 
+html{
+    text-align: center;
+    color: var(--fuligem);
+    font-size: 16pt;
+}
+
 :root {
     --fuligem: #161616;
     --carbono: #232323;
@@ -17,166 +23,198 @@
 }
 
 body {
-    background-color: var(--carbono);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
+    background: url(imgs/elementos/textura-damasco.png) no-repeat;
+    background-size: cover;
+    background-color: var(--fuligem);
+    background-blend-mode: overlay; /* Mistura as duas camadas de cor */
+    min-height: 100vh;
 }
 
 img {
-    position: absolute;
-    top: 50px;
-    left: 50%; /* Coloca o item no meio da largura do contêiner */
-    transform: translateX(-50%); /* Move o item para a esquerda pela metade da sua largura */
     width: 200px;
     height: auto;
-    transition: all 0.3s ease-in;
+    position: absolute;
+    top: 50px;
+    left: 20%;
+    transform: translateX(-50%);
+    transition: all 0.15s ease-in;
 }
 
 img:hover {
-    transform: translateX(-50%) scale(1.05);
+    transform: translate(-50%) scale(1.05);
 }
 
-.container-login {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 3rem;
-    margin-top: 3rem;
-}
-
-.entrar, .contato {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    padding: 3rem 3rem;
-    background: url(imgs/elementos/textura-damasco.png) no-repeat 50% 20%;
-    background-size: cover;
-    background-color: var(--fuligem);
-    background-blend-mode: overlay;
-    border-radius: 10px;
-    box-shadow: rgba(0, 0, 0, 0.7) 0px 5px 15px;
-    height: 38rem;
-}
-
-.entrar {
-
-}
-
-.cadastro {
-
-}
-
-.contato {
-
-}
-
-.cadastro {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    padding: 3rem 3rem;
-    background: url(imgs/elementos/textura-damasco.png) no-repeat 50% 20%;
-    background-size: cover;
-    background-color: var(--fuligem);
-    background-blend-mode: overlay;
-    border-radius: 10px;
-    box-shadow: rgba(0, 0, 0, 0.7) 0px 5px 15px;
-    height: 38rem;
-}
-
-.entrar i, .contato i, .cadastro i {
-    color: var(--brasa);
-    padding-left: 0.5rem;
-    font-size: 2rem;
-}
-
-
-.entrar h1, .contato h1, .cadastro h1 {
-    position: absolute;
-    top: 2rem;
-    text-align: start;
-    color: var(--aluminio);
-    font-weight: bold;
-    font-size: 2.5rem;
-    color: var(--brasa);
-}
-
-.dados {
-    margin-bottom: 15px;
-}
-
-label {
+#login {
     display: block;
-    color: var(--aluminio);
-    font-size: 1.6rem;
-    margin-bottom: 0.5rem;
-    font-weight: bold;
-    color: var(--brasa);
 }
 
-input[type="text"], input[type="password"], input[type="email"] {
-    width: 25rem;
-    padding: 1rem;
-    padding-left: 0.5rem;
-    margin-top: 0.5rem;
-    border: 1px solid #ddd;
-    border-radius: 10px;
-    font-size: 1.2rem;
-    color: var(--fuligem);
+#cadastro, #contato, .teste {
+    display: none;
 }
 
-
-input::placeholder {
-    color: var(--carbono);
-    font-style: italic;
+.container {
+    box-sizing: border-box;
+    background-color: var(--carbono);
+    height: 100vh;
+    width: max(40%, 600px);
+    padding: 10px;
+    border-radius: 0 20px 20px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
-button {
-    width: 40%; /* Define a largura do botão como 40% da tela */
-    padding: 1rem; /* Ajuste o padding conforme necessário */
-    color: var(--fuligem);
+h1 {
+    font-size: 3rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    margin-top: 1rem;
+}
+
+form {
+    width: min(400px, 100%);
+    margin-top: 20px;
+    margin-bottom: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+form > div {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+form label {
+    flex-shrink: 0;
+    height: 50px;
+    width: 50px;
     background-color: var(--brasa);
-    border: none;
-    border-radius: 10px;
-    font-size: 1.4rem;
-    cursor: pointer;
-    transition: all 0.3s ease-in;
-    text-align: center; /* Alinha o texto no centro */
-    margin: 2rem auto; /* Centraliza o botão horizontalmente e adiciona margem vertical */
+    fill: var(--fuligem);
+    color: var(--fuligem);
+    border-radius: 10px 0 0 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    font-weight: 500;
 }
 
-button:hover {
-    transform: scale(1.05);
-    background-color: #f15217;
-    color: var(--aluminio);
-    transition: all 0.3s ease-out;
-    border: 1px solid var(--brasa);
+form label span {
+    color: var(--fuligem);
+    font-weight: 700;
+}
+
+form input {
+    box-sizing: border-box;
+    flex-grow: 1;
+    min-width: 0;
+    height: 50px;
+    padding: 1em;
+    font: inherit;
+    border-radius: 0 10px 10px 0;
+    border: 2px solid var(--fuligem);
+    border-left: none;
+    background-color: var(--fuligem);
+    transition: 150ms ease;
+}
+
+form input:hover{
+    border-color: var(--brasa);
+  }
+
+form input:focus{
+    outline: none;
+    border-color: var(--incandescente);
+    box-shadow: none;
+  }
+
+div:has(input:focus) > label{
+    background-color: var(--fuligem);
+    fill: var(--brasa);
     box-shadow: 0 0 20px rgba(255, 69, 0, 1), 0 0 30px rgba(255, 69, 0, 0.8), 0 0 40px rgba(255, 69, 0, 0.6);
-}
+    border: 2px solid var(--brasa);
+    border-right: none;
+  }
 
-
-p {
-    display: block;
-    text-align: center;
-    font-size: 1.6rem;
-    margin-top: 2rem;
-}
-
-.link-cadastro {
-    font-size: 2rem;
-    display: block;
+div:has(input:focus) > label span {
     color: var(--brasa);
-    margin-top: 1.2rem;
 }
 
-.link-cadastro:hover {
-    transition: all 0.3s ease-in-out;
+form input::placeholder{
+    color: var(--aluminio);
+  }
+
+form button{
+    margin-top: 1rem;
+    border: none;
+    border-radius: 1000px;
+    padding: .85rem 2rem;
+    background-color: var(--brasa);
+    color: var(--fuligem);
+    font: inherit;
+    font-weight: 600;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: 150ms ease;
+    box-shadow: var(--fuligem) 6px 4.8px 6.4px;
+  }
+
+form button:hover{
+    background-color: var(--incandescente);
+    color: var(--aluminio);
     transform: scale(1.05);
-    color: var(--incandescente);
+    box-shadow: 0 0 20px rgba(255, 69, 0, 1), 0 0 30px rgba(255, 69, 0, 0.8), 0 0 40px rgba(255, 69, 0, 0.6);
+  }
+
+form button:focus{
+    outline: none;
+    background-color: var(--prata);
+  }
+
+a{
+    text-decoration: none;
+    color: var(--brasa);
+  }
+
+a:hover{
+    text-decoration: underline;
+  }
+
+@media(max-width: 1100px){
+
+.container{
+      width: min(600px, 100%);
+      border-radius: 0;
+    }
+  }
+
+@media(max-width: 600px){
+
+.container{
+        font-size: 14pt;
+    }
 }
+
+@media(max-width: 360px){
+
+.container{
+        font-size: 12pt;
+    }
+}
+
+form div.incorrect label{
+    background-color: #f06272;
+  }
+
+form div.incorrect input{
+    border-color: #f06272;
+  }
+
+#error-message{
+    color:#f06272;
+  }
+

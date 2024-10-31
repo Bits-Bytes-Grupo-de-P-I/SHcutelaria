@@ -46,6 +46,7 @@ main {
     border: 2px solid var(--fuligem);
     margin-bottom: 6rem;
     overflow: hidden;
+    max-height: 600px;
 }
 
 
