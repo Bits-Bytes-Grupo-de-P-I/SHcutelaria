@@ -82,7 +82,7 @@ main {
     transform: scale(1.04);
   } */
 
-.container {
+.container-tutorial {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
