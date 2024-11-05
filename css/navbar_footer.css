@@ -46,7 +46,7 @@ body::-webkit-scrollbar-thumb:hover {
                 0 0 40px rgba(255, 69, 0, 0.8),
                 0 0 60px rgba(255, 69, 0, 0.6),
                 0 0 80px rgba(255, 69, 0, 0.4);
-    transition: all 0.3s ease;
+    transition: all 0.15s ease;
 }
 
 
@@ -133,7 +133,7 @@ main {
                 0 0 40px rgba(255, 69, 0, 0.8),
                 0 0 60px rgba(255, 69, 0, 0.6),
                 0 0 80px rgba(255, 69, 0, 0.4);
-    transition: all 0.3s ease;
+    transition: all 0.15s ease;
 }
 
 .menu, .atendimento {
@@ -158,13 +158,13 @@ main {
 }
 
 .menu a, .atendimento a {
-    font-size: clamp(0.5rem, 2vw, 1.1rem);
-    
+    font-size: clamp(0.5rem, 2vw, 1.2rem);
 }
 
 .menu i, .atendimento i {
     padding-right: 0.2rem;
     color: var(--incandescente);
+    font-size: 1.3rem;
 }
 
 
@@ -174,12 +174,14 @@ main {
     flex-direction: column;
     text-transform: uppercase;
     background-color: rgba(35, 35, 35, 0.5);
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(3px);
+    border-left: 1px solid var(--fuligem);
     position: fixed;
     top: 0;
     right: 0;
     height: 100vw;
-    gap: 2rem;
+    width: 40vw;
+    gap: 4rem;
     z-index: 10;
 }
 
@@ -189,6 +191,7 @@ main {
 
 .menu-reduzido li {
     padding: 1rem 0;
+    padding-left: 1rem;
     width: 100%;
 }
 
@@ -206,8 +209,8 @@ main {
     padding-right: 0.5rem;
     color: var(--incandescente);
     margin-right: 0.4rem;
-    width: 1.2rem;
-    height: 1.2rem;
+    width: 1.5rem;
+    height: 1.5rem;
     display: inline-flex;
     justify-content: center;
     align-items: center;
@@ -220,6 +223,8 @@ main {
 .atendimento-reduzido li {
     justify-content: space-between;
     padding: 1rem 0;
+    width: 100%;
+    text-align: center;
 }
 
 .atendimento-reduzido li:hover {
@@ -233,7 +238,7 @@ main {
     right: 0;
     font-size: 3rem;
     margin: 20px;
-    transition: transform 0.3s ease;
+    transition: transform 0.15s ease;
 }
 
 .btn-whats-fixo i {
@@ -315,7 +320,7 @@ footer {
     display: flex;
     align-items: center;
     justify-content: center;
-    transition: all 0.3s ease-out;
+    transition: all 0.15s ease-out;
 }
 
 .wrapper .footer-widget .socials li a i {
@@ -343,7 +348,7 @@ footer {
     text-decoration: none;
     text-transform: capitalize;
     line-height: 2rem;
-    transition: all 0.3s ease-out;
+    transition: all 0.15s ease-out;
 }
   
 .wrapper .footer-widget .links li a:hover,
@@ -354,7 +359,7 @@ footer {
                 0 0 40px rgba(255, 69, 0, 0.8),
                 0 0 60px rgba(255, 69, 0, 0.6),
                 0 0 80px rgba(255, 69, 0, 0.4);
-    transition: all 0.3s ease;
+    transition: all 0.15s ease;
 }
   
 .copyright-wrapper {
@@ -373,7 +378,7 @@ footer {
     color: inherit;
     font-weight: 500;
     text-decoration: none;
-    transition: all 0.3s ease-out;
+    transition: all 0.15s ease-out;
 }
   
 .copyright-wrapper p a:hover {
@@ -383,7 +388,7 @@ footer {
                 0 0 40px rgba(255, 69, 0, 0.8),
                 0 0 60px rgba(255, 69, 0, 0.6),
                 0 0 80px rgba(255, 69, 0, 0.4);
-    transition: all 0.3s ease;
+    transition: all 0.15s ease;
 }
 
 /*Cabo footer pae*/
@@ -397,57 +402,71 @@ footer {
 @media (max-width: 79rem) {
     
 
-    .menu a {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
+.menu a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.menu i {
+    padding-bottom: 0.2rem;
+}
+
+
+.atendimento a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.atendimento i {
+    padding-bottom: 0.2rem;
+}
+
+.card-destaque {
+    width: 15rem;
+}
+
+.card-cutelaria {
+    height: 20rem;
+}
+
+.card-blocos {
+    width: 100%;
+    height: 20rem;
+    margin-bottom: 2rem;
+}
+
+.card-restauracao {
+    width: 100%;
+    margin-bottom: 2rem;
+    height: 20rem;
+}
+
+.explorar-card {
+    padding-left: 1rem;
+}
+
+.btn-whats-fixo {
+    max-width: 50px;
+    height: 50px;
+}
+}
+
+@media (min-width: 70rem) {
+    
+    .navbar-reduzida, .atendimento-reduzido, .menu-reduzido, .fechar-menu {
+        display: none;
     }
 
-    .menu i {
-        padding-bottom: 0.2rem;
-    }
-
-
-    .atendimento a {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-    }
-
-    .atendimento i {
-        padding-bottom: 0.2rem;
-    }
-
-    .card-destaque {
-        width: 15rem;
+    .navbar-reduzida {
+        background: none;
+        backdrop-filter: blur(0px);
+        border-left: none;
     }
     
-    .card-cutelaria {
-        height: 20rem;
-    }
-
-    .card-blocos {
-        width: 100%;
-        height: 20rem;
-        margin-bottom: 2rem;
-    }
-
-    .card-restauracao {
-        width: 100%;
-        margin-bottom: 2rem;
-        height: 20rem;
-    }
-
-    .explorar-card {
-        padding-left: 1rem;
-    }
-
-    .btn-whats-fixo {
-        max-width: 50px;
-        height: 50px;
-    }
 }
 
 
@@ -455,55 +474,55 @@ footer {
 
 @media (max-width: 70rem) { /* Menu reduzido */
 
-    main {
-        margin-left: 5rem;
-        margin-right: 5rem;
-    }
+main {
+    margin-left: 5rem;
+    margin-right: 5rem;
+}
 
 
-    .ativar-menu {
-        display: flex;
-        position: relative;
-        padding: 1rem;
-    }
+.ativar-menu {
+    display: flex;
+    position: relative;
+    padding: 1rem;
+}
 
-    .ativar-menu:hover {
-        cursor: pointer;
-        color: var(--brasa);
-        text-shadow: 
-                    0 0 20px rgba(255, 69, 0, 1),
-                    0 0 40px rgba(255, 69, 0, 0.8),
-                    0 0 60px rgba(255, 69, 0, 0.6),
-                    0 0 80px rgba(255, 69, 0, 0.4);
-    }
+.ativar-menu:hover {
+    cursor: pointer;
+    color: var(--brasa);
+    text-shadow: 
+                0 0 20px rgba(255, 69, 0, 1),
+                0 0 40px rgba(255, 69, 0, 0.8),
+                0 0 60px rgba(255, 69, 0, 0.6),
+                0 0 80px rgba(255, 69, 0, 0.4);
+}
 
-    .ativar-menu i {
-        color: var(--incandescente);
-    }
+.ativar-menu i {
+    color: var(--incandescente);
+}
 
 
-    .fechar-menu:hover {
-        cursor: pointer;
-        color: var(--brasa);
-        text-shadow: 
-                    0 0 20px rgba(255, 69, 0, 1),
-                    0 0 40px rgba(255, 69, 0, 0.8),
-                    0 0 60px rgba(255, 69, 0, 0.6),
-                    0 0 80px rgba(255, 69, 0, 0.4);
-    }
+.fechar-menu:hover {
+    cursor: pointer;
+    color: var(--brasa);
+    text-shadow: 
+                0 0 20px rgba(255, 69, 0, 1),
+                0 0 40px rgba(255, 69, 0, 0.8),
+                0 0 60px rgba(255, 69, 0, 0.6),
+                0 0 80px rgba(255, 69, 0, 0.4);
+}
 
-    .menu {
-        display: none;
-    }
+.menu {
+    display: none;
+}
 
-    .atendimento {
-        display: none;
-    }
+.atendimento {
+    display: none;
+}
 
-    .btn-whats-fixo {
-        max-width: 40px;
-        height: 40px;
-    }
+.btn-whats-fixo {
+    max-width: 40px;
+    height: 40px;
+}
 
 }
 
@@ -523,6 +542,16 @@ footer {
 /* 768px = 48rem */
 
 @media (max-width: 48rem) {
+
+    .menu-reduzido li, .atendimento-reduzido li{
+        padding-left: 0.5rem;
+    }
+
+    .menu-reduzido a, .atendimento-reduzido a{
+        padding: 1rem;
+        font-size: 1.3rem;
+    }
+
     main {
         margin-left: 2rem;
         margin-right: 2rem;
@@ -537,6 +566,14 @@ footer {
         width: 100%;
         margin: 0 10px 50px;
     }
+}
+
+@media (max-width: 676px) {
+    
+    .navbar-reduzida {
+        width: 50%;
+    }
+    
 }
 
 /* 512px = 32rem */

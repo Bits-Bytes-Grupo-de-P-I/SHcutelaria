@@ -197,15 +197,23 @@ a:hover{
 @media(max-width: 600px){
 
 .container{
-    font-size: 14pt;
+    font-size: 16pt;
     }
 }
 
-@media(max-width: 360px){
+@media(max-width: 380px){
 
 .container{
     font-size: 12pt;
     }
+}
+
+h1 {
+  font-size: 2.5rem;
+}
+
+form {
+  padding: 0.5rem;
 }
 
 form div.incorrect label{
@@ -219,4 +227,24 @@ form div.incorrect input{
 #error-message{
     color:#f06272;
   }
+
+  @media(max-width: 320px){
+
+    img {
+      width: 200px;
+    }
+
+    .container{
+        font-size: 12pt;
+        }
+    }
+    
+    h1 {
+      font-size: 2rem;
+    }
+    
+    form {
+      padding: 1rem;
+    }
+    
 

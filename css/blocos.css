@@ -124,7 +124,7 @@ button {
 button:hover {
     background-color: #f15217;
     color: var(--aluminio);
-    transition: all 0.3s ease-out;
+    transition: all 0.15s ease-out;
     border: 1px solid var(--brasa);
     box-shadow: 0 0 20px rgba(255, 69, 0, 1), 0 0 30px rgba(255, 69, 0, 0.8), 0 0 40px rgba(255, 69, 0, 0.6);
 }
@@ -264,7 +264,7 @@ h2 {
 .modal-body img {
     width: 22%;
     height: auto;
-    transition: transform 0.3s;
+    transition: transform 0.15s;
     object-fit: contain;
     border-radius: 0.5rem;
 }
@@ -295,7 +295,7 @@ h2 {
     padding: 0.5rem 1rem;
     cursor: pointer;
     margin-top: 0.5rem;
-    transition: all 0.3s ease-out;
+    transition: all 0.15s ease-out;
 }
 
 #info-message button:hover {

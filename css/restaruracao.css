@@ -145,7 +145,7 @@ main {
   object-fit: cover; 
   margin-bottom: 0.5rem;
   border: 2px solid var(--fuligem);
-  transition: all 0.3s ease-in-out;
+  transition: all 0.15s ease-in-out;
 }
 
 .illustration-video {
@@ -154,7 +154,7 @@ main {
   object-fit: cover;
   margin: auto 0;
   border: 2px solid var(--fuligem);
-  transition: all 0.3s ease-in-out;
+  transition: all 0.15s ease-in-out;
 }
 
 .uatizapi {

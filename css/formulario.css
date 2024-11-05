@@ -40,7 +40,7 @@ button {
 main {
   margin-left: clamp(10rem, 5vw, 15rem);
   margin-right: clamp(10rem, 5vw, 15rem);
-  transition: all 0.3s ease-in-out;
+  transition: all 0.15s ease-in-out;
 }
 
 .title  {
@@ -98,7 +98,7 @@ label {
 }
 
 label:hover {
-  transition: all 0.3s ease-in-out;
+  transition: all 0.15s ease-in-out;
   transform: translate(0px, -8px);
 }
 
@@ -149,7 +149,7 @@ input[type="radio"] {
 
 .form-opcao {
   border: 1px solid var(--fuligem);
-  transition: transition 0.3s ease;
+  transition: transition 0.15s ease;
   border-radius: 10px;
   background-color: var(--carbono);
 }
@@ -162,7 +162,7 @@ input[type="radio"] {
   width: 16rem;
   height: 18rem;
   border-radius: 10px 10px 0 0;
-  transition: all 0.3s ease;
+  transition: all 0.15s ease;
   object-fit: cover;
 }
 
@@ -199,7 +199,7 @@ input[type="radio"]:checked + .titulo-formulario {
 
 input[type="radio"]:checked + .form-opcao {
   color: var(--brasa);
-  transition: all 0.3s ease-out;
+  transition: all 0.15s ease-out;
   box-shadow: 0 0 20px rgba(255, 103, 0, 0.7), 0 0 40px rgba(255, 103, 0, 0.5), 0 0 60px rgba(255, 103, 0, 0.3);
   transform: scale(1.05);
   border: 1px solid var(--incandescente);
@@ -211,7 +211,7 @@ input[type="radio"]:checked + .form-opcao .texts {
 
 input[type="radio"]:checked + .form-opcao .texts h3 {
   color: var(--fuligem);
-  transition: transform 0.3s ease-out;
+  transition: transform 0.15s ease-out;
 }
 
 .carrossel-bugadao {
@@ -226,7 +226,7 @@ input[type="radio"]:checked + .form-opcao .texts h3 {
 }
 
 .carousel:hover {
-  transition: all 0.3s ease-in-out;
+  transition: all 0.15s ease-in-out;
   border-radius: 0;
 }
 
@@ -249,7 +249,7 @@ input[type="radio"]:checked + .form-opcao .texts h3 {
   border: 2px solid var(--fuligem);
   border-radius: 10px;
   font-weight: bold;
-  transition: transform 0.3s ease-in-out;
+  transition: transform 0.15s ease-in-out;
 }
 
 .reset:hover {
@@ -327,7 +327,7 @@ input[type="radio"]:checked + .form-opcao .texts h3 {
   position: relative;
   overflow: hidden;
   white-space: nowrap;
-  transition: background-color 0.3s ease, transform 0.3s ease;
+  transition: background-color 0.15s ease, transform 0.15s ease;
   width: 15%;
   height: 80px;
   box-shadow: rgba(0, 0, 0, 0.7) 5px 10px 30px;
@@ -356,7 +356,7 @@ input[type="radio"]:checked + .form-opcao .texts h3 {
   transform: translateX(30px);
   opacity: 0;
   position: absolute;
-  transition: all 0.3s ease-in-out
+  transition: all 0.15s ease-in-out
 }
 
 .icones-btn-whats i {
@@ -392,7 +392,7 @@ input[type="radio"]:checked + .form-opcao .texts h3 {
   font-size: clamp(2rem, 2vw, 4rem);
   font-weight: bold;
   margin: 0 auto 5rem auto;
-  transition: all 0.3s ease-in-out;
+  transition: all 0.15s ease-in-out;
   box-shadow: rgba(0, 0, 0, 0.7) 5px 10px 30px;
 }
 

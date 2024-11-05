@@ -122,7 +122,7 @@ main {
     background: url(imgs/elementos/faca-bainha-de-couro.jpg) no-repeat 50% 70%;
     background-size: cover;
     margin-bottom: 2rem;
-    transition: all 0.3s ease;
+    transition: all 0.15s ease;
     transform-style: preserve-3d; /* Habilita o efeito 3D */ /*O chat disse que era pra deixar tudo do mesmo tamanho quando aumenta, mas não sei se precisa realmente 😔*/
     will-change: transform;
 }
@@ -143,7 +143,7 @@ main {
     box-shadow: var(--fuligem) 6px 4.8px 6.4px;
     background: url(imgs/elementos/blocos-de-cima.jpg) no-repeat 50% 90%;
     background-size: cover;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
     transform-style: preserve-3d; /* Habilita o efeito 3D */
     will-change: transform;
 }
@@ -163,7 +163,7 @@ main {
     box-shadow: var(--fuligem) 6px 4.8px 6.4px;
     background: url(imgs/elementos/facas-e-blocos.jpg) no-repeat 40% 90%;
     background-size: cover;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
     transform-style: preserve-3d; /* Habilita o efeito 3D */
     will-change: transform;
 }
@@ -214,7 +214,7 @@ main {
 .explorar-card button:hover {
     background-color: #f15217;
     color: var(--aluminio);
-    transition: all 0.3s ease-out;
+    transition: all 0.15s ease-out;
     border: 1px solid var(--brasa);
     box-shadow: 0 0 20px rgba(255, 69, 0, 1), 0 0 30px rgba(255, 69, 0, 0.8), 0 0 40px rgba(255, 69, 0, 0.6);
 }
@@ -234,7 +234,7 @@ main {
     background-size: cover;
     background-color: var(--fuligem);
     background-blend-mode: overlay; /* Mistura as duas camadas de cor */
-    transition: transform 0.3s ease;
+    transition: transform 0.15s ease;
     margin: 0 auto;
     margin-bottom: 2rem;
 }
@@ -252,6 +252,7 @@ main {
     text-align: center;
     text-transform: uppercase;
     margin-bottom: 0.5rem;
+    font-size: clamp(1.2rem, 2vw, 2rem);
 }
 
 .timer {
@@ -273,6 +274,7 @@ main {
     align-items: center;
     gap: 2rem;
     margin: 0 0 3rem 0;
+    transition: all 0.15s ease-in-out;
 }
 
 .rifa-imagem {
@@ -284,7 +286,7 @@ main {
     border-radius: 10px;
     background: url(imgs/formulario/aço.jpg);
     overflow: hidden;
-    transition: all 0.3s ease-in-out;
+    transition: all 0.15s ease-in-out;
     padding: 0.5rem;
     /* box-shadow: rgba(240, 94, 27, 0.56) 0px 22px 70px 4px; */
 }
@@ -294,15 +296,18 @@ main {
     height: 24rem;
     border-radius: 10px;
     object-fit: cover;
-    transition: all 0.3s ease-in-out;
+    transition: all 0.15s ease-in-out;
 }
 
 .rifa-info {
-    font-size: clamp(1.2rem, 2vw, 1.6rem);
-    text-align: center;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
 }
 
 .rifa-info p {
+    font-size: clamp(1.2rem, 2vw, 1.6rem);
+    text-align: center;
     background-color: var(--prata);
     border-radius: 10px;
     border: 2px solid var(--aluminio);
@@ -317,7 +322,7 @@ main {
     color: var(--fuligem);
 }
 
-.rifa-blocos {
+.rifa-blocos h2 {
     font-size: 2rem;
     text-align: center;
 }
@@ -326,18 +331,19 @@ main {
     display: block;
     margin: 0 auto;
     margin-top: 1rem;
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
     background-color: var(--brasa);
     color: var(--fuligem);
     border: 1px solid var(--fuligem);
     border-radius: 10px;
     padding: 1rem;
-    transition: transform 0.3s ease-in-out;
+    transition: transform 0.15s ease-in-out;
     font-weight: bold;
+    font-size: clamp(1.5rem, 2vw, 2.5rem);
 }
 
 .rifa-blocos i {
-    transition: transform 0.3s ease-in-out;
+    transition: transform 0.15s ease-in-out;
     color: #161616;
 }
 
@@ -368,7 +374,7 @@ main {
     position: relative;
     overflow: hidden;
     white-space: nowrap;
-    transition: background-color 0.3s ease, transform 0.3s ease;
+    transition: background-color 0.15s ease, transform 0.15s ease;
     width: 26%;
   }
   
@@ -377,6 +383,7 @@ main {
     color: var(--fuligem);
     border: none;
     font-weight: bold;
+    padding: 1rem 0;
 }
 
 .btn-enviar span {
@@ -410,7 +417,7 @@ main {
     transform: translateX(30px);
     opacity: 0;
     position: absolute;
-    transition: all 0.3s ease-in-out
+    transition: all 0.15s ease-in-out
   }
   
 .icones-btn-whats i {
@@ -485,13 +492,13 @@ main {
 
 @media (max-width: 1500px) {
   
-.btn-mobile {
-    display: block;
-}
-    
-.btn-enviar {
-    display: none;
-}
+    .btn-mobile {
+        display: block;
+    }
+        
+    .btn-enviar {
+        display: none;
+    }
 }
 
 
@@ -500,43 +507,43 @@ main {
 @media (max-width: 79rem) {
     
 
-.carousel-cell {
-    width: 12rem;
-    height: 16rem;
-    counter-increment: carousel-cell;
-    overflow: hidden;
+    .carousel-cell {
+        width: 12rem;
+        height: 16rem;
+        counter-increment: carousel-cell;
+        overflow: hidden;
+        }
+
+    .carousel-cell img {
+        width: 12rem;
+        height: 16rem;
+        border-radius: 10px;
+        object-fit: cover;
     }
 
-.carousel-cell img {
-    width: 12rem;
-    height: 16rem;
-    border-radius: 10px;
-    object-fit: cover;
-}
+    .card-cutelaria {
+        height: 20rem;
+    }
 
-.card-cutelaria {
-    height: 20rem;
-}
+    .card-blocos {
+        width: 100%;
+        height: 20rem;
+        margin-bottom: 2rem;
+    }
 
-.card-blocos {
-    width: 100%;
-    height: 20rem;
-    margin-bottom: 2rem;
-}
+    .card-restauracao {
+        width: 100%;
+        margin-bottom: 2rem;
+        height: 20rem;
+    }
 
-.card-restauracao {
-    width: 100%;
-    margin-bottom: 2rem;
-    height: 20rem;
-}
+    .explorar-card {
+        padding-left: 1rem;
+    }
 
-.explorar-card {
-    padding-left: 1rem;
-}
-
-.rifa {
-    width: 100%;
-}
+    .rifa {
+        width: 100%;
+    }
 }
 
 
@@ -568,25 +575,68 @@ main {
 
 @media (max-width: 950px) {
     .rifa-imagem {
-        width: 20rem;
-        height: 22rem;
+        width: 19rem;
+        height: 21rem;
     }
 
     .rifa-imagem img {
         width: 18rem;
         height: 20rem;
     }
+}
 
+@media (max-width: 850px) {
+    
     .rifa-conteudo {
         flex-direction: column;
     }
+
 }
 
 /* 768px = 48rem */
 
 @media (max-width: 48rem) {
+
     main {
         margin-left: 2rem;
         margin-right: 2rem;
-    } 
+    }
+
+    .explorar-card p {
+        font-size: 1.5rem;
+    }
+
+    .explorar-card button {
+        padding: 0.5rem;
+        font-size: 1.2rem;
+    }
+
+    .rifa-imagem {
+        width: 17rem;
+        height: 19rem;
+    }
+
+    .rifa-imagem img {
+        width: 16rem;
+        height: 18rem;
+    }
+}
+
+@media (max-width: 420px) {
+    
+    .rifa-imagem {
+        width: 15rem;
+        height: 17rem;
+        margin: 0.5rem 1rem;
+    }
+
+    .rifa-imagem img {
+        width: 14rem;
+        height: 16rem;
+    }
+
+    .rifa-info p {
+        margin: 0.5rem 1rem;
+    }
+
 }

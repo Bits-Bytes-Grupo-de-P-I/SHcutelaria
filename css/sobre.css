@@ -100,7 +100,7 @@
     text-decoration: none;
     border-radius: 1.5rem; 
     margin-top: 0.9rem; 
-    transition: 0.3s;
+    transition: 0.15s;
 }
 
 .about-content .read-more:hover {
@@ -130,7 +130,7 @@
     align-items: center;
     border-radius: 50%;
     text-decoration: none;
-    transition: background-color 0.3s ease, transform 0.3s ease;
+    transition: background-color 0.15s ease, transform 0.15s ease;
 }
 
 .social-links a:hover {
