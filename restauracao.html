@@ -27,6 +27,7 @@
     <link rel="icon" href="css/imgs/elementos/logo-aba.png">
 
     <script src="js/navbar.js" defer></script>
+    <script src="js/restauracao.js" defer></script>
 
 </head>
 <body>
@@ -156,28 +157,68 @@
     <!-- Início da Main -->
     <main>   
 
-        <div class="container-tutorial">
-            <div class="container-instructions">
-                <h2>Como Restaurar sua Ferramenta</h2>
-                <ol class="instructions">
-                    <li><strong>Entre em contato:</strong> Entre em contato conosco por meio do botão do WhatsApp localizado abaixo.</li>
-                    <li><strong>Mande sua ferramenta:</strong> Assim que estiver no WhatsApp, mande uma ou mais fotos da ferramenta que você gostaria de restaurar.</li>
-                    <li><strong>Avaliação:</strong> Assim que recebermos as fotos, vamos avaliar o serviço, ou seja, vamos analisar o estado da ferramenta para determinar o que deverá ser feito quanto à restauração.</li>
-                    <li><strong>Negociação:</strong> Detalhes mais especifícos relacionados à restauração serão discutidos entre o cliente e o artesão.</li>
-                    <li><strong>Envio da ferramenta:</strong> Caso o serviço seja aceito, o cliente deverá enviar a ferramenta para o endereço "XXXXXX", por meio dos Correios.</li>
-                    <li><strong>Pagamento:</strong> Metade do valor total do pagamento deve ser pago no momento da compra, e a outra metade na finalização do produto.</li>
-                </ol>
-                <div class="uatizapi"><a href="" class="whatsapp-button">Contato pelo WhatsApp</a></div>
-            </div>
-            
-            <div class="illustrations">
-                <img class="illustration-image" src="css/imgs/elementos/faca-antiga.jpg" alt="Faca Antiga">
-                <video autoplay muted loop class="illustration-video">
-                    <source src="css/imgs/elementos/faca-restaurada.mp4" type="video/mp4">
-                </video>
-            </div>
-        </div>
+        <div class="container-restauracao">
+            <section class="about">
+                <div class="steps-section">
+                    <h2>Como Restaurar Sua Ferramenta</h2>
         
+                    <!-- Passo 1 -->
+                    <div class="step">
+                        <button onclick="toggleDropdown('step1-content', this)">
+                            <span class="icon">+</span> Entre em Contato
+                        </button>
+                        <div id="step1-content" class="step-content">
+                            <p>Para iniciar o processo de restauração, entre em contato pelo <a href="http://" target="_blank" rel="noopener noreferrer">WhatsApp.</a>. Estamos prontos para ajudar!</p>
+                        </div>
+                    </div>
+            
+                    <!-- Passo 2 -->
+                    <div class="step">
+                        <button onclick="toggleDropdown('step2-content', this)">
+                            <span class="icon">+</span> Envie Fotos e Avaliação
+                        </button>
+                        <div id="step2-content" class="step-content">
+                            <p>Assim que estiver no WhatsApp, envie uma ou mais fotos da ferramenta que você gostaria de restaurar. Analisaremos as imagens para avaliar o estado da ferramenta e determinar as necessidades de restauração.</p>
+                        </div>
+                    </div>
+            
+                    <!-- Passo 3 -->
+                    <div class="step">
+                        <button onclick="toggleDropdown('step3-content', this)">
+                            <span class="icon">+</span> Negociação
+                        </button>
+                        <div id="step3-content" class="step-content">
+                            <p>Após a avaliação, discutiremos os detalhes específicos da restauração diretamente com você. Aqui, abordaremos suas expectativas, esclareceremos dúvidas e falaremos sobre o que pode ser feito.</p>
+                        </div>
+                    </div>
+
+                    <!-- Passo 4 -->
+                    <div class="step">
+                        <button onclick="toggleDropdown('step4-content', this)">
+                            <span class="icon">+</span> Pagamento
+                        </button>
+                        <div id="step4-content" class="step-content">
+                            <p>O pagamento será realizado em duas etapas: 50% do valor total deve ser pago no momento da solicitação do serviço, e os 50% restantes serão devidos na finalização do produto, antes da entrega</p>
+                        </div>
+                    </div>
+
+                    <!-- Passo 5 -->
+                    <div class="step">
+                        <button onclick="toggleDropdown('step5-content', this)">
+                            <span class="icon">+</span> Envio da Ferramenta
+                        </button>
+                        <div id="step5-content" class="step-content">
+                            <p>Caso os termos do serviço sejam aceitos, será necessário fazer o envio da ferramenta.. Garantiremos que o processo de envio seja seguro e eficiente.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="about-image">
+                    <img src="css/imgs/elementos/restauration.jpg" alt="">
+                </div>
+
+            </section>
+        </div>       
 
     </main>
     <!-- Fim da Main -->
