@@ -91,7 +91,7 @@
     flex-grow: 0;
 }
 
-h3 {
+.texts h3 {
     text-align: center;
     font-size: 1.3rem;
     margin: 0;
@@ -107,7 +107,7 @@ h3 {
     overflow: hidden;
 }
 
-button {
+.content button {
     text-align: center;
     font-size: 1.2rem;
     color: var(--fuligem);
@@ -121,7 +121,7 @@ button {
     background-color: var(--brasa);
 }
 
-button:hover {
+.content button:hover {
     background-color: #f15217;
     color: var(--aluminio);
     transition: all 0.3s ease-out;
@@ -134,7 +134,7 @@ button:hover {
     margin-bottom: 2rem;
 }
 
-h2 {
+.container-instructions h2 {
     font-size: 1.6rem;
     color: var(--aluminio);
     display: inline-block;
@@ -348,21 +348,21 @@ h2 {
         flex-basis: calc(50% - 1rem); 
     }
 
-    img {
+    .content img {
         height: auto;
     }
 
-    h3 {
+    .texts h3 {
         font-size: 1rem;
         height: 18px;
     }
 
-    p {
+    .texts p {
         font-size: 0.7rem;
         height: 40px;
     }
 
-    h2 {
+    .container-instructions h2 {
         font-size: 1.5rem;
     }
 
