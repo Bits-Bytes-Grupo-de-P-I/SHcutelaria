@@ -251,7 +251,7 @@ main {
 
 
 .rifa-titulo h1 {
-    font-size: clamp(1.2rem, 2vw, 2.5rem);
+    font-size: clamp(1.5rem, 2vw, 2.5rem);
     text-align: center;
     text-transform: uppercase;
     margin: 1rem 0;
@@ -274,7 +274,7 @@ main {
 
 .rifa-conteudo, .rifa-conteudo-blocos {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: center;
     gap: 2rem;
     margin: 1rem 0;
@@ -282,7 +282,6 @@ main {
     border-radius: 10px;
     transition: all 0.15s ease-in-out;
     width: 90%;
-    background-color: var(--fuligem);
 }
 
 .rifa-imagem, .rifa-imagem-blocos {
@@ -292,14 +291,13 @@ main {
     width: 25rem;
     height: 27rem;
     border-radius: 10px;
-    background: url(imgs/formulario/aço.jpg);
     overflow: hidden;
     transition: all 0.15s ease-in-out;
 }
 
 .rifa-imagem-blocos {
+    width: max(1500px, 60%);
     background: none;
-    order: 1;
 }
 
 .rifa-imagem img, .rifa-imagem-blocos img {
@@ -315,8 +313,9 @@ main {
 }
 
 .rifa-info, .rifa-info-blocos {
+    position: relative;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     flex-direction: column;
 }
 
@@ -331,17 +330,13 @@ main {
     font-weight: 500;
 }
 
-.rifa-info-blocos {
-    max-width: 40%;
-}
-
 .rifa-info-blocos strong {
     color: var(--brasa);
 }
 
 .rifa-info-blocos p {
     text-align: center;
-    font-size: 1.5rem;
+    font-size: clamp(0.8rem, 2vw, 1,4rem);
     background: none;
     color: var(--aluminio);
     border: none;
@@ -386,6 +381,8 @@ main {
     align-items: center;
     position: relative;
     transition: padding-right 0.3s ease-in-out;
+    border-radius: 10px;
+    max-height: 60px;
   }
   
 .btn-enviar:hover {
@@ -446,7 +443,7 @@ main {
     padding: 0.8rem;
     font-size: clamp(2rem, 2vw, 4rem);
     font-weight: bold;
-    margin: 0 auto 5rem auto;
+    margin: 0 auto;
   }
   
 .btn-mobile button {
@@ -487,14 +484,33 @@ main {
 @media (max-width: 1500px) {
   
     .btn-mobile {
+        width: 50%;
+        text-align: center;
         display: block;
     }
         
     .btn-enviar {
         display: none;
     }
-}
 
+    .rifa-faca, .rifa-blocos {
+        width: 90%;
+        height: auto;
+    }
+
+    .rifa-conteudo, .rifa-conteudo-blocos {
+        justify-content: center;
+    }
+
+    .rifa-info, .rifa-info-blocos {
+        justify-content: center;
+    }
+
+    .rifa-info p, .rifa-info-blocos p {
+        font-size: 1.4rem;
+        line-height: 1.8rem;
+    }
+}
 
 /* 1264px = 79rem */
 
@@ -535,11 +551,11 @@ main {
         padding-left: 1rem;
     }
 
-    .rifa {
+    .rifa-faca, .rifa-blocos {
         width: 100%;
+        height: auto;
     }
 }
-
 
 /* 1120px = 66rem */
 
@@ -552,27 +568,6 @@ main {
 
 }
 
-/* 960px = ?rem */
-
-@media (max-width: 950px) {
-    .rifa-imagem {
-        width: 19rem;
-        height: 21rem;
-    }
-
-    .rifa-imagem img {
-        width: 18rem;
-        height: 20rem;
-    }
-}
-
-@media (max-width: 850px) {
-    
-    .rifa-conteudo {
-        flex-direction: column;
-    }
-
-}
 
 /* 768px = 48rem */
 
@@ -606,26 +601,32 @@ main {
         font-size: 1.2rem;
     }
 
-    .rifa-imagem {
-        width: 17rem;
-        height: 19rem;
+    .rifa-imagem, .rifa-imagem-blocos {
+        width: 100%;
+        height: 100%;
+        margin: 0.5rem 1rem;
     }
 
-    .rifa-imagem img {
-        width: 16rem;
-        height: 18rem;
+    .rifa-imagem img, .rifa-imagem-blocos img {
+        width: 100%;
+        height: 100%;
     }
+
+    .rifa-conteudo, .rifa-conteudo-blocos {
+        flex-direction: column;
+    }
+    
 }
 
 @media (max-width: 420px) {
     
-    .rifa-imagem {
-        width: 15rem;
-        height: 17rem;
+    .rifa-imagem, .rifa-imagem-blocos {
+        width: 14rem;
+        height: 16rem;
         margin: 0.5rem 1rem;
     }
 
-    .rifa-imagem img {
+    .rifa-imagem img, .rifa-imagem-blocos img {
         width: 14rem;
         height: 16rem;
     }
