@@ -1,0 +1,66 @@
+:root {
+    --fuligem: #161616;
+    --carbono: #232323;
+    --cinza: #383838;
+    --prata: #C0C0C0;
+    --aluminio: #D0D5DB;
+    --brasa: #F05E1B;
+    --incandescente: #f15217;
+}
+
+.institucional-container {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 1.5rem;
+    background-color: var(--fuligem);
+    background-blend-mode: overlay;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 0.5rem;
+}
+
+.institucional-heading {
+    font-size: 1.5rem;
+    color: var(--aluminio);
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.institucional-container h2 {
+    font-size: 1.3rem;
+    color: var(--aluminio);
+    margin-top: 1rem;
+    display: inline-block;
+    border-bottom: 2px solid var(--brasa);
+    padding-bottom: 0.2rem;
+}
+
+.institucional-container p, ul {
+    line-height: 1.6;
+    font-size: 1.1rem;
+    color: var(--aluminio);
+}
+
+.institucional-list {
+    list-style-type: none;
+    padding: 0;
+    margin-left: 0.8rem;
+}
+
+.institucional-list li {
+    margin: 0.5rem 0;
+    padding-left: 1.2rem;
+    position: relative;
+}
+
+.institucional-list li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: var(--brasa);
+    font-size: 1.2rem;
+}
+
+.institucional-list li strong {
+    color: var(--brasa);
+    font-size: 1.2rem;
+}
