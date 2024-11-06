@@ -13,14 +13,18 @@
     margin: 2rem auto;
     padding: 1.5rem;
     background-color: var(--fuligem);
-    background-blend-mode: overlay;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     border-radius: 0.5rem;
 }
 
+.institucional-container a {
+    color: var(--brasa);
+    text-decoration: underline;
+}
+
 .institucional-heading {
     font-size: 1.5rem;
-    color: var(--aluminio);
+    color: var(--brasa);
     margin-bottom: 1rem;
     text-align: center;
 }
