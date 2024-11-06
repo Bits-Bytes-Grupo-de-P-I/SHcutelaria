@@ -17,6 +17,7 @@ body:active {
 /* Define a cor do "thumb" (parte móvel da barra) */
 body::-webkit-scrollbar-thumb {
     background-color: var(--brasa);
+    width: 0.5rem;
 }
 
 body::-webkit-scrollbar-thumb:active {
@@ -230,6 +231,10 @@ main {
 .atendimento-reduzido li:hover {
     background-color: var(--fuligem);
     transition: all 0.2s ease;
+}
+
+.usuario {
+
 }
 
 .btn-whats-fixo {

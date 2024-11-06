@@ -81,9 +81,9 @@ main {
 .destaques h1 {
     text-align: center;
     text-transform: uppercase;
-    color: var(--brasa);
+    color: var(--aluminio);
     padding-bottom: 1.5rem;
-    font-size: clamp(2.2rem, 2vw, 3rem);
+    font-size: clamp(1.2rem, 2vw, 2.5rem);
 }
 
 .carousel-cell {
@@ -219,21 +219,31 @@ main {
     box-shadow: 0 0 20px rgba(255, 69, 0, 1), 0 0 30px rgba(255, 69, 0, 0.8), 0 0 40px rgba(255, 69, 0, 0.6);
 }
 
-
 .rifa {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 3rem;
+    gap: 2%;
+}
+
+.rifa-faca, .rifa-blocos {
     position: relative;
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-direction: column;
-    width: 70%;
+    width: 49%;
+    height: 45rem;
     border-radius: 10px;
     border: 1px solid black;
     box-shadow: var(--fuligem) 6px 4.8px 6.4px;
     background: url(imgs/elementos/textura-damasco.png) no-repeat 50% 20%;
     background-size: cover;
     background-color: var(--fuligem);
-    background-blend-mode: overlay; /* Mistura as duas camadas de cor */
+    background-blend-mode: overlay;
+    background-color: var(--fuligem);
     transition: transform 0.15s ease;
     margin: 0 auto;
     margin-bottom: 2rem;
@@ -241,129 +251,112 @@ main {
 
 
 .rifa-titulo h1 {
-    font-size: clamp(1.5rem, 2vw, 3rem);
+    font-size: clamp(1.2rem, 2vw, 2.5rem);
     text-align: center;
     text-transform: uppercase;
     margin: 1rem 0;
-    color: var(--brasa);
-}
-
-.rifa-titulo h2 {
-    text-align: center;
-    text-transform: uppercase;
-    margin-bottom: 0.5rem;
-    font-size: clamp(1.2rem, 2vw, 2rem);
+    color: var(--aluminio);
 }
 
 .timer {
-    font-family: 'DIGITAL-7';
+    position: relative;
+    font-family: 'DIGITAL-7', serif;
     text-align: center;
-    font-size: 3rem;
-    background-color: var(--prata);
+    font-size: 2.5rem;
+    background-color: var(--aluminio);
     color: red;
     padding: 10px;
-    flex: 0 1 auto;
-    margin: 2rem 0;
     border-radius: 10px;
-    border: 2px solid var(--cinza);
+    border: 5px solid var(--cinza);
+    min-width: 200px;
+    min-height: 70px;
 }
 
-.rifa-conteudo {
+.rifa-conteudo, .rifa-conteudo-blocos {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
     gap: 2rem;
-    margin: 0 0 3rem 0;
+    margin: 1rem 0;
+    padding: 1rem 1.5rem;
+    border-radius: 10px;
     transition: all 0.15s ease-in-out;
+    width: 90%;
+    background-color: var(--fuligem);
 }
 
-.rifa-imagem {
+.rifa-imagem, .rifa-imagem-blocos {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 23rem;
-    height: 25rem;
+    width: 25rem;
+    height: 27rem;
     border-radius: 10px;
     background: url(imgs/formulario/aço.jpg);
     overflow: hidden;
     transition: all 0.15s ease-in-out;
-    padding: 0.5rem;
-    /* box-shadow: rgba(240, 94, 27, 0.56) 0px 22px 70px 4px; */
 }
 
-.rifa-imagem img {
-    width: 22rem;
-    height: 24rem;
+.rifa-imagem-blocos {
+    background: none;
+    order: 1;
+}
+
+.rifa-imagem img, .rifa-imagem-blocos img {
+    width: 25rem;
+    height: 27rem;
     border-radius: 10px;
     object-fit: cover;
-    transition: all 0.15s ease-in-out;
+    transition: all 0.3s ease-in-out;
 }
 
-.rifa-info {
+.rifa-imagem img:hover, .rifa-imagem-blocos img:hover {
+    transform: scale(1.1);
+}
+
+.rifa-info, .rifa-info-blocos {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
     flex-direction: column;
 }
 
-.rifa-info p {
-    font-size: clamp(1rem, 2vw, 1.4rem);
+.rifa-info p, .rifa-info-blocos p {
+    font-size: 1.3rem;
     text-align: center;
-    background-color: var(--prata);
     border-radius: 10px;
-    border: 2px solid var(--aluminio);
-    padding: 0.5rem;
+    padding: 5px 0.5rem;
     margin: 0.5rem 0;
     text-align: start;
-    color: var(--fuligem);
+    color: var(--aluminio);
+    font-weight: 500;
 }
 
-.rifa-info span {
-    font-weight: bold;
-    color: var(--fuligem);
+.rifa-info-blocos {
+    max-width: 40%;
 }
 
-.rifa-blocos h2 {
-    font-size: 2rem;
+.rifa-info-blocos strong {
+    color: var(--brasa);
+}
+
+.rifa-info-blocos p {
     text-align: center;
-}
-
-.rifa-blocos button {
-    display: block;
-    margin: 0 auto;
-    margin-top: 1rem;
-    margin-bottom: 2rem;
-    background-color: var(--brasa);
-    color: var(--fuligem);
-    border: 1px solid var(--fuligem);
-    border-radius: 10px;
-    padding: 1rem;
-    transition: transform 0.15s ease-in-out;
-    font-weight: bold;
-    font-size: clamp(1.5rem, 2vw, 2.5rem);
-}
-
-.rifa-blocos i {
-    transition: transform 0.15s ease-in-out;
-    color: #161616;
-}
-
-.rifa-blocos:hover button{
-    background-color: #f15217;
+    font-size: 1.5rem;
+    background: none;
     color: var(--aluminio);
-    border: 1px solid var(--brasa);
-    box-shadow: 0 0 20px rgba(255, 69, 0, 1), 0 0 30px rgba(255, 69, 0, 0.8), 0 0 40px rgba(255, 69, 0, 0.6);
-    transform: scale(1.02);
+    border: none;
 }
 
-.rifa-blocos:hover i {
-    color: var(--aluminio);
+.rifa-info span, .rifa-info-blocos span {
+    font-weight: bolder;
+    color: var(--brasa);
 }
 
 .btn-enviar {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 0 auto 5rem auto;
+    margin: 1rem auto;
     font-weight: bold;
     font-size: clamp(2rem, 2vw, 4rem);
     padding: 0.5rem;
@@ -375,7 +368,8 @@ main {
     overflow: hidden;
     white-space: nowrap;
     transition: background-color 0.15s ease, transform 0.15s ease;
-    width: 26%;
+    width: 100%;
+    max-height: 60px;
   }
   
 .btn-enviar button {
@@ -391,7 +385,7 @@ main {
     display: none;
     align-items: center;
     position: relative;
-    transition: padding-right 0.5s ease-in-out;
+    transition: padding-right 0.3s ease-in-out;
   }
   
 .btn-enviar:hover {

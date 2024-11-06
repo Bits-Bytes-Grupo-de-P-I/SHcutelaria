@@ -49,6 +49,7 @@ let authToken = '';
             const data = await response.json();
             if (data.token) {
                 authToken = data.token; // Aqui que deve colocar o código pra redirecionar pra página inicial
+                window.location.href = 'index.html';
                 document.getElementById('output').innerText = 'Login bem-sucedido! Token armazenado.';
                 console.log(data)
             } else {

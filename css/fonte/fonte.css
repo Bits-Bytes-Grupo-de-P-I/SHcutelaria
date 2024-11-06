@@ -2,13 +2,14 @@
     font-family: 'PLAYFAIR';
     font-style: normal;
     src: 
-        url('fonte/PlayfairDisplay-Regular.woff2') format('woff2'),
-        url('fonte/PlayfairDisplay-Regular.woff') format('woff'),
-        url('fonte/PlayfairDisplay-VariableFont_wght.ttf') format('truetype');
+        url('PlayfairDisplay-Regular.woff2') format('woff2'),
+        url('PlayfairDisplay-Regular.woff') format('woff'),
+        url('PlayfairDisplay-VariableFont_wght.ttf') format('truetype');
 }
 
 @font-face {
     font-family: 'DIGITAL-7';
     font-style: normal;
-    src: url('fonte/Digital-7.ttf') format('truetype');
+    font-display: swap;
+    src: url('Digital-7.woff2') format('woff2');
 }

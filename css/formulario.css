@@ -107,7 +107,7 @@ input[type="radio"] {
 
 
 .titulo-formulario {
-  font-size: clamp(1.3rem, 2vw, 2.2rem);
+  font-size: clamp(1.3rem, 2vw, 2rem);
   text-align: center;
   color: var(--aluminio);
   text-transform: uppercase;
@@ -127,7 +127,7 @@ input[type="radio"] {
   font-style: italic;
   font-weight: bold;
   color: var(--aluminio);
-  font-size: clamp(0.5rem, 2vw, 1rem);
+  font-size: clamp(0.8rem, 2vw, 1rem);
   text-shadow: 2px 2px 2px black;
   font-weight: normal;
   margin: 0 0.5rem;
@@ -183,7 +183,7 @@ input[type="radio"] {
   border-radius: 0 0 8px 8px;
 }
 .texts h3 {
-  font-size: clamp(1.2rem, 2vw, 1.8rem);
+  font-size: clamp(1rem, 2vw, 1.5rem);
 }
 
 .estilo-faca, .estilo-cutelo, .estilo-machado, .tipo-couro, .tipo-madeira {
@@ -327,7 +327,7 @@ input[type="radio"]:checked + .form-opcao .texts h3 {
   display: none;
   align-items: center;
   position: relative;
-  transition: padding-right 0.5s ease-in-out;
+  transition: padding-right 0.3s ease-in-out;
 }
 
 .btn-enviar:hover {
@@ -572,7 +572,7 @@ form::-webkit-scrollbar-thumb:hover {
   background-color: var(--incandescente);
 }
 
-#formulario-7, .tipo-couro #formulario-8 {
+#formulario-7, #formulario-8 {
   justify-content: center;
 }
 
@@ -582,7 +582,7 @@ form::-webkit-scrollbar-thumb:hover {
 
 @media (max-width: 650px) {
 
-#formulario-7 {
+#formulario-7, #formulario-8 {
   justify-content: space-between;
 }
 

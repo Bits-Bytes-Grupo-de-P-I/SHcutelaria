@@ -48,7 +48,7 @@ img:hover {
     display: block;
 }
 
-#cadastro, #contato, .teste {
+#cadastro, #contato{
     display: none;
 }
 
@@ -113,7 +113,7 @@ form input {
   flex-grow: 1;
   min-width: 0;
   height: 50px;
-  padding: 1em;
+  padding: 1rem;
   font: inherit;
   border-radius: 0 10px 10px 0;
   border: 2px solid var(--fuligem);
