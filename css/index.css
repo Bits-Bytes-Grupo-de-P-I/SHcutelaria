@@ -43,7 +43,7 @@ main {
 
 .banner {
     background-color: var(--fuligem);
-    border: 2px solid var(--fuligem);
+    border: 1px solid var(--fuligem);
     margin-bottom: 6rem;
     overflow: hidden;
     max-height: 600px;
@@ -256,9 +256,9 @@ main {
 }
 
 .timer {
+    font-family: 'DIGITAL-7';
     text-align: center;
     font-size: 3rem;
-    font-family: 'DIGITAL-7';
     background-color: var(--prata);
     color: red;
     padding: 10px;
@@ -306,7 +306,7 @@ main {
 }
 
 .rifa-info p {
-    font-size: clamp(1.2rem, 2vw, 1.6rem);
+    font-size: clamp(1rem, 2vw, 1.4rem);
     text-align: center;
     background-color: var(--prata);
     border-radius: 10px;
@@ -508,14 +508,14 @@ main {
     
 
     .carousel-cell {
-        width: 12rem;
+        width: 14rem;
         height: 16rem;
         counter-increment: carousel-cell;
         overflow: hidden;
         }
 
     .carousel-cell img {
-        width: 12rem;
+        width: 14rem;
         height: 16rem;
         border-radius: 10px;
         object-fit: cover;
@@ -556,19 +556,6 @@ main {
         margin-right: 5rem;
     }
 
-    .carousel-cell {
-        width: 9rem;
-        height: 11rem;
-        counter-increment: carousel-cell;
-        overflow: hidden;
-      }
-    
-    .carousel-cell img {
-        width: 9rem;
-        height: 11rem;
-        border-radius: 10px;
-        object-fit: cover;
-    }
 }
 
 /* 960px = ?rem */
@@ -600,6 +587,20 @@ main {
     main {
         margin-left: 2rem;
         margin-right: 2rem;
+    }
+
+    .carousel-cell {
+        width: 10rem;
+        height: 12rem;
+        counter-increment: carousel-cell;
+        overflow: hidden;
+      }
+    
+    .carousel-cell img {
+        width: 10rem;
+        height: 12rem;
+        border-radius: 10px;
+        object-fit: cover;
     }
 
     .explorar-card p {

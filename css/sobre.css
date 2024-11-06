@@ -96,7 +96,7 @@
     padding: 0.6rem 1.25rem; 
     background-color: #b12424;
     color: var(--aluminio);
-    font-size: 1.1rem; 
+    font-size: 1.3rem; 
     text-decoration: none;
     border-radius: 1.5rem; 
     margin-top: 0.9rem; 
@@ -157,7 +157,7 @@
 }
 
 .sobre-sergio p {
-    font-size: 1.2rem;
+    font-size: 1.3rem;
 }
 
 
@@ -239,7 +239,7 @@
 
 .card p {
     height: 10.5rem;
-    font-size: 1rem; 
+    font-size: 1.1rem; 
     margin-bottom: 1.8rem;
     line-height: 1.5;
     color: var(--fuligem);
@@ -247,7 +247,7 @@
 
 .button {
     margin-top: 1rem;
-    font-size: 0.9rem; 
+    font-size: 1rem; 
     text-decoration: none;
     color: var(--aluminio);
     background-color: var(--fuligem);

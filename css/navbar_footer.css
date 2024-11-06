@@ -158,13 +158,13 @@ main {
 }
 
 .menu a, .atendimento a {
-    font-size: clamp(0.5rem, 2vw, 1.2rem);
+    font-size: clamp(0.5rem, 2vw, 1.1rem);
 }
 
 .menu i, .atendimento i {
     padding-right: 0.2rem;
     color: var(--incandescente);
-    font-size: 1.3rem;
+    font-size: 1.2rem;
 }
 
 
@@ -261,6 +261,7 @@ footer {
     background-size: cover;
     background-color: var(--fuligem);
     background-blend-mode: overlay;
+    border-top: 1px solid var(--fuligem);
 }
   
 .container {

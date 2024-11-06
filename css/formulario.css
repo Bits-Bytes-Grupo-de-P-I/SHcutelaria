@@ -73,13 +73,12 @@ main {
   color: var(--brasa);
 }
 
-
 form {
   position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: 6rem;
+  margin-bottom: 5rem;
   background: url(imgs/elementos/textura-damasco.png) no-repeat 50% 20%;
   background-size: cover;
   background-color: var(--fuligem);
@@ -125,15 +124,13 @@ input[type="radio"] {
 .subtitulo-formulario {
   text-decoration: none;
   text-align: center;
+  font-style: italic;
+  font-weight: bold;
   color: var(--aluminio);
-  font-size: clamp(1rem, 2vw, 1.3rem);
-  margin-top: -0.5rem;
-  background: url(imgs/elementos/textura-damasco.png) no-repeat 50% 20%;
-  background-size: cover;
-  background-color: var(--fuligem);
-  background-blend-mode: overlay;
+  font-size: clamp(0.5rem, 2vw, 1rem);
   text-shadow: 2px 2px 2px black;
   font-weight: normal;
+  margin: 0 0.5rem;
 }
 
 .subtitulo-formulario a {
@@ -240,9 +237,9 @@ input[type="radio"]:checked + .form-opcao .texts h3 {
   display: block;
   margin-right: 2rem;
   margin-left: auto;
-  margin-bottom: 4rem;
+  margin-bottom: 6rem;
   margin-top: -3rem;
-  font-size: clamp(1.5rem, 2vw, 2rem);
+  font-size: clamp(1.2rem, 2vw, 1.5rem);
   padding: 1rem;
   background-color: var(--brasa);
   color: var(--fuligem);
@@ -259,14 +256,6 @@ input[type="radio"]:checked + .form-opcao .texts h3 {
   border: 2px solid var(--brasa);
   box-shadow: 0 0 20px rgba(255, 69, 0, 1), 0 0 30px rgba(255, 69, 0, 0.8), 0 0 40px rgba(255, 69, 0, 0.6);
 }
-
-/* .reset:focus {
-  transform: scale(1.05);
-  color: var(--aluminio);
-  background-color: var(--incandescente);
-  border: 2px solid var(--brasa);
-  box-shadow: 0 0 20px rgba(255, 69, 0, 1), 0 0 30px rgba(255, 69, 0, 0.8), 0 0 40px rgba(255, 69, 0, 0.6);
-} */
 
 .comentarios {
   display: flex;
@@ -583,7 +572,7 @@ form::-webkit-scrollbar-thumb:hover {
   background-color: var(--incandescente);
 }
 
-#formulario-7, #formulario-8 {
+#formulario-7, .tipo-couro #formulario-8 {
   justify-content: center;
 }
 

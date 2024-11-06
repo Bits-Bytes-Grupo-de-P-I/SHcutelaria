@@ -225,6 +225,7 @@
 }
 
 .modal-info {
+    text-align: center;
     flex-grow: 1;
     margin-right: 0.6rem;
 }
@@ -241,8 +242,15 @@
     color: #d3d3cf;
 }
 
+.modal-info i {
+    margin-top: 0.5rem;
+    transition: all 0.15s ease-in-out;
+}
+
 .modal-info i:hover {
     cursor: pointer;
+    transform: scale(1.1);
+    color: var(--brasa);
 } 
 
 .close {
