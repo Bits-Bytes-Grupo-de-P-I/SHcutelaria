@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin - Editar Faca</title>
+    <script>
+        // Variáveis de verificação (email e senha fixos)
+        const usuarioValido = { email: "admin@exemplo.com", senha: "admin123" };
+
+        // Função para verificar se os dados inseridos são válidos
+        function verificarLogin() {
+            const email = document.getElementById("email").value;
+            const senha = document.getElementById("senha").value;
+            
+            // Verifica se o e-mail e a senha são válidos
+            if (email === usuarioValido.email && senha === usuarioValido.senha) {
+                // Se forem válidos, exibe o conteúdo protegido
+                document.getElementById("conteudo-protegido").style.display = "block";
+                document.getElementById("login-form").style.display = "none";
+            } else {
+                alert("E-mail ou senha inválidos. Tente novamente.");
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="css/admin.css">
+</head>
+<body>
+
+    <!-- Formulário de login -->
+    <div id="login-form" class="login-container">
+        <h2>Login de Administrador</h2>
+        <input type="email" id="email" placeholder="E-mail" required>
+        <input type="password" id="senha" placeholder="Senha" required>
+        <button type="button" onclick="verificarLogin()">Entrar</button>
+    </div>
+
+    <!-- Conteúdo protegido (Formulário de edição de faca) -->
+    <div id="conteudo-protegido" style="display: none;">
+        <h1>Área de Administração - Editar Faca</h1>
+
+        <form id="form-editar-faca">
+            <label for="estilo">Estilo da Faca:</label>
+            <input type="text" id="estilo" name="estilo" value="Chef">
+
+            <label for="tamanho">Tamanho (cm):</label>
+            <input type="number" id="tamanho" name="tamanho" value="25">
+
+            <label for="material-lamina">Material da Lâmina:</label>
+            <input type="text" id="material-lamina" name="material-lamina" value="Aço">
+
+            <label for="material-cabo">Material do Cabo:</label>
+            <input type="text" id="material-cabo" name="material-cabo" value="Leopard Wood">
+
+            <label for="material-bainha">Material da Bainha:</label>
+            <input type="text" id="material-bainha" name="material-bainha" value="Couro de jacaré">
+
+            <label for="imagem-faca">Imagem da Faca:</label>
+            <input type="file" id="imagem-faca" name="imagem-faca" accept="image/*">
+
+            <button type="submit">Salvar Alterações</button>
+        </form>
+    </div>
+
+</body>
+</html>
