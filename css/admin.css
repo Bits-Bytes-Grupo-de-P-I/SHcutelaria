@@ -1,0 +1,32 @@
+body{
+    background-color: rgb(148, 148, 148);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1{
+    text-align: center;
+}
+
+form{
+    margin-left: 45%;
+}
+
+label{
+    display: block;
+    margin: 0.3rem 0rem;
+    font-weight: 300;
+    font-size: 18.5px;
+}
+
+input{
+    display: block;
+    margin: 0.4rem 0rem;
+    border-radius: 15px;
+    text-align: center;
+    border: 0.5px solid black;
+    padding: 0.3rem;
+}
+
+input:hover{
+
+}
