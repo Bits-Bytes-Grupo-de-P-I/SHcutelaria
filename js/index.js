@@ -1,7 +1,8 @@
-// Função pro carrossel funcionar
 window.onload = function() {
-  const carousel = document.querySelector('.carousel');
-  const flickityOptions = {
+  const carousel = document.getElementById('carousel');
+  
+  // Salva a instância de Flickity
+  const flkty = new Flickity(carousel, {
       wrapAround: true,
       cellAlign: 'left',
       contain: true,
@@ -10,9 +11,16 @@ window.onload = function() {
       pauseAutoPlayOnHover: false,
       // pageDots: false,
       imagesLoaded: true
-  };
-  new Flickity(carousel, flickityOptions);
+  });
+
+  // Adiciona um evento para retomar o autoPlay após a interação manual
+  flkty.on('dragEnd', function() {
+    setTimeout(() => {
+      flkty.playPlayer(); // Retoma o rolamento automático
+    }, 1000); // Tempo de espera para retomar o autoPlay após a interação
+  });
 };
+
 
 // Função de TESTE do timer
 function startTimer() {
