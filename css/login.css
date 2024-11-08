@@ -31,17 +31,14 @@ body {
 }
 
 img {
-  position: absolute;
   width: 250px;
   height: auto;
-  top: 10px;
-  left: 50%;
-  transform: translateX(-50%);
+  text-align: center;
   transition: all 0.15s ease-in;
 }
 
 img:hover {
-    transform: translate(-50%) scale(1.05);
+    transform: scale(1.05);
 }
 
 #login {
@@ -63,7 +60,7 @@ img:hover {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: space-evenly;
 }
 
 h1 {
@@ -133,6 +130,8 @@ form input:focus{
   box-shadow: none;
   }
 
+
+  
 div:has(input:focus) > label{
   background-color: var(--fuligem);
   fill: var(--brasa);

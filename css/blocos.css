@@ -195,6 +195,7 @@
     align-items: center;
     padding: 1.25rem;
     box-sizing: border-box;
+    z-index: 999;
 }
 
 .modal-content {

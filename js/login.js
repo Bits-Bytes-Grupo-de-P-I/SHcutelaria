@@ -29,6 +29,9 @@ let authToken = '';
                 body: JSON.stringify({ name, email, password })
             });
             const data = await response.json();
+            if (usuario.success) {
+            localStorage.setItem('userName', name); // Salva o nome no localStorage
+        }
             document.getElementById('output').innerText = JSON.stringify(data, null, 2);
         } catch (error) {
             document.getElementById('output').innerText = 'Erro: ' + error.message;
@@ -50,6 +53,13 @@ let authToken = '';
             if (data.token) {
                 authToken = data.token; // Aqui que deve colocar o código pra redirecionar pra página inicial
                 window.location.href = 'index.html';
+                
+                // Recupera o nome do usuário e exibe no elemento com o id 'usuario'
+                const name = localStorage.getItem('userName'); // Obtém o nome do localStorage
+                if (name) {
+                    document.getElementById('usuario').innerText = name;
+                }
+
                 document.getElementById('output').innerText = 'Login bem-sucedido! Token armazenado.';
                 console.log(data)
             } else {

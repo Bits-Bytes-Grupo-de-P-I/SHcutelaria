@@ -63,93 +63,94 @@ function hideAllSubForms() {
     }
   });
 
-function enviarWhatsApp() {
-  // Obtém os valores selecionados nos formulários
-  const tipoFerramenta = document.querySelector('input[name="tipo-ferramenta"]:checked');
+  function enviarWhatsApp() {
+    // Obtém os valores selecionados nos formulários
+    const tipoFerramenta = document.querySelector('input[name="tipo-ferramenta"]:checked');
+    
+    // Variáveis para os estilos
+    const facaEstilo = document.querySelector('input[name="faca-estilo"]:checked');
+    const cuteloEstilo = document.querySelector('input[name="cutelo-estilo"]:checked');
+    const machadoEstilo = document.querySelector('input[name="machado-estilo"]:checked');
+    
+    // Obtém materiais e tipo de bainha
+    const materialLamina = document.querySelector('input[name="material-lamina"]:checked');
+    const materialCabo = document.querySelector('input[name="material-cabo"]:checked');
+    const tipoBainha = document.querySelector('input[name="tipo-bainha"]:checked');
+    
+    // Obtém couro e madeira (pode escolher apenas um)
+    const couroTipo = document.querySelector('input[name="couro-tipo"]:checked');
+    const madeiraTipo = document.querySelector('input[name="madeira-tipo"]:checked');
+    
+    // Obtém o campo de comentários
+    const comentarios = document.getElementById('comentarios');
   
-  // Variáveis para os estilos
-  const facaEstilo = document.querySelector('input[name="faca-estilo"]:checked');
-  const cuteloEstilo = document.querySelector('input[name="cutelo-estilo"]:checked');
-  const machadoEstilo = document.querySelector('input[name="machado-estilo"]:checked');
+    // Verifica se o tipo de ferramenta foi selecionado
+    if (!tipoFerramenta || !materialLamina || !materialCabo || !tipoBainha) {
+        mostrarAviso();
+        return;
+    }
   
-  // Obtém materiais e tipo de bainha
-  const materialLamina = document.querySelector('input[name="material-lamina"]:checked');
-  const materialCabo = document.querySelector('input[name="material-cabo"]:checked');
-  const tipoBainha = document.querySelector('input[name="tipo-bainha"]:checked');
+    // Verifica o estilo com base na ferramenta selecionada
+    if (tipoFerramenta.value === "faca" && !facaEstilo) {
+        mostrarAviso();
+        return;
+    } else if (tipoFerramenta.value === "cutelo" && !cuteloEstilo) {
+        mostrarAviso();
+        return;
+    } else if (tipoFerramenta.value === "machado" && !machadoEstilo) {
+        mostrarAviso();
+        return;
+    }
   
-  // Obtém couro e madeira (pode escolher apenas um)
-  const couroTipo = document.querySelector('input[name="couro-tipo"]:checked');
-  const madeiraTipo = document.querySelector('input[name="madeira-tipo"]:checked');
+    // Verifica se couro ou madeira foi selecionado
+    // E faz com que tipos de couro/madeira sejam opcionais se "tipo-bainha" for "madeira"
+    if (tipoBainha.value === "couro" && !couroTipo) {
+        mostrarAviso();
+        return;
+    }
   
-  // Obtém o campo de comentários
-  const comentarios = document.getElementById('comentarios');
-
-  // Verifica se o tipo de ferramenta foi selecionado
-  if (!tipoFerramenta || !materialLamina || !materialCabo || !tipoBainha) {
-      mostrarAviso();
-      return;
+    // Monta a mensagem somente com os valores selecionados
+    let mensagem = `---------------------------\n\n`
+    mensagem += `Tipo de Ferramenta: *${tipoFerramenta.value.toUpperCase()}*\n\n`;
+    mensagem += `Material da Lâmina: *${materialLamina.value.toUpperCase()}*\n\n`;
+    mensagem += `Material do Cabo: *${materialCabo.value.toUpperCase()}*\n\n`;
+    mensagem += `Tipo de Bainha: *${tipoBainha.value.toUpperCase()}*\n\n`;
+  
+    // Adiciona o estilo da ferramenta se selecionado
+    if (facaEstilo) {
+        mensagem += `Estilo de Faca: *${facaEstilo.value.toUpperCase()}*\n\n`;
+    }
+    if (cuteloEstilo) {
+        mensagem += `Estilo de Cutelo: *${cuteloEstilo.value.toUpperCase()}*\n\n`;
+    }
+    if (machadoEstilo) {
+        mensagem += `Estilo de Machado: *${machadoEstilo.value.toUpperCase()}*\n\n`;
+    }
+  
+    // Adiciona o tipo de couro ou madeira se selecionado
+    if (couroTipo) {
+        mensagem += `Tipo de Couro: *${couroTipo.value.toUpperCase()}*\n\n`;
+    } else if (tipoBainha.value === "madeira" && madeiraTipo) {
+        mensagem += `Tipo de Madeira: *${madeiraTipo.value.toUpperCase()}*\n\n`;
+    }
+  
+    // Adiciona comentários se houver algum
+    if (comentarios && comentarios.value.trim()) {
+      mensagem += `Comentários: *${comentarios.value.trim().toUpperCase()}*\n\n`;
+    }
+  
+    mensagem += `---------------------------\n`
+  
+    // URL encode da mensagem
+    const urlMensagem = encodeURIComponent(mensagem);
+  
+    // URL do WhatsApp API
+    const whatsappURL = `https://api.whatsapp.com/send?phone=553498812829&text=${urlMensagem}`;
+  
+    // Abrir a URL no WhatsApp
+    window.open(whatsappURL, '_blank');
   }
-
-  // Verifica o estilo com base na ferramenta selecionada
-  if (tipoFerramenta.value === "faca" && !facaEstilo) {
-      mostrarAviso();
-      return;
-  } else if (tipoFerramenta.value === "cutelo" && !cuteloEstilo) {
-      mostrarAviso();
-      return;
-  } else if (tipoFerramenta.value === "machado" && !machadoEstilo) {
-      mostrarAviso();
-      return;
-  }
-
-  // Verifica se couro ou madeira foi selecionado
-  if (!couroTipo && !madeiraTipo) {
-      mostrarAviso();
-      return;
-  }
-
-  // Monta a mensagem somente com os valores selecionados
-  let mensagem = `---------------------------\n\n`
-  mensagem += `Tipo de Ferramenta: *${tipoFerramenta.value.toUpperCase()}*\n\n`;
-  mensagem += `Material da Lâmina: *${materialLamina.value.toUpperCase()}*\n\n`;
-  mensagem += `Material do Cabo: *${materialCabo.value.toUpperCase().toUpperCase()}*\n\n`;
-  mensagem += `Tipo de Bainha: *${tipoBainha.value.toUpperCase().toUpperCase()}*\n\n`;
-
-  // Adiciona o estilo da ferramenta se selecionado
-  if (facaEstilo) {
-      mensagem += `Estilo de Faca: *${facaEstilo.value.toUpperCase()}*\n\n`;
-  }
-  // Se cuteloEstilo e machadoEstilo forem definidos, inclua as condições abaixo
-  if (cuteloEstilo) {
-      mensagem += `Estilo de Cutelo: *${cuteloEstilo.value.toUpperCase()}*\n\n`;
-  }
-  if (machadoEstilo) {
-      mensagem += `Estilo de Machado: *${machadoEstilo.value.toUpperCase()}*\n\n`;
-  }
-
-  // Adiciona o tipo de couro ou madeira se selecionado
-  if (couroTipo) {
-      mensagem += `Tipo de Couro: *${couroTipo.value.toUpperCase()}*\n\n`;
-  } else if (madeiraTipo) {
-      mensagem += `Tipo de Madeira: *${madeiraTipo.value.toUpperCase()}*\n\n`;
-  }
-
-  // Adiciona comentários se houver algum
-  if (comentarios && comentarios.value.trim()) {
-    mensagem += `Comentários: *${comentarios.value.trim().toUpperCase()}*\n\n`;
-  }
-
-  mensagem += `---------------------------\n`
-
-  // URL encode da mensagem
-  const urlMensagem = encodeURIComponent(mensagem);
-
-  // URL do WhatsApp API
-  const whatsappURL = `https://api.whatsapp.com/send?phone=553498812829&text=${urlMensagem}`;
-
-  // Abrir a URL no WhatsApp
-  window.open(whatsappURL, '_blank');
-}
+  
 
 
 function mostrarAviso() {
