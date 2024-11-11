@@ -174,7 +174,7 @@ main {
     justify-content: flex-start;
     flex-direction: column;
     text-transform: uppercase;
-    background-color: rgba(35, 35, 35, 0.5);
+    background-color: rgba(35, 35, 35, 0.7);
     backdrop-filter: blur(3px);
     border-left: 1px solid var(--fuligem);
     position: fixed;

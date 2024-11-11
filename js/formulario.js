@@ -112,10 +112,7 @@ function hideAllSubForms() {
     // Monta a mensagem somente com os valores selecionados
     let mensagem = `---------------------------\n\n`
     mensagem += `Tipo de Ferramenta: *${tipoFerramenta.value.toUpperCase()}*\n\n`;
-    mensagem += `Material da Lâmina: *${materialLamina.value.toUpperCase()}*\n\n`;
-    mensagem += `Material do Cabo: *${materialCabo.value.toUpperCase()}*\n\n`;
-    mensagem += `Tipo de Bainha: *${tipoBainha.value.toUpperCase()}*\n\n`;
-  
+
     // Adiciona o estilo da ferramenta se selecionado
     if (facaEstilo) {
         mensagem += `Estilo de Faca: *${facaEstilo.value.toUpperCase()}*\n\n`;
@@ -126,8 +123,13 @@ function hideAllSubForms() {
     if (machadoEstilo) {
         mensagem += `Estilo de Machado: *${machadoEstilo.value.toUpperCase()}*\n\n`;
     }
+
+    mensagem += `Material da Lâmina: *${materialLamina.value.toUpperCase()}*\n\n`;
+    mensagem += `Material do Cabo: *${materialCabo.value.toUpperCase()}*\n\n`;
+    mensagem += `Tipo de Bainha: *${tipoBainha.value.toUpperCase()}*\n\n`;
   
-    // Adiciona o tipo de couro ou madeira se selecionado
+  
+    // Adiciona o tipo de couro se selecionado
     if (couroTipo) {
         mensagem += `Tipo de Couro: *${couroTipo.value.toUpperCase()}*\n\n`;
     } else if (tipoBainha.value === "madeira" && madeiraTipo) {
