@@ -1,26 +1,21 @@
-document.addEventListener('DOMContentLoaded', () => {
-    // Função para exibir o nome do usuário se ele estiver logado
-    function exibirNomeUsuario() {
-        const name = getCookie('userName'); // Obtém o nome do usuário do cookie
-        const usuarioElement = document.getElementById('usuario'); // Referência à <span id="usuario">
+// Função para ler o valor do cookie
+function getCookie(name) {
+    let match = document.cookie.match(new RegExp('(^| )' + name + '=([^;]+)'));
+    return match ? match[2] : null;
+}
 
-        if (name && usuarioElement) {
-            usuarioElement.innerText = `Bem-vindo, ${name}`; // Substitui o texto "Entrar" pelo nome do usuário
-        }
+// Quando a página carregar, exibe o userName armazenado no cookie
+window.onload = function() {
+    const userName = getCookie('userName'); // Lê o valor do cookie 'userName'
+    console.log(getCookie('userName'));
+    
+    if (userName) {
+        document.getElementById('usuario').innerText = `Olá, ${userName}`;
+        document.getElementById('usuario-reduzido').innerText = `Olá, ${userName}`;
+        link = document.getElementById('link-login');
+        link.href = '#'
+    } else {
+        document.getElementById('usuario').innerText = `Entrar`;
+        document.getElementById('usuario-reduzido').innerText = `Entrar`;
     }
-
-    // Função para recuperar o valor de um cookie
-    function getCookie(name) {
-        const nameEQ = name + "=";
-        const ca = document.cookie.split(';');
-        for (let i = 0; i < ca.length; i++) {
-            let c = ca[i];
-            while (c.charAt(0) === ' ') c = c.substring(1, c.length);
-            if (c.indexOf(nameEQ) === 0) return c.substring(nameEQ.length, c.length);
-        }
-        return null;
-    }
-
-    // Chama a função para atualizar o nome do usuário ao carregar a página
-    exibirNomeUsuario();
-});
+};
