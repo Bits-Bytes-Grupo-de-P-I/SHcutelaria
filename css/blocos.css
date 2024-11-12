@@ -199,7 +199,7 @@
 }
 
 .modal-content {
-    background: url(imgs/textura-damasco.png) no-repeat 50% 20%;
+    background: url(imgs/elementos/textura-damasco.png) no-repeat 50% 20%;
     background-size: cover;
     background-color: var(--fuligem);
     background-blend-mode: overlay;

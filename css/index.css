@@ -476,6 +476,109 @@ main {
     font-size: clamp(2rem, 2vw, 3rem);
   }
 
+/*estilização sorteio*/
+
+.sorteio-secao {
+    display: flex;
+    flex-direction: row;
+    gap: 1.25rem;
+    padding: 1.25rem;
+    background: url(imgs/elementos/textura-damasco.png) no-repeat 50% 20%;
+    background-size: cover;
+    background-color: var(--fuligem);
+    background-blend-mode: overlay;
+    border-radius: 0.5rem;
+    box-sizing: border-box;
+}
+
+main .sorteio-secao {
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
+    margin-bottom: 2rem;
+}
+
+.sorteio-principal {
+    flex: 8; 
+    padding: 1.25rem;
+    text-align: center;
+}
+
+.sorteio-titulo {
+    font-size: 1.5rem;
+    color: var(--brasa);
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+.sorteio-data-final {
+    font-size: 1.2rem;
+    color: var(--aluminio);
+    margin-bottom: 1rem;
+}
+
+.sorteio-descricao {
+    font-size: 1.1rem;
+    margin-bottom: 1.25rem;
+    color: var(--aluminio);
+}
+
+.sorteio-imagem img {
+    max-width: 50%;
+    border-radius: 0.5rem;
+    transition: transform 0.3s;
+}
+
+.sorteio-imagem img:hover {
+    transform: scale(1.01);
+}
+
+.sorteio-detalhes {
+    flex: 2;
+    padding: 1rem;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 0.5rem;
+    text-align: left;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    opacity: 0.9;
+}
+
+.sorteio-detalhes h3 {
+    color: var(--brasa);
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+}
+
+.sorteio-detalhes ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sorteio-detalhes li {
+    font-size: 1rem;
+    margin-bottom: 0.1rem;
+}
+
+.btn-participar-faca, .btn-participar-bloco {
+    background-color: var(--brasa);
+    color: var(--fuligem);
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    font-size: 1rem;
+    margin: 0.5rem 0;
+    transition: background-color 0.3s;
+}
+
+.btn-participar-faca:hover, .btn-participar-bloco:hover {
+    background-color: #f15217;
+    color: var(--aluminio);
+    transition: all 0.15s ease-out;
+    border: 1px solid var(--brasa);
+    box-shadow: 0 0 20px rgba(255, 69, 0, 1), 0 0 30px rgba(255, 69, 0, 0.8), 0 0 40px rgba(255, 69, 0, 0.6);
+}
+
 /*--------------------------MEDIA QUERIES--------------------------*/
 
 @media (max-width: 1500px) {
@@ -556,6 +659,15 @@ main {
         margin-left: 5rem;
         margin-right: 5rem;
     }
+
+    .sorteio-secao {
+        flex-direction: column;
+        padding: 0.5rem;
+    }
+
+    .sorteio-detalhes {
+        text-align: center;
+    }
 }
 
 /* 768px = 48rem */
@@ -626,6 +738,37 @@ main {
         width: 30%;
         text-align: center;
         display: block;
+    }
+
+    .sorteio-secao {
+        padding: 15px;
+        flex-direction: column;
+    }
+
+    .sorteio-principal, .sorteio-detalhes {
+        width: 100%;
+        padding: 0.3rem;
+    }
+
+    .sorteio-titulo {
+        font-size: 1.1rem;
+    }
+
+    .sorteio-data-final,
+    .sorteio-descricao {
+        font-size: 1rem;
+    }
+
+    .sorteio-imagem img {
+        width: 90%;
+        max-width: 100%;
+        margin: 0 auto;
+    }
+
+    .btn-participar-faca, .btn-participar-bloco {
+        width: 100%;
+        padding: 0.5rem;
+        font-size: 0.9rem;
     }
 }
 

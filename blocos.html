@@ -134,15 +134,15 @@
                 </div>
 
                 <div class="atendimento-reduzido">
-                    <ul>
-                        <li class="converse">
-                            <a href="login.html" id="usuario">
-                                <i class="fa-solid fa-user"></i>
-                                Entrar
-                            </a>
-                        </li>
-                    </ul>
-                </div>
+                        <ul>
+                            <li class="converse">
+                                <a href="login.html" id="link-login">
+                                    <i class="fa-solid fa-user"></i>
+                                    <span id="usuario-reduzido">Entrar</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
 
         </div>
         <!-- Fim do Menu Reduzido -->
@@ -226,13 +226,13 @@
                 <button onclick="toggleModal('modal-spalted')">Ver Mais</button>
             </div>
 
-            <div class="content invisible">
-                <img class="imgCat" src="css/imgs/catalogo/spalted-cat.jpg" alt="" loading="lazy">
+            <div class="content">
+                <img class="imgCat" src="css/imgs/catalogo/internacional-cat.jpg" alt="" loading="lazy">
                 <div class="texts">
-                    <h3>Spalted</h3>
-                    <p>Madeira spalted tratada, destacando seus padrões naturais.</p>
+                    <h3>Internacional</h3>
+                    <p>Bloco com materiais importados, destacando qualidade e durabilidade.</p>
                 </div>
-                <button>Ver Mais</button>
+                <button onclick="toggleModal('modal-internacional')" >Ver Mais</button>
             </div>
 
         </div>
@@ -244,7 +244,7 @@
                 <li><strong>Contato pelo WhatsApp:</strong> Clique no botão abaixo para ser direcionado ao WhatsApp do artesão.</li>
                 <li><strong>Consulte o Catálogo Atualizado:</strong> No WhatsApp, consulte o catálogo atualizado com as cores e padrões disponíveis.</li>
                 <li><strong>Escolha Seu Bloco:</strong> Escolha o bloco que deseja adquirir e finalize sua compra diretamente com o artesão.</li>
-                <li><strong>Métodos de pagamento:</strong> No pagamento dos blocos estabilizados, aceitamos apenas à vista e por cartão.</li>
+                <li><strong>Métodos de pagamento:</strong> Na venda de blocos estabilizados, aceitamos apenas pagamentos à vista por pix ou por cartão.</li>
                 <li><strong>Atenção aos Detalhes:</strong> Caso deseje um bloco em tamanho personalizado, o valor pode variar conforme a solicitação.</li>
             </ol>
             <a href="" class="whatsapp-button">Contato pelo WhatsApp</a>
@@ -451,6 +451,29 @@
             </div>
         </div>
 
+        <div id="modal-internacional" class="modal" style="display: none;">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div class="modal-info">
+                        <h3>Madeira Importada Estabilazada</h3>
+                        <p>Preço: a consultar</p>
+                        <p>
+                            Dimensões: 30 x 52 x 140mm<br>
+                            <i id="info-icon-internacional" class="info-icon fas fa-info-circle info-icon" onclick="toggleInfo('internacional', 'Medidas padrão que podem ter variações.')"></i>
+                        </p>
+                    </div>
+                    <span class="close" onclick="toggleModal('modal-internacional')">&times;</span>
+                </div>
+                <div class="modal-body">
+                    <img src="css/imgs/catalogo/internacional-extra-1.jpg" alt="Foto bloco estabilizado internacional extra 1" loading="lazy">
+                    <img src="css/imgs/catalogo/internacional-extra-2.jpg" alt="Foto bloco estabilizado internacional extra 2" loading="lazy">
+                </div>
+                <div style="text-align: center;">
+                    <a href="" class="whatsapp-button">Contato pelo WhatsApp</a>
+                </div>
+            </div>
+        </div>
+
     </main>
     <!-- Fim da Main -->    
 
@@ -463,8 +486,7 @@
                     <img src="css/imgs/elementos/logo-cortada.png" class="logo"/>
                 </a>
                 <p class="desc">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos
-                    deserunt magni recusandae ut! Natus?
+                   SH cutelaria - venha descobrir uma nova maneira de cutelaria
                 </p>
 
                 <ul class="socials">
