@@ -28,8 +28,8 @@
     <link rel="icon" href="css/imgs/elementos/logo-aba.ico">
 
     <script src="js/navbar.js" defer></script>
+    
     <script src="js/index.js" defer></script>
-    <script src="js/flickity.js" defer></script>
 
 </head>
 <body>
@@ -136,7 +136,7 @@
                     <div class="atendimento-reduzido">
                         <ul>
                             <li class="converse">
-                                <a href="login.html" id="link-login">
+                                <a href="login.html" id="link-login-reduzido">
                                     <i class="fa-solid fa-user"></i>
                                     <span id="usuario-reduzido">Entrar</span>
                                 </a>
@@ -159,17 +159,18 @@
 
     <div class="banner">
         <div class="carousel" id="carousel">
-            <video preload="auto" autoplay muted loop height="600px" width="auto">
+            <video preload="auto" autoplay muted loop>
                 <source src="css/imgs/elementos/banner-blocos-ofc.mp4" type="video/mp4">
             </video>
-            <video preload="auto" autoplay muted loop height="600px" width="auto">
+            <video preload="auto" autoplay muted loop>
                 <source src="css/imgs/elementos/banner-2.mp4" type="video/mp4">
             </video>
-            <video preload="auto" autoplay muted loop height="600px" width="auto">
+            <video preload="auto" autoplay muted loop>
                 <source src="css/imgs/elementos/banner-restauracao-ofc.mp4" type="video/mp4">
             </video>
         </div>
     </div>
+    
 
     <!-- Fim da NavBar -->
 
@@ -177,7 +178,16 @@
     <div class="destaques">
     <h1>Destaques</h1>
         <div class="carousel"
-        data-flickity='{"wrapAround": true, "freeScroll": true,  "pageDots": false, "autoPlay": 1500, "pauseAutoPlayOnHover": true, "prevNextButtons": false, "selectedAttraction": 0.01,"friction": 0.15}'>
+        data-flickity='{
+        "wrapAround": true, 
+        "freeScroll": true,  
+        "pageDots": false, 
+        "autoPlay": 1500, 
+        "pauseAutoPlayOnHover": true, 
+        "prevNextButtons": false, 
+        "selectedAttraction": 0.01, 
+        "friction": 0.15
+    }'>
             <div class="carousel-cell">
                 <img src="css/imgs/destaques/faca-roxa-e-preta.jpg" alt="" loading="lazy">
             </div>
@@ -462,8 +472,9 @@
     <a class="btn-whats-fixo" href="">
         <i class="fa-brands fa-whatsapp"></i>
     </a>
-    
-    <script src="js/nome_usuario.js" defer></script>
+
+    <script src="js/nome_usuario.js"></script>
+    <script src="js/flickity.js"></script>
 
 </body>
 </html>

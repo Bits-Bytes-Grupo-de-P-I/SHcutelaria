@@ -13,9 +13,15 @@ window.onload = function() {
         document.getElementById('usuario').innerText = `Olá, ${userName}`;
         document.getElementById('usuario-reduzido').innerText = `Olá, ${userName}`;
         link = document.getElementById('link-login');
-        link.href = '#'
+        linkReduzido = document.getElementById('link-login-reduzido');
+        link.href = '#';
+        linkReduzido.href = '#'
     } else {
         document.getElementById('usuario').innerText = `Entrar`;
         document.getElementById('usuario-reduzido').innerText = `Entrar`;
+        link = document.getElementById('link-login');
+        linkReduzido = document.getElementById('link-login-reduzido');
+        link.href = 'login.html';
+        linkReduzido.href = 'login.html';
     }
 };

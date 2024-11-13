@@ -181,7 +181,6 @@ main {
     top: 0;
     right: 0;
     height: 100vw;
-    width: 40vw;
     gap: 4rem;
     z-index: 10;
 }
@@ -569,14 +568,6 @@ main {
         width: 100%;
         margin: 0 10px 50px;
     }
-}
-
-@media (max-width: 676px) {
-    
-    .navbar-reduzida {
-        width: 50%;
-    }
-    
 }
 
 /* 512px = 32rem */

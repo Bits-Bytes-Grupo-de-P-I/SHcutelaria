@@ -510,6 +510,12 @@ h2 {
 
 @media (max-width: 91rem) {
   
+#formulario-2 {
+  overflow-y: scroll;
+  scroll-snap-type: x mandatory;
+  justify-content: space-between;
+  gap: 1.2rem;
+}
 
 .form-opcao img {
   width: 14rem;

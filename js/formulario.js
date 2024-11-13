@@ -85,7 +85,7 @@ function hideAllSubForms() {
     const comentarios = document.getElementById('comentarios');
   
     // Verifica se o tipo de ferramenta foi selecionado
-    if (!tipoFerramenta || !materialLamina || !materialCabo || !tipoBainha) {
+    if (!tipoFerramenta || !facaEstilo || !materialLamina || !materialCabo || !tipoBainha) {
         mostrarAviso();
         return;
     }

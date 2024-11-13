@@ -131,8 +131,16 @@ form input:focus{
   box-shadow: none;
   }
 
+form input:active {
+  background-color: var(--brasa);
+  color: var(--fuligem);
+}
 
-  
+form input:active::placeholder {
+  opacity: 1;
+  color: var(--fuligem);
+}
+
 div:has(input:focus) > label{
   background-color: var(--fuligem);
   fill: var(--brasa);
@@ -174,7 +182,7 @@ form button:hover{
 
 form button:focus{
   outline: none;
-  background-color: var(--prata);
+  background-color: var(--incandescente);
   }
 
 a{
