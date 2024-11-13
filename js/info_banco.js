@@ -41,8 +41,9 @@ window.onload = async function (e) {
             document.getElementById('estiloFaca').innerText = data.estilo;
             document.getElementById('tamanhoFaca').innerText = data.tamanho;
             document.getElementById('materialLamina').innerText = data.material_lamina;
-            
-
+            document.getElementById('materialCabo').innerText = data.material_cabo;
+            document.getElementById('materialBainha').innerText = data.material_bainha;
+            document.getElementById('dataFinal').innerText = data.data;
             
         } catch (error) {
             alert(error.message);
