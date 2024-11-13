@@ -64,6 +64,7 @@
 
 .invisible {
     visibility: hidden;
+    display: none;
 }
 
 .content:hover {
@@ -322,11 +323,19 @@
     .content {
         flex-basis: calc(33.333% - 1rem);
     }
+
+    .invisible {
+        display: block;
+    }
 }
 
 @media (max-width: 768px) {
     .content {
         flex-basis: calc(50% - 1rem); 
+    }
+
+    .invisible {
+        display: none;
     }
 
     .modal-body img {
