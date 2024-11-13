@@ -272,6 +272,10 @@ footer {
     padding: 0 0.8rem;
 }
   
+.desc {
+    text-align: center;
+}
+
 .wrapper {
     display: flex;
     justify-content: space-between;

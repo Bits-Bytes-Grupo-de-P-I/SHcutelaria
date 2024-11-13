@@ -483,19 +483,29 @@ main {
     flex-direction: row;
     gap: 1.25rem;
     padding: 1.25rem;
-    background: url(imgs/elementos/textura-damasco.png) no-repeat 50% 20%;
+    /* background: url(imgs/elementos/textura-damasco.png) no-repeat 50% 20%;
     background-size: cover;
     background-color: var(--fuligem);
+    background-blend-mode: overlay; */
+    background: url(imgs/elementos/faca-bainha-de-couro.jpg) no-repeat 80% 80%;
+    background-color: rgba(35, 35, 35, 0.7);
     background-blend-mode: overlay;
+    background-size: cover;
     border-radius: 0.5rem;
     box-sizing: border-box;
 }
 
 main .sorteio-secao {
-    width: 100%;
-    max-width: 100%;
+    width: 80%;
+    max-width: 80%;
     margin: 0 auto;
     margin-bottom: 2rem;
+}
+.detalhes {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
 .sorteio-principal {
@@ -561,6 +571,7 @@ main .sorteio-secao {
 
 .btn-participar-faca, .btn-participar-bloco {
     background-color: var(--brasa);
+    border: 1px solid var(--brasa);
     color: var(--fuligem);
     border: none;
     padding: 0.5rem 1rem;
@@ -575,7 +586,6 @@ main .sorteio-secao {
     background-color: #f15217;
     color: var(--aluminio);
     transition: all 0.15s ease-out;
-    border: 1px solid var(--brasa);
     box-shadow: 0 0 20px rgba(255, 69, 0, 1), 0 0 30px rgba(255, 69, 0, 0.8), 0 0 40px rgba(255, 69, 0, 0.6);
 }
 

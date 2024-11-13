@@ -29,59 +29,24 @@ window.onload = function() {
 
 // Função para pegar as informações do sorteio
 
-window.onload = function() {
-    let isAdmin = false;
-
-    // A função que será chamada no evento onsubmit do formulário
-    async function enviarRifa(e) {
+window.onload = async function (e) {
         e.preventDefault();
 
-        // Verificar se o usuário tem permissão de administrador
-        if (!isAdmin) {
-            alert('Acesso negado. Apenas administradores podem cadastrar rifas.');
-            return;
-        }
-
-        // Obter os dados do formulário
-        const formData = {
-            estilo: document.getElementById('estilo').value,
-            tamanho: document.getElementById('tamanho').value,
-            material_lamina: document.getElementById('material_lamina').value,
-            material_cabo: document.getElementById('material_cabo').value,
-            material_bainha: document.getElementById('material_bainha').value,
-            data: document.getElementById('data').value
-        };
-
-        // Recuperar o token JWT do localStorage
-        const token = localStorage.getItem('jwtToken');
-        console.log(token);
-        if (!token) {
-            alert('Token de autenticação não encontrado.');
-            return;
-        }
-
         try {
-            const response = await fetch('https://sh-cutelaria.onrender.com/upload', {
-                method: 'POST',
-                headers: {
-                    'Authorization': `Bearer ${token}`,
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify(formData)
+            const response = await fetch('https://sh-cutelaria.onrender.com/rifa/1', {
+                method: 'GET',
             });
+            const data = await response.json();
+            console.log(data);
+            document.getElementById('estiloFaca').innerText = data.estilo;
+            document.getElementById('tamanhoFaca').innerText = data.tamanho;
+            document.getElementById('materialLamina').innerText = data.material_lamina;
+            
 
-            if (response.ok) {
-                alert('Rifa cadastrada com sucesso!');
-                document.getElementById('rifa-form').reset();
-            } else {
-                const error = await response.json();
-                alert(error.error || 'Erro ao cadastrar a rifa');
-            }
+            
         } catch (error) {
-            console.error('Erro:', error);
-            alert('Erro ao cadastrar a rifa');
+            alert(error.message);
         }
-    }
-};
+    };
 
 
