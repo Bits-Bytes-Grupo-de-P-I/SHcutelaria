@@ -1,6 +1,7 @@
 // Função para ler o valor do cookie
 function getCookie(name) {
     let match = document.cookie.match(new RegExp('(^| )' + name + '=([^;]+)'));
+    console.log(match);
     return match ? match[2] : null;
 }
 
