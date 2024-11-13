@@ -75,7 +75,7 @@ let authToken = '';
             const data = await response.json();
             
             // Salva o nome do usuário nos cookies
-            document.cookie = `userName=${data.user.name}; path=/; max-age=60; SameSite=None; Secure`; // Cookie expira em 1 minuto e tem as medidas de segurança para funfar na Vercel
+            document.cookie = `userName=${data.user.name}; path=/; max-age=60`; // Cookie expira em 1 minuto e tem as medidas de segurança para funfar na Vercel
             
             console.log(getCookie('userName')); // Exibe o nome armazenado no cookie
     
