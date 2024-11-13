@@ -1,66 +1,167 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Admin - Editar Faca</title>
-    <script>
-        // Variáveis de verificação (email e senha fixos)
-        const usuarioValido = { email: "admin@exemplo.com", senha: "admin123" };
-
-        // Função para verificar se os dados inseridos são válidos
-        function verificarLogin() {
-            const email = document.getElementById("email").value;
-            const senha = document.getElementById("senha").value;
-            
-            // Verifica se o e-mail e a senha são válidos
-            if (email === usuarioValido.email && senha === usuarioValido.senha) {
-                // Se forem válidos, exibe o conteúdo protegido
-                document.getElementById("conteudo-protegido").style.display = "block";
-                document.getElementById("login-form").style.display = "none";
-            } else {
-                alert("E-mail ou senha inválidos. Tente novamente.");
-            }
-        }
-    </script>
-    <link rel="stylesheet" href="css/admin.css">
+    <title>Rifa - Gerenciamento</title>
 </head>
 <body>
+    <h1>Gerenciamento de Rifas</h1>
 
-    <!-- Formulário de login -->
-    <div id="login-form" class="login-container">
-        <h2>Login de Administrador</h2>
-        <input type="email" id="email" placeholder="E-mail" required>
-        <input type="password" id="senha" placeholder="Senha" required>
-        <button type="button" onclick="verificarLogin()">Entrar</button>
-    </div>
+    <!-- Formulário de Login -->
+    <h2>Login</h2>
+    <form id="login-form">
+        <label for="login-email">Email:</label>
+        <input type="text" id="login-email" name="email" required><br><br>
 
-    <!-- Conteúdo protegido (Formulário de edição de faca) -->
-    <div id="conteudo-protegido" style="display: none;">
-        <h1>Área de Administração - Editar Faca</h1>
+        <label for="login-password">Senha:</label>
+        <input type="password" id="login-password" name="password" required><br><br>
 
-        <form id="form-editar-faca">
-            <label for="estilo">Estilo da Faca:</label>
-            <input type="text" id="estilo" name="estilo" value="Chef">
+        <button type="submit">Entrar</button>
+    </form>
 
-            <label for="tamanho">Tamanho (cm):</label>
-            <input type="number" id="tamanho" name="tamanho" value="25">
+    <!-- Formulário para cadastrar rifa, visível apenas para administradores -->
+    <h2>Cadastro de Rifa</h2>
+    <form id="rifa-form" style="display: none;">
+        <label for="estilo">Estilo da faca:</label>
+        <input type="text" id="estilo" name="estilo" required><br><br>
 
-            <label for="material-lamina">Material da Lâmina:</label>
-            <input type="text" id="material-lamina" name="material-lamina" value="Aço">
+        <label for="tamanho">Tamanho:</label>
+        <input type="text" id="tamanho" name="tamanho" required><br><br>
 
-            <label for="material-cabo">Material do Cabo:</label>
-            <input type="text" id="material-cabo" name="material-cabo" value="Leopard Wood">
+        <label for="material_lamina">Material da lâmina:</label>
+        <input type="text" id="material_lamina" name="material_lamina" required><br><br>
 
-            <label for="material-bainha">Material da Bainha:</label>
-            <input type="text" id="material-bainha" name="material-bainha" value="Couro de jacaré">
+        <label for="material_cabo">Material do cabo:</label>
+        <input type="text" id="material_cabo" name="material_cabo" required><br><br>
 
-            <label for="imagem-faca">Imagem da Faca:</label>
-            <input type="file" id="imagem-faca" name="imagem-faca" accept="image/*">
+        <label for="material_bainha">Material da bainha:</label>
+        <input type="text" id="material_bainha" name="material_bainha" required><br><br>
 
-            <button type="submit">Salvar Alterações</button>
-        </form>
-    </div>
+        <label for="data">Data:</label>
+        <input type="date" id="data" name="data" required><br><br>
 
+        <button type="submit">Cadastrar Rifa</button>
+    </form>
+
+    <!-- Consulta do perfil -->
+    <h2>Perfil</h2>
+    <button onclick="fetchProfile()">Ver Perfil</button>
+    <div id="profile-details"></div>
+
+    <script>
+        let isAdmin = false;
+
+        // Função para realizar o login e armazenar o token JWT
+        document.getElementById('login-form').addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const email = document.getElementById('login-email').value;
+            const password = document.getElementById('login-password').value;
+
+            try {
+                const response = await fetch('https://sh-cutelaria.onrender.com/login', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({ email, password })
+                });
+
+                if (response.ok) {
+                    const data = await response.json();
+                    localStorage.setItem('jwtToken', data.token);
+                    isAdmin = JSON.parse(atob(data.token.split('.')[1])).isAdmin;
+
+                    alert('Login realizado com sucesso!');
+                    document.getElementById('login-form').reset();
+
+                    if (isAdmin) {
+                        document.getElementById('rifa-form').style.display = 'block';
+                    }
+                } else {
+                    alert('Falha no login. Verifique o email e senha.');
+                }
+            } catch (error) {
+                console.error('Erro:', error);
+                alert('Erro ao realizar login.');
+            }
+        });
+
+        // Função para cadastrar rifa (acessível apenas para administradores)
+        document.getElementById('rifa-form').addEventListener('submit', async (e) => {
+            e.preventDefault();
+
+            if (!isAdmin) {
+                alert('Acesso negado. Apenas administradores podem cadastrar rifas.');
+                return;
+            }
+
+            const formData = {
+                estilo: document.getElementById('estilo').value,
+                tamanho: document.getElementById('tamanho').value,
+                material_lamina: document.getElementById('material_lamina').value,
+                material_cabo: document.getElementById('material_cabo').value,
+                material_bainha: document.getElementById('material_bainha').value,
+                data: document.getElementById('data').value
+            };
+            const token = localStorage.getItem('jwtToken');
+
+            try {
+                const response = await fetch('https://sh-cutelaria.onrender.com/upload', {
+                    method: 'POST',
+                    headers: {
+                        'Authorization': `Bearer ${token}`,
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(formData)
+                });
+
+                if (response.ok) {
+                    alert('Rifa cadastrada com sucesso!');
+                    document.getElementById('rifa-form').reset();
+                } else {
+                    const error = await response.json();
+                    alert(error.error || 'Erro ao cadastrar a rifa');
+                }
+            } catch (error) {
+                console.error('Erro:', error);
+                alert('Erro ao cadastrar a rifa');
+            }
+        });
+
+        // Função para buscar os dados do perfil do usuário autenticado
+        async function fetchProfile() {
+            const token = localStorage.getItem('jwtToken');
+
+            try {
+                const response = await fetch('https://sh-cutelaria.onrender.com/profile', {
+                    headers: {
+                        'Authorization': `Bearer ${token}`
+                    }
+                });
+
+                if (response.ok) {
+                    const profile = await response.json();
+                    displayProfile(profile.user);
+                } else {
+                    alert('Erro ao buscar o perfil.');
+                }
+            } catch (error) {
+                console.error('Erro:', error);
+                alert('Erro ao buscar o perfil.');
+            }
+        }
+
+        // Função para exibir os detalhes do perfil do usuário
+        function displayProfile(user) {
+            const profileDetails = document.getElementById('profile-details');
+            profileDetails.innerHTML = `
+                <h3>Detalhes do Perfil</h3>
+                <p><strong>Nome:</strong> ${user.name}</p>
+                <p><strong>Email:</strong> ${user.email}</p>
+                <p><strong>Administrador:</strong> ${user.isAdmin ? 'Sim' : 'Não'}</p>
+            `;
+        }
+    </script>
 </body>
 </html>
