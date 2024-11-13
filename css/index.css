@@ -480,13 +480,7 @@ main {
 
 .sorteio-secao {
     display: flex;
-    flex-direction: row;
-    gap: 1.25rem;
-    padding: 1.25rem;
-    /* background: url(imgs/elementos/textura-damasco.png) no-repeat 50% 20%;
-    background-size: cover;
-    background-color: var(--fuligem);
-    background-blend-mode: overlay; */
+    flex-direction: column;
     background: url(imgs/elementos/faca-bainha-de-couro.jpg) no-repeat 80% 80%;
     background-color: rgba(35, 35, 35, 0.7);
     background-blend-mode: overlay;
@@ -501,16 +495,10 @@ main .sorteio-secao {
     margin: 0 auto;
     margin-bottom: 2rem;
 }
-.detalhes {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
 
 .sorteio-principal {
     flex: 8; 
-    padding: 1.25rem;
+    padding: 1rem;
     text-align: center;
 }
 
@@ -519,9 +507,13 @@ main .sorteio-secao {
     color: var(--brasa);
     margin-bottom: 0.5rem;
     font-weight: bold;
+    display: inline-block;
+    border-bottom: 2px solid var(--brasa);
+    padding-bottom: 0.2rem;
 }
 
 .sorteio-data-final {
+    margin-top: 0.5rem;
     font-size: 1.2rem;
     color: var(--aluminio);
     margin-bottom: 1rem;
@@ -533,40 +525,33 @@ main .sorteio-secao {
     color: var(--aluminio);
 }
 
-.sorteio-imagem img {
-    max-width: 50%;
-    border-radius: 0.5rem;
-    transition: transform 0.3s;
+.detalhes {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
-.sorteio-imagem img:hover {
-    transform: scale(1.01);
+.detalhes .sorteio-faca ul {
+    margin: 1rem 0;
+    list-style: none;
 }
 
-.sorteio-detalhes {
-    flex: 2;
-    padding: 1rem;
-    background-color: rgba(0, 0, 0, 0.5);
-    border-radius: 0.5rem;
-    text-align: left;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    opacity: 0.9;
-}
-
-.sorteio-detalhes h3 {
-    color: var(--brasa);
-    font-size: 1.25rem;
+.sorteio-faca h3 {
+    color: var(--aluminio);
+    font-size: 1.3rem;
     margin-bottom: 0.5rem;
 }
 
-.sorteio-detalhes ul {
-    list-style: none;
-    padding: 0;
+.sorteio-faca ul li {
+    font-style: italic;
+    font-weight: 600;
+    font-size: 1.2rem;
+    color: var(--brasa);
 }
 
-.sorteio-detalhes li {
-    font-size: 1rem;
-    margin-bottom: 0.1rem;
+.sorteio-blocos {
+    margin-top: 1rem;
 }
 
 .btn-participar-faca, .btn-participar-bloco {
@@ -656,8 +641,9 @@ main .sorteio-secao {
         padding-left: 1rem;
     }
 
-    .rifa-faca, .rifa-blocos {
+    main .sorteio-secao {
         width: 100%;
+        max-width: 100%;
     }
 }
 
