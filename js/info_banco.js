@@ -11,7 +11,7 @@ window.onload = async function (e) {
             const data = await response.json();
             console.log(data);
             document.getElementById('estiloFaca').innerText = data.estilo;
-            document.getElementById('tamanhoFaca').innerText = data.tamanho;
+            document.getElementById('tamanhoFaca').innerText = `${data.tamanho} centímetros`;
             document.getElementById('materialLamina').innerText = data.material_lamina;
             document.getElementById('materialCabo').innerText = data.material_cabo;
             document.getElementById('materialBainha').innerText = data.material_bainha;
