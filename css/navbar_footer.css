@@ -71,6 +71,7 @@ button {
 }
 
 nav {
+    position: relative;
     background: url(imgs/elementos/textura-damasco.png) no-repeat 50% 20%;
     background-size: cover;
     background-color: var(--fuligem);
@@ -78,7 +79,7 @@ nav {
     position: relative;
     top: 0;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: center;
     border-bottom: 1px solid var(--fuligem);
 }
@@ -90,6 +91,9 @@ main {
 
 
 .logo-nav {
+    position: absolute;
+    top: 10px;
+    left: 70px;
     font-size: 1.8rem;
     text-wrap: nowrap;
     color: var(--aluminio);
@@ -143,7 +147,7 @@ main {
     align-items: center;
     text-align: center;
     text-transform: uppercase;
-    padding: 2rem 0;
+    padding: 1rem 0;
 }
 
 .menu ul, .atendimento ul {
@@ -159,6 +163,11 @@ main {
 }
 
 .menu a, .atendimento a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
     font-size: clamp(0.5rem, 2vw, 1.1rem);
 }
 
@@ -485,6 +494,17 @@ main {
     margin-right: 5rem;
 }
 
+nav {
+    gap: 3rem;
+}
+
+.menu {
+    justify-content: space-around;
+}
+
+.logo-nav {
+    position: static;
+}
 
 .ativar-menu {
     display: flex;
@@ -548,6 +568,10 @@ main {
 /* 768px = 48rem */
 
 @media (max-width: 48rem) {
+
+    nav {
+        gap: 1rem;
+    }
 
     .menu-reduzido li, .atendimento-reduzido li{
         padding-left: 0.5rem;
