@@ -49,22 +49,18 @@ main {
     max-height: 600px;
 }
 
-
-/* external css: flickity.css */ /* Framework do carrossel do banner */
-
-
 .carousel img { 
     width: 100%;
-    height: auto; /* Permite que a altura seja ajustada proporcionalmente */
-    max-width: 100%; /* Garante que o vídeo não ultrapasse a largura do contêiner */
+    height: auto;
+    max-width: 100%;
     object-fit: cover; 
 }
 
 .carousel video { 
     width: 100%;
-    max-height: 600px; /* Permite que a altura seja ajustada proporcionalmente */
-    max-width: 100%; /* Garante que o vídeo não ultrapasse a largura do contêiner */
-    object-fit: cover; 
+    max-height: 600px;
+    max-width: 100%;
+    object-fit: cover;
 }
 
 /*--------------DESTAQUES--------------*/

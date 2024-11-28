@@ -85,19 +85,13 @@ function hideAllSubForms() {
     const comentarios = document.getElementById('comentarios');
   
     // Verifica se o tipo de ferramenta foi selecionado
-    if (!tipoFerramenta || !facaEstilo || !materialLamina || !materialCabo || !tipoBainha) {
+    if (!tipoFerramenta || !materialLamina || !materialCabo || !tipoBainha) {
         mostrarAviso();
         return;
     }
   
     // Verifica o estilo com base na ferramenta selecionada
     if (tipoFerramenta.value === "faca" && !facaEstilo) {
-        mostrarAviso();
-        return;
-    } else if (tipoFerramenta.value === "cutelo" && !cuteloEstilo) {
-        mostrarAviso();
-        return;
-    } else if (tipoFerramenta.value === "machado" && !machadoEstilo) {
         mostrarAviso();
         return;
     }
@@ -147,7 +141,8 @@ function hideAllSubForms() {
     const urlMensagem = encodeURIComponent(mensagem);
   
     // URL do WhatsApp API
-    const whatsappURL = `https://api.whatsapp.com/send?phone=553498812829&text=${urlMensagem}`;
+    //const whatsappURL = `https://api.whatsapp.com/send?phone=553498812829&text=${urlMensagem}`;
+    const whatsappURL = `https://api.whatsapp.com/send?phone=553499690102&text=${urlMensagem}`;
   
     // Abrir a URL no WhatsApp
     window.open(whatsappURL, '_blank');

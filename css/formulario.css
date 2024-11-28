@@ -101,6 +101,12 @@ label:hover {
   transform: translate(0px, -8px);
 }
 
+/* Css pra fazer com que o botão de ativar o menu não tenha hover */
+.ativar-menu label {
+  transform: none;
+}
+
+
 input[type="radio"] {
   display: none; /* Esconde os botões de rádio */
 }

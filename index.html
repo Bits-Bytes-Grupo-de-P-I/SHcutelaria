@@ -141,16 +141,22 @@
 
 
     <div class="banner">
-        <div class="carousel" id="carousel" data-flickity='{}'>
+        <div class="carousel" id="carousel" data-flickity='{
+            "wrapAround": true,
+            "cellAlign": "center",
+            "prevNextButtons": false,
+            "autoPlay": 5000,
+            "pauseAutoPlayOnHover": false,
+            "imagesLoaded": true
+         }'>
             <video preload="auto" autoplay muted loop id="banner-1">
-                <source src="css/imgs/elementos/banner-blocos-ofc.mp4" type="video/mp4">
+                <source src="css/imgs/elementos/banner-1.mp4" type="video/mp4">
             </video>
             <video preload="auto" autoplay muted loop id="banner-2">
                 <source src="css/imgs/elementos/banner-2.mp4" type="video/mp4">
             </video>
-            <video preload="auto" autoplay muted loop id="banner-3">
-                <source src="css/imgs/elementos/banner-restauracao-ofc.mp4" type="video/mp4">
-            </video>
+            <img id="banner-3" src="css/imgs/elementos/banner-3.png" alt="Banner de restauração">
+
         </div>
     </div>
     
@@ -171,6 +177,9 @@
         "selectedAttraction": 0.01, 
         "friction": 0.15
     }'>
+            <div class="carousel-cell">
+                <img src="css/imgs/destaques/tanto1.jpg" alt="" loading="lazy">
+            </div>
             <div class="carousel-cell">
                 <img src="css/imgs/destaques/faca-roxa-e-preta.jpg" alt="" loading="lazy">
             </div>
@@ -377,7 +386,6 @@
 
     <script src="js/info_banco.js" defer></script>
     <script src="js/flickity.js" defer></script>
-    <script src="js/index.js" defer></script>
 
 </body>
 </html>
