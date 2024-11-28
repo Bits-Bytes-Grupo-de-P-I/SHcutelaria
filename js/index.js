@@ -19,14 +19,5 @@ function initCarousel() {
       flkty.playPlayer(); // Retoma o rolamento automático
     }, 1000); // Tempo de espera para retomar o autoPlay após a interação
   });
-
-  // Salva a instância do Flickity globalmente para manipulação posterior, se necessário
-  window.carrossel = flkty;
-}
-
-window.addEventListener("load", function () {
-  if (window.carrossel) {
-    window.carrossel.destroy(); // Destrói a instância anterior, se existir
-  }
   initCarousel(); // Inicializa a nova instância do Flickity
-});
+};
