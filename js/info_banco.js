@@ -5,7 +5,7 @@ window.onload = async function (e) {
         e.preventDefault();
 
         try {
-            const response = await fetch('https://sh-cutelaria.onrender.com/rifa/1', {
+            const response = await fetch('https://sh-cutelaria.onrender.com/rifa/8', {
                 method: 'GET',
             });
             const data = await response.json();
