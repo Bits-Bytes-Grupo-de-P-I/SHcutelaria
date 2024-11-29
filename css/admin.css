@@ -138,7 +138,7 @@ input::placeholder{
     background-color: var(--carbono);
     padding: 1rem;
     border-radius: 10px;
-    width: 30%;
+    width: (400px, 100%);
 }
 
 .perfil {
