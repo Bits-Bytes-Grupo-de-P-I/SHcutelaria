@@ -335,19 +335,19 @@
 
 @media screen and (max-width: 480px) {
     .card p {
-        height: 10rem;
+        height: 13rem;
     }
 }
 
 @media screen and (max-width: 420px) {
     .card p {
-        height: 16rem;
+        height: 18rem;
     }
 }
 
 @media screen and (max-width: 320px) {
     .card p {
-        height: 19rem;
+        height: 21rem;
     }
 }
 
