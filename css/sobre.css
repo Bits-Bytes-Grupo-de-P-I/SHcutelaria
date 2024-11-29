@@ -236,7 +236,7 @@
 }
 
 .card p {
-    height: 10.5rem;
+    height: 14rem;
     font-size: 1.1rem; 
     margin-bottom: 1.8rem;
     line-height: 1.5;
@@ -262,13 +262,13 @@
 
 @media screen and (max-width: 1390px) {
     .card p {
-        height: 14rem;
+        height: 16rem;
     }
 }
 
 @media screen and (max-width: 1350px) {
     .card p {
-        height: 17rem;
+        height: 21rem;
     }
 }
 
