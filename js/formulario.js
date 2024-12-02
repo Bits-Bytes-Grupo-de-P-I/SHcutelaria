@@ -15,9 +15,23 @@ window.addEventListener('load', () => {
 });
 
 
-// Função para esconder todos os sub-formulários e limpar as opções
-function hideAllSubForms() {
-  const subForms = document.querySelectorAll('.estilo-faca, .estilo-cutelo, .estilo-machado, .tipo-couro, .tipo-madeira');
+// Função para esconder os sub-formulários dos tipos de facas e limpar as opções
+function EsconderTipoFaca() {
+  const subForms = document.querySelectorAll('.estilo-faca');
+  
+  subForms.forEach(label => {
+    label.style.display = 'none';
+    // Limpa as seleções dos inputs dentro do sub-formulário
+    const inputs = label.querySelectorAll('input[type="radio"]');
+    inputs.forEach(input => {
+      input.checked = false;
+    });
+  });
+}
+
+// Função para esconder os sub-formulários dos tipos de facas e limpar as opções
+function EsconderTipoCouro() {
+  const subForms = document.querySelectorAll('.tipo-couro');
   
   subForms.forEach(label => {
     label.style.display = 'none';
@@ -34,7 +48,7 @@ function hideAllSubForms() {
     // Verifica se o input alterado é do tipo radio
     if (event.target.type === 'radio') {
         // Esconde todos os sub-formulários e limpa suas opções
-        hideAllSubForms();
+        EsconderTipoFaca();
 
         // Pega o valor da opção selecionada e mostra o sub-formulário correspondente
         const selectedValue = event.target.nextElementSibling.querySelector('h3').textContent.toLowerCase();
@@ -46,12 +60,12 @@ function hideAllSubForms() {
     }
   });
 
-  // Adiciona um listener ao novo formulário principal (formulario-5)
+  // Adiciona um listener ao formulário da bainha de couro
   document.getElementById('formulario-7').addEventListener('change', (event) => {
     // Verifica se o input alterado é do tipo radio
     if (event.target.type === 'radio') {
         // Esconde todos os sub-formulários e limpa suas opções
-        hideAllSubForms();
+        EsconderTipoCouro();
 
         // Pega o valor da opção selecionada e mostra o sub-formulário correspondente
         const selectedValue = event.target.nextElementSibling.querySelector('h3').textContent.toLowerCase();
